@@ -1,0 +1,5 @@
+export const APP_BASE = '/peer-support'
+export const APP_TITLE = 'Peer Support'
+export const API_URL = 'http://cofasv38/api/v2/pd/peer-support'
+// export const API_URL = 'https://istest.franklintn.gov/api/v2/pd/peer-support'
+export const NODE_ENV: 'development' | 'test' | 'production' = 'development' 
