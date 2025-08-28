@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5002",
-    "build": "tsc -b && vite build",
+    "dev": "vite --port 5054",
+    "build": "tsc -b && vite build --outDir ~/apps/builds/pd-peer-support-vite-ts/dist",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest"

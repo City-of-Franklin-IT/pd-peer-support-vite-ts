@@ -1,7 +1,7 @@
 import { useRedirect } from './hooks'
 
 function Redirect() {
-  useRedirect('/public')
+  useRedirect('/support')
 
   return null
 }

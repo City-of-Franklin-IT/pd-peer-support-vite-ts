@@ -4,7 +4,8 @@ import { motionProps } from '@/helpers/utils'
 // Components
 import * as Components from './components'
 
-function FiltersContainer() {
+function FiltersContainer({ visible }: { visible: boolean }) {
+  if(!visible) return
 
   return (
     <motion.div 

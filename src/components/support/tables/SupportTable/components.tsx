@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { motion } from 'motion/react'
 import { motionProps } from '@/helpers/utils'
 import { useOnTableRowClick, useSetColumnVisibility } from './hooks'
@@ -15,6 +16,16 @@ export const Table = ({ tableData }: { tableData: AppTypes.SupportInterface[] })
         <TableHeaders />
         <TableBody tableData={tableData} />
     </motion.table>
+  )
+}
+
+export const NoSupport = () => {
+
+  return (
+    <div className="flex flex-col gap-4 font-[play] text-neutral-content text-center m-10 p-10 m-auto outline outline-2 outline-dashed outline-neutral-content w-fit rounded-xl">
+      <span className="text-xl uppercase font-bold">No Peer Support Entries</span>
+      <Link to={'/create/support'} className="text-lg text-warning font-bold hover:text-info">Click to create peer support entry</Link>
+    </div>
   )
 }
 

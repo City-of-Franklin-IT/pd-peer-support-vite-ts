@@ -4,13 +4,21 @@ import { useSetTableData } from './hooks'
 import * as AppTypes from '@/context/App/types'
 
 // Components
+import PaginationContainer from '../../containers/PaginationContainer'
 import * as Components from './components'
 
 function SupportTable({ support }: { support: AppTypes.SupportInterface[] }) {
   const tableData = useSetTableData(support)
 
+  if(!tableData.length) return (
+    <Components.NoSupport />
+  )
+
   return (
-    <Components.Table tableData={tableData} />
+    <>
+      <PaginationContainer />
+      <Components.Table tableData={tableData} />
+    </>
   )
 }
 

@@ -2,9 +2,9 @@ import { LogLevel } from '@azure/msal-browser';
 
 export const msalConfig = {
     auth: {
-        clientId: '',
+        clientId: 'fc6e7f34-d393-4a51-affc-3c87ff617396',
         authority: 'https://login.microsoftonline.com/f6644f52-f834-4a2f-a433-e6bc40d7c17f/',
-        redirectUri: 'https://apps.franklintn.gov/peer-support',
+        redirectUri: 'https://istest.franklintn.gov/peer-support',
         postLogoutRedirectUri: '/',
         navigateToLoginRequestUrl: false
     },
@@ -38,5 +38,5 @@ export const msalConfig = {
 
 export const loginRequest = {
     scopes: ["openid", "profile"],
-    redirectUri: "https://apps.franklintn.gov/peer-support"
+    redirectUri: "https://istest.franklintn.gov/peer-support"
 };
