@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { MemoryRouter } from 'react-router'
 import { screen, render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'

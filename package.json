@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 5054",
-    "build": "tsc -b && vite build --outDir ~/apps/builds/pd-peer-support-vite-ts/dist",
+    "build": "tsc -b && vite build",
+    "deploy": "scp -r dist/* andrew@cofasv32:/home/andrew/apps/builds/pd-peer-support-vite-ts/dist",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest"

@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Link } from "react-router"
 import { APP_TITLE } from '../../../config'
+import cofIcon from '@/assets/icons/cof/cof-primary-content.svg'
 import HeaderCtx from "./context"
 import { useActiveAccount } from "@/helpers/hooks"
 import useHandleLogoutRedirect from "@/context/Auth/hooks/useHandleLogoutRedirect"
@@ -12,9 +13,11 @@ export const Title = () => {
   if(!visible) return null
 
   return (
-    <Link to={href} className="flex flex-col text-primary-content items-start w-fit">
-      <h1 className="text-lg font-bold whitespace-nowrap lg:text-2xl">Franklin Police Department</h1>
-      <span className="text-sm ml-6 w-fit lg:text-xl lg:whitespace-nowrap">{APP_TITLE}</span>
+    <Link to={href}>
+      <div className="flex gap-4 text-primary-content items-center">
+        <img src={cofIcon} alt="cof icon" className="w-20" />
+        <h1 className="text-4xl font-bold text-center">{APP_TITLE}</h1>
+      </div>
     </Link>
   )
 }
@@ -34,6 +37,13 @@ export const Buttons = () => {
         visible={!visible}>Login</HeaderBtn>
       <LogoutBtn />
     </div>
+  )
+}
+
+export const HomeLink = () => {
+
+  return (
+    <a href={'/home'} className="text-neutral-content uppercase p-3 m-auto bg-neutral/20 w-fit rounded-b-lg hover:bg-warning/50 hover:text-neutral">Back To All PD Apps</a>
   )
 }
 

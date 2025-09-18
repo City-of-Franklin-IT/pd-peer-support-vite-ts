@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import SupportCtx from "../../context"
-import Loading from "@/components/loading/Loading"
+import Loading from "@/components/layout/loading/Loading"
 import { useGetRosterPersonnel } from "@/pages/Roster/hooks"
 
 // Components

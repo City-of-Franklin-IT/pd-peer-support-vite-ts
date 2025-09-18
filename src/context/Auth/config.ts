@@ -1,15 +1,16 @@
-import { LogLevel } from '@azure/msal-browser';
+import { LogLevel } from '@azure/msal-browser'
+import { CLIENT_ID } from '@/config'
 
 export const msalConfig = {
     auth: {
-        clientId: 'fc6e7f34-d393-4a51-affc-3c87ff617396',
+        clientId: CLIENT_ID,
         authority: 'https://login.microsoftonline.com/f6644f52-f834-4a2f-a433-e6bc40d7c17f/',
-        redirectUri: 'https://istest.franklintn.gov/peer-support',
-        postLogoutRedirectUri: '/',
+        redirectUri: 'https://pdapps.franklintn.gov/peer-support',
+        postLogoutRedirectUri: 'https://pdapps.franklintn.gov/',
         navigateToLoginRequestUrl: false
     },
     cache: {
-        cacheLocation: 'sessionStorage', 
+        cacheLocation: 'localStorage', 
         storeAuthStateInCookie: false
     },
     system: {
@@ -38,5 +39,5 @@ export const msalConfig = {
 
 export const loginRequest = {
     scopes: ["openid", "profile"],
-    redirectUri: "https://istest.franklintn.gov/peer-support"
+    redirectUri: "https://pdapps.franklintn.gov/peer-support"
 };
