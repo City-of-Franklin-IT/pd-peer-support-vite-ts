@@ -1,6 +1,4 @@
-import { useContext, useRef } from "react"
-import SupportCtx from "../../context"
-import { useGetSupport, useScrollToRef } from './hooks'
+import { useGetSupport, useHandleForm } from './hooks'
 
 // Components
 import FormContainer from "@/components/form-elements/FormContainer"
@@ -8,16 +6,12 @@ import HandleLoading from "@/utils/HandleLoading"
 import UpdateSupportForm from "../../forms/update/UpdateSupportForm"
 
 export const Form = () => {
-  const { supportUUID } = useContext(SupportCtx)
-
-  const ref = useRef<HTMLDivElement>(null)
-
-  useScrollToRef(ref)
+  const { supportUUID, formRef } = useHandleForm()
 
   if(!supportUUID) return
 
   return (
-    <div data-testid="get-support" ref={ref}>
+    <div data-testid="get-support" ref={formRef}>
       <GetSupport />
     </div>
   )

@@ -1,6 +1,6 @@
 import { useContext, useRef } from "react"
 import RosterCtx from "../../context"
-import { useHandleDeleteBtn, useGetPerson, useScrollToRef } from "./hooks"
+import { useHandleDeleteBtn, useGetPerson, useHandleForm } from "./hooks"
 
 // Components
 import HandleLoading from "@/utils/HandleLoading"
@@ -29,11 +29,7 @@ export const CreateBtn = ({ children }: { children: React.ReactNode }) => {
 }
 
 export const Form = () => {
-  const { formType } = useContext(RosterCtx)
-
-  const formRef = useRef<HTMLDivElement>(null)
-
-  useScrollToRef(formRef)
+  const { formType, formRef } = useHandleForm()
 
   const { onClick, label } = useHandleDeleteBtn()
 

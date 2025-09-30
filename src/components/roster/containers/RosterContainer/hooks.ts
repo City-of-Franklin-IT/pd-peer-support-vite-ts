@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react"
+import { useContext, useState, useEffect, useRef } from "react"
 import { useQuery, useQueryClient } from "react-query"
 import * as AppActions from '@/context/App/AppActions'
 import RosterCtx from "../../context"
@@ -54,14 +54,18 @@ export const useHandleDeleteBtn = () => {
   return { onClick, label: !state.active ? 'Delete Personnel' : 'Confirm Delete' }
 }
 
-export const useScrollToRef = (ref: React.RefObject<HTMLDivElement|null>) => {
+export const useHandleForm = () => {
   const { formType } = useContext(RosterCtx)
+
+  const formRef = useRef<HTMLDivElement>(null)
 
   const active = !!formType
 
   useEffect(() => {
-    if(active && ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' })
+    if(active && formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' })
     } else window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [ref, active])
+  }, [formRef, active])
+
+  return { formType, formRef }
 }

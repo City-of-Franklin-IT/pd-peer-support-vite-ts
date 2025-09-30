@@ -22,7 +22,7 @@ export const Table = ({ tableData }: { tableData: AppTypes.SupportInterface[] })
 export const NoSupport = () => {
 
   return (
-    <div className="flex flex-col gap-4 font-[play] text-neutral-content text-center m-10 p-10 m-auto outline outline-2 outline-dashed outline-neutral-content w-fit rounded-xl">
+    <div className="flex flex-col gap-4 font-[play] text-neutral-content text-center p-10 m-auto outline-2 outline-dashed outline-neutral-content w-fit rounded-xl">
       <span className="text-xl uppercase font-bold">No Peer Support Entries</span>
       <Link to={'/create/support'} className="text-lg text-warning font-bold hover:text-info">Click to create peer support entry</Link>
     </div>
@@ -61,18 +61,22 @@ const TableBody = ({ tableData }: { tableData: AppTypes.SupportInterface[] }) =>
   )
 }
 
-const TableRow = ({ tableData, index }: { tableData: AppTypes.SupportInterface, index: number }) => {
-  const onTableRowClick = useOnTableRowClick(tableData.uuid)
+type TableRowProps = { tableData: AppTypes.SupportInterface, index: number }
+
+const TableRow = (props: TableRowProps) => {
+  const onTableRowClick = useOnTableRowClick(props.tableData.uuid)
 
   const visible = useSetColumnVisibility()
 
+  const bgColor = props.index % 2 === 0 ? 'bg-neutral/20' : null
+
   return (
-    <tr className={`border-0 border-t-1 border-neutral-content whitespace-nowrap hover:cursor-pointer hover:bg-neutral ${ index % 2 === 0 ? 'bg-neutral/20' : null }`} onClick={onTableRowClick}>
-      <td className="pl-10 whitespace-nowrap"><DateTimes support={tableData} /></td>
-      <td className="pl-10">{tableData.supportDesignation}</td>
-      <td className="px-10"><SupportType supportType={tableData.supportType} /></td>
-      <td className="px-10"><Personnel tableData={tableData} /></td>
-      <td className={`${ !visible ? 'hidden' : 'p-6 text-center block' }`}><Note note={tableData.note} /></td>
+    <tr className={`border-0 border-t-1 border-neutral-content whitespace-nowrap hover:cursor-pointer hover:bg-neutral ${ bgColor }`} onClick={onTableRowClick}>
+      <td className="pl-10 whitespace-nowrap"><DateTimes support={props.tableData} /></td>
+      <td className="pl-10">{props.tableData.supportDesignation}</td>
+      <td className="px-10"><SupportType supportType={props.tableData.supportType} /></td>
+      <td className="px-10"><Personnel tableData={props.tableData} /></td>
+      <td className={`${ !visible ? 'hidden' : 'p-6 text-center block' }`}><Note note={props.tableData.note} /></td>
     </tr> 
   )
 }

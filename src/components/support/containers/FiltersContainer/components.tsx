@@ -13,8 +13,12 @@ export const DateRangeFilterInputs = () => {
     <div className="flex flex-col gap-2 items-center p-3 pb-4 border-1 border-b-3 border-r-3 border-neutral-content rounded-lg bg-neutral/50 w-full shadow-xl">
       <span className="text-neutral-content uppercase font-bold">Date Range Filter</span>
       <div className="flex items-center gap-4 font-[play] px-2 justify-center flex-wrap">
-        <DateRangeStartInput />
-        <DateRangeEndInput />
+        <DateRangeInput onChange={(e) => dispatch({ type: 'SET_DATE_RANGE_FILTER_START', payload: e.currentTarget.value })}>
+          Start:
+        </DateRangeInput>
+        <DateRangeInput onChange={(e) => dispatch({ type: 'SET_DATE_RANGE_FILTER_END', payload: e.currentTarget.value })}>
+          End:
+        </DateRangeInput>
       </div>
       <ClearFilterBtn
         onClick={() => {
@@ -31,25 +35,21 @@ export const PersonnelFilter = () => {
 
   const { isSuccess } = useGetRosterPersonnel()
 
+  if(!isSuccess) return <Loading />
+
   return (
     <div className="flex flex-col gap-2 items-center p-3 pb-4 border-1 border-b-3 border-r-3 border-neutral-content rounded-lg bg-neutral/50 shadow-xl w-full">
       <h3 className="text-neutral-content uppercase font-bold">Personnel Filter</h3>
-
-      {!isSuccess ? <Loading /> : (
-        <>
-          <select
-            data-testid="personnel-select"
-            className="select mx-auto w-[90%] hover:cursor-pointer"
-            value={personnelFilter}
-            onChange={(e) => dispatch({ type: 'SET_PERSONNEL_FILTER', payload: e.currentTarget.value })}>
-              <CreatePersonnelForm.PersonnelOptions />
-          </select>
-          <ClearFilterBtn
-            onClick={() => dispatch({ type: 'SET_PERSONNEL_FILTER', payload: '' })}
-            disabled={!personnelFilter} />
-        </>
-      )}
-      
+        <select
+          data-testid="personnel-select"
+          className="select mx-auto w-[90%] hover:cursor-pointer"
+          value={personnelFilter}
+          onChange={(e) => dispatch({ type: 'SET_PERSONNEL_FILTER', payload: e.currentTarget.value })}>
+            <CreatePersonnelForm.PersonnelOptions />
+        </select>
+        <ClearFilterBtn
+          onClick={() => dispatch({ type: 'SET_PERSONNEL_FILTER', payload: '' })}
+          disabled={!personnelFilter} />
     </div>
   )
 }
@@ -75,31 +75,17 @@ export const Search = () => {
   )
 }
 
-const DateRangeStartInput = () => {
-  const { dispatch } = useContext(SupportCtx)
+type DateRangeInputProps = { onChange: React.ChangeEventHandler<HTMLInputElement>, children: React.ReactNode }
+
+const DateRangeInput = (props: DateRangeInputProps) => {
 
   return (
     <div className="flex gap-2 items-center font-[play]">
-      <label className="label text-neutral-content">Start:</label>
+      <label className="label text-neutral-content">{props.children}</label>
       <input
-        data-testid="start-input" 
         type="date"
         className="input hover:cursor-pointer" 
-        onChange={(e) => dispatch({ type: 'SET_DATE_RANGE_FILTER_START', payload: e.currentTarget.value })}/>
-    </div>
-  )
-}
-
-const DateRangeEndInput = () => {
-  const { dispatch } = useContext(SupportCtx)
-
-  return (
-    <div className="flex gap-2 items-center font-[play]">
-      <label className="label text-neutral-content">End:</label>
-      <input 
-        type="date"
-        className="input hover:cursor-pointer" 
-        onChange={(e) => dispatch({ type: 'SET_DATE_RANGE_FILTER_END', payload: e.currentTarget.value })}/>
+        onChange={props.onChange}/>
     </div>
   )
 }

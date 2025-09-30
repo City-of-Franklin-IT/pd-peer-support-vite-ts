@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useRef } from "react"
 import { useQuery } from "react-query"
 import * as AppActions from '@/context/App/AppActions'
 import { useEnableQuery } from "@/helpers/hooks"
@@ -13,12 +13,16 @@ export const useGetSupport = () => {
   return useQuery(['getSupport', supportUUID], () => AppActions.getSupport(supportUUID, authHeaders(token)), { enabled: enabled && !!token && !!supportUUID })
 }
 
-export const useScrollToRef = (ref: React.RefObject<HTMLDivElement|null>) => {
+export const useHandleForm = () => {
   const { supportUUID } = useContext(SupportCtx)
 
+  const formRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
-    if(ref.current && supportUUID) {
-      ref.current.scrollIntoView({ behavior: 'smooth' })
+    if(formRef.current && supportUUID) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' })
     } else window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [ref, supportUUID])
+  }, [formRef, supportUUID])
+
+  return { supportUUID, formRef }
 }

@@ -1,15 +1,11 @@
-import { useContext } from "react"
-import SupportCtx from "../../context"
-import { useHandleNavBtns } from './hooks'
+import { useHandlePageNav } from './hooks'
 
 // Components
 import PrevPageBtn from "@/components/layout/buttons/nav/PrevPageBtn"
 import NextPageBtn from "@/components/layout/buttons/nav/NextPageBtn"
 
 export const PageNavBtns = () => { // Page nav buttons
-  const { currentPage, totalPages } = useContext(SupportCtx)
-  
-  const { handlePrevBtn, handleNextBtn, label } = useHandleNavBtns()
+  const { handlePrevBtn, handleNextBtn, label, currentPage, totalPages } = useHandlePageNav()
 
   return (
     <div className="flex flex-col ml-auto mt-auto w-fit">
