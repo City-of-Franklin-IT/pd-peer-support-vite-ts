@@ -26,7 +26,25 @@ export const useGetPerson = () => {
   return useQuery(['getPerson', rosterUUID], () => AppActions.getPerson(rosterUUID, authHeaders(token)), { enabled: enabled && !!token })
 }
 
-export const useHandleDeleteBtn = () => {
+export const useHandleForm = () => {
+  const { formType } = useContext(RosterCtx)
+
+  const formRef = useRef<HTMLDivElement>(null)
+
+  const deleteBtnProps = useHandleDeleteBtn()
+
+  const active = !!formType
+
+  useEffect(() => {
+    if(active && formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' })
+    } else window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [formRef, active])
+
+  return { formType, formRef, deleteBtnProps }
+}
+
+const useHandleDeleteBtn = () => {
   const { rosterUUID, dispatch } = useContext(RosterCtx)
 
   const [state, setState] = useState<{ active: boolean }>({ active: false })
@@ -52,20 +70,4 @@ export const useHandleDeleteBtn = () => {
   }
 
   return { onClick, label: !state.active ? 'Delete Personnel' : 'Confirm Delete' }
-}
-
-export const useHandleForm = () => {
-  const { formType } = useContext(RosterCtx)
-
-  const formRef = useRef<HTMLDivElement>(null)
-
-  const active = !!formType
-
-  useEffect(() => {
-    if(active && formRef.current) {
-      formRef.current.scrollIntoView({ behavior: 'smooth' })
-    } else window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [formRef, active])
-
-  return { formType, formRef }
 }

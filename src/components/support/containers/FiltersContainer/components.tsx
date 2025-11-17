@@ -1,41 +1,29 @@
-import { useContext } from "react"
-import SupportCtx from "../../context"
-import Loading from "@/components/layout/loading/Loading"
-import { useGetRosterPersonnel } from "@/pages/Roster/hooks"
+import { useHandleDateRangeFilterInputs, useHandlePersonnelFilter, useHandleSearch } from "./hooks"
 
 // Components
 import * as CreatePersonnelForm from '../../forms/create/CreatePersonnelForm/components'
 
 export const DateRangeFilterInputs = () => {
-  const { dateRangeFilter, dispatch } = useContext(SupportCtx)
+  const { startDateOnChange, endDateOnChange, clearBtnProps } = useHandleDateRangeFilterInputs()
 
   return (
     <div className="flex flex-col gap-2 items-center p-3 pb-4 border-1 border-b-3 border-r-3 border-neutral-content rounded-lg bg-neutral/50 w-full shadow-xl">
       <span className="text-neutral-content uppercase font-bold">Date Range Filter</span>
       <div className="flex items-center gap-4 font-[play] px-2 justify-center flex-wrap">
-        <DateRangeInput onChange={(e) => dispatch({ type: 'SET_DATE_RANGE_FILTER_START', payload: e.currentTarget.value })}>
+        <DateRangeInput onChange={startDateOnChange}>
           Start:
         </DateRangeInput>
-        <DateRangeInput onChange={(e) => dispatch({ type: 'SET_DATE_RANGE_FILTER_END', payload: e.currentTarget.value })}>
+        <DateRangeInput onChange={endDateOnChange}>
           End:
         </DateRangeInput>
       </div>
-      <ClearFilterBtn
-        onClick={() => {
-          dispatch({ type: 'SET_DATE_RANGE_FILTER_START', payload: '' })
-          dispatch({ type: 'SET_DATE_RANGE_FILTER_END', payload: '' })
-        }}
-        disabled={!dateRangeFilter.start || !dateRangeFilter.end} />
+      <ClearFilterBtn { ...clearBtnProps } />
     </div>
   )
 }
 
 export const PersonnelFilter = () => {
-  const { personnelFilter, dispatch } = useContext(SupportCtx)
-
-  const { isSuccess } = useGetRosterPersonnel()
-
-  if(!isSuccess) return <Loading />
+  const { selectProps, clearBtnProps } = useHandlePersonnelFilter()
 
   return (
     <div className="flex flex-col gap-2 items-center p-3 pb-4 border-1 border-b-3 border-r-3 border-neutral-content rounded-lg bg-neutral/50 shadow-xl w-full">
@@ -43,19 +31,16 @@ export const PersonnelFilter = () => {
         <select
           data-testid="personnel-select"
           className="select mx-auto w-[90%] hover:cursor-pointer"
-          value={personnelFilter}
-          onChange={(e) => dispatch({ type: 'SET_PERSONNEL_FILTER', payload: e.currentTarget.value })}>
+          { ...selectProps }>
             <CreatePersonnelForm.PersonnelOptions />
         </select>
-        <ClearFilterBtn
-          onClick={() => dispatch({ type: 'SET_PERSONNEL_FILTER', payload: '' })}
-          disabled={!personnelFilter} />
+        <ClearFilterBtn { ...clearBtnProps } />
     </div>
   )
 }
 
 export const Search = () => {
-  const { searchValue, dispatch } = useContext(SupportCtx)
+  const { inputProps, clearBtnProps } = useHandleSearch()
 
   return (
     <div className="flex flex-col gap-2 items-center p-6 pb-4 border-1 border-b-3 border-r-3 border-neutral-content rounded-lg bg-neutral/50 w-full shadow-xl">
@@ -66,11 +51,8 @@ export const Search = () => {
         type="text"
         className="input"
         placeholder="by peer support note.."
-        value={searchValue}
-        onChange={(e) => dispatch({ type: 'SET_SEARCH_VALUE', payload: e.currentTarget.value })} />
-      <ClearFilterBtn
-        onClick={() => dispatch({ type: 'SET_SEARCH_VALUE', payload: '' })}
-        disabled={!searchValue} />
+        { ...inputProps } />
+      <ClearFilterBtn { ...clearBtnProps } />
     </div>
   )
 }
@@ -99,8 +81,7 @@ const ClearFilterBtn = (props: ClearFilterBtnProps) => {
       data-testid="clear-filter-btn" 
       type="button"
       className="btn btn-secondary btn-sm font-[play] uppercase w-full"
-      disabled={props.disabled}
-      onClick={props.onClick}>
+      { ...props }>
         Clear
     </button>
   )

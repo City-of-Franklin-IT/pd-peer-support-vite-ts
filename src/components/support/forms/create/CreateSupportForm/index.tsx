@@ -1,5 +1,5 @@
 import { FormProvider } from "react-hook-form"
-import { useCreateSupport, useOnCancelBtnClick, useHandleFormSubmit } from "./hooks"
+import { useHandleCreateSupport } from "./hooks"
 
 // Components
 import CreateOtherSupportForm from "../CreateOtherSupportForm"
@@ -7,11 +7,7 @@ import FormBtns from "@/components/form-elements/buttons/FormBtns"
 import * as Components from './components'
 
 function CreateSupportForm() {
-  const methods = useCreateSupport()
-
-  const onCancelBtnClick = useOnCancelBtnClick()
-
-  const handleFormSubmit = useHandleFormSubmit()
+  const { methods, onCancelBtnClick, handleFormSubmit } = useHandleCreateSupport()
 
   return (
     <FormProvider { ...methods }>

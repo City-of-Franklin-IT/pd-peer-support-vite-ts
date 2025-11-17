@@ -1,20 +1,16 @@
 import { FormProvider } from "react-hook-form"
-import { useCreateRosterPersonnel, useOnCancelBtnClick, useHandleFormSubmit } from './hooks'
+import { useHandleCreateRosterPersonnelForm } from './hooks'
 
 // Components
 import FormBtns from "@/components/form-elements/buttons/FormBtns"
 import * as Components from './components'
 
 function CreateRosterPersonnelForm() {
-  const methods = useCreateRosterPersonnel()
-
-  const onCancelBtnClick = useOnCancelBtnClick()
-
-  const handleFormSubmit = useHandleFormSubmit()
+  const { methods, onCancelBtnClick, handleFormSubmit } = useHandleCreateRosterPersonnelForm()
 
   return (
     <FormProvider { ...methods }>
-      <form onSubmit={methods.handleSubmit(formData => handleFormSubmit(formData))}>
+      <form onSubmit={methods.handleSubmit(handleFormSubmit)}>
         <Components.EmailInput />
         <FormBtns onCancelBtnClick={onCancelBtnClick} />
       </form>

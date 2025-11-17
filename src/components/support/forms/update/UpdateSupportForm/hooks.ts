@@ -11,7 +11,21 @@ import { handleUpdateSupport } from './utils'
 // Types
 import * as AppTypes from '@/context/App/types'
 
-export const useUpdateSupport = (support: AppTypes.SupportInterface | undefined) => {
+export const useHandleUpdateSupportForm = (support: AppTypes.SupportInterface | undefined) => {
+  const methods = useUpdateSupport(support)
+  const onCancelBtnClick = useOnCancelBtnClick()
+  const { label, onDeleteBtnClick } = useHandleDeleteBtn()
+  const handleFormSubmit = useHandleFormSubmit()
+
+  const deleteBtnProps = {
+    onClick: onDeleteBtnClick,
+    label
+  }
+
+  return { methods, onCancelBtnClick, deleteBtnProps, handleFormSubmit }
+}
+
+const useUpdateSupport = (support: AppTypes.SupportInterface | undefined) => {
 
   return useForm<AppTypes.SupportCreateInterface>({
     mode: 'onBlur',
@@ -28,13 +42,13 @@ export const useUpdateSupport = (support: AppTypes.SupportInterface | undefined)
   })
 }
 
-export const useOnCancelBtnClick = () => {
+const useOnCancelBtnClick = () => {
   const { dispatch } = useContext(SupportCtx)
 
   return () => dispatch({ type: 'RESET_CTX' })
 }
 
-export const useHandleDeleteBtn = () => {
+const useHandleDeleteBtn = () => {
   const { supportUUID, dispatch } = useContext(SupportCtx)
 
   const [state, setState] = useState<{ active: boolean }>({ active: false })
@@ -61,7 +75,7 @@ export const useHandleDeleteBtn = () => {
   return { onDeleteBtnClick, label: !state.active ? 'Delete Support' : 'Confirm Delete' }
 }
 
-export const useHandleFormSubmit = () => {
+const useHandleFormSubmit = () => {
   const { dispatch } = useContext(SupportCtx)
 
   const queryClient = useQueryClient()

@@ -1,8 +1,8 @@
 import { Link } from 'react-router'
 import { motion } from 'motion/react'
 import { motionProps } from '@/helpers/utils'
-import { useOnTableRowClick, useSetColumnVisibility } from './hooks'
-import { supportTypeIconMap } from './utils'
+import { useSetColumnVisibility, useHandleTableRow } from './hooks'
+import { supportTypeIconMap, handleDateTimes } from './utils'
 
 // Types
 import * as AppTypes from '@/context/App/types'
@@ -64,37 +64,21 @@ const TableBody = ({ tableData }: { tableData: AppTypes.SupportInterface[] }) =>
 type TableRowProps = { tableData: AppTypes.SupportInterface, index: number }
 
 const TableRow = (props: TableRowProps) => {
-  const onTableRowClick = useOnTableRowClick(props.tableData.uuid)
-
-  const visible = useSetColumnVisibility()
-
-  const bgColor = props.index % 2 === 0 ? 'bg-neutral/20' : null
+  const { tableRowProps, noteClassName } = useHandleTableRow(props.tableData.uuid, props.index)
 
   return (
-    <tr className={`border-0 border-t-1 border-neutral-content whitespace-nowrap hover:cursor-pointer hover:bg-neutral ${ bgColor }`} onClick={onTableRowClick}>
+    <tr { ...tableRowProps }>
       <td className="pl-10 whitespace-nowrap"><DateTimes support={props.tableData} /></td>
       <td className="pl-10">{props.tableData.supportDesignation}</td>
       <td className="px-10"><SupportType supportType={props.tableData.supportType} /></td>
       <td className="px-10"><Personnel tableData={props.tableData} /></td>
-      <td className={`${ !visible ? 'hidden' : 'p-6 text-center block' }`}><Note note={props.tableData.note} /></td>
+      <td className={noteClassName}><Note note={props.tableData.note} /></td>
     </tr> 
   )
 }
 
 const DateTimes = ({ support }: { support: AppTypes.SupportInterface }) => {
-  const start = new Date(support.startDateTime).toISOString()
-  const end = new Date(support.endDateTime).toISOString()
-
-  const startEndDateTimes = {
-    start: {
-      date: start.split('T')[0],
-      time: start.split('T')[1].slice(0, -8)
-    },
-    end: {
-      date: end.split('T')[0],
-      time: end.split('T')[1].slice(0, -8)
-    }
-  }
+  const startEndDateTimes = handleDateTimes(support)
 
   return (
     <div className="flex flex-col w-full">
@@ -121,7 +105,7 @@ const Personnel = ({ tableData }: { tableData: AppTypes.SupportInterface }) => {
 }
 
 const SupportType = ({ supportType }: { supportType: AppTypes.SupportType }) => {
-  const src = supportTypeIconMap.get(supportType)
+  const src = supportTypeIconMap.get(supportType)!
 
   return (
     <div className="flex flex-col gap-1 items-center">
@@ -131,8 +115,7 @@ const SupportType = ({ supportType }: { supportType: AppTypes.SupportType }) => 
   )
 }
 
-const SupportTypeIcon = ({ src }: { src: string | undefined }) => {
-  if(!src) return
+const SupportTypeIcon = ({ src }: { src: string }) => {
 
   return (
     <img src={src} className="w-[40px]" />

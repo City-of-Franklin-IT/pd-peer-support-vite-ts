@@ -1,5 +1,5 @@
 import { FormProvider } from 'react-hook-form'
-import { useUpdateSupport, useOnCancelBtnClick, useHandleDeleteBtn, useHandleFormSubmit } from './hooks'
+import { useHandleUpdateSupportForm } from './hooks'
 
 // Types
 import * as AppTypes from '@/context/App/types'
@@ -11,13 +11,7 @@ import DeleteBtn from '@/components/form-elements/buttons/DeleteBtn'
 import * as CreateSupport from '../../create/CreateSupportForm/components'
 
 function UpdateSupportForm({ support }: { support: AppTypes.SupportInterface | undefined }) {
-  const methods = useUpdateSupport(support)
-
-  const onCancelBtnClick = useOnCancelBtnClick()
-
-  const { label, onDeleteBtnClick } = useHandleDeleteBtn()
-
-  const handleFormSubmit = useHandleFormSubmit()
+  const { methods, onCancelBtnClick, deleteBtnProps, handleFormSubmit } = useHandleUpdateSupportForm(support)
 
   return (
     <FormProvider { ...methods }>
@@ -37,9 +31,9 @@ function UpdateSupportForm({ support }: { support: AppTypes.SupportInterface | u
           <div className="flex flex-col gap-6">
             <FormBtns onCancelBtnClick={onCancelBtnClick} />
             <DeleteBtn 
-              onClick={onDeleteBtnClick}
+              onClick={deleteBtnProps.onClick}
               size={'btn-lg'}>
-                {label}
+                {deleteBtnProps.label}
             </DeleteBtn>
           </div>
         </div>

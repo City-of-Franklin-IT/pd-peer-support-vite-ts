@@ -1,22 +1,28 @@
-import { useContext, useCallback } from "react"
+import { useContext } from "react"
 import SupportCtx from "../../context"
 
 export const useHandlePageNav = () => {
   const { currentPage, totalPages, dispatch } = useContext(SupportCtx)
 
-  const handlePrevBtn = useCallback(() => {
-    if(currentPage !== 1) {
-      dispatch({ type: 'SET_CURRENT_PAGE', payload: currentPage - 1 })
-    }
-  }, [currentPage, dispatch])
+  const prevBtnOnClick = () => {
+    dispatch({ type: 'SET_CURRENT_PAGE', payload: currentPage - 1 })
+  }
 
-  const handleNextBtn = useCallback(() => {
-    if(currentPage !== totalPages) {
-      dispatch({ type: 'SET_CURRENT_PAGE', payload: currentPage + 1 })
-    }
-  }, [currentPage, totalPages, dispatch])
+  const nextBtnOnClick = () => {
+    dispatch({ type: 'SET_CURRENT_PAGE', payload: currentPage + 1 })
+  }
+
+  const prevPageBtnProps = {
+    onClick: prevBtnOnClick,
+    disabled: currentPage === 1
+  }
+
+  const nextPageBtnProps = {
+    onClick: nextBtnOnClick,
+    disabled: !totalPages || currentPage === totalPages
+  }
 
   const label = `Page ${ currentPage } / ${ totalPages }`
 
-  return { currentPage, handlePrevBtn, handleNextBtn, label, totalPages }
+  return { prevPageBtnProps, nextPageBtnProps, label }
 }

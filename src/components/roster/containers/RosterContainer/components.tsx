@@ -1,6 +1,6 @@
-import { useContext, useRef } from "react"
+import { useContext } from "react"
 import RosterCtx from "../../context"
-import { useHandleDeleteBtn, useGetPerson, useHandleForm } from "./hooks"
+import { useGetPerson, useHandleForm } from "./hooks"
 
 // Components
 import HandleLoading from "@/utils/HandleLoading"
@@ -29,9 +29,7 @@ export const CreateBtn = ({ children }: { children: React.ReactNode }) => {
 }
 
 export const Form = () => {
-  const { formType, formRef } = useHandleForm()
-
-  const { onClick, label } = useHandleDeleteBtn()
+  const { formType, formRef, deleteBtnProps } = useHandleForm()
 
   if(!formType) return
 
@@ -45,9 +43,9 @@ export const Form = () => {
     <div ref={formRef} className="flex flex-col items-center gap-4 w-full">
       <GetPersonnel />
       <DeleteBtn 
-        onClick={onClick}
+        onClick={deleteBtnProps.onClick}
         size={'btn-lg'}>
-          {label}
+          {deleteBtnProps.label}
       </DeleteBtn>
     </div>
   )

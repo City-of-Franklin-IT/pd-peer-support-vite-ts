@@ -1,10 +1,7 @@
-import { Controller, useFormContext } from "react-hook-form"
+import { Controller } from "react-hook-form"
 import { useGetRosterPersonnel } from "@/pages/Roster/hooks"
-import { useHandleVisibility } from './hooks'
+import { useHandlePersonnelSelect } from './hooks'
 import styles from '@/components/form-elements/Forms.module.css'
-
-// Types
-import * as AppTypes from '@/context/App/types'
 
 // Components
 import FormLabel from "@/components/form-elements/FormLabel"
@@ -12,11 +9,9 @@ import FormError from "@/components/form-elements/FormError"
 import RemoveBtn from "@/components/form-elements/buttons/RemoveBtn"
 
 export const PersonnelSelect = ({ index }: { index: number }) => {
-  const { control, setValue } = useFormContext<AppTypes.SupportCreateInterface>()
+  const { control, setValue, deleted, removeBtnProps } = useHandlePersonnelSelect(index)
 
-  const { deleted, showRemoveBtn } = useHandleVisibility(index)
-
-  if(deleted) return null
+  if(deleted) return
 
   return (
     <div className="flex flex-col gap-2">
@@ -47,9 +42,7 @@ export const PersonnelSelect = ({ index }: { index: number }) => {
             <FormError error={error?.message} />
           </div>
         )} />
-        <RemoveBtn 
-          onClick={() => setValue(`Personnel.${ index }._deleted`, true, { shouldDirty: true, shouldValidate: true })}
-          visible={showRemoveBtn} />
+        <RemoveBtn { ...removeBtnProps } />
     </div>
   )
 }

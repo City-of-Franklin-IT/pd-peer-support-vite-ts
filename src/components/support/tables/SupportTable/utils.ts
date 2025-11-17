@@ -23,3 +23,21 @@ export const supportTypeIconMap = new Map<AppTypes.SupportType, string | undefin
   ['Work', workIcon],
   ['Other', undefined]
 ])
+
+export const handleDateTimes = (support: AppTypes.SupportInterface) => {
+  const start = new Date(support.startDateTime).toISOString()
+  const end = new Date(support.endDateTime).toISOString()
+
+  const startEndDateTimes = {
+    start: {
+      date: start.split('T')[0],
+      time: start.split('T')[1].slice(0, -8)
+    },
+    end: {
+      date: end.split('T')[0],
+      time: end.split('T')[1].slice(0, -8)
+    }
+  }
+
+  return startEndDateTimes
+}

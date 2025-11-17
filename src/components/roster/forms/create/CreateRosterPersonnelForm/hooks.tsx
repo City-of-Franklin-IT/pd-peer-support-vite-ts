@@ -8,7 +8,15 @@ import { handleCreateRosterPersonnel } from './utils'
 import * as AppTypes from '@/context/App/types'
 import { useEnableQuery } from "@/helpers/hooks"
 
-export const useCreateRosterPersonnel = () => {
+export const useHandleCreateRosterPersonnelForm = () => {
+  const methods = useCreateRosterPersonnel()
+  const onCancelBtnClick = useOnCancelBtnClick()
+  const handleFormSubmit = useHandleFormSubmit()
+
+  return { methods, onCancelBtnClick, handleFormSubmit }
+}
+
+const useCreateRosterPersonnel = () => {
 
   return useForm<AppTypes.PersonnelRosterCreateInterface>({
     mode: 'onBlur',
@@ -24,7 +32,7 @@ export const useOnCancelBtnClick = () => {
   return () => dispatch({ type: 'RESET_CTX' })
 }
 
-export const useHandleFormSubmit = () => {
+const useHandleFormSubmit = () => {
   const { dispatch } = useContext(RosterCtx)
 
   const { enabled, token } = useEnableQuery()

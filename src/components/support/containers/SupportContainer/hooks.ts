@@ -24,5 +24,7 @@ export const useHandleForm = () => {
     } else window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [formRef, supportUUID])
 
-  return { supportUUID, formRef }
+  const visible = !!supportUUID
+
+  return { visible, formRef }
 }

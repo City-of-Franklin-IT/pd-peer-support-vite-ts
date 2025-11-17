@@ -1,6 +1,5 @@
 import { FormProvider } from 'react-hook-form'
-import { useOnCancelBtnClick } from '../../create/CreateRosterPersonnelForm/hooks'
-import { useUpdateRosterPersonnel, useHandleFormSubmit } from './hooks'
+import { useHandleUpdateRosterPersonnelForm } from './hooks'
 
 // Types
 import * as AppTypes from '@/context/App/types'
@@ -11,15 +10,11 @@ import * as CreateRosterPersonnelForm from '../../create/CreateRosterPersonnelFo
 import * as Components from './components'
 
 function UpdateRosterPersonnelForm({ personnel }: { personnel: AppTypes.PersonnelRosterInterface | undefined }) {
-  const methods = useUpdateRosterPersonnel(personnel)
-
-  const onCancelBtnClick = useOnCancelBtnClick()
-
-  const handleFormSubmit = useHandleFormSubmit()
+  const { methods, onCancelBtnClick, handleFormSubmit } = useHandleUpdateRosterPersonnelForm(personnel)
 
   return (
     <FormProvider { ...methods }>
-      <form onSubmit={methods.handleSubmit(formData => handleFormSubmit(formData))} className="w-full">
+      <form onSubmit={methods.handleSubmit(handleFormSubmit)} className="w-full">
         <Components.Header />
 
         <CreateRosterPersonnelForm.EmailInput />

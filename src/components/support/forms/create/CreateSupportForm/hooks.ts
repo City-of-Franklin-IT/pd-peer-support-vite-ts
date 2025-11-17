@@ -1,14 +1,37 @@
 import { useCallback } from "react"
 import { useNavigate } from "react-router"
 import { useQueryClient } from "react-query"
-import { useForm } from "react-hook-form"
+import { useForm, useFormContext, useFieldArray } from "react-hook-form"
 import { useEnableQuery } from "@/helpers/hooks"
 import { handleCreateSupport } from './utils'
 
 // Types
 import * as AppTypes from '@/context/App/types'
 
-export const useCreateSupport = () => {
+export const useHandleCreateSupport = () => {
+  const methods = useCreateSupport()
+  const onCancelBtnClick = useOnCancelBtnClick()
+  const handleFormSubmit = useHandleFormSubmit()
+
+  return { methods, onCancelBtnClick, handleFormSubmit }
+}
+
+export const useHandleAddPersonnelBtn = () => {
+  const { control } = useFormContext<AppTypes.SupportCreateInterface>()
+  
+  const { append } = useFieldArray({
+    control,
+    name: 'Personnel'
+  })
+
+  const onClick = () => {
+    append({ email: '', parentId: '' })
+  }
+
+  return onClick
+}
+
+const useCreateSupport = () => {
 
   return useForm<AppTypes.SupportCreateInterface>({
     mode: 'onBlur',
@@ -24,13 +47,13 @@ export const useCreateSupport = () => {
   })
 }
 
-export const useOnCancelBtnClick = () => {
+const useOnCancelBtnClick = () => {
   const navigate = useNavigate()
 
   return () => navigate('/support')
 }
 
-export const useHandleFormSubmit = () => {
+const useHandleFormSubmit = () => {
   const navigate = useNavigate()
 
   const queryClient = useQueryClient()

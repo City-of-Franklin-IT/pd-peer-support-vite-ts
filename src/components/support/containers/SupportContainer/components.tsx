@@ -6,9 +6,9 @@ import HandleLoading from "@/utils/HandleLoading"
 import UpdateSupportForm from "../../forms/update/UpdateSupportForm"
 
 export const Form = () => {
-  const { supportUUID, formRef } = useHandleForm()
+  const { visible, formRef } = useHandleForm()
 
-  if(!supportUUID) return
+  if(!visible) return
 
   return (
     <div data-testid="get-support" ref={formRef}>

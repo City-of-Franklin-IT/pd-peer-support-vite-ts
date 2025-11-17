@@ -4,12 +4,6 @@ import SupportCtx from "../../context"
 // Types
 import * as AppTypes from '@/context/App/types'
 
-export const useOnTableRowClick = (uuid: string) => {
-  const { dispatch } = useContext(SupportCtx)
-
-  return () => dispatch({ type: 'SET_SUPPORT_UUID', payload: uuid })
-}
-
 export const useSetTableData = (support: AppTypes.SupportInterface[]) => {
   const { dateRangeFilter, personnelFilter, searchValue, currentPage } = useContext(SupportCtx)
 
@@ -66,4 +60,26 @@ export const useSetColumnVisibility = () => { // Hide cols on smaller display si
   }, [])
 
   return state.visible
+}
+
+export const useHandleTableRow = (uuid: string, index: number) => {
+  const onTableRowClick = useOnTableRowClick(uuid)
+  const visible = useSetColumnVisibility()
+  const bgColor = index % 2 === 0 ? 'bg-neutral/20' : null
+
+  const rowClassName = `border-0 border-t-1 border-neutral-content whitespace-nowrap hover:cursor-pointer hover:bg-neutral ${ bgColor }`
+  const noteClassName = `${ !visible ? 'hidden' : 'p-6 text-center block' }`
+
+  const tableRowProps = {
+    onClick: onTableRowClick,
+    className: rowClassName
+  }
+
+  return { tableRowProps, noteClassName }
+}
+
+const useOnTableRowClick = (uuid: string) => {
+  const { dispatch } = useContext(SupportCtx)
+
+  return () => dispatch({ type: 'SET_SUPPORT_UUID', payload: uuid })
 }

@@ -1,6 +1,7 @@
-import { useFormContext, useFieldArray } from "react-hook-form"
+import { useFormContext } from "react-hook-form"
 import styles from '@/components/form-elements/Forms.module.css'
 import { supportDesignations, supportTypes } from './utils'
+import { useHandleAddPersonnelBtn } from './hooks'
 
 // Types
 import * as AppTypes from '@/context/App/types'
@@ -191,16 +192,7 @@ const SupportTypeOptions = () => {
 }
 
 const AddPersonnelBtn = () => {
-  const { control } = useFormContext<AppTypes.SupportCreateInterface>()
-
-  const { append } = useFieldArray({
-    control,
-    name: 'Personnel'
-  })
-
-  const onClick = () => {
-    append({ email: '', parentId: '' })
-  }
+  const onClick = useHandleAddPersonnelBtn()
 
   return (
     <button 

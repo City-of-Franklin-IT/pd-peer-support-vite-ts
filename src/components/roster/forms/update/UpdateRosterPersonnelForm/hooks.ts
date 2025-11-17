@@ -4,12 +4,21 @@ import { useForm } from 'react-hook-form'
 import RosterCtx from '@/components/roster/context'
 import { useEnableQuery } from '@/helpers/hooks'
 import { errorPopup } from '@/utils/Toast/Toast'
+import { useOnCancelBtnClick } from '../../create/CreateRosterPersonnelForm/hooks'
 import { handleUpdateRosterPersonnel } from './utils'
 
 // Types
 import * as AppTypes from '@/context/App/types'
 
-export const useUpdateRosterPersonnel = (personnel: AppTypes.PersonnelRosterInterface | undefined) => {
+export const useHandleUpdateRosterPersonnelForm = (personnel: AppTypes.PersonnelRosterInterface | undefined) => {
+  const methods = useUpdateRosterPersonnel(personnel)
+  const onCancelBtnClick = useOnCancelBtnClick()
+  const handleFormSubmit = useHandleFormSubmit()
+
+  return { methods, onCancelBtnClick, handleFormSubmit }
+}
+
+const useUpdateRosterPersonnel = (personnel: AppTypes.PersonnelRosterInterface | undefined) => {
 
   return useForm<AppTypes.PersonnelRosterCreateInterface>({
     mode: 'onBlur',
@@ -20,7 +29,7 @@ export const useUpdateRosterPersonnel = (personnel: AppTypes.PersonnelRosterInte
   })
 }
 
-export const useHandleFormSubmit = () => {
+const useHandleFormSubmit = () => {
   const { dispatch } = useContext(RosterCtx)
 
   const queryClient = useQueryClient()
