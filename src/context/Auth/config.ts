@@ -14,6 +14,7 @@ export const msalConfig = {
         storeAuthStateInCookie: false
     },
     system: {
+        allowRedirectInIframe: true,
         loggerOptions: {
             loggerCallback: (level: LogLevel, message: string, containsPii: boolean) => {
                 if (containsPii) {
