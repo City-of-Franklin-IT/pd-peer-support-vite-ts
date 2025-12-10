@@ -31,7 +31,7 @@ describe('PaginationContainer', () => {
       <MemoryRouter>
         <SupportProvider>
           <TestComponent>
-            <PaginationContainer />
+            <PaginationContainer count={25} />
           </TestComponent>
         </SupportProvider>
       </MemoryRouter>

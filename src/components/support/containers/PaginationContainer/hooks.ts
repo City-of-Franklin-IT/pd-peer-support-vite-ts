@@ -1,7 +1,7 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import SupportCtx from "../../context"
 
-export const useHandlePageNav = () => {
+export const useHandlePageNav = (count: number) => {
   const { currentPage, totalPages, dispatch } = useContext(SupportCtx)
 
   const prevBtnOnClick = () => {
@@ -23,6 +23,16 @@ export const useHandlePageNav = () => {
   }
 
   const label = `Page ${ currentPage } / ${ totalPages }`
+
+  useEffect(() => {
+    if(count > 25) {
+      const payload = Math.ceil(count / 25)
+      
+      if(totalPages !== payload) {
+        dispatch({ type: 'SET_TOTAL_PAGES', payload })
+      }
+    }
+  }, [count])
 
   return { prevPageBtnProps, nextPageBtnProps, label }
 }

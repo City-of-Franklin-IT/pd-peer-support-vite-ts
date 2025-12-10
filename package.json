@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --port 5054",
     "build": "tsc -b && vite build",
-    "deploy": "scp -r dist/* andrew@cofasv32:/home/andrew/apps/builds/pd-peer-support-vite-ts/dist",
+    "deploy": "scp -r dist andrew@cofasv32:/home/andrew/apps/builds/pd-peer-support-vite-ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest"

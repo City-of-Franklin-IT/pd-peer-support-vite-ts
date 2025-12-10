@@ -4,8 +4,8 @@ import { useHandlePageNav } from './hooks'
 import PrevPageBtn from "@/components/layout/buttons/nav/PrevPageBtn"
 import NextPageBtn from "@/components/layout/buttons/nav/NextPageBtn"
 
-export const PageNavBtns = () => { // Page nav buttons
-  const { prevPageBtnProps, nextPageBtnProps, label } = useHandlePageNav()
+export const PageNavBtns = ({ count }: { count: number }) => { // Page nav buttons
+  const { prevPageBtnProps, nextPageBtnProps, label } = useHandlePageNav(count)
 
   return (
     <div className="flex flex-col ml-auto mt-auto w-fit">

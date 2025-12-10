@@ -16,7 +16,7 @@ function SupportTable({ support }: { support: AppTypes.SupportInterface[] }) {
 
   return (
     <>
-      <PaginationContainer />
+      <PaginationContainer count={support.length} />
       <Components.Table tableData={tableData} />
     </>
   )
