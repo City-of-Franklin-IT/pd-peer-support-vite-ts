@@ -1,19 +1,22 @@
-import React, { ChangeEvent, useContext } from "react"
+import { ChangeEvent, useContext } from "react"
 import SupportCtx from "../../context"
 
+/**
+* Returns props for date range filter inputs; clear date range filter button props
+**/
 export const useHandleDateRangeFilterInputs = () => {
   const { dateRangeFilter, dispatch } = useContext(SupportCtx)
 
-  const startDateOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const dateOnChange = (e: React.ChangeEvent<HTMLInputElement>, field: 'start' | 'end') => {
     const payload = e.currentTarget.value
 
-    dispatch({ type: 'SET_DATE_RANGE_FILTER_START', payload })
-  }
+    const type = field === 'start' ?
+      'SET_DATE_RANGE_FILTER_START' :
+      'SET_DATE_RANGE_FILTER_END'
 
-  const endDateOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const payload = e.currentTarget.value
-
-    dispatch({ type: 'SET_DATE_RANGE_FILTER_END', payload })
+    if(dateRangeFilter[field] !== payload) {
+      dispatch({ type, payload })
+    }    
   }
 
   const clearBtnOnClick = () => {
@@ -26,16 +29,32 @@ export const useHandleDateRangeFilterInputs = () => {
     disabled: !dateRangeFilter.start || !dateRangeFilter.end
   }
 
-  return { startDateOnChange, endDateOnChange, clearBtnProps }
+  const inputProps = {
+    start: {
+      onChange: (e: React.ChangeEvent<HTMLInputElement>) => dateOnChange(e, 'start'),
+      value: dateRangeFilter.start
+    },
+    end: {
+      onChange: (e: React.ChangeEvent<HTMLInputElement>) => dateOnChange(e, 'end'),
+      value: dateRangeFilter.end
+    }
+  }
+
+  return { inputProps, clearBtnProps }
 }
 
+/**
+* Returns personnel filter select props; clear personnel filter button props
+**/
 export const useHandlePersonnelFilter = () => {
   const { personnelFilter, dispatch } = useContext(SupportCtx)
 
   const selectOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const payload = e.currentTarget.value
 
-    dispatch({ type: 'SET_PERSONNEL_FILTER', payload })
+    if(payload !== personnelFilter) {
+      dispatch({ type: 'SET_PERSONNEL_FILTER', payload })
+    }
   }
 
   const clearBtnOnClick = () => {
@@ -55,6 +74,9 @@ export const useHandlePersonnelFilter = () => {
   return { selectProps, clearBtnProps }
 }
 
+/**
+* Returns search input props; clear search button props
+**/
 export const useHandleSearch = () => {
   const { searchValue, dispatch } = useContext(SupportCtx)
 
@@ -70,7 +92,7 @@ export const useHandleSearch = () => {
 
   const inputProps = {
     value: searchValue,
-    onchange: searchOnChange
+    onChange: searchOnChange
   }
 
   const clearBtnProps = { 

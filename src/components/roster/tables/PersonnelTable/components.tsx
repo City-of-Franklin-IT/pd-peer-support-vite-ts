@@ -44,12 +44,12 @@ const TableBody = ({ tableData }: { tableData: AppTypes.PersonnelRosterInterface
 type TableRowProps = { tableData: AppTypes.PersonnelRosterInterface, index: number }
 
 const TableRow = (props: TableRowProps) => {
-  const { rowProps, support, email } = useHandleTableRow(props.tableData, props.index)
+  const { rowProps, supportCount, email } = useHandleTableRow(props.tableData, props.index)
 
   return (
     <tr { ...rowProps }>
       <td className="px-10 whitespace-nowrap">{email}</td>
-      <td className="text-center">{support}</td>
+      <td className="text-center">{supportCount}</td>
     </tr>
   )
 }

@@ -5,14 +5,19 @@ import { useEnableQuery } from "@/helpers/hooks"
 import { authHeaders } from "@/helpers/utils"
 import SupportCtx from "../../context"
 
+/**
+* Returns support entry by uuid from server
+**/
 export const useGetSupport = () => {
   const { supportUUID } = useContext(SupportCtx)
-
   const { enabled, token } = useEnableQuery()
 
   return useQuery(['getSupport', supportUUID], () => AppActions.getSupport(supportUUID, authHeaders(token)), { enabled: enabled && !!token && !!supportUUID })
 }
 
+/**
+* Returns form visibility boolean and ref; scrolls to ref when available
+**/
 export const useHandleForm = () => {
   const { supportUUID } = useContext(SupportCtx)
 

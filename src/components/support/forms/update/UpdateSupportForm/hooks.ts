@@ -11,6 +11,9 @@ import { handleUpdateSupport } from './utils'
 // Types
 import * as AppTypes from '@/context/App/types'
 
+/**
+* Returns update support form methods, cancel button onClick handler, delete button props, and form submit function
+**/
 export const useHandleUpdateSupportForm = (support: AppTypes.SupportInterface | undefined) => {
   const methods = useUpdateSupport(support)
   const onCancelBtnClick = useOnCancelBtnClick()
@@ -25,6 +28,9 @@ export const useHandleUpdateSupportForm = (support: AppTypes.SupportInterface | 
   return { methods, onCancelBtnClick, deleteBtnProps, handleFormSubmit }
 }
 
+/**
+* Returns update support form methods
+**/
 const useUpdateSupport = (support: AppTypes.SupportInterface | undefined) => {
 
   return useForm<AppTypes.SupportCreateInterface>({
@@ -42,12 +48,20 @@ const useUpdateSupport = (support: AppTypes.SupportInterface | undefined) => {
   })
 }
 
+/**
+* Returns cancel button onClick handler
+**/
 const useOnCancelBtnClick = () => {
   const { dispatch } = useContext(SupportCtx)
 
-  return () => dispatch({ type: 'RESET_CTX' })
+  const onClick = () => dispatch({ type: 'RESET_CTX' })
+
+  return onClick
 }
 
+/**
+* Returns support delete button onClick handler and button label
+**/
 const useHandleDeleteBtn = () => {
   const { supportUUID, dispatch } = useContext(SupportCtx)
 
@@ -72,9 +86,14 @@ const useHandleDeleteBtn = () => {
     } else errorPopup(result.msg)
   }
 
-  return { onDeleteBtnClick, label: !state.active ? 'Delete Support' : 'Confirm Delete' }
+  const label = !state.active ? 'Delete Support' : 'Confirm Delete'
+
+  return { onDeleteBtnClick, label }
 }
 
+/**
+* Returns update support form submit function
+**/
 const useHandleFormSubmit = () => {
   const { dispatch } = useContext(SupportCtx)
 

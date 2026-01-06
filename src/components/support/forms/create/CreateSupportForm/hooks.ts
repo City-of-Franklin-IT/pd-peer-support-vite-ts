@@ -8,6 +8,9 @@ import { handleCreateSupport } from './utils'
 // Types
 import * as AppTypes from '@/context/App/types'
 
+/**
+* Returns create support form methods, cancel button onClick handler, and create support form submit function
+**/
 export const useHandleCreateSupport = () => {
   const methods = useCreateSupport()
   const onCancelBtnClick = useOnCancelBtnClick()
@@ -16,6 +19,9 @@ export const useHandleCreateSupport = () => {
   return { methods, onCancelBtnClick, handleFormSubmit }
 }
 
+/**
+* Returns add personnel button onClick handler
+**/
 export const useHandleAddPersonnelBtn = () => {
   const { control } = useFormContext<AppTypes.SupportCreateInterface>()
   
@@ -31,6 +37,9 @@ export const useHandleAddPersonnelBtn = () => {
   return onClick
 }
 
+/**
+* Returns create support form methods
+**/
 const useCreateSupport = () => {
 
   return useForm<AppTypes.SupportCreateInterface>({
@@ -47,12 +56,20 @@ const useCreateSupport = () => {
   })
 }
 
+/**
+* Returns cancel button onClick handler
+**/
 const useOnCancelBtnClick = () => {
   const navigate = useNavigate()
 
-  return () => navigate('/support')
+  const onClick = () => navigate('/support')
+
+  return onClick
 }
 
+/**
+* Returns create support form submit function
+**/
 const useHandleFormSubmit = () => {
   const navigate = useNavigate()
 

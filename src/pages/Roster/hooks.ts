@@ -3,6 +3,9 @@ import { useEnableQuery } from "@/helpers/hooks"
 import { authHeaders } from "@/helpers/utils"
 import * as AppActions from '@/context/App/AppActions'
 
+/**
+* Returns roster personnel from server
+**/
 export const useGetRosterPersonnel = () => {
   const { enabled, token } = useEnableQuery()
 

@@ -5,32 +5,33 @@ import HeaderCtx from "./context"
 // Types
 import { PagesType } from "./context"
 
+/**
+* Returns title link href
+**/
 export const useHandleTitle = () => {
   const { pathname } = useLocation()
 
-  const width = window.innerWidth
-
   const href = pathname !== '/' ? '/support' : ''
 
-  const visible = useMemo(() => {
-    if(width >= 1024) {
-      return true
-    }
-    
-    return false
-  }, [width])
-
-  return { href, visible }
+  return href
 }
 
+/**
+* Returns header buttons visibility boolean
+**/
 export const useHandleButtonsVisibility = () => {
   const { pathname } = useLocation()
 
-  return pathname !== '/'
+  const visibile = pathname !== '/'
+
+  return visibile
 }
 
+/**
+* Handles updating activePage in context on page change
+**/
 export const useSetActivePage = () => {
-  const { dispatch } = useContext(HeaderCtx)
+  const { activePage, dispatch } = useContext(HeaderCtx)
 
   const { pathname } = useLocation()
 
@@ -51,6 +52,8 @@ export const useSetActivePage = () => {
         payload = undefined
     }
 
-    return () => dispatch({ type: 'SET_ACTIVE_PAGE', payload })
-  }, [pathname, dispatch])
+    if(payload !== activePage) {
+      dispatch({ type: 'SET_ACTIVE_PAGE', payload })
+    }
+  }, [pathname, activePage, dispatch])
 }

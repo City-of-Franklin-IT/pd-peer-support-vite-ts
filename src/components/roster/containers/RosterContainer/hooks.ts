@@ -9,6 +9,9 @@ import { errorPopup, savedPopup } from "@/utils/Toast/Toast"
 // Types
 import { FormType } from "../../context"
 
+/**
+* Returns roster create button onClick handler
+**/
 export const useOnCreateBtnClick = (formType: FormType) => {
   const { dispatch } = useContext(RosterCtx)
 
@@ -18,6 +21,9 @@ export const useOnCreateBtnClick = (formType: FormType) => {
   }
 }
 
+/**
+* Returns person by uuid from server
+**/
 export const useGetPerson = () => {
   const { rosterUUID } = useContext(RosterCtx)
 
@@ -26,6 +32,9 @@ export const useGetPerson = () => {
   return useQuery(['getPerson', rosterUUID], () => AppActions.getPerson(rosterUUID, authHeaders(token)), { enabled: enabled && !!token })
 }
 
+/**
+* Returns formType from context and form ref; delete button props
+**/
 export const useHandleForm = () => {
   const { formType } = useContext(RosterCtx)
 
@@ -44,6 +53,9 @@ export const useHandleForm = () => {
   return { formType, formRef, deleteBtnProps }
 }
 
+/**
+* Returns delete button label and onClick handler
+**/
 const useHandleDeleteBtn = () => {
   const { rosterUUID, dispatch } = useContext(RosterCtx)
 
@@ -69,5 +81,7 @@ const useHandleDeleteBtn = () => {
     } else errorPopup(result.msg)
   }
 
-  return { onClick, label: !state.active ? 'Delete Personnel' : 'Confirm Delete' }
+  const label = !state.active ? 'Delete Personnel' : 'Confirm Delete'
+
+  return { onClick, label }
 }

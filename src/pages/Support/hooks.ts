@@ -3,6 +3,9 @@ import { useEnableQuery } from "@/helpers/hooks"
 import { authHeaders } from "@/helpers/utils"
 import * as AppActions from '@/context/App/AppActions'
 
+/**
+* Returns all peer support entries from server
+**/
 export const useGetAllSupport = () => {
   const { enabled, token } = useEnableQuery()
 

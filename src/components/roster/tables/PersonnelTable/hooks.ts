@@ -5,13 +5,13 @@ import RosterCtx from "../../context"
 import * as AppTypes from '@/context/App/types'
 import { FormType } from "../../context"
 
+/**
+* Returns personnel table row className and onClick handler
+**/
 export const useHandleTableRow = (tableData: AppTypes.PersonnelRosterInterface, index: number) => {
   const onClick = useOnTableRowClick('UpdateRosterPersonnel', tableData.uuid)
-  
-  const support = tableData.Support?.length ? tableData.Support.map(item => (item)).length : '-'
-
+  const supportCount = (Array.isArray(tableData.Support) && tableData.Support.length > 0) ? tableData.Support.length : '-'
   const bgColor = index % 2 === 0 ? 'bg-neutral/20' : null
-
   const className= `border-0 border-t-1 border-neutral-content hover:cursor-pointer hover:bg-neutral ${ bgColor }`
 
   const rowProps = {
@@ -19,9 +19,12 @@ export const useHandleTableRow = (tableData: AppTypes.PersonnelRosterInterface, 
     className
   }
 
-  return { rowProps, support, email: tableData.email }
+  return { rowProps, supportCount, email: tableData.email }
 }
 
+/**
+* Returns personnel table row onClick handler
+**/
 const useOnTableRowClick = (formType: FormType, uuid: string) => {
   const { dispatch } = useContext(RosterCtx)
 

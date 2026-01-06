@@ -3,8 +3,13 @@ import { useFormContext } from "react-hook-form"
 // Types
 import * as AppTypes from '@/context/App/types'
 
+/**
+* Returns visibility boolean for create other support form
+**/
 export const useIsVisible = () => {
   const { watch } = useFormContext<AppTypes.SupportCreateInterface>()
 
-  return watch('supportType') === 'Other'
+  const visible = watch('supportType') === 'Other'
+
+  return visible
 }

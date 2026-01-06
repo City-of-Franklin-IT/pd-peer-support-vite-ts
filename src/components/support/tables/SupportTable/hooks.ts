@@ -4,6 +4,9 @@ import SupportCtx from "../../context"
 // Types
 import * as AppTypes from '@/context/App/types'
 
+/**
+* Returns paginated peer support table data; applies filtering when applicable
+**/
 export const useSetTableData = (support: AppTypes.SupportInterface[]) => {
   const { dateRangeFilter, personnelFilter, searchValue, currentPage } = useContext(SupportCtx)
 
@@ -44,7 +47,10 @@ export const useSetTableData = (support: AppTypes.SupportInterface[]) => {
   }, [supportArray, dateRangeFilter, personnelFilter, searchValue, currentPage])
 }
 
-export const useSetColumnVisibility = () => { // Hide cols on smaller display sizes
+/**
+* Returns column visibility boolean; hides columns on smaller devices
+**/
+export const useSetColumnVisibility = () => {
   const [state, setState] = useState<{ visible: boolean }>({ visible: false })
 
   useLayoutEffect(() => {
@@ -62,6 +68,9 @@ export const useSetColumnVisibility = () => { // Hide cols on smaller display si
   return state.visible
 }
 
+/**
+* Returns table row props className and onClick handler
+**/
 export const useHandleTableRow = (uuid: string, index: number) => {
   const onTableRowClick = useOnTableRowClick(uuid)
   const visible = useSetColumnVisibility()
@@ -78,6 +87,9 @@ export const useHandleTableRow = (uuid: string, index: number) => {
   return { tableRowProps, noteClassName }
 }
 
+/**
+* Returns table row onClick handler
+**/
 const useOnTableRowClick = (uuid: string) => {
   const { dispatch } = useContext(SupportCtx)
 

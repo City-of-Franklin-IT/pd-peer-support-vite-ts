@@ -4,16 +4,16 @@ import { useHandleDateRangeFilterInputs, useHandlePersonnelFilter, useHandleSear
 import * as CreatePersonnelForm from '../../forms/create/CreatePersonnelForm/components'
 
 export const DateRangeFilterInputs = () => {
-  const { startDateOnChange, endDateOnChange, clearBtnProps } = useHandleDateRangeFilterInputs()
+  const { inputProps, clearBtnProps } = useHandleDateRangeFilterInputs()
 
   return (
     <div className="flex flex-col gap-2 items-center p-3 pb-4 border-1 border-b-3 border-r-3 border-neutral-content rounded-lg bg-neutral/50 w-full shadow-xl">
       <span className="text-neutral-content uppercase font-bold">Date Range Filter</span>
       <div className="flex items-center gap-4 font-[play] px-2 justify-center flex-wrap">
-        <DateRangeInput onChange={startDateOnChange}>
+        <DateRangeInput { ...inputProps.start }>
           Start:
         </DateRangeInput>
-        <DateRangeInput onChange={endDateOnChange}>
+        <DateRangeInput { ...inputProps.end }>
           End:
         </DateRangeInput>
       </div>
@@ -57,17 +57,18 @@ export const Search = () => {
   )
 }
 
-type DateRangeInputProps = { onChange: React.ChangeEventHandler<HTMLInputElement>, children: React.ReactNode }
+type DateRangeInputProps = { onChange: React.ChangeEventHandler<HTMLInputElement>, value: string, children: React.ReactNode }
 
 const DateRangeInput = (props: DateRangeInputProps) => {
+  const { children, ...inputProps } = props
 
   return (
     <div className="flex gap-2 items-center font-[play]">
-      <label className="label text-neutral-content">{props.children}</label>
+      <label className="label text-neutral-content">{children}</label>
       <input
         type="date"
         className="input hover:cursor-pointer" 
-        onChange={props.onChange}/>
+        { ...inputProps } />
     </div>
   )
 }

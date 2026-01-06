@@ -3,6 +3,9 @@ import { useFormContext } from "react-hook-form"
 // Types
 import * as AppTypes from '@/context/App/types'
 
+/**
+* Returns remove button props and deleted boolean
+**/
 export const useHandlePersonnelSelect = (index: number) => {
   const { control, setValue } = useFormContext<AppTypes.SupportCreateInterface>()
   
@@ -16,6 +19,9 @@ export const useHandlePersonnelSelect = (index: number) => {
   return { control, setValue, deleted, removeBtnProps }
 }
 
+/**
+* Returns deleted and showRemoveBtn visibility booleans
+**/
 const useHandleVisibility = (index: number) => {
   const { getValues } = useFormContext<AppTypes.SupportCreateInterface>()
 

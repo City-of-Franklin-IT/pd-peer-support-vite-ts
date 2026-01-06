@@ -1,25 +1,33 @@
 import { useContext, useEffect } from "react"
 import SupportCtx from "../../context"
 
+/**
+* Returns pagination button props and label; handles updating totalPages in context
+**/
 export const useHandlePageNav = (count: number) => {
   const { currentPage, totalPages, dispatch } = useContext(SupportCtx)
 
-  const prevBtnOnClick = () => {
-    dispatch({ type: 'SET_CURRENT_PAGE', payload: currentPage - 1 })
-  }
+  const btnOnClick = (type: 'prev' | 'next') => {
+    const payload = type === 'prev' ?
+      currentPage - 1 :
+      currentPage + 1
 
-  const nextBtnOnClick = () => {
-    dispatch({ type: 'SET_CURRENT_PAGE', payload: currentPage + 1 })
+    dispatch({ type: 'SET_CURRENT_PAGE', payload })
   }
 
   const prevPageBtnProps = {
-    onClick: prevBtnOnClick,
+    onClick: () => btnOnClick('prev'),
     disabled: currentPage === 1
   }
 
   const nextPageBtnProps = {
-    onClick: nextBtnOnClick,
+    onClick: () => btnOnClick('next'),
     disabled: !totalPages || currentPage === totalPages
+  }
+
+  const pageBtnProps = {
+    prevPageBtnProps,
+    nextPageBtnProps
   }
 
   const label = `Page ${ currentPage } / ${ totalPages }`
@@ -32,7 +40,7 @@ export const useHandlePageNav = (count: number) => {
         dispatch({ type: 'SET_TOTAL_PAGES', payload })
       }
     }
-  }, [count])
+  }, [count, totalPages])
 
-  return { prevPageBtnProps, nextPageBtnProps, label }
+  return { pageBtnProps, label }
 }
