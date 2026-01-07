@@ -12,7 +12,7 @@ export const useSetTableData = (support: AppTypes.SupportInterface[]) => {
 
   let supportArray = support
 
-  return useMemo(() => {
+  const data = useMemo(() => {
     if(dateRangeFilter.start && dateRangeFilter.end) { // Date range filter
       const startDate = new Date(dateRangeFilter.start)
       const endDate = new Date(dateRangeFilter.end)
@@ -42,9 +42,13 @@ export const useSetTableData = (support: AppTypes.SupportInterface[]) => {
 
     const startIndex = (currentPage - 1) * 25
     const endIndex = currentPage * 25
+    const filteredCount = supportArray.length
+    const tableData = supportArray.slice(startIndex, endIndex)
 
-    return supportArray.slice(startIndex, endIndex)
+    return { tableData, filteredCount }
   }, [supportArray, dateRangeFilter, personnelFilter, searchValue, currentPage])
+
+  return data
 }
 
 /**

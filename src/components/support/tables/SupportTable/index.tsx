@@ -8,7 +8,7 @@ import PaginationContainer from '../../containers/PaginationContainer'
 import * as Components from './components'
 
 function SupportTable({ support }: { support: AppTypes.SupportInterface[] }) {
-  const tableData = useSetTableData(support)
+  const { tableData, filteredCount } = useSetTableData(support)
 
   if(!tableData.length) return (
     <Components.NoSupport />
@@ -16,7 +16,7 @@ function SupportTable({ support }: { support: AppTypes.SupportInterface[] }) {
 
   return (
     <>
-      <PaginationContainer count={support.length} />
+      <PaginationContainer count={filteredCount} />
       <Components.Table tableData={tableData} />
     </>
   )

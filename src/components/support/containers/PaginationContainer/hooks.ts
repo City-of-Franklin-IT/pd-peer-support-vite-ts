@@ -5,7 +5,7 @@ import SupportCtx from "../../context"
 * Returns pagination button props and label; handles updating totalPages in context
 **/
 export const useHandlePageNav = (count: number) => {
-  const { currentPage, totalPages, dispatch } = useContext(SupportCtx)
+  const { currentPage, totalPages, dateRangeFilter, personnelFilter, searchValue, dispatch } = useContext(SupportCtx)
 
   const btnOnClick = (type: 'prev' | 'next') => {
     const payload = type === 'prev' ?
@@ -33,14 +33,16 @@ export const useHandlePageNav = (count: number) => {
   const label = `Page ${ currentPage } / ${ totalPages }`
 
   useEffect(() => {
-    if(count > 25) {
-      const payload = Math.ceil(count / 25)
-      
-      if(totalPages !== payload) {
-        dispatch({ type: 'SET_TOTAL_PAGES', payload })
-      }
-    }
+    const payload = count > 25 ?
+      Math.ceil(count / 25) :
+      1
+
+    dispatch({ type: 'SET_TOTAL_PAGES', payload })
   }, [count, totalPages])
+
+  useEffect(() => {
+    dispatch({ type: 'SET_CURRENT_PAGE', payload: 1 })
+  }, [dateRangeFilter, personnelFilter, searchValue])
 
   return { pageBtnProps, label }
 }
