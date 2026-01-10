@@ -2,96 +2,171 @@
 
 A React-based web application for Franklin Police Department peer support program administrators to track and manage support services provided to first responders and city employees.
 
-## 🌐 Deployment
+![React](https://img.shields.io/badge/React-18.3.1-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue) ![Vite](https://img.shields.io/badge/Vite-6.3.5-purple)
 
-**Production:** [https://pdapps.franklintn.gov/peer-support](https://pdapps.franklintn.gov/peer-support)
+## Overview
 
-## 📋 Features
+This application enables FPD peer support coordinators to document and manage support services (debriefs, defusing, referrals, etc.) provided to department personnel and other first responders. It features Azure AD authentication, personnel roster management, and comprehensive filtering/search capabilities.
 
-### Support Management
-- Create, update, and delete support entries
-- Track support provided to FPD employees and other first responders
-- Categorize support by type (debrief, defusing, referral, substance use, etc.)
-- Record support sessions with timestamps and notes
-- Filter and paginate support records
+## Features
 
-### Personnel Roster
-- Manage roster of peer support personnel
-- Track support entries associated with each personnel member
-- Add and remove personnel from the roster
+- **Support Entry Management** - Create, update, delete, and search support records with filtering by date range and personnel
+- **Personnel Roster** - Maintain roster of peer support team members with associated support history
+- **Support Categorization** - Track 10 different support types including internal/external debriefs, defusing, referrals, and substance use support
+- **Recipient Tracking** - Classify recipients as FPD employees, COF first responders, city employees, or non-COF first responders
+- **Azure AD Authentication** - Secure access via Microsoft authentication with Edge browser compatibility
+- **Pagination & Filtering** - Navigate large datasets with pagination and advanced filtering
 
-### Support Types
-- Debrief (Internal/External)
-- Defusing
-- Family Support
-- Financial Support
-- Referrals
-- Substance Use Support
-- Work-related Support
-- Undisclosed/Other
+## Prerequisites
 
-### Recipient Designations
-- FPD Employee
-- Other COF First Responder
-- Other City Employee
-- Other Non-COF First Responder
+- Node.js >= 18.0.0
+- npm >= 9.0.0
+- Access to Azure AD tenant for authentication
 
-## 🛠️ Tech Stack
+## Installation
 
-### Core
-- **React** 18.3.1 - UI framework
-- **TypeScript** 5.8.3 - Type safety
-- **Vite** 6.3.5 - Build tool and dev server
+```bash
+# Clone the repository
+git clone <repository-url>
+cd pd-peer-support-vite-ts
 
-### State & Data Management
-- **React Query** 3.39.3 - Server state management and caching
-- **React Hook Form** 7.60.0 - Form validation and handling
-- **React Router** 7.6.3 - Client-side routing
+# Install dependencies
+npm install
+```
 
-### Authentication
-- **@azure/msal-react** 3.0.15 - Azure AD/Microsoft authentication
+## Configuration
 
-### UI & Styling
-- **Tailwind CSS** 4.1.11 - Utility-first CSS
-- **DaisyUI** 5.0.46 - Component library
-- **Motion** 12.23.6 - Animations
-- **React Toastify** 11.0.5 - Notifications
+The application configuration is managed in `src/config/index.ts`. Update the following values as needed:
 
-### Testing
-- **Vitest** 3.2.4 - Unit testing framework
-- **@testing-library/react** 16.3.0 - Component testing
-- **@faker-js/faker** 9.9.0 - Test data generation
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `APP_BASE` | Base path for deployment | `/peer-support` |
+| `APP_TITLE` | Application title | `Peer Support` |
+| `API_URL` | Production API endpoint | `https://pdapps.franklintn.gov/api/v2/pd/peer-support` |
+| `NODE_ENV` | Environment mode | `production` |
+| `CLIENT_ID` | Azure AD client ID | `fc6e7f34-d393-4a51-affc-3c87ff617396` |
 
-## 🔌 API
+**Development Mode:**
+To enable development mode with local API and bypassed authentication, change `NODE_ENV` to `'development'` in `src/config/index.ts`.
 
-**API URL:** https://api.franklin-gov.com/api/v2/pd
-**API Proxy:** https://dev.franklintn.gov/api/v2/pd
-**GitHub:** [pd-api-ts](https://github.com/City-of-Franklin-IT/pd-api-ts)
+### API Endpoints
+
+| Environment | Base URL |
+|-------------|----------|
+| Development | `https://cofasv38.franklin-gov.com/api/v2/pd/peer-support` |
+| Production | `https://pdapps.franklintn.gov/api/v2/pd/peer-support` |
+
+**API Repository:** [pd-api-ts](https://github.com/City-of-Franklin-IT/pd-api-ts)
 **API Documentation:** [API Docs](https://dev.franklintn.gov/api/v2/pd/api-docs)
 
-## 💾 Database
+## Usage
 
-**Server:** COFDBV08
-**Database:** pd_peer_support
+### Development Server
 
-## 📁 Project Structure
+```bash
+npm run dev
+```
+
+Runs the app on `http://localhost:6000` (or configured host). Hot module replacement is enabled.
+
+### Production Preview
+
+```bash
+npm run build
+npm run preview
+```
+
+Builds the app and serves it locally to preview production behavior.
+
+## Project Structure
 
 ```
 src/
-├── pages/              # Main page components (Login, Support, Roster, Create)
-├── components/         # Feature-based components
-│   ├── support/       # Support management components
-│   ├── roster/        # Roster management components
-│   ├── layout/        # Layout and navigation components
+├── pages/              # Route pages (Login, Support, Roster, Create)
+├── components/
+│   ├── support/       # Support entry management (forms, tables, filters)
+│   ├── roster/        # Personnel roster management
+│   ├── layout/        # Header, Footer, Layout, navigation
 │   └── form-elements/ # Reusable form components
-├── context/           # Global state and API actions
-│   ├── App/          # Application context and API calls
-│   └── Auth/         # Authentication context
-└── config/           # Application configuration
+├── context/
+│   ├── App/          # API actions and application state
+│   └── Auth/         # MSAL authentication configuration
+├── config/           # Application constants and settings
+├── helpers/          # Custom hooks (useGetToken, useEnableQuery)
+└── test/             # Test setup and mocks
 ```
 
-## 🔐 Authentication
+## Components
 
-This application uses Azure Active Directory (Azure AD) authentication via MSAL. Users must authenticate with their Microsoft account to access the application.
+### Core Pages
+- **Login** - Azure AD authentication entry point
+- **Support** - Main support entries list with filtering and pagination
+- **Create** - Form page for creating new support entries and personnel
+- **Roster** - Personnel roster management view
+
+### Key Components
+- **SupportTable** - Displays support entries with update/delete actions
+- **FiltersContainer** - Date range and personnel filtering
+- **PaginationContainer** - Navigate through paginated support records
+- **CreateSupportForm** - Multi-step form for new support entries with nested personnel
+- **PersonnelTable** - Roster personnel list with support history
+
+## Development
+
+### Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run specific test file
+npx vitest src/components/support/containers/SupportContainer/test.tsx
+
+# Run tests in watch mode
+npx vitest --watch
+
+# Run tests with UI
+npx vitest --ui
+```
+
+Tests use Vitest + React Testing Library with jsdom environment. Mock API responses are in `src/test/mocks/api.ts`.
+
+### Linting
+
+```bash
+npm run lint
+```
+
+Runs ESLint with TypeScript support. Configuration includes React Hooks plugin and React Refresh plugin.
+
+## Deployment
+
+### Build
+
+```bash
+npm run build
+```
+
+Compiles TypeScript and builds production bundle to `dist/` directory.
+
+### Deploy
+
+```bash
+npm run deploy
+```
+
+Copies the `dist/` directory to production server via SCP:
+```
+andrew@cofasv32:/home/andrew/apps/builds/pd-peer-support-vite-ts
+```
+
+**Production URL:** [https://pdapps.franklintn.gov/peer-support](https://pdapps.franklintn.gov/peer-support)
+
+### Database
+
+- **Server:** COFDBV08
+- **Database:** pd_peer_support
+
+---
 
 **Maintained by:** City of Franklin IT Department
