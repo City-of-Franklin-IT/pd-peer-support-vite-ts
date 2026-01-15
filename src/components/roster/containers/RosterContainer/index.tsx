@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 import { motionProps } from '@/helpers/utils'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import PersonnelTable from '../../tables/PersonnelTable'

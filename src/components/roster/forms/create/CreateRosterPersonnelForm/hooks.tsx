@@ -5,7 +5,7 @@ import RosterCtx from "@/components/roster/context"
 import { handleCreateRosterPersonnel } from './utils'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 import { useEnableQuery } from "@/helpers/hooks"
 
 export const useHandleCreateRosterPersonnelForm = () => {

@@ -4,7 +4,7 @@ import { supportDesignations, supportTypes } from './utils'
 import { useHandleAddPersonnelBtn } from './hooks'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import FormLabel from "@/components/form-elements/FormLabel"

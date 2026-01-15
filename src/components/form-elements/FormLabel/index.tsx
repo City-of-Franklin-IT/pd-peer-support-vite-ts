@@ -2,7 +2,7 @@ import styles from '@/components/form-elements/Forms.module.css'
 
 // Types
 import { Path } from 'react-hook-form'
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import RequiredIcon from '../RequiredIcon'

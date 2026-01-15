@@ -8,7 +8,7 @@ import { useOnCancelBtnClick } from '../../create/CreateRosterPersonnelForm/hook
 import { handleUpdateRosterPersonnel } from './utils'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 export const useHandleUpdateRosterPersonnelForm = (personnel: AppTypes.PersonnelRosterInterface | undefined) => {
   const methods = useUpdateRosterPersonnel(personnel)

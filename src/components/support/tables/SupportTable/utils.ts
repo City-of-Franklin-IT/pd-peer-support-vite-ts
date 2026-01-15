@@ -9,7 +9,7 @@ import undisclosedIcon from '@/assets/icons/support-type-icons/undisclosed/undis
 import workIcon from '@/assets/icons/support-type-icons/work/work.svg'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 export const supportTypeIconMap = new Map<AppTypes.SupportType, string | undefined>([
   ['Debrief - External', defbriefIcon],

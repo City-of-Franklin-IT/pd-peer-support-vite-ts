@@ -2,7 +2,7 @@ import { FormProvider } from 'react-hook-form'
 import { useHandleUpdateSupportForm } from './hooks'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import CreateOtherSupportForm from '../../create/CreateOtherSupportForm'

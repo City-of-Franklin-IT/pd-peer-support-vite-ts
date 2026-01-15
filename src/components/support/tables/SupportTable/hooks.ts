@@ -2,7 +2,7 @@ import { useContext, useState, useMemo, useLayoutEffect } from "react"
 import SupportCtx from "../../context"
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 /**
 * Returns paginated peer support table data; applies filtering when applicable

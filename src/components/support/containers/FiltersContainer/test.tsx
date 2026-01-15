@@ -8,7 +8,7 @@ import SupportCtx, { SupportProvider } from '../../context'
 
 // Types
 import { UseQueryResult } from 'react-query'
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import * as Components from './components'

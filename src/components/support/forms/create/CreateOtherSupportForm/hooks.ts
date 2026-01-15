@@ -1,7 +1,7 @@
 import { useFormContext } from "react-hook-form"
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 /**
 * Returns visibility boolean for create other support form

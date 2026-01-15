@@ -3,7 +3,7 @@ import * as AppActions from '@/context/App/AppActions'
 import { errorPopup, savedPopup } from "@/utils/Toast/Toast"
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 export const handleUpdateRosterPersonnel = async (formData: AppTypes.PersonnelRosterCreateInterface, token: string) => {
   if(formData._dirtied) {

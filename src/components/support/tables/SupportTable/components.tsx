@@ -5,7 +5,7 @@ import { useSetColumnVisibility, useHandleTableRow } from './hooks'
 import { supportTypeIconMap, handleDateTimes } from './utils'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 export const Table = ({ tableData }: { tableData: AppTypes.SupportInterface[] }) => {
 

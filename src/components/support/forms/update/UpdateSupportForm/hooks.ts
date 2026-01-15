@@ -9,7 +9,7 @@ import { savedPopup, errorPopup } from '@/utils/Toast/Toast'
 import { handleUpdateSupport } from './utils'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 /**
 * Returns update support form methods, cancel button onClick handler, delete button props, and form submit function

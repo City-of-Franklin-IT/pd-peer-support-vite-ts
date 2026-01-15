@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 export const createMockSupport = (overrides?: Partial<AppTypes.SupportInterface>): AppTypes.SupportInterface => ({
   startDateTime: faker.date.anytime().toISOString(),

@@ -129,8 +129,12 @@ The project uses path aliases configured in both `vite.config.ts` and `tsconfig.
 - Mock API responses in `src/test/mocks/api.ts`
 - Uses jsdom environment for DOM testing
 
-## Documentation Standards
+## Standards
 
-### README.md Files
+Follow the guides in `/opt/claude-standards/` for consistent code style and conventions:
 
-When creating or updating README.md files, use the template at `/opt/claude-standards/README_TEMPLATE.md` as a guide. Follow the structured format with clear sections for overview, features, installation, configuration, and deployment. Keep descriptions concise and focus on practical information developers need immediately.
+- **Import Organization:** `/opt/claude-standards/IMPORT_ORGANIZATION.md`
+- **React Conventions:** `/opt/claude-standards/REACT_CONVENTIONS.md`
+- **TypeScript Style:** `/opt/claude-standards/TYPESCRIPT_STYLE.md`
+- **Version Control:** `/opt/claude-standards/VERSION_CONTROL.md`
+- **README Template:** `/opt/claude-standards/README_TEMPLATE.md`

@@ -6,7 +6,7 @@ import { useEnableQuery } from "@/helpers/hooks"
 import { handleCreateSupport } from './utils'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 /**
 * Returns create support form methods, cancel button onClick handler, and create support form submit function

@@ -5,7 +5,7 @@ const baseUrl = NODE_ENV === 'development' ?
   'https://pdapps.franklintn.gov/api/v2/pd/peer-support'
 
 // Types
-import * as AppTypes from './types'
+import * as AppTypes from './AppTypes'
 
 /**
 * Get all peer support entries

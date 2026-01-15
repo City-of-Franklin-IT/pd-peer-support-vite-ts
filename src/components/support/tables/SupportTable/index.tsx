@@ -1,7 +1,7 @@
 import { useSetTableData } from './hooks'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import PaginationContainer from '../../containers/PaginationContainer'

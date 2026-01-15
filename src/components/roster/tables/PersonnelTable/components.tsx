@@ -1,7 +1,7 @@
 import { useHandleTableRow } from './hooks'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 export const Table = ({ tableData }: { tableData: AppTypes.PersonnelRosterInterface[] }) => {
 

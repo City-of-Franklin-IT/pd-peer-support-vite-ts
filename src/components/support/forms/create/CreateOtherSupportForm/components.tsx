@@ -2,7 +2,7 @@ import { useFormContext } from "react-hook-form"
 import styles from '@/components/form-elements/Forms.module.css'
 
 // Types
-import * as AppTypes from '@/context/App/types'
+import * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import FormLabel from "@/components/form-elements/FormLabel"
