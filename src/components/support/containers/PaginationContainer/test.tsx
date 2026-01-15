@@ -1,8 +1,8 @@
 import { useContext, useEffect } from 'react'
 import { MemoryRouter } from 'react-router'
-import { screen, render, waitFor } from '@testing-library/react';
+import { screen, render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import SupportCtx, { SupportProvider } from '../../context';
+import SupportCtx, { SupportProvider } from '../../context'
 
 // Components
 import PaginationContainer from '.'

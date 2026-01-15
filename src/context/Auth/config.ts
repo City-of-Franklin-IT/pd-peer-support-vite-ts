@@ -10,7 +10,7 @@ export const msalConfig = {
         navigateToLoginRequestUrl: false
     },
     cache: {
-        cacheLocation: 'localStorage', 
+        cacheLocation: 'localStorage',
         storeAuthStateInCookie: false
     },
     system: {
@@ -18,27 +18,27 @@ export const msalConfig = {
         loggerOptions: {
             loggerCallback: (level: LogLevel, message: string, containsPii: boolean) => {
                 if (containsPii) {
-                    return;
+                    return
                 }
                 switch (level) {
                     case LogLevel.Error:
-                        console.error(message);
-                        return;
+                        console.error(message)
+                        return
                     case LogLevel.Verbose:
-                        console.debug(message);
-                        return;
+                        console.debug(message)
+                        return
                     case LogLevel.Warning:
-                        console.warn(message);
-                        return;
+                        console.warn(message)
+                        return
                     default:
-                        return;
+                        return
                 }
             },
         },
     },
-};
+}
 
 export const loginRequest = {
     scopes: ["openid", "profile"],
     redirectUri: "https://pdapps.franklintn.gov/peer-support"
-};
+}
