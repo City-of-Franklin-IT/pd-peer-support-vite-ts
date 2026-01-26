@@ -1,4 +1,4 @@
-import { useQuery } from "react-query"
+import { useQuery } from "@tanstack/react-query"
 import { useEnableQuery } from "@/helpers/hooks"
 import { authHeaders } from "@/helpers/utils"
 import * as AppActions from '@/context/App/AppActions'
@@ -9,5 +9,9 @@ import * as AppActions from '@/context/App/AppActions'
 export const useGetRosterPersonnel = () => {
   const { enabled, token } = useEnableQuery()
 
-  return useQuery('getRosterPersonnel', () => AppActions.getRosterPersonnel(authHeaders(token)), { enabled: enabled && !!token })
+  return useQuery({
+    queryKey: ['getRosterPersonnel'],
+    queryFn: () => AppActions.getRosterPersonnel(authHeaders(token)),
+    enabled: enabled && !!token
+  })
 }

@@ -1,6 +1,6 @@
 import { useCallback } from "react"
 import { useNavigate } from "react-router"
-import { useQueryClient } from "react-query"
+import { useQueryClient } from "@tanstack/react-query"
 import { useForm, useFormContext, useFieldArray } from "react-hook-form"
 import { useEnableQuery } from "@/helpers/hooks"
 import { handleCreateSupport } from './utils'
@@ -82,7 +82,7 @@ const useHandleFormSubmit = () => {
 
     handleCreateSupport(formData, token)
       .then(() => {
-        queryClient.invalidateQueries('getAllSupport')
+        queryClient.invalidateQueries({ queryKey: ['getAllSupport'] })
         navigate('/support')
       })
   }, [enabled, token, navigate, queryClient])

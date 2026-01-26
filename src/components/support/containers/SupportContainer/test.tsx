@@ -8,7 +8,7 @@ import SupportCtx, { SupportProvider } from '../../context'
 import { useGetSupport } from './hooks'
 
 // Types
-import { UseQueryResult } from 'react-query'
+import { UseQueryResult } from '@tanstack/react-query'
 import * as AppTypes from '@/context/App/AppTypes'
 
 // Components

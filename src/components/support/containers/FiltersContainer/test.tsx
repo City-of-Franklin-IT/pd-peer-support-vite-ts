@@ -7,7 +7,7 @@ import { useGetRosterPersonnel } from '@/pages/Roster/hooks'
 import SupportCtx, { SupportProvider } from '../../context'
 
 // Types
-import { UseQueryResult } from 'react-query'
+import { UseQueryResult } from '@tanstack/react-query'
 import * as AppTypes from '@/context/App/AppTypes'
 
 // Components

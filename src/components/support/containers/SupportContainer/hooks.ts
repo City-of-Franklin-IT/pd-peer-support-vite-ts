@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from "react"
-import { useQuery } from "react-query"
+import { useQuery } from "@tanstack/react-query"
 import * as AppActions from '@/context/App/AppActions'
 import { useEnableQuery } from "@/helpers/hooks"
 import { authHeaders } from "@/helpers/utils"
@@ -12,7 +12,11 @@ export const useGetSupport = () => {
   const { supportUUID } = useContext(SupportCtx)
   const { enabled, token } = useEnableQuery()
 
-  return useQuery(['getSupport', supportUUID], () => AppActions.getSupport(supportUUID, authHeaders(token)), { enabled: enabled && !!token && !!supportUUID })
+  return useQuery({
+    queryKey: ['getSupport', supportUUID],
+    queryFn: () => AppActions.getSupport(supportUUID, authHeaders(token)),
+    enabled: enabled && !!token && !!supportUUID
+  })
 }
 
 /**

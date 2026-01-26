@@ -1,6 +1,6 @@
 import { useCallback, useContext, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useQueryClient } from 'react-query'
+import { useQueryClient } from '@tanstack/react-query'
 import { authHeaders } from '@/helpers/utils'
 import * as AppActions from '@/context/App/AppActions'
 import SupportCtx from '@/components/support/context'
@@ -80,7 +80,7 @@ const useHandleDeleteBtn = () => {
     const result = await AppActions.deleteSupport(supportUUID, authHeaders(token))
 
     if(result.success) {
-      queryClient.invalidateQueries('getAllSupport')
+      queryClient.invalidateQueries({ queryKey: ['getAllSupport'] })
       dispatch({ type: 'RESET_CTX' })
       savedPopup(result.msg)
     } else errorPopup(result.msg)
@@ -106,8 +106,8 @@ const useHandleFormSubmit = () => {
 
     handleUpdateSupport(formData, token)
       .then(() => {
-        queryClient.invalidateQueries('getAllSupport')
-        queryClient.invalidateQueries(['getSupport', formData.uuid])
+        queryClient.invalidateQueries({ queryKey: ['getAllSupport'] })
+        queryClient.invalidateQueries({ queryKey: ['getSupport', formData.uuid] })
         dispatch({ type: 'RESET_CTX' })
       })
       .catch(err => console.log(err))

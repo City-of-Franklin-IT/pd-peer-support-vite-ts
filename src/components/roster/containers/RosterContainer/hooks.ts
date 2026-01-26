@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect, useRef } from "react"
-import { useQuery, useQueryClient } from "react-query"
+import { useQuery, useQueryClient } from "@tanstack/react-query"
 import * as AppActions from '@/context/App/AppActions'
 import RosterCtx from "../../context"
 import { authHeaders } from "@/helpers/utils"
@@ -29,7 +29,11 @@ export const useGetPerson = () => {
 
   const { enabled, token } = useEnableQuery()
 
-  return useQuery(['getPerson', rosterUUID], () => AppActions.getPerson(rosterUUID, authHeaders(token)), { enabled: enabled && !!token })
+  return useQuery({
+    queryKey: ['getPerson', rosterUUID],
+    queryFn: () => AppActions.getPerson(rosterUUID, authHeaders(token)),
+    enabled: enabled && !!token
+  })
 }
 
 /**
@@ -74,8 +78,8 @@ const useHandleDeleteBtn = () => {
     const result = await AppActions.deleteRosterPersonnel(rosterUUID, authHeaders(token))
 
     if(result.success) {
-      queryClient.invalidateQueries('getRosterPersonnel')
-      queryClient.invalidateQueries(['getPerson', rosterUUID])
+      queryClient.invalidateQueries({ queryKey: ['getRosterPersonnel'] })
+      queryClient.invalidateQueries({ queryKey: ['getPerson', rosterUUID] })
       dispatch({ type: 'RESET_CTX' })
       savedPopup(result.msg)
     } else errorPopup(result.msg)
