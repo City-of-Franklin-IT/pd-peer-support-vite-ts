@@ -7,7 +7,7 @@ import FormBtns from "@/components/form-elements/buttons/FormBtns"
 import * as Components from './components'
 
 function CreateSupportForm() {
-  const { methods, onCancelBtnClick, handleFormSubmit } = useHandleCreateSupport()
+  const { methods, handleFormSubmit, onCancelBtnClick } = useHandleCreateSupport()
 
   return (
     <FormProvider { ...methods }>
@@ -16,7 +16,7 @@ function CreateSupportForm() {
 
         <div className="flex flex-col gap-6">
           <Components.DateTimeInputs />
-          <div className="flex justify-around gap-4 flex-wrap">
+          <div className="flex gap-4 flex-wrap">
             <Components.SupportDesignationSelect />
             <Components.SupportTypeSelect />
             <CreateOtherSupportForm />

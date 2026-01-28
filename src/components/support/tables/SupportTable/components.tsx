@@ -10,12 +10,14 @@ import * as AppTypes from '@/context/App/AppTypes'
 export const Table = ({ tableData }: { tableData: AppTypes.SupportInterface[] }) => {
 
   return (
-    <motion.table 
-      className="table text-neutral-content font-[play] w-full"
-      { ...motionProps.slideInLeft }>
-        <TableHeaders />
-        <TableBody tableData={tableData} />
-    </motion.table>
+    <div className="overflow-x-auto">
+      <motion.table
+        className="table text-neutral-content font-[play] w-full"
+        { ...motionProps.slideInLeft }>
+          <TableHeaders />
+          <TableBody tableData={tableData} />
+      </motion.table>
+    </div>
   )
 }
 
@@ -123,7 +125,7 @@ const SupportTypeIcon = ({ src }: { src: string }) => {
 }
 
 const Note = ({ note }: { note: string | null }) => {
-  if(!note) return
+  if(!note) return null
 
   return (
     <span className="py-6 text-center italic whitespace-normal">"{note}"</span>

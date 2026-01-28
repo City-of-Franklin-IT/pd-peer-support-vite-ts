@@ -4,10 +4,7 @@ import { HeaderProvider } from "../Header/context"
 import Header from "../Header"
 import Footer from "../Footer"
 
-// Types
-import { ReactNode } from 'react'
-
-function Layout({ children }: { children: ReactNode }) {
+function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex flex-col w-full h-[100%] min-h-screen">

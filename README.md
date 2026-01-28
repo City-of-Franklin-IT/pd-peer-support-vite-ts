@@ -42,7 +42,6 @@ The application configuration is managed in `src/config/index.ts`. Update the fo
 |----------|-------------|---------|
 | `APP_BASE` | Base path for deployment | `/peer-support` |
 | `APP_TITLE` | Application title | `Peer Support` |
-| `API_URL` | Production API endpoint | `https://pdapps.franklintn.gov/api/v2/pd/peer-support` |
 | `NODE_ENV` | Environment mode | `production` |
 | `CLIENT_ID` | Azure AD client ID | `fc6e7f34-d393-4a51-affc-3c87ff617396` |
 
@@ -157,7 +156,7 @@ npm run deploy
 
 Copies the `dist/` directory to production server via SCP:
 ```
-andrew@cofasv32:/home/andrew/apps/builds/pd-peer-support-vite-ts
+$USER@cofasv32:/opt/builds/pd-peer-support-vite-ts
 ```
 
 **Production URL:** [https://pdapps.franklintn.gov/peer-support](https://pdapps.franklintn.gov/peer-support)

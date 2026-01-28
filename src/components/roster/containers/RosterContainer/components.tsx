@@ -31,7 +31,7 @@ export const CreateBtn = ({ children }: { children: React.ReactNode }) => {
 export const Form = () => {
   const { formType, formRef, deleteBtnProps } = useHandleForm()
 
-  if(!formType) return
+  if(!formType) return null
 
   if(formType === 'CreateRosterPersonnel') return ( // Create new
     <div data-testid="create-personnel-form" ref={formRef} className="w-full">

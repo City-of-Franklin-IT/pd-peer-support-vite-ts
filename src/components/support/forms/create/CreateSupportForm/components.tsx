@@ -1,5 +1,4 @@
 import { useFormContext } from "react-hook-form"
-import styles from '@/components/form-elements/Forms.module.css'
 import { supportDesignations, supportTypes } from './utils'
 import { useHandleAddPersonnelBtn } from './hooks'
 
@@ -14,16 +13,16 @@ import CreatePersonnelForm from "../CreatePersonnelForm"
 export const Header = ({ children }: { children: React.ReactNode }) => {
 
   return (
-    <h3 className="text-5xl font-[play] text-neutral-content text-center py-6">{children}</h3>
+    <h3 className="text-neutral-content text-4xl font-[play] font-normal text-center py-6 whitespace-nowrap">{children}</h3>
   )
 }
 
 export const DateTimeInputs = () => {
 
   return (
-    <div className="flex gap-6">
-      <StartInput />
-      <EndInput />
+    <div className="flex gap-6 flex-wrap">
+      <DateInput field={'startDateTime'} />
+      <DateInput field={'endDateTime'} />
     </div>
   )
 }
@@ -33,14 +32,14 @@ export const SupportDesignationSelect = () => {
 
   return (
     <div className="flex-2 flex flex-col gap-2">
-      <div className="flex">
+      <div className="flex flex-col">
         <FormLabel
           name={'supportDesignation'}
           required={true}>
             Designation:
         </FormLabel>
         <select
-          className={styles.input}
+          className="select w-full"
           { ...register('supportDesignation', {
             required: 'Support designation is required',
             onChange: () => setValue('_dirtied', true)
@@ -58,14 +57,14 @@ export const SupportTypeSelect = () => {
 
   return (
     <div className="flex-2 flex flex-col gap-2">
-      <div className="flex">
+      <div className="flex flex-col">
         <FormLabel
           name={'supportType'}
           required={true}>
             Type:            
         </FormLabel>
         <select
-          className={styles.input}
+          className="select w-full"
           { ...register('supportType', {
             required: 'Support type is required',
             onChange: () => setValue('_dirtied', true)
@@ -82,13 +81,13 @@ export const NoteInput = () => {
   const { register, setValue } = useFormContext<AppTypes.SupportCreateInterface>()
 
   return (
-    <div className="flex">
+    <div className="flex flex-col">
       <FormLabel name={'note'}>
         Note:
       </FormLabel>
       <textarea
         rows={4}
-        className={styles.input}
+        className="textarea w-full"
         { ...register('note', {
           onChange: () => setValue('_dirtied', true)
         }) }></textarea>
@@ -115,50 +114,30 @@ export const PersonnelInputs = () => {
   )
 }
 
-const StartInput = () => {
+const DateInput = ({ field }: { field: 'startDateTime' | 'endDateTime' }) => {
   const { register, formState: { errors }, setValue } = useFormContext<AppTypes.SupportCreateInterface>()
+
+  const label = field === 'startDateTime' ?
+    'Start Date/Time:' :
+    'End Date/Time:'
 
   return (
     <div className="flex-1 flex flex-col gap-2">
-      <div className="flex">
+      <div className="flex flex-col">
         <FormLabel
-          name={'startDateTime'}
+          name={field}
           required={true}>
-            Start Date/Time:
+            {label}
         </FormLabel>
         <input 
           type="datetime-local"
-          className={styles.input}
-          { ...register('startDateTime', {
-            required: 'Start date/time is required',
+          className="input w-full"
+          { ...register(field, {
+            required: 'Required',
             onChange: () => setValue('_dirtied', true)
           }) } />
       </div>
-      <FormError error={errors.startDateTime?.message} />
-    </div>
-  )
-}
-
-const EndInput = () => {
-  const { register, formState: { errors }, setValue } = useFormContext<AppTypes.SupportCreateInterface>()
-
-  return (
-    <div className="flex-1 flex flex-col gap-2">
-      <div className="flex">
-        <FormLabel
-          name={'endDateTime'}
-          required={true}>
-            End Date/Time:
-        </FormLabel>
-        <input 
-          type="datetime-local"
-          className={styles.input}
-          { ...register('endDateTime', {
-            required: 'End date/time is required',
-            onChange: () => setValue('_dirtied', true)
-          }) } />
-      </div>
-      <FormError error={errors.endDateTime?.message} />
+      <FormError error={errors[field]?.message} />
     </div>
   )
 }

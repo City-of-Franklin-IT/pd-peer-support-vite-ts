@@ -1,7 +1,6 @@
 import { Controller } from "react-hook-form"
 import { useGetRosterPersonnel } from "@/pages/Roster/hooks"
 import { useHandlePersonnelSelect } from './hooks'
-import styles from '@/components/form-elements/Forms.module.css'
 
 // Components
 import FormLabel from "@/components/form-elements/FormLabel"
@@ -11,7 +10,7 @@ import RemoveBtn from "@/components/form-elements/buttons/RemoveBtn"
 export const PersonnelSelect = ({ index }: { index: number }) => {
   const { control, setValue, deleted, removeBtnProps } = useHandlePersonnelSelect(index)
 
-  if(deleted) return
+  if(deleted) return null
 
   return (
     <div className="flex flex-col gap-2">
@@ -22,15 +21,15 @@ export const PersonnelSelect = ({ index }: { index: number }) => {
           required: 'Email is required'
         }}
         render={({ field, fieldState: { error } }) => (
-          <div className="flex flex-col gap-2 mx-auto w-fit">
-            <div className="flex">
+          <div className="flex flex-col gap-2 mx-auto">
+            <div className="flex flex-col">
               <FormLabel
                 name={field.name}
                 required={true}>
                   Support Personnel Email:
               </FormLabel>
               <select
-                className={styles.input}
+                className="select"
                 { ...field }
                 onChange={(e) => {
                   field.onChange(e)
@@ -50,7 +49,7 @@ export const PersonnelSelect = ({ index }: { index: number }) => {
 export const PersonnelOptions = () => {
   const { data } = useGetRosterPersonnel()
 
-  if(!data?.data) return
+  if(!data?.data) return null
 
   return (
     <>

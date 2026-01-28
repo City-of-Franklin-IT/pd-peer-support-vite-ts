@@ -1,5 +1,4 @@
 import { useFormContext } from "react-hook-form"
-import styles from '@/components/form-elements/Forms.module.css'
 
 // Types
 import * as AppTypes from '@/context/App/AppTypes'
@@ -19,9 +18,9 @@ export const DescriptionInput = () => {
           required={true}>
             Other Support Description:
         </FormLabel>
-        <input 
-          type="text" 
-          className={styles.input}
+        <input
+          type="text"
+          className="input flex-1"
           { ...register('OtherSupport.description', {
             required: 'Description is required',
             maxLength: {

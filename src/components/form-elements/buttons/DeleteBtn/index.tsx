@@ -1,9 +1,9 @@
 type DeleteBtnProps = { onClick: React.MouseEventHandler<HTMLButtonElement>, size: 'btn-sm' | 'btn-lg', children: React.ReactNode }
 
-export const DeleteBtn = (props: DeleteBtnProps) => {
+function DeleteBtn(props: DeleteBtnProps) {
 
   return (
-    <button 
+    <button
       type="button"
       className={`btn btn-error btn-dash w-full font-[play] uppercase ${ props.size }`}
       onClick={props.onClick}>

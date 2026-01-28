@@ -8,10 +8,10 @@ import UpdateSupportForm from "../../forms/update/UpdateSupportForm"
 export const Form = () => {
   const { visible, formRef } = useHandleForm()
 
-  if(!visible) return
+  if(!visible) return null
 
   return (
-    <div data-testid="get-support" ref={formRef}>
+    <div data-testid="get-support" ref={formRef} className="max-w-3xl w-full">
       <GetSupport />
     </div>
   )

@@ -7,7 +7,7 @@ function FormContainer({ children }: { children: React.ReactNode }) {
 
   return (
     <motion.div 
-      className="relative flex flex-col bg-neutral/20 overflow-hidden px-15 pb-10 m-auto shadow-xl w-full"
+      className="relative flex flex-col bg-neutral/20 overflow-hidden px-4 pb-10 m-auto shadow-xl w-full lg:px-15"
       { ...motionProps.fadeInOut }>
         <img src={cofIcon} className={styles.icon} />
         {children}
