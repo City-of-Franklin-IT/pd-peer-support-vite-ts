@@ -11,6 +11,7 @@ import Support from "@/pages/Support"
 import Create from "@/pages/Create"
 import Roster from "./pages/Roster"
 import Redirect from "@/pages/Redirect"
+import Docs from "@/pages/Docs"
 
 const queryClient = new QueryClient()
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/create/:formtype" element={<Create />} />
           <Route path="/roster" element={<Roster />} />
+          <Route path="/docs" element={<Docs />} />
           <Route path="/*" element={<Redirect />} />
         </Routes>
       </Router>

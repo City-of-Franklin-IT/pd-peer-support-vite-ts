@@ -228,3 +228,14 @@ export const deleteRosterPersonnel = async (uuid: string, headers: Headers): Pro
 
   return await res.json()
 }
+
+/**
+* Get documentation
+*
+* GET /api/v2/pd/peer-support/docs
+**/
+export const getDocs = async (headers: Headers) => {
+  const res = await fetch(`${ baseUrl }/docs`, { headers })
+
+  return await res.json()
+}

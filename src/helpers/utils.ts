@@ -1,5 +1,6 @@
 // Types
 import { MotionProps } from "motion/react"
+import { IPublicClientApplication, AccountInfo } from "@azure/msal-browser"
 
 export const authHeaders = (token: string | undefined) => {
   const headers = new Headers()
@@ -58,4 +59,37 @@ export const motionProps = {
   slideInLeft,
   slideInRight,
   fadeInOut
+}
+
+export type MotionPropsType =
+  | 'slideInLeft'
+  | 'slideInRight'
+  | 'fadeInOut'
+
+export const motionPropsMap = new Map<MotionPropsType, MotionProps>([
+  ['slideInLeft', slideInLeft],
+  ['slideInRight', slideInRight],
+  ['fadeInOut', fadeInOut]
+])
+
+export const getUserDepartment = async (instance: IPublicClientApplication, activeAccount: AccountInfo) => {
+  const graphConfig = {
+    graphMeEndpoint: 'https://graph.microsoft.com/v1.0/me?$select=department',
+    scopes: ['User.Read']
+  }
+
+  const accessTokenRequest = {
+    scopes: graphConfig.scopes,
+    account: activeAccount
+  }
+
+  const result = await instance.acquireTokenSilent(accessTokenRequest)
+  const accessToken = result.accessToken
+
+  const headers = new Headers()
+  headers.append('Authorization', `Bearer ${ accessToken }`)
+  const response = await fetch(graphConfig.graphMeEndpoint, { headers })
+  const data = await response.json()
+
+  return data.department
 }
