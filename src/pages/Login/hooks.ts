@@ -21,10 +21,8 @@ export const useHandleAuth = () => {
           instance.setActiveAccount(response.account)
           navigate('/support')
         }
-      }).catch(error => {
-        if(error.errorCode === "interaction_required") {
-          window.location.href = 'https://pdapps.franklintn.gov/'
-        }
+      }).catch(() => {
+        instance.loginRedirect({ scopes: ["openid", "profile"] })
       })
     } else navigate('/support')
   }, [instance, accounts.length, inProgress, navigate])
