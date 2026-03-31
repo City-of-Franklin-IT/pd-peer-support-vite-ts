@@ -101,7 +101,7 @@ export const PersonnelInputs = () => {
   const personnel = getValues('Personnel') || []
 
   return (
-    <div className="flex flex-col gap-4 items-center mx-auto my-10 py-6 w-4/5 bg-neutral/50">
+    <div className="flex flex-col gap-4 items-center mx-auto my-10 p-6 w-4/5 min-w-fit bg-neutral/50">
       <h3 className="font-[play] text-2xl text-neutral-content text-center">Support Personnel</h3>
 
       {personnel.map((_, index) => (

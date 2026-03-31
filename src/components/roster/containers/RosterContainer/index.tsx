@@ -12,7 +12,7 @@ function RosterContainer({ personnel }: { personnel: AppTypes.PersonnelRosterInt
 
   return (
     <motion.div 
-      className="flex flex-col gap-4 items-center p-6 mx-auto my-10 w-1/2 rounded-xl bg-neutral/10 xl:p-10"
+      className="flex flex-col gap-4 items-center p-6 mx-auto my-10 w-full rounded-xl bg-neutral/10 md:w-3/4 xl:w-1/2 xl:p-10"
       { ...motionProps.slideInLeft }>
         <div className="flex flex-col gap-4 items-center">
           <Components.Header>Manage Support Personnel</Components.Header>

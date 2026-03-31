@@ -7,9 +7,9 @@ export const DateRangeFilterInputs = () => {
   const { inputProps, clearBtnProps } = useHandleDateRangeFilterInputs()
 
   return (
-    <div className="flex flex-col gap-2 items-center p-3 pb-4 border-1 border-b-3 border-r-3 border-neutral-content rounded-lg bg-neutral/50 w-full shadow-xl">
-      <span className="text-neutral-content uppercase font-bold">Date Range Filter</span>
-      <div className="flex items-center gap-4 font-[play] px-2 justify-center flex-wrap">
+    <div className="flex flex-col gap-1 items-center w-full md:w-xs">
+      <span className="text-secondary font-[play] uppercase underline">Date Range Filter</span>
+      <div className="flex items-center gap-4 font-[play] px-2 justify-center flex-wrap w-full md:flex-nowrap">
         <DateRangeInput { ...inputProps.start }>
           Start:
         </DateRangeInput>
@@ -26,15 +26,15 @@ export const PersonnelFilter = () => {
   const { selectProps, clearBtnProps } = useHandlePersonnelFilter()
 
   return (
-    <div className="flex flex-col gap-2 items-center p-3 pb-4 border-1 border-b-3 border-r-3 border-neutral-content rounded-lg bg-neutral/50 shadow-xl w-full">
-      <h3 className="text-neutral-content uppercase font-bold">Personnel Filter</h3>
-        <select
-          data-testid="personnel-select"
-          className="select mx-auto w-[90%] hover:cursor-pointer"
-          { ...selectProps }>
-            <CreatePersonnelForm.PersonnelOptions />
-        </select>
-        <ClearFilterBtn { ...clearBtnProps } />
+    <div className="flex flex-col gap-1 items-center w-full md:w-55">
+      <span className="text-secondary font-[play] uppercase underline">Personnel Filter</span>
+      <select
+        data-testid="personnel-select"
+        className="select select-sm text-neutral-content mx-auto truncate bg-neutral hover:cursor-pointer w-full"
+        { ...selectProps }>
+          <CreatePersonnelForm.PersonnelOptions />
+      </select>
+      <ClearFilterBtn { ...clearBtnProps } />
     </div>
   )
 }
@@ -43,13 +43,12 @@ export const Search = () => {
   const { inputProps, clearBtnProps } = useHandleSearch()
 
   return (
-    <div className="flex flex-col gap-2 items-center p-6 pb-4 border-1 border-b-3 border-r-3 border-neutral-content rounded-lg bg-neutral/50 w-full shadow-xl">
-      <span className="text-neutral-content uppercase font-bold">Search</span>
-
+    <div className="flex flex-col gap-1 items-center w-full md:w-55">
+      <span className="text-secondary font-[play] uppercase underline">Search</span>
       <input
-        data-testid="search-input" 
+        data-testid="search-input"
         type="text"
-        className="input"
+        className="input input-sm text-neutral-content bg-neutral w-full"
         placeholder="by peer support note.."
         { ...inputProps } />
       <ClearFilterBtn { ...clearBtnProps } />
@@ -63,11 +62,12 @@ const DateRangeInput = (props: DateRangeInputProps) => {
   const { children, ...inputProps } = props
 
   return (
-    <div className="flex gap-2 items-center font-[play]">
-      <label className="label text-neutral-content">{children}</label>
+    <div className="flex flex-row gap-2 items-center flex-1 font-[play]">
+      <label className="label text-sm text-neutral-content">{children}</label>
       <input
+        data-testid="date-range-input"
         type="date"
-        className="input hover:cursor-pointer" 
+        className="input input-sm text-neutral-content bg-neutral hover:cursor-pointer w-full"
         { ...inputProps } />
     </div>
   )
