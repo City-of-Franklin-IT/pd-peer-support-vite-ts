@@ -9,13 +9,13 @@ import { getUserDepartment } from "./utils"
 import { BrowserAuthError, AccountInfo } from "@azure/msal-browser"
 
 export const useGetToken = () => {
-  const [state, setState] = useState<{ token: string | undefined, isLoading: boolean, popupBlocked: boolean }>({ token: undefined, isLoading: true, popupBlocked: false })
+  const [state, setState] = useState<{ token: string | undefined, isLoading: boolean, popupBlocked: boolean }>(
+    NODE_ENV === 'development'
+      ? { token: 'dev-token', isLoading: false, popupBlocked: false }
+      : { token: undefined, isLoading: true, popupBlocked: false }
+  )
 
   const { instance, accounts, inProgress } = useMsal()
-
-  if(NODE_ENV === 'development') {
-    return { token: 'dev-token', isLoading: false, popupBlocked: false }
-  }
 
   const checkToken = async () => {
     setState(prevState => ({ ...prevState, isLoading: true }))
@@ -105,6 +105,8 @@ export const useGetToken = () => {
   }
 
   useEffect(() => {
+    if(NODE_ENV === 'development') return
+
     if(inProgress !== 'none') { // Wait for instance to fully initialize
       return
     }

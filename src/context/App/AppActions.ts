@@ -15,6 +15,8 @@ import * as AppTypes from './AppTypes'
 export const getAllSupport = async (headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.SupportInterface[] }> => {
   const res = await fetch(`${ baseUrl }/support`, { headers })
 
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
+
   return await res.json()
 }
 
@@ -25,6 +27,8 @@ export const getAllSupport = async (headers: Headers): Promise<AppTypes.ServerRe
 **/
 export const getSupport = async (uuid: string, headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.SupportInterface }> => {
   const res = await fetch(`${ baseUrl }/support/${ uuid }`, { headers })
+
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
 
   return await res.json()
 }
@@ -43,6 +47,8 @@ export const createSupport = async (formData: AppTypes.SupportCreateInterface, h
     body: JSON.stringify({ ...formData })
   })
 
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
+
   return await res.json()
 }
 
@@ -60,6 +66,8 @@ export const updateSupport = async (formData: AppTypes.SupportCreateInterface, h
     body: JSON.stringify({ ...formData })
   })
 
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
+
   return await res.json()
 }
 
@@ -73,6 +81,8 @@ export const deleteSupport = async (uuid: string, headers: Headers): Promise<App
     method: 'DELETE',
     headers
   })
+
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
 
   return await res.json()
 }
@@ -91,6 +101,8 @@ export const createOtherSupport = async (formData: AppTypes.OtherSupportCreateIn
     body: JSON.stringify({ ...formData })
   })
 
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
+
   return await res.json()
 }
 
@@ -107,6 +119,8 @@ export const updateOtherSupport = async (formData: AppTypes.OtherSupportCreateIn
     headers,
     body: JSON.stringify({ ...formData })
   })
+
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
 
   return await res.json()
 }
@@ -125,6 +139,8 @@ export const createPersonnel = async (formData: AppTypes.PersonnelCreateInterfac
     body: JSON.stringify({ ...formData })
   })
 
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
+
   return await res.json()
 }
 
@@ -142,6 +158,8 @@ export const updatePersonnel = async (formData: AppTypes.PersonnelCreateInterfac
     body: JSON.stringify({ ...formData })
   })
 
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
+
   return await res.json()
 }
 
@@ -156,6 +174,8 @@ export const deletePersonnel = async (uuid: string, headers: Headers): Promise<A
     headers
   })
 
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
+
   return await res.json()
 }
 
@@ -166,6 +186,8 @@ export const deletePersonnel = async (uuid: string, headers: Headers): Promise<A
 **/
 export const getRosterPersonnel = async (headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.PersonnelRosterInterface[] }> => {
   const res = await fetch(`${ baseUrl }/personnel-roster`, { headers })
+
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
 
   return await res.json()
 }
@@ -178,6 +200,8 @@ export const getRosterPersonnel = async (headers: Headers): Promise<AppTypes.Ser
 export const getPerson = async (uuid: string, headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.PersonnelRosterInterface }> => {
   const res = await fetch(`${ baseUrl }/personnel-roster/${ uuid }`, { headers })
 
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
+
   return await res.json()
 }
 
@@ -188,12 +212,14 @@ export const getPerson = async (uuid: string, headers: Headers): Promise<AppType
 **/
 export const createRosterPersonnel = async (formData: AppTypes.PersonnelRosterCreateInterface, headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.PersonnelRosterInterface }> => {
   headers.append('Content-Type', 'application/json')
-  
+
   const res = await fetch(`${ baseUrl }/personnel-roster`, {
     method: 'POST',
     headers,
     body: JSON.stringify({ ...formData })
   })
+
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
 
   return await res.json()
 }
@@ -212,6 +238,8 @@ export const updateRosterPersonnel = async (formData: AppTypes.PersonnelRosterCr
     body: JSON.stringify({ ...formData })
   })
 
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
+
   return await res.json()
 }
 
@@ -226,6 +254,8 @@ export const deleteRosterPersonnel = async (uuid: string, headers: Headers): Pro
     headers
   })
 
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
+
   return await res.json()
 }
 
@@ -236,6 +266,8 @@ export const deleteRosterPersonnel = async (uuid: string, headers: Headers): Pro
 **/
 export const getDocs = async (headers: Headers) => {
   const res = await fetch(`${ baseUrl }/docs`, { headers })
+
+  if(!res.ok) throw new Error(`HTTP error ${res.status}`)
 
   return await res.json()
 }
