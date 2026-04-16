@@ -1,51 +1,55 @@
-import { faker } from '@faker-js/faker'
-
-// Types
 import * as AppTypes from '@/context/App/AppTypes'
 
-export const createMockSupport = (overrides?: Partial<AppTypes.SupportInterface>): AppTypes.SupportInterface => ({
-  startDateTime: faker.date.anytime().toISOString(),
-  endDateTime: faker.date.anytime().toISOString(),
-  supportDesignation: faker.helpers.arrayElement(supportDesignations),
-  supportType: faker.helpers.arrayElement(supportTypes),
-  note: faker.lorem.paragraph(),
+export const createPersonnelRoster = (
+  overrides?: Partial<AppTypes.PersonnelRosterInterface>
+): AppTypes.PersonnelRosterInterface => ({
+  uuid: 'roster-uuid-1',
+  email: 'john.doe@franklintn.gov',
+  createdBy: 'admin',
+  createdAt: '2024-01-01T00:00:00.000Z',
+  updatedBy: 'admin',
+  updatedAt: '2024-01-01T00:00:00.000Z',
+  ...overrides,
+})
+
+export const createSupport = (
+  overrides?: Partial<AppTypes.SupportInterface>
+): AppTypes.SupportInterface => ({
+  uuid: 'support-uuid-1',
+  startDateTime: '2024-01-15T09:00:00.000Z',
+  endDateTime: '2024-01-15T10:00:00.000Z',
+  supportDesignation: 'FPD Employee',
+  supportType: 'Debrief - Internal',
+  note: null,
+  createdBy: 'admin',
+  createdAt: '2024-01-15T00:00:00.000Z',
+  updatedBy: 'admin',
+  updatedAt: '2024-01-15T00:00:00.000Z',
   Personnel: [],
-  OtherSupport: undefined,
-  uuid: faker.string.uuid(),
-  createdBy: 'test.o365-3@franklintn.gov',
-  createdAt: faker.date.anytime().toISOString(),
-  updatedBy: 'test.o365-3@franklintn.gov',
-  updatedAt: faker.date.anytime().toISOString(),
-  ...overrides
+  ...overrides,
 })
 
-export const createMockPersonnel = (overrides?: Partial<AppTypes.PersonnelInterface>): AppTypes.PersonnelInterface => ({
-  email: faker.internet.email({ provider: 'franklintn.gov' }),
-  parentId: faker.string.uuid(),
-  uuid: faker.string.uuid(),
-  createdBy: 'test.o365-3@franklintn.gov',
-  createdAt: faker.date.anytime().toISOString(),
-  updatedBy: 'test.o365-3@franklintn.gov',
-  updatedAt: faker.date.anytime().toISOString(),
-  ...overrides
+export const createMockCollection = () => ({
+  info: {
+    name: 'Peer Support API',
+    description: 'API documentation for the peer support system',
+  },
+  item: [
+    {
+      name: 'Support',
+      item: [
+        {
+          name: 'Get All Support',
+          request: {
+            method: 'GET',
+            url: {
+              raw: '{{URL}}/support',
+              path: ['support'],
+            },
+            description: 'Returns all peer support entries',
+          },
+        },
+      ],
+    },
+  ],
 })
-
-const supportDesignations: AppTypes.SupportDesignationType[] = [
-  'FPD Employee',
-  'Other COF First Responder',
-  'Other City Employee',
-  'Other Non-COF First Responder'
-]
-
-const supportTypes: AppTypes.SupportType[] = [
-  'Debrief - External',
-  'Debrief - Internal',
-  'Defusing',
-  'Family',
-  'Finances',
-  'Other',
-  'Referral',
-  'Substance Use',
-  'Undisclosed',
-  'Work'
-]

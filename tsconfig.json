@@ -29,7 +29,8 @@
       "@helpers/*": ["src/helpers/*"],
       "@pages/*": ["src/pages/*"],
       "@utils/*": ["src/utils/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@test/*": ["src/test/*"]
     }
   },
   "include": ["src"],
