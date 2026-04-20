@@ -11,12 +11,6 @@ vi.mock('../hooks', () => ({
 }))
 
 describe('Roster page', () => {
-  it('renders the layout structure', () => {
-    renderWithProviders(<Roster />)
-    expect(screen.getByRole('banner')).toBeInTheDocument()
-    expect(screen.getByRole('contentinfo')).toBeInTheDocument()
-  })
-
   it('renders the Manage Support Personnel heading when data loads', () => {
     renderWithProviders(<Roster />)
     expect(screen.getByText('Manage Support Personnel')).toBeInTheDocument()

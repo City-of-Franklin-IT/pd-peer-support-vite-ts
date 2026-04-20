@@ -1,11 +1,10 @@
 import { useFormContext } from "react-hook-form"
 
 // Types
-import * as AppTypes from '@/context/App/AppTypes'
+import type * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import FormLabel from "@/components/form-elements/FormLabel"
-import FormError from "@/components/form-elements/FormError"
 
 export const DescriptionInput = () => {
   const { register, formState: { errors }, setValue } = useFormContext<AppTypes.SupportCreateInterface>()
@@ -15,7 +14,8 @@ export const DescriptionInput = () => {
       <div className="flex">
         <FormLabel
           name={'OtherSupport.description'}
-          required={true}>
+          required={true}
+          error={errors.OtherSupport?.description?.message}>
             Other Support Description:
         </FormLabel>
         <input
@@ -30,7 +30,6 @@ export const DescriptionInput = () => {
             onChange: () => setValue('OtherSupport._dirtied', true)
           }) } />
       </div>
-      <FormError error={errors.OtherSupport?.description?.message} />
     </div>
   )
 }

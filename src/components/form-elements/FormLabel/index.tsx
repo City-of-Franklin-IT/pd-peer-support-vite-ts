@@ -1,20 +1,24 @@
-// Types
-import { Path } from 'react-hook-form'
-import * as AppTypes from '@/context/App/AppTypes'
-
 // Components
 import RequiredIcon from '../RequiredIcon'
+import FormError from '../FormError'
 
 type FormLabelProps = { 
-  name: Path<AppTypes.SupportCreateInterface|AppTypes.OtherSupportCreateInterface|AppTypes.PersonnelRosterCreateInterface>
+  name: string
   required?: boolean
-  children: React.ReactNode
+  error?: string
+  children: React.ReactNode 
 }
 
 function FormLabel(props: FormLabelProps) {
   
   return (
-    <label data-testid="form-label" htmlFor={props.name} className="label text-neutral-content font-[play]">{props.children}{props.required && <RequiredIcon />}</label>
+    <label data-testid="form-label" htmlFor={props.name} className="label text-neutral-content font-[Play] justify-between">
+      <div className="flex items-center gap-1">
+        {props.children}
+        <RequiredIcon required={props.required} />
+      </div>
+      <FormError error={props.error} />
+    </label>
   )
 }
 

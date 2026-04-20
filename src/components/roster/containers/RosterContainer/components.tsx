@@ -8,12 +8,9 @@ import CreateRosterPersonnelForm from "../../forms/create/CreateRosterPersonnelF
 import UpdateRosterPersonnelForm from "../../forms/update/UpdateRosterPersonnelForm"
 import DeleteBtn from "@/components/form-elements/buttons/DeleteBtn"
 
-export const Header = ({ children }: { children: React.ReactNode }) => {
-
-  return (
-    <h2 className="text-4xl text-neutral-content font-[play] text-center mb-4">{children}</h2>
-  )
-}
+export const Header = ({ children }: { children: React.ReactNode }) => (
+  <h2 className="text-4xl text-neutral-content font-[play] text-center mb-4">{children}</h2>
+)
 
 export const CreateBtn = ({ children }: { children: React.ReactNode }) => {
   const { dispatch } = useContext(RosterCtx)

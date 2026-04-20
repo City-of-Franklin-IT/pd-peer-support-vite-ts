@@ -1,50 +1,44 @@
 import { useHandleTableRow } from './hooks'
 
 // Types
-import * as AppTypes from '@/context/App/AppTypes'
+import type * as AppTypes from '@/context/App/AppTypes'
 
-export const Table = ({ tableData }: { tableData: AppTypes.PersonnelRosterInterface[] }) => {
+export const Table = ({ tableData }: { tableData: AppTypes.PersonnelRosterInterface[] }) => (
+  <table className="table text-neutral-content font-[play] w-fit">
+    <TableHeaders />
+    <TableBody tableData={tableData} />
+  </table>
+)
 
-  return (
-    <table className="table text-neutral-content font-[play] w-fit">
-      <TableHeaders />
-      <TableBody tableData={tableData} />
-    </table>
-  )
+const TableHeaders = () => (
+  <thead>
+    <tr className="text-warning uppercase bg-neutral/50 border-b-2 border-warning">
+      <th className="pl-10">Email</th>
+      <th className="text-center">Support Cases</th>
+    </tr>
+  </thead>
+)
+
+const TableBody = ({ tableData }: { tableData: AppTypes.PersonnelRosterInterface[] }) => (
+  <tbody>
+    {tableData.map((personnel, index) => {
+      return (
+        <TableRow
+          key={`table-row-${ personnel.uuid }`}
+          tableData={personnel}
+          index={index} />
+      )
+    })}
+  </tbody>
+)
+
+type TableRowProps = { 
+  tableData: AppTypes.PersonnelRosterInterface
+  index: number 
 }
 
-const TableHeaders = () => {
-
-  return (
-    <thead>
-      <tr className="text-warning uppercase bg-neutral/50 border-b-2 border-warning">
-        <th className="pl-10">Email</th>
-        <th className="text-center">Support Cases</th>
-      </tr>
-    </thead>
-  )
-}
-
-const TableBody = ({ tableData }: { tableData: AppTypes.PersonnelRosterInterface[] }) => {
-
-  return (
-    <tbody>
-      {tableData.map((personnel, index) => {
-        return (
-          <TableRow
-            key={`table-row-${ personnel.uuid }`}
-            tableData={personnel}
-            index={index} />
-        )
-      })}
-    </tbody>
-  )
-}
-
-type TableRowProps = { tableData: AppTypes.PersonnelRosterInterface, index: number }
-
-const TableRow = (props: TableRowProps) => {
-  const { rowProps, supportCount, email } = useHandleTableRow(props.tableData, props.index)
+const TableRow = ({ tableData, index }: TableRowProps) => {
+  const { rowProps, supportCount, email } = useHandleTableRow(tableData, index)
 
   return (
     <tr { ...rowProps }>

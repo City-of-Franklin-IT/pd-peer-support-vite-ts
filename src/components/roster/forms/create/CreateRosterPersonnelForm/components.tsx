@@ -1,11 +1,10 @@
 import { useFormContext } from "react-hook-form"
 
 // Types
-import * as AppTypes from '@/context/App/AppTypes'
+import type * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import FormLabel from "@/components/form-elements/FormLabel"
-import FormError from "@/components/form-elements/FormError"
 
 export const EmailInput = () => {
   const { register, formState: { errors }, setValue } = useFormContext<AppTypes.PersonnelRosterCreateInterface>()
@@ -13,12 +12,13 @@ export const EmailInput = () => {
   return (
     <div className="flex flex-col gap-2 w-full">
       <div className="flex flex-col">
-        <FormLabel 
+        <FormLabel
           name={'email'}
-          required={true}>
+          required={true}
+          error={errors.email?.message}>
             Email:
         </FormLabel>
-        <input 
+        <input
           type="text"
           className="input w-full"
           { ...register('email', {
@@ -30,7 +30,6 @@ export const EmailInput = () => {
             onChange: () => setValue('_dirtied', true)
           }) } />
       </div>
-      <FormError error={errors.email?.message} />
     </div>
   )
 }

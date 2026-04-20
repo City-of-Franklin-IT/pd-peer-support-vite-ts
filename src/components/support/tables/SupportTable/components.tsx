@@ -5,31 +5,25 @@ import { useSetColumnVisibility, useHandleTableRow } from './hooks'
 import { supportTypeIconMap, handleDateTimes } from './utils'
 
 // Types
-import * as AppTypes from '@/context/App/AppTypes'
+import type * as AppTypes from '@/context/App/AppTypes'
 
-export const Table = ({ tableData }: { tableData: AppTypes.SupportInterface[] }) => {
+export const Table = ({ tableData }: { tableData: AppTypes.SupportInterface[] }) => (
+  <div className="overflow-x-auto">
+    <motion.table
+      className="table text-neutral-content font-[play] w-full"
+      { ...motionProps.fadeInOut }>
+        <TableHeaders />
+        <TableBody tableData={tableData} />
+    </motion.table>
+  </div>
+)
 
-  return (
-    <div className="overflow-x-auto">
-      <motion.table
-        className="table text-neutral-content font-[play] w-full"
-        { ...motionProps.slideInLeft }>
-          <TableHeaders />
-          <TableBody tableData={tableData} />
-      </motion.table>
-    </div>
-  )
-}
-
-export const NoSupport = () => {
-
-  return (
-    <div className="flex flex-col gap-4 font-[play] text-neutral-content text-center p-10 m-auto outline-2 outline-dashed outline-neutral-content w-fit rounded-xl">
-      <span className="text-xl uppercase font-bold">No Peer Support Entries</span>
-      <Link to={'/create/support'} className="text-lg text-warning font-bold hover:text-info">Click to create peer support entry</Link>
-    </div>
-  )
-}
+export const NoSupport = () => (
+  <div className="flex flex-col gap-4 font-[play] text-neutral-content text-center p-10 m-auto outline-2 outline-dashed outline-neutral-content w-fit rounded-xl">
+    <span className="text-xl uppercase font-bold">No Peer Support Entries</span>
+    <Link to={'/create/support'} className="text-lg text-warning font-bold hover:text-info">Click to create peer support entry</Link>
+  </div>
+)
 
 const TableHeaders = () => {
   const visible = useSetColumnVisibility()
@@ -47,23 +41,23 @@ const TableHeaders = () => {
   )
 }
 
-const TableBody = ({ tableData }: { tableData: AppTypes.SupportInterface[] }) => {
+const TableBody = ({ tableData }: { tableData: AppTypes.SupportInterface[] }) => (
+  <tbody>
+    {tableData.map((support, index) => {
+      return (
+        <TableRow
+          key={`table-row-${ support.uuid }`}
+          tableData={support}
+          index={index} />
+      )
+    })}
+  </tbody>
+)
 
-  return (
-    <tbody>
-      {tableData.map((support, index) => {
-        return (
-          <TableRow
-            key={`table-row-${ support.uuid }`}
-            tableData={support}
-            index={index} />
-        )
-      })}
-    </tbody>
-  )
+type TableRowProps = { 
+  tableData: AppTypes.SupportInterface
+  index: number 
 }
-
-type TableRowProps = { tableData: AppTypes.SupportInterface, index: number }
 
 const TableRow = (props: TableRowProps) => {
   const { tableRowProps, noteClassName } = useHandleTableRow(props.tableData.uuid, props.index)
@@ -117,12 +111,9 @@ const SupportType = ({ supportType }: { supportType: AppTypes.SupportType }) => 
   )
 }
 
-const SupportTypeIcon = ({ src }: { src: string }) => {
-
-  return (
-    <img src={src} className="w-[40px]" />
-  )
-}
+const SupportTypeIcon = ({ src }: { src: string }) => (
+  <img src={src} className="w-[40px]" />
+)
 
 const Note = ({ note }: { note: string | null }) => {
   if(!note) return null

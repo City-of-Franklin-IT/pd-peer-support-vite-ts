@@ -75,15 +75,12 @@ const DateRangeInput = (props: DateRangeInputProps) => {
 
 type ClearFilterBtnProps = { onClick: React.MouseEventHandler<HTMLButtonElement>, disabled: boolean }
 
-const ClearFilterBtn = (props: ClearFilterBtnProps) => {
-
-  return (
-    <button
-      data-testid="clear-filter-btn" 
-      type="button"
-      className="btn btn-secondary btn-sm font-[play] uppercase w-full"
-      { ...props }>
-        Clear
-    </button>
-  )
-}
+const ClearFilterBtn = (props: ClearFilterBtnProps) => (
+  <button
+    data-testid="clear-filter-btn" 
+    type="button"
+    className="btn btn-secondary btn-sm font-[play] uppercase w-full"
+    { ...props }>
+      Clear
+  </button>
+)

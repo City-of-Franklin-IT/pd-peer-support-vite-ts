@@ -3,29 +3,22 @@ import { supportDesignations, supportTypes } from './utils'
 import { useHandleAddPersonnelBtn } from './hooks'
 
 // Types
-import * as AppTypes from '@/context/App/AppTypes'
+import type * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import FormLabel from "@/components/form-elements/FormLabel"
-import FormError from "@/components/form-elements/FormError"
 import CreatePersonnelForm from "../CreatePersonnelForm"
 
-export const Header = ({ children }: { children: React.ReactNode }) => {
+export const Header = ({ children }: { children: React.ReactNode }) => (
+  <h3 className="text-neutral-content text-4xl font-[play] font-normal text-center py-6 whitespace-nowrap">{children}</h3>
+)
 
-  return (
-    <h3 className="text-neutral-content text-4xl font-[play] font-normal text-center py-6 whitespace-nowrap">{children}</h3>
-  )
-}
-
-export const DateTimeInputs = () => {
-
-  return (
-    <div className="flex gap-6 flex-wrap">
-      <DateInput field={'startDateTime'} />
-      <DateInput field={'endDateTime'} />
-    </div>
-  )
-}
+export const DateTimeInputs = () => (
+  <div className="flex gap-6 flex-wrap">
+    <DateInput field={'startDateTime'} />
+    <DateInput field={'endDateTime'} />
+  </div>
+)
 
 export const SupportDesignationSelect = () => {
   const { register, formState: { errors }, setValue } = useFormContext<AppTypes.SupportCreateInterface>()
@@ -35,7 +28,8 @@ export const SupportDesignationSelect = () => {
       <div className="flex flex-col">
         <FormLabel
           name={'supportDesignation'}
-          required={true}>
+          required={true}
+          error={errors.supportDesignation?.message}>
             Designation:
         </FormLabel>
         <select
@@ -47,7 +41,6 @@ export const SupportDesignationSelect = () => {
             <SupportDesignationOptions />
         </select>
       </div>
-      <FormError error={errors.supportDesignation?.message} />
     </div>
   )
 }
@@ -60,8 +53,9 @@ export const SupportTypeSelect = () => {
       <div className="flex flex-col">
         <FormLabel
           name={'supportType'}
-          required={true}>
-            Type:            
+          required={true}
+          error={errors.supportType?.message}>
+            Type:
         </FormLabel>
         <select
           className="select w-full"
@@ -72,7 +66,6 @@ export const SupportTypeSelect = () => {
             <SupportTypeOptions />
         </select>
       </div>
-      <FormError error={errors.supportType?.message} />
     </div>
   )
 }
@@ -126,7 +119,8 @@ const DateInput = ({ field }: { field: 'startDateTime' | 'endDateTime' }) => {
       <div className="flex flex-col">
         <FormLabel
           name={field}
-          required={true}>
+          required={true}
+          error={errors[field]?.message}>
             {label}
         </FormLabel>
         <input 
@@ -137,38 +131,31 @@ const DateInput = ({ field }: { field: 'startDateTime' | 'endDateTime' }) => {
             onChange: () => setValue('_dirtied', true)
           }) } />
       </div>
-      <FormError error={errors[field]?.message} />
     </div>
   )
 }
 
-const SupportDesignationOptions = () => {
+const SupportDesignationOptions = () => (
+  <>
+    <option value="">Select support designation..</option>
+    {supportDesignations.map(designation => {
+      return (
+        <option key={`option-${ designation }`} value={designation}>{designation}</option>
+      )
+    })}
+  </>
+)
 
-  return (
-    <>
-      <option value="">Select support designation..</option>
-      {supportDesignations.map(designation => {
-        return (
-          <option key={`option-${ designation }`} value={designation}>{designation}</option>
-        )
-      })}
-    </>
-  )
-}
-
-const SupportTypeOptions = () => {
-
-  return (
-    <>
-      <option value="">Select support type..</option>
-      {supportTypes.map(type => {
-        return (
-          <option key={`option-${ type }`} value={type}>{type}</option>
-        )
-      })}
-    </>
-  )
-}
+const SupportTypeOptions = () => (
+  <>
+    <option value="">Select support type..</option>
+    {supportTypes.map(type => {
+      return (
+        <option key={`option-${ type }`} value={type}>{type}</option>
+      )
+    })}
+  </>
+)
 
 const AddPersonnelBtn = () => {
   const onClick = useHandleAddPersonnelBtn()

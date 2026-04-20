@@ -9,7 +9,6 @@ function ErrorBoundary({ href, children }: ErrorBoundaryProps) {
     const navigate = useNavigate()
 
     setTimeout(() => { // Navigate to href after 50ms
-
       navigate(href)
     }, (50))
 

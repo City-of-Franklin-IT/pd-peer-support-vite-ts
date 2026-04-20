@@ -9,13 +9,13 @@ describe('FormLabel', () => {
 
   it('renders the required icon when required is true', () => {
     render(<FormLabel name="email" required>Email Address</FormLabel>)
-    const icon = screen.getByAltText('required icon')
+    const icon = screen.getByTestId('required-icon')
     expect(icon).toBeInTheDocument()
   })
 
   it('does not render the required icon when required is false', () => {
     render(<FormLabel name="email" required={false}>Email Address</FormLabel>)
-    expect(screen.queryByAltText('required icon')).not.toBeInTheDocument()
+    expect(screen.queryByTestId('required-icon')).not.toBeInTheDocument()
   })
 
   it('does not render the required icon when required is omitted', () => {

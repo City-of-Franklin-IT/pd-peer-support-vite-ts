@@ -1,5 +1,5 @@
 // Types
-import * as AppTypes from '@/context/App/AppTypes'
+import type * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import * as Components from './components'

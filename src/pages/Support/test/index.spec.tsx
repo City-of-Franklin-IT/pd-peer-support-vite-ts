@@ -11,12 +11,6 @@ vi.mock('../hooks', () => ({
 }))
 
 describe('Support page', () => {
-  it('renders the layout structure', () => {
-    renderWithProviders(<Support />)
-    expect(screen.getByRole('banner')).toBeInTheDocument()
-    expect(screen.getByRole('contentinfo')).toBeInTheDocument()
-  })
-
   it('renders the NoSupport message when there are no entries', () => {
     renderWithProviders(<Support />)
     expect(screen.getByText(/no peer support entries/i)).toBeInTheDocument()

@@ -1,15 +1,15 @@
 // Components
-import Layout from "@/components/layout/Layout"
+import ErrorBoundary from '@/components/error/ErrorBoundary'
 import * as Components from './components'
 
 function Create() {
 
   return (
-    <Layout>
+    <ErrorBoundary href={'/support'}>
       <div className="my-10 xl:w-3/5 lg:mx-auto">
         <Components.CreateContainer />
       </div>
-    </Layout>
+    </ErrorBoundary>
   )
 }
 

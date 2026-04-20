@@ -6,6 +6,7 @@ import { APP_BASE } from "./config"
 import 'react-toastify/dist/ReactToastify.css'
 
 // Components
+import Layout from "./components/layout/Layout"
 import Login from "@/pages/Login"
 import Support from "@/pages/Support"
 import Create from "@/pages/Create"
@@ -21,11 +22,13 @@ function App() {
       <Router basename={APP_BASE}>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/create/:formtype" element={<Create />} />
-          <Route path="/roster" element={<Roster />} />
-          <Route path="/docs" element={<Docs />} />
-          <Route path="/*" element={<Redirect />} />
+          <Route element={<Layout />}>
+            <Route path="/support" element={<Support />} />
+            <Route path="/create/:formtype" element={<Create />} />
+            <Route path="/roster" element={<Roster />} />
+            <Route path="/docs" element={<Docs />} />
+            <Route path="/*" element={<Redirect />} />
+          </Route>
         </Routes>
       </Router>
       <ToastContainer />

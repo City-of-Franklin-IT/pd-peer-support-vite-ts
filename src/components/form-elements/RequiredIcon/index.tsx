@@ -1,10 +1,9 @@
-import icon from '@/assets/icons/required/required.svg'
-
-function RequiredIcon() {
+function RequiredIcon({ required }: { required: boolean | undefined }) {
+  if(!required) return null
 
   return (
-    <div className="mb-auto mt-1">
-      <img src={icon} alt="required icon" className="w-3" />
+    <div data-testid="required-icon" className="mb-auto mt-1">
+      <span className="text-error font-bold">*</span>
     </div>
   )
 }

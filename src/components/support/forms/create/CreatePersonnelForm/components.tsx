@@ -4,7 +4,6 @@ import { useHandlePersonnelSelect } from './hooks'
 
 // Components
 import FormLabel from "@/components/form-elements/FormLabel"
-import FormError from "@/components/form-elements/FormError"
 import RemoveBtn from "@/components/form-elements/buttons/RemoveBtn"
 
 export const PersonnelSelect = ({ index }: { index: number }) => {
@@ -25,7 +24,8 @@ export const PersonnelSelect = ({ index }: { index: number }) => {
             <div className="flex flex-col">
               <FormLabel
                 name={field.name}
-                required={true}>
+                required={true}
+                error={error?.message}>
                   Support Personnel Email:
               </FormLabel>
               <select
@@ -38,7 +38,6 @@ export const PersonnelSelect = ({ index }: { index: number }) => {
                   <PersonnelOptions />
               </select>
             </div>
-            <FormError error={error?.message} />
           </div>
         )} />
         <RemoveBtn { ...removeBtnProps } />

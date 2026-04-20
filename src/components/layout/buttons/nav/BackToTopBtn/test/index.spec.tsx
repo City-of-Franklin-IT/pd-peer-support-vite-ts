@@ -5,6 +5,7 @@ import BackToTopBtn from '../index'
 
 const Wrapper = () => {
   const topRef = useRef<HTMLDivElement>(null)
+
   return (
     <>
       <div ref={topRef} data-testid="top-target" />
