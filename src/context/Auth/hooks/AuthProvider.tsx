@@ -1,21 +1,11 @@
 import { useEffect, useState } from "react"
-import { PublicClientApplication } from "@azure/msal-browser"
+import { PublicClientApplication, AuthenticationResult, EventType } from "@azure/msal-browser"
 import { MsalProvider } from "@azure/msal-react"
-import { NODE_ENV } from "@/config"
 import { msalConfig } from "../config"
-
-// Types
-import { AuthenticationResult, EventType } from "@azure/msal-browser"
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [msalInstance, setMsalInstance] = useState<PublicClientApplication | null>(null)
   const [isInitialized, setIsInitialized] = useState(false)
-
-  if(NODE_ENV === 'development') return (
-    <>
-      {children}
-    </>
-  )
 
   useEffect(() => {
     const initializeMsal = async () => {

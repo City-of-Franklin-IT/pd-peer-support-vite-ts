@@ -3,8 +3,8 @@ import { Link } from 'react-router'
 import { APP_TITLE } from '../../../config'
 import fpdIcon from '@/assets/icons/fpd/fpd.png'
 import HeaderCtx from './context'
-import { useActiveAccount } from '@/helpers/hooks'
-import useHandleLogoutRedirect from '@/context/Auth/hooks/useHandleLogoutRedirect'
+import { useAuth } from '@/context/Auth'
+import { useHandleLogoutRedirect } from '@/context/Auth/hooks/useHandleLogoutRedirect'
 import { useHandleTitle, useHandleButtonsVisibility } from './hooks'
 
 export const Title = () => {
@@ -90,11 +90,11 @@ const HeaderBtn = (props: HeaderBtnProps) => {
 }
 
 const LogoutBtn = () => {
-  const activeAccount = useActiveAccount()
+  const { isAuthenticated } = useAuth()
 
   const handleLogoutRedirect = useHandleLogoutRedirect()
 
-  if(!activeAccount) return null
+  if (!isAuthenticated) return null
 
   return (
     <button

@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { ToastContainer } from "react-toastify"
 import { APP_BASE } from "./config"
+import { AuthCtxProvider } from "@/context/Auth"
 import 'react-toastify/dist/ReactToastify.css'
 
 // Components
@@ -19,18 +20,20 @@ const queryClient = new QueryClient()
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router basename={APP_BASE}>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route element={<Layout />}>
-            <Route path="/support" element={<Support />} />
-            <Route path="/create/:formtype" element={<Create />} />
-            <Route path="/roster" element={<Roster />} />
-            <Route path="/docs" element={<Docs />} />
-            <Route path="/*" element={<Redirect />} />
-          </Route>
-        </Routes>
-      </Router>
+      <AuthCtxProvider>
+        <Router basename={APP_BASE}>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route element={<Layout />}>
+              <Route path="/support" element={<Support />} />
+              <Route path="/create/:formtype" element={<Create />} />
+              <Route path="/roster" element={<Roster />} />
+              <Route path="/docs" element={<Docs />} />
+              <Route path="/*" element={<Redirect />} />
+            </Route>
+          </Routes>
+        </Router>
+      </AuthCtxProvider>
       <ToastContainer />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

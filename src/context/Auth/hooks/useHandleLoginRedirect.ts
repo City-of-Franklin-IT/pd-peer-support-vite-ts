@@ -1,7 +1,7 @@
 import { useMsal } from "@azure/msal-react"
 import { loginRequest } from "../config"
 
-export default () => {
+export const useHandleLoginRedirect = () => {
   const { instance, inProgress } = useMsal()
 
   return () => {

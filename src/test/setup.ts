@@ -50,14 +50,26 @@ vi.mock('motion/react', async () => {
   }
 })
 
+vi.mock('@/context/Auth', () => ({
+  useAuth: vi.fn(() => ({
+    isAuthenticated: false,
+    token: undefined,
+    isLoading: false,
+    refreshToken: vi.fn()
+  })),
+  AuthCtxProvider: ({ children }: any) => children,
+  MOCK_AUTH: false
+}))
+
 vi.mock('@/helpers/hooks', () => ({
   useGetToken: vi.fn(() => ({ token: undefined, isLoading: false, popupBlocked: false })),
-  useEnableQuery: vi.fn(() => ({ enabled: false, token: undefined })),
+  useEnableQuery: vi.fn(() => ({ enabled: false, token: undefined, refreshToken: vi.fn() })),
   useActiveAccount: vi.fn(() => false),
   useGetUserDepartment: vi.fn(() => ({ department: undefined, isLoading: false })),
   useRedirectAfterLogin: vi.fn(),
   useAuthRedirect: vi.fn(),
   useUnauthRedirect: vi.fn(),
+  withTokenRefresh: vi.fn(),
 }))
 
 vi.mock('@/utils/Toast/Toast', () => ({

@@ -1,236 +1,91 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { useNavigate } from "react-router"
 import { useMsal } from "@azure/msal-react"
-import { NODE_ENV } from '@/config/index'
-import { infoPopup } from "@/utils/Toast/Toast"
-import { getUserDepartment } from "./utils"
-
-// Types
-import { BrowserAuthError, AccountInfo } from "@azure/msal-browser"
+import { useAuth, MOCK_AUTH } from "@/context/Auth"
 
 export const useGetToken = () => {
-  const [state, setState] = useState<{ token: string | undefined, isLoading: boolean, popupBlocked: boolean }>(
-    NODE_ENV === 'development'
-      ? { token: 'dev-token', isLoading: false, popupBlocked: false }
-      : { token: undefined, isLoading: true, popupBlocked: false }
-  )
-
-  const { instance, accounts, inProgress } = useMsal()
-
-  const checkToken = async () => {
-    setState(prevState => ({ ...prevState, isLoading: true }))
-
-    const activeAccount = instance.getActiveAccount()
-
-    const isEdge = /Edg/.test(navigator.userAgent)
-
-    if(!activeAccount && accounts.length === 0) {
-      setState(prevState => ({ ...prevState, isLoading: false }))
-      window.location.href = '/'
-      return
-    }
-
-    if(!activeAccount && accounts.length > 0) {
-      setState(prevState => ({ ...prevState, isLoading: false }))
-      instance.setActiveAccount(accounts[0])
-      return
-    }
-
-    if(activeAccount?.idTokenClaims && activeAccount.idTokenClaims.exp) {
-      const expiresOn = activeAccount.idTokenClaims.exp * 1000
-      const now = Date.now()
-
-      if(expiresOn > now + 3000000) {
-        setState({ token: activeAccount.idToken, isLoading: false, popupBlocked: false })
-        return
-      }
-
-      const request = {
-        scopes: ["openid", "profile", "email"],
-        account: activeAccount,
-        forceRefresh: true,
-        redirectUri: "https://pdapps.franklintn.gov/peer-support/redirect.html"
-      }
-
-      if(isEdge) { // Acquire token via popup for Edge users
-        try {
-          const response = await instance.acquireTokenPopup(request)
-          setState({ token: response.idToken, isLoading: false, popupBlocked: false })
-        } catch(error) {
-          if(error instanceof BrowserAuthError && (error.errorCode === 'popup_window_error' || error.errorCode === 'empty_window_error')) {
-            setState({ token: undefined, isLoading: false, popupBlocked: true })
-          } else throw error
-        }
-      } else {
-        try {
-          const response = await instance.acquireTokenSilent(request)
-          setState({ token: response.idToken, isLoading: false, popupBlocked: false })
-        } catch {
-          instance.loginRedirect({ scopes: ["openid", "profile"] })
-        }
-      }
-
-      return
-    }
-
-    if(activeAccount && !activeAccount.idTokenClaims) {
-      const request = {
-        scopes: ["openid", "profile", "email"],
-        account: activeAccount,
-        redirectUri: "https://pdapps.franklintn.gov/peer-support/redirect.html"
-      }
-
-      if(isEdge) { // Acquire token via popup for Edge users
-        try {
-          const response = await instance.acquireTokenPopup(request)
-          setState({ token: response.idToken, isLoading: false, popupBlocked: false })
-        } catch(error) {
-          if(error instanceof BrowserAuthError && (error.errorCode === 'popup_window_error' || error.errorCode === 'empty_window_error')) {
-            setState({ token: undefined, isLoading: false, popupBlocked: true })
-          } else throw error
-        }
-      } else {
-        try {
-          const response = await instance.acquireTokenSilent(request)
-          setState({ token: response.idToken, isLoading: false, popupBlocked: false })
-        } catch {
-          instance.loginRedirect({ scopes: ["openid", "profile"] })
-        }
-      }
-
-      return
-    }
-
-    setState(prevState => ({ ...prevState, isLoading: false }))
-  }
-
-  useEffect(() => {
-    if(NODE_ENV === 'development') return
-
-    if(inProgress !== 'none') { // Wait for instance to fully initialize
-      return
-    }
-
-    checkToken()
-
-    const intervalId = setInterval(checkToken, 4 * 60 * 1000) // Check every 4 minutes
-    
-    return () => clearInterval(intervalId)
-  }, [inProgress, accounts.length])
-
-  return state
+  const { token, isLoading } = useAuth()
+  return { token, isLoading, popupBlocked: false }
 }
 
 export const useEnableQuery = () => {
-  const [state, setState] = useState<{ enabled: boolean }>({ enabled: false })
-
-  const { token, isLoading, popupBlocked } = useGetToken()
-
-  useEffect(() => {
-    if(isLoading) {
-      setState({ enabled: false })
-    } else setState({ enabled: !!token })
-  }, [token, isLoading])
+  const { token, isLoading, refreshToken } = useAuth()
+  const navigate = useNavigate()
 
   useEffect(() => {
-    if(popupBlocked) {
-      infoPopup('Please disable popup blocker for this site')
+    if (!isLoading && !token) {
+      navigate('/')
     }
-  }, [popupBlocked])
+  }, [token, isLoading, navigate])
 
-  return { enabled: state.enabled, token }
+  return { enabled: !!token && !isLoading, token, refreshToken }
 }
 
 export const useRedirectAfterLogin = () => {
-  const { instance, inProgress } = useMsal()
-  const development = NODE_ENV === 'development'
+  const { isAuthenticated, isLoading } = useAuth()
 
   useEffect(() => {
-    if(development) return
-
-    if(inProgress === 'none') {
-      const activeAccount = instance.getActiveAccount()
-
-      if(activeAccount) {
-        const redirectUrl = sessionStorage.getItem('redirectUrl')
-
-        if(redirectUrl) {
-          window.location.href = redirectUrl
-          sessionStorage.removeItem('redirectUrl')
-        }
-      } else {
-        window.location.pathname = '/'
+    if (!isLoading && isAuthenticated) {
+      const redirectUrl = sessionStorage.getItem('redirectUrl')
+      if (redirectUrl) {
+        window.location.href = redirectUrl
+        sessionStorage.removeItem('redirectUrl')
       }
     }
-  }, [inProgress, development, instance])
+  }, [isAuthenticated, isLoading])
 }
 
 export const useActiveAccount = () => {
-  const [state, setState] = useState<{ authenticated: boolean }>({ authenticated: false })
-  const { instance, inProgress } = useMsal()
-
-  useEffect(() => {
-    if(inProgress === 'none') {
-      const activeAccount = instance.getActiveAccount()
-      setState({ authenticated: !!activeAccount })
-    }
-  }, [instance, inProgress])
-
-  return state.authenticated
+  const { isAuthenticated } = useAuth()
+  return isAuthenticated
 }
 
 export const useAuthRedirect = () => {
-  const { instance, inProgress } = useMsal()
+  const { isAuthenticated, isLoading } = useAuth()
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (inProgress === 'none') {
-      const activeAccount = instance.getActiveAccount()
-      if (activeAccount) {
-        navigate('/petitions')
-      }
+    if (!isLoading && isAuthenticated) {
+      navigate('/support')
     }
-  }, [inProgress, instance, navigate])
+  }, [isAuthenticated, isLoading, navigate])
 }
 
 export const useUnauthRedirect = () => {
-  const { instance, inProgress } = useMsal()
+  const { isAuthenticated, isLoading } = useAuth()
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (inProgress === 'none') {
-      const activeAccount = instance.getActiveAccount()
-
-      if(!activeAccount) {
-        navigate('/')
-      }
+    if (!isLoading && !isAuthenticated) {
+      navigate('/')
     }
-  }, [inProgress, instance, navigate])
+  }, [isAuthenticated, isLoading, navigate])
 }
 
 export const useGetUserDepartment = () => {
-  const [state, setState] = useState<{ department: string | undefined, isLoading: boolean }>({ department: undefined, isLoading: true })
+  const { isLoading: authLoading } = useAuth()
+  const { inProgress } = useMsal()
 
-  const { instance, inProgress } = useMsal()
-  const activeAccount = instance.getActiveAccount()
+  // Mock implementation for development
+  if (MOCK_AUTH) {
+    return { department: 'IT', isLoading: false }
+  }
 
-  useEffect(() => {
-    if(NODE_ENV === 'development') {
-      setState({ department: 'IT', isLoading: false })
-      return
+  // Placeholder: actual implementation would fetch from Graph API
+  // For now, return undefined to avoid breaking existing code
+  return { department: undefined, isLoading: authLoading || inProgress !== 'none' }
+}
+
+export const withTokenRefresh = async <T>(
+  fn: () => Promise<T>,
+  refresh: () => Promise<void>
+): Promise<T> => {
+  try {
+    return await fn()
+  } catch (e) {
+    if (e instanceof Error && e.message === '401') {
+      await refresh()
     }
-
-    if(activeAccount && inProgress === 'none' && !state.department) {
-      getUserDepartment(instance, activeAccount as AccountInfo)
-        .then(department => setState({ department, isLoading: false }))
-        .catch((err) => {
-          console.log(err)
-          setState(prev => ({ ...prev, isLoading: false }))
-        })
-    } else if (inProgress === 'none' && !activeAccount) {
-      setState(prev => ({ ...prev, isLoading: false }))
-    }
-  }, [inProgress, state.department])
-
-  return { department: state.department, isLoading: state.isLoading }
+    throw e
+  }
 }

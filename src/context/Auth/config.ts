@@ -1,4 +1,4 @@
-import { LogLevel } from '@azure/msal-browser'
+import { LogLevel, AccountInfo } from '@azure/msal-browser'
 import { CLIENT_ID } from '@/config'
 
 export const msalConfig = {
@@ -42,3 +42,8 @@ export const loginRequest = {
     scopes: ["openid", "profile"],
     redirectUri: "https://pdapps.franklintn.gov/peer-support"
 }
+
+export const acquireRequest = (account: AccountInfo) => ({
+    scopes: ["openid", "email", "profile"],
+    account
+})
