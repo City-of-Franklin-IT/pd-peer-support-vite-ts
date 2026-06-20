@@ -56,7 +56,11 @@ export const Search = () => {
   )
 }
 
-type DateRangeInputProps = { onChange: React.ChangeEventHandler<HTMLInputElement>, value: string, children: React.ReactNode }
+type DateRangeInputProps = { 
+  onChange: React.ChangeEventHandler<HTMLInputElement>
+  value: string
+  children: React.ReactNode
+}
 
 const DateRangeInput = (props: DateRangeInputProps) => {
   const { children, ...inputProps } = props
@@ -73,7 +77,10 @@ const DateRangeInput = (props: DateRangeInputProps) => {
   )
 }
 
-type ClearFilterBtnProps = { onClick: React.MouseEventHandler<HTMLButtonElement>, disabled: boolean }
+type ClearFilterBtnProps = { 
+  onClick: React.MouseEventHandler<HTMLButtonElement>
+  disabled: boolean 
+}
 
 const ClearFilterBtn = (props: ClearFilterBtnProps) => (
   <button

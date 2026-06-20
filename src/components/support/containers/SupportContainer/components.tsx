@@ -1,8 +1,8 @@
 import { useGetSupport, useHandleForm } from './hooks'
 
 // Components
+import Loading from '@/components/layout/loading/Loading'
 import FormContainer from "@/components/form-elements/FormContainer"
-import HandleLoading from "@/utils/HandleLoading"
 import UpdateSupportForm from "../../forms/update/UpdateSupportForm"
 
 export const Form = () => {
@@ -18,13 +18,13 @@ export const Form = () => {
 }
 
 const GetSupport = () => {
-  const { data, isSuccess } = useGetSupport()
+  const { data, isLoading } = useGetSupport()
+
+  if(isLoading) return <Loading />
 
   return (
-    <HandleLoading isSuccess={isSuccess}>
-      <FormContainer>
-        <UpdateSupportForm support={data?.data} />
-      </FormContainer>
-    </HandleLoading>
+    <FormContainer>
+      <UpdateSupportForm support={data?.data} />
+    </FormContainer>
   )
 }

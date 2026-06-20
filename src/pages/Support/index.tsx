@@ -2,20 +2,20 @@ import { SupportProvider } from '@/components/support/context'
 import { useGetAllSupport } from './hooks'
 
 // Components
-import HandleLoading from "@/utils/HandleLoading"
+import Loading from '@/components/layout/loading/Loading'
 import ErrorBoundary from "@/components/error/ErrorBoundary"
 import SupportContainer from '@/components/support/containers/SupportContainer'
 
 function Support() {
-  const { data, isSuccess } = useGetAllSupport()
+  const { data, isLoading } = useGetAllSupport()
+
+  if(isLoading) return <Loading />
 
   return (
     <ErrorBoundary href={'/'}>
-      <HandleLoading isSuccess={isSuccess}>
-        <SupportProvider>
-          <SupportContainer support={data?.data || []} />
-        </SupportProvider>
-      </HandleLoading>
+      <SupportProvider>
+        <SupportContainer support={data?.data || []} />
+      </SupportProvider>
     </ErrorBoundary>
   )
 }

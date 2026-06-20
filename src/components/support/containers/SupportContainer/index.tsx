@@ -1,7 +1,7 @@
 import { useSetTableData } from '../../tables/SupportTable/hooks'
 
 // Types
-import * as AppTypes from '@/context/App/AppTypes'
+import type * as AppTypes from '@/context/App/AppTypes'
 
 // Components
 import SupportTable from '../../tables/SupportTable'
