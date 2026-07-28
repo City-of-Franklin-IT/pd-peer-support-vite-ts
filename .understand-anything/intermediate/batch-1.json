@@ -1,0 +1,1779 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/form-elements/FormContainer/index.tsx",
+      "type": "file",
+      "name": "FormContainer/index.tsx",
+      "filePath": "src/components/form-elements/FormContainer/index.tsx",
+      "summary": "Reusable form container component providing consistent styling for form elements throughout the application.",
+      "tags": ["component", "form-elements", "layout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/FormContainer/index.tsx:FormContainer",
+      "type": "function",
+      "name": "FormContainer",
+      "filePath": "src/components/form-elements/FormContainer/index.tsx",
+      "lineRange": [6, 16],
+      "summary": "React component that wraps form content with consistent container styling and spacing.",
+      "tags": ["component", "form-layout", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/Footer/hooks.ts",
+      "type": "file",
+      "name": "Footer/hooks.ts",
+      "filePath": "src/components/layout/Footer/hooks.ts",
+      "summary": "Custom hook for Footer component to handle documentation button navigation based on user department.",
+      "tags": ["hook", "navigation", "footer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Footer/hooks.ts:useHandleDocsBtn",
+      "type": "function",
+      "name": "useHandleDocsBtn",
+      "filePath": "src/components/layout/Footer/hooks.ts",
+      "lineRange": [4, 10],
+      "summary": "Hook that determines documentation button behavior based on user's department affiliation.",
+      "tags": ["hook", "navigation", "handler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/roster/containers/RosterContainer/components.tsx",
+      "type": "file",
+      "name": "RosterContainer/components.tsx",
+      "filePath": "src/components/roster/containers/RosterContainer/components.tsx",
+      "summary": "Sub-components for roster management including header, create button, form, and personnel list elements.",
+      "tags": ["component", "roster", "container"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/roster/containers/RosterContainer/components.tsx:Header",
+      "type": "function",
+      "name": "Header",
+      "filePath": "src/components/roster/containers/RosterContainer/components.tsx",
+      "lineRange": [11, 13],
+      "summary": "Roster section header component displaying roster title and basic layout.",
+      "tags": ["component", "header", "layout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/containers/RosterContainer/components.tsx:CreateBtn",
+      "type": "function",
+      "name": "CreateBtn",
+      "filePath": "src/components/roster/containers/RosterContainer/components.tsx",
+      "lineRange": [15, 26],
+      "summary": "Button component that toggles the create roster personnel form visibility via context dispatch.",
+      "tags": ["component", "button", "control"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/containers/RosterContainer/components.tsx:Form",
+      "type": "function",
+      "name": "Form",
+      "filePath": "src/components/roster/containers/RosterContainer/components.tsx",
+      "lineRange": [28, 49],
+      "summary": "Conditional form renderer that displays either create or update roster personnel forms.",
+      "tags": ["component", "form", "conditional"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "type": "file",
+      "name": "RosterContainer/hooks.ts",
+      "filePath": "src/components/roster/containers/RosterContainer/hooks.ts",
+      "summary": "Collection of custom hooks managing roster container logic including form handling, personnel retrieval, and deletion operations.",
+      "tags": ["hook", "roster", "state-management"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/roster/containers/RosterContainer/hooks.ts:useOnCreateBtnClick",
+      "type": "function",
+      "name": "useOnCreateBtnClick",
+      "filePath": "src/components/roster/containers/RosterContainer/hooks.ts",
+      "lineRange": [15, 22],
+      "summary": "Hook handling create button click by toggling form visibility and resetting roster context.",
+      "tags": ["hook", "handler", "form-control"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/containers/RosterContainer/hooks.ts:useGetPerson",
+      "type": "function",
+      "name": "useGetPerson",
+      "filePath": "src/components/roster/containers/RosterContainer/hooks.ts",
+      "lineRange": [27, 37],
+      "summary": "Custom hook using React Query to fetch individual roster personnel details with authentication.",
+      "tags": ["hook", "data-fetching", "react-query"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/roster/containers/RosterContainer/hooks.ts:useHandleForm",
+      "type": "function",
+      "name": "useHandleForm",
+      "filePath": "src/components/roster/containers/RosterContainer/hooks.ts",
+      "lineRange": [42, 58],
+      "summary": "Hook managing form visibility and scroll behavior when roster form opens with delete handling.",
+      "tags": ["hook", "form-control", "scroll-behavior"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/roster/containers/RosterContainer/hooks.ts:useHandleDeleteBtn",
+      "type": "function",
+      "name": "useHandleDeleteBtn",
+      "filePath": "src/components/roster/containers/RosterContainer/hooks.ts",
+      "lineRange": [63, 91],
+      "summary": "Hook managing roster personnel deletion with confirmation, API call, and query cache invalidation.",
+      "tags": ["hook", "delete-handler", "api-integration"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/roster/context.tsx",
+      "type": "file",
+      "name": "context.tsx",
+      "filePath": "src/components/roster/context.tsx",
+      "summary": "React context provider for roster page state management including form visibility and form type tracking.",
+      "tags": ["context", "state-management", "roster"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/roster/context.tsx:RosterReducer",
+      "type": "function",
+      "name": "RosterReducer",
+      "filePath": "src/components/roster/context.tsx",
+      "lineRange": [30, 48],
+      "summary": "Reducer function managing roster context state transitions for form visibility and form type changes.",
+      "tags": ["reducer", "state-management", "handler"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/roster/context.tsx:RosterProvider",
+      "type": "function",
+      "name": "RosterProvider",
+      "filePath": "src/components/roster/context.tsx",
+      "lineRange": [50, 58],
+      "summary": "Context provider component wrapping roster page with state management via useReducer.",
+      "tags": ["context-provider", "state-management", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "type": "file",
+      "name": "CreateRosterPersonnelForm/hooks.tsx",
+      "filePath": "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "summary": "Custom hooks for create roster personnel form including form handling, submission, and cancellation logic.",
+      "tags": ["hook", "form-handling", "roster"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx:useHandleCreateRosterPersonnelForm",
+      "type": "function",
+      "name": "useHandleCreateRosterPersonnelForm",
+      "filePath": "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "lineRange": [11, 17],
+      "summary": "Composite hook aggregating form creation, cancellation, and submission handlers for create roster form.",
+      "tags": ["hook", "form-handler", "composition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx:useCreateRosterPersonnel",
+      "type": "function",
+      "name": "useCreateRosterPersonnel",
+      "filePath": "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "lineRange": [19, 27],
+      "summary": "Hook initializing React Hook Form instance for roster personnel creation with empty defaults.",
+      "tags": ["hook", "form-initialization", "react-hook-form"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx:useOnCancelBtnClick",
+      "type": "function",
+      "name": "useOnCancelBtnClick",
+      "filePath": "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "lineRange": [29, 33],
+      "summary": "Hook handling form cancellation by resetting roster context state.",
+      "tags": ["hook", "handler", "form-control"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx:useHandleFormSubmit",
+      "type": "function",
+      "name": "useHandleFormSubmit",
+      "filePath": "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "lineRange": [35, 51],
+      "summary": "Hook managing form submission with API call, query cache invalidation, and toast notifications.",
+      "tags": ["hook", "form-submission", "api-integration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "type": "file",
+      "name": "CreateRosterPersonnelForm/utils.ts",
+      "filePath": "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "summary": "Utility function for creating roster personnel with API integration and error handling.",
+      "tags": ["utility", "api-handler", "roster"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts:handleCreateRosterPersonnel",
+      "type": "function",
+      "name": "handleCreateRosterPersonnel",
+      "filePath": "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "lineRange": [8, 14],
+      "summary": "Function making API call to create roster personnel with authentication and toast feedback.",
+      "tags": ["api-handler", "create-operation", "error-handling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "type": "file",
+      "name": "UpdateRosterPersonnelForm/hooks.ts",
+      "filePath": "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "summary": "Custom hooks for update roster personnel form with form initialization, submission, and cancellation logic.",
+      "tags": ["hook", "form-handling", "roster"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts:useHandleUpdateRosterPersonnelForm",
+      "type": "function",
+      "name": "useHandleUpdateRosterPersonnelForm",
+      "filePath": "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "lineRange": [13, 19],
+      "summary": "Composite hook aggregating update form initialization, cancellation, and submission handlers.",
+      "tags": ["hook", "form-handler", "composition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts:useUpdateRosterPersonnel",
+      "type": "function",
+      "name": "useUpdateRosterPersonnel",
+      "filePath": "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "lineRange": [21, 30],
+      "summary": "Hook initializing React Hook Form with personnel data for editing existing roster members.",
+      "tags": ["hook", "form-initialization", "react-hook-form"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts:useHandleFormSubmit",
+      "type": "function",
+      "name": "useHandleFormSubmit",
+      "filePath": "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "lineRange": [32, 50],
+      "summary": "Hook handling form submission for roster updates with API call, cache invalidation, and error handling.",
+      "tags": ["hook", "form-submission", "api-integration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "type": "file",
+      "name": "UpdateRosterPersonnelForm/utils.ts",
+      "filePath": "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "summary": "Utility function for updating roster personnel with API integration and error handling.",
+      "tags": ["utility", "api-handler", "roster"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts:handleUpdateRosterPersonnel",
+      "type": "function",
+      "name": "handleUpdateRosterPersonnel",
+      "filePath": "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "lineRange": [8, 16],
+      "summary": "Function making API call to update roster personnel with authentication and toast feedback.",
+      "tags": ["api-handler", "update-operation", "error-handling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/roster/test/context.spec.tsx",
+      "type": "file",
+      "name": "context.spec.tsx",
+      "filePath": "src/components/roster/test/context.spec.tsx",
+      "summary": "Unit tests for roster context provider covering reducer actions and provider initialization.",
+      "tags": ["test", "context", "vitest"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/support/containers/SupportContainer/components.tsx",
+      "type": "file",
+      "name": "SupportContainer/components.tsx",
+      "filePath": "src/components/support/containers/SupportContainer/components.tsx",
+      "summary": "Sub-components for support management container including form and support list elements.",
+      "tags": ["component", "support", "container"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/containers/SupportContainer/components.tsx:Form",
+      "type": "function",
+      "name": "Form",
+      "filePath": "src/components/support/containers/SupportContainer/components.tsx",
+      "lineRange": [8, 18],
+      "summary": "Conditional form component rendering create or update support form based on context state.",
+      "tags": ["component", "form", "conditional"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/containers/SupportContainer/hooks.ts",
+      "type": "file",
+      "name": "SupportContainer/hooks.ts",
+      "filePath": "src/components/support/containers/SupportContainer/hooks.ts",
+      "summary": "Custom hooks managing support container logic including data fetching and form visibility.",
+      "tags": ["hook", "support", "state-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/containers/SupportContainer/hooks.ts:useGetSupport",
+      "type": "function",
+      "name": "useGetSupport",
+      "filePath": "src/components/support/containers/SupportContainer/hooks.ts",
+      "lineRange": [11, 20],
+      "summary": "Custom hook using React Query to fetch support entries with authentication and context awareness.",
+      "tags": ["hook", "data-fetching", "react-query"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/containers/SupportContainer/hooks.ts:useHandleForm",
+      "type": "function",
+      "name": "useHandleForm",
+      "filePath": "src/components/support/containers/SupportContainer/hooks.ts",
+      "lineRange": [25, 39],
+      "summary": "Hook managing form visibility and scroll behavior when support form opens.",
+      "tags": ["hook", "form-control", "scroll-behavior"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "type": "file",
+      "name": "UpdateSupportForm/hooks.ts",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "summary": "Custom hooks for update support form including form initialization, submission, and deletion logic.",
+      "tags": ["hook", "form-handling", "support"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useHandleUpdateSupportForm",
+      "type": "function",
+      "name": "useHandleUpdateSupportForm",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "lineRange": [17, 29],
+      "summary": "Composite hook aggregating form initialization, cancellation, deletion, and submission handlers.",
+      "tags": ["hook", "form-handler", "composition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useUpdateSupport",
+      "type": "function",
+      "name": "useUpdateSupport",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "lineRange": [34, 49],
+      "summary": "Hook initializing React Hook Form with support entry data for editing with datetime normalization.",
+      "tags": ["hook", "form-initialization", "react-hook-form"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useOnCancelBtnClick",
+      "type": "function",
+      "name": "useOnCancelBtnClick",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "lineRange": [54, 60],
+      "summary": "Hook handling form cancellation by resetting support context state.",
+      "tags": ["hook", "handler", "form-control"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useHandleDeleteBtn",
+      "type": "function",
+      "name": "useHandleDeleteBtn",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "lineRange": [65, 92],
+      "summary": "Hook managing support entry deletion with confirmation, API call, and query cache invalidation.",
+      "tags": ["hook", "delete-handler", "api-integration"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useHandleFormSubmit",
+      "type": "function",
+      "name": "useHandleFormSubmit",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "lineRange": [97, 115],
+      "summary": "Hook managing complex form submission with multiple API calls for support and related entities.",
+      "tags": ["hook", "form-submission", "api-integration"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "type": "file",
+      "name": "UpdateSupportForm/utils.ts",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "summary": "Utility function orchestrating complex support entry updates including related personnel and other support records.",
+      "tags": ["utility", "api-handler", "support"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/forms/update/UpdateSupportForm/utils.ts:handleUpdateSupport",
+      "type": "function",
+      "name": "handleUpdateSupport",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "lineRange": [8, 48],
+      "summary": "Function orchestrating support update with nested personnel create/update/delete operations and other support records.",
+      "tags": ["api-handler", "update-operation", "orchestration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/config/index.ts",
+      "type": "file",
+      "name": "config/index.ts",
+      "filePath": "src/config/index.ts",
+      "summary": "Application configuration constants including base path, title, environment mode, and Azure AD client ID.",
+      "tags": ["config", "constants", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/context/App/AppActions.ts",
+      "type": "file",
+      "name": "AppActions.ts",
+      "filePath": "src/context/App/AppActions.ts",
+      "summary": "Centralized API integration layer exporting 16 action functions for all CRUD operations on support, personnel, roster, and documentation endpoints.",
+      "tags": ["api-handler", "service", "entry-point"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:getAllSupport",
+      "type": "function",
+      "name": "getAllSupport",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [15, 21],
+      "summary": "API function fetching all support entries from the backend with authentication.",
+      "tags": ["api-handler", "fetch", "read-operation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:getSupport",
+      "type": "function",
+      "name": "getSupport",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [28, 34],
+      "summary": "API function fetching a single support entry by UUID with authentication.",
+      "tags": ["api-handler", "fetch", "read-operation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:createSupport",
+      "type": "function",
+      "name": "createSupport",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [41, 53],
+      "summary": "API function creating a new support entry with form data and authentication.",
+      "tags": ["api-handler", "create-operation", "post-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:updateSupport",
+      "type": "function",
+      "name": "updateSupport",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [60, 72],
+      "summary": "API function updating an existing support entry with new form data.",
+      "tags": ["api-handler", "update-operation", "put-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:deleteSupport",
+      "type": "function",
+      "name": "deleteSupport",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [79, 88],
+      "summary": "API function deleting a support entry by UUID with authentication.",
+      "tags": ["api-handler", "delete-operation", "delete-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:createOtherSupport",
+      "type": "function",
+      "name": "createOtherSupport",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [95, 107],
+      "summary": "API function creating a support record for non-personnel recipients.",
+      "tags": ["api-handler", "create-operation", "post-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:updateOtherSupport",
+      "type": "function",
+      "name": "updateOtherSupport",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [114, 126],
+      "summary": "API function updating a support record for non-personnel recipients.",
+      "tags": ["api-handler", "update-operation", "put-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:createPersonnel",
+      "type": "function",
+      "name": "createPersonnel",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [133, 145],
+      "summary": "API function creating a personnel association with a support entry.",
+      "tags": ["api-handler", "create-operation", "post-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:updatePersonnel",
+      "type": "function",
+      "name": "updatePersonnel",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [152, 164],
+      "summary": "API function updating an existing personnel association.",
+      "tags": ["api-handler", "update-operation", "put-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:deletePersonnel",
+      "type": "function",
+      "name": "deletePersonnel",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [171, 180],
+      "summary": "API function deleting a personnel association by UUID.",
+      "tags": ["api-handler", "delete-operation", "delete-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:getRosterPersonnel",
+      "type": "function",
+      "name": "getRosterPersonnel",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [187, 193],
+      "summary": "API function fetching the roster of all peer support personnel.",
+      "tags": ["api-handler", "fetch", "read-operation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:getPerson",
+      "type": "function",
+      "name": "getPerson",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [200, 206],
+      "summary": "API function fetching a single roster personnel member by UUID.",
+      "tags": ["api-handler", "fetch", "read-operation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:createRosterPersonnel",
+      "type": "function",
+      "name": "createRosterPersonnel",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [213, 225],
+      "summary": "API function adding a new peer support personnel member to the roster.",
+      "tags": ["api-handler", "create-operation", "post-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:updateRosterPersonnel",
+      "type": "function",
+      "name": "updateRosterPersonnel",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [232, 244],
+      "summary": "API function updating an existing roster personnel member information.",
+      "tags": ["api-handler", "update-operation", "put-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:deleteRosterPersonnel",
+      "type": "function",
+      "name": "deleteRosterPersonnel",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [251, 260],
+      "summary": "API function removing a peer support personnel member from the roster by UUID.",
+      "tags": ["api-handler", "delete-operation", "delete-request"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/App/AppActions.ts:getDocs",
+      "type": "function",
+      "name": "getDocs",
+      "filePath": "src/context/App/AppActions.ts",
+      "lineRange": [267, 273],
+      "summary": "API function fetching API documentation entries.",
+      "tags": ["api-handler", "fetch", "read-operation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/helpers/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/helpers/hooks.ts",
+      "summary": "Collection of 8 shared custom hooks for authentication, query enabling, navigation redirects, and token refresh logic.",
+      "tags": ["hook", "utility", "entry-point"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/helpers/hooks.ts:useGetToken",
+      "type": "function",
+      "name": "useGetToken",
+      "filePath": "src/helpers/hooks.ts",
+      "lineRange": [6, 9],
+      "summary": "Hook retrieving authentication token from the auth context.",
+      "tags": ["hook", "auth", "token"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/helpers/hooks.ts:useEnableQuery",
+      "type": "function",
+      "name": "useEnableQuery",
+      "lineRange": [11, 22],
+      "filePath": "src/helpers/hooks.ts",
+      "summary": "Hook enabling React Query operations only when user is authenticated, redirecting to login otherwise.",
+      "tags": ["hook", "auth", "query-guard"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/helpers/hooks.ts:useRedirectAfterLogin",
+      "type": "function",
+      "name": "useRedirectAfterLogin",
+      "filePath": "src/helpers/hooks.ts",
+      "lineRange": [24, 36],
+      "summary": "Hook redirecting to stored session URL after successful login or to home if none stored.",
+      "tags": ["hook", "auth", "navigation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/helpers/hooks.ts:useActiveAccount",
+      "type": "function",
+      "name": "useActiveAccount",
+      "filePath": "src/helpers/hooks.ts",
+      "lineRange": [38, 41],
+      "summary": "Hook returning the currently active account from auth context.",
+      "tags": ["hook", "auth", "account"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/helpers/hooks.ts:useAuthRedirect",
+      "type": "function",
+      "name": "useAuthRedirect",
+      "filePath": "src/helpers/hooks.ts",
+      "lineRange": [43, 52],
+      "summary": "Hook redirecting authenticated users away from public pages like login.",
+      "tags": ["hook", "auth", "navigation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/helpers/hooks.ts:useUnauthRedirect",
+      "type": "function",
+      "name": "useUnauthRedirect",
+      "filePath": "src/helpers/hooks.ts",
+      "lineRange": [54, 63],
+      "summary": "Hook redirecting unauthenticated users to login page from protected pages.",
+      "tags": ["hook", "auth", "navigation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/helpers/hooks.ts:useGetUserDepartment",
+      "type": "function",
+      "name": "useGetUserDepartment",
+      "filePath": "src/helpers/hooks.ts",
+      "lineRange": [65, 77],
+      "summary": "Hook retrieving the department affiliation of the currently logged-in user.",
+      "tags": ["hook", "auth", "user-info"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/helpers/hooks.ts:withTokenRefresh",
+      "type": "function",
+      "name": "withTokenRefresh",
+      "filePath": "src/helpers/hooks.ts",
+      "lineRange": [79, 91],
+      "summary": "Higher-order function wrapping async operations with periodic token refresh capability.",
+      "tags": ["hook", "auth", "token-refresh"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/helpers/test/utils.spec.ts",
+      "type": "file",
+      "name": "utils.spec.ts",
+      "filePath": "src/helpers/test/utils.spec.ts",
+      "summary": "Unit tests for utility functions covering helper function behavior and output validation.",
+      "tags": ["test", "vitest", "helpers"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/helpers/utils.ts",
+      "type": "file",
+      "name": "utils.ts",
+      "filePath": "src/helpers/utils.ts",
+      "summary": "Utility functions library providing authentication headers, date formatting, motion animation props, and user department retrieval.",
+      "tags": ["utility", "helpers", "entry-point"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/helpers/utils.ts:authHeaders",
+      "type": "function",
+      "name": "authHeaders",
+      "filePath": "src/helpers/utils.ts",
+      "lineRange": [5, 13],
+      "summary": "Function constructing HTTP headers with Bearer token for authenticated API requests.",
+      "tags": ["utility", "auth", "headers"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/helpers/utils.ts:formatDate",
+      "type": "function",
+      "name": "formatDate",
+      "filePath": "src/helpers/utils.ts",
+      "lineRange": [15, 18],
+      "summary": "Function formatting dates to ISO string format for display in the UI.",
+      "tags": ["utility", "formatting", "date"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/helpers/utils.ts:getUserDepartment",
+      "type": "function",
+      "name": "getUserDepartment",
+      "filePath": "src/helpers/utils.ts",
+      "lineRange": [75, 95],
+      "summary": "Function fetching authenticated user department information from API with MSAL token acquisition.",
+      "tags": ["utility", "auth", "user-info"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/utils/Toast/Toast.tsx",
+      "type": "file",
+      "name": "Toast.tsx",
+      "filePath": "src/utils/Toast/Toast.tsx",
+      "summary": "Toast notification utility exporting 4 notification functions for success, error, authentication, and info messages.",
+      "tags": ["utility", "notification", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/utils/Toast/Toast.tsx:savedPopup",
+      "type": "function",
+      "name": "savedPopup",
+      "filePath": "src/utils/Toast/Toast.tsx",
+      "lineRange": [10, 25],
+      "summary": "Function displaying a success toast notification with save confirmation.",
+      "tags": ["notification", "success", "toast"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/Toast/Toast.tsx:errorPopup",
+      "type": "function",
+      "name": "errorPopup",
+      "filePath": "src/utils/Toast/Toast.tsx",
+      "lineRange": [27, 42],
+      "summary": "Function displaying an error toast notification with error message.",
+      "tags": ["notification", "error", "toast"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/Toast/Toast.tsx:authPopup",
+      "type": "function",
+      "name": "authPopup",
+      "filePath": "src/utils/Toast/Toast.tsx",
+      "lineRange": [44, 59],
+      "summary": "Function displaying an authentication error toast notification.",
+      "tags": ["notification", "auth", "toast"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/Toast/Toast.tsx:infoPopup",
+      "type": "function",
+      "name": "infoPopup",
+      "filePath": "src/utils/Toast/Toast.tsx",
+      "lineRange": [61, 76],
+      "summary": "Function displaying an informational toast notification.",
+      "tags": ["notification", "info", "toast"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/form-elements/FormContainer/index.tsx",
+      "target": "function:src/components/form-elements/FormContainer/index.tsx:FormContainer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/FormContainer/index.tsx",
+      "target": "file:src/components/form-elements/FormContainer/FormContainer.module.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/form-elements/FormContainer/index.tsx",
+      "target": "file:src/helpers/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/Footer/hooks.ts",
+      "target": "function:src/components/layout/Footer/hooks.ts:useHandleDocsBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Footer/hooks.ts",
+      "target": "file:src/config/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/Footer/hooks.ts",
+      "target": "file:src/helpers/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/layout/Footer/hooks.ts:useHandleDocsBtn",
+      "target": "function:src/helpers/hooks.ts:useGetUserDepartment",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/components.tsx",
+      "target": "function:src/components/roster/containers/RosterContainer/components.tsx:Header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/components.tsx",
+      "target": "function:src/components/roster/containers/RosterContainer/components.tsx:CreateBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/components.tsx",
+      "target": "function:src/components/roster/containers/RosterContainer/components.tsx:Form",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/components.tsx",
+      "target": "file:src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/components.tsx",
+      "target": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/components.tsx",
+      "target": "file:src/components/roster/context.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/components.tsx",
+      "target": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/components.tsx",
+      "target": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/components.tsx",
+      "target": "file:src/utils/HandleLoading/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "target": "function:src/components/roster/containers/RosterContainer/hooks.ts:useOnCreateBtnClick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "target": "function:src/components/roster/containers/RosterContainer/hooks.ts:useGetPerson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "target": "function:src/components/roster/containers/RosterContainer/hooks.ts:useHandleForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "target": "function:src/components/roster/containers/RosterContainer/hooks.ts:useHandleDeleteBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "target": "file:src/components/roster/context.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "target": "file:src/context/App/AppActions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "target": "file:src/helpers/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "target": "file:src/helpers/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/hooks.ts",
+      "target": "file:src/utils/Toast/Toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/roster/containers/RosterContainer/hooks.ts:useHandleDeleteBtn",
+      "target": "function:src/context/App/AppActions.ts:deleteRosterPersonnel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/roster/containers/RosterContainer/hooks.ts:useGetPerson",
+      "target": "function:src/context/App/AppActions.ts:getPerson",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/roster/context.tsx",
+      "target": "function:src/components/roster/context.tsx:RosterReducer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/context.tsx",
+      "target": "function:src/components/roster/context.tsx:RosterProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/context.tsx",
+      "target": "file:src/components/roster/context.tsx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "target": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx:useHandleCreateRosterPersonnelForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "target": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx:useCreateRosterPersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "target": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx:useOnCancelBtnClick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "target": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx:useHandleFormSubmit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "target": "file:src/components/roster/context.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "target": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "target": "file:src/helpers/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx:useHandleFormSubmit",
+      "target": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts:handleCreateRosterPersonnel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "target": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts:handleCreateRosterPersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "target": "file:src/context/App/AppActions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "target": "file:src/helpers/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "target": "file:src/utils/Toast/Toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts:handleCreateRosterPersonnel",
+      "target": "function:src/context/App/AppActions.ts:createRosterPersonnel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "target": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts:useHandleUpdateRosterPersonnelForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "target": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts:useUpdateRosterPersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "target": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts:useHandleFormSubmit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "target": "file:src/components/roster/context.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "target": "file:src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "target": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "target": "file:src/helpers/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "target": "file:src/utils/Toast/Toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts:useHandleFormSubmit",
+      "target": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts:handleUpdateRosterPersonnel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "target": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts:handleUpdateRosterPersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "target": "file:src/context/App/AppActions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "target": "file:src/helpers/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "target": "file:src/utils/Toast/Toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts:handleUpdateRosterPersonnel",
+      "target": "function:src/context/App/AppActions.ts:updateRosterPersonnel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/roster/test/context.spec.tsx",
+      "target": "file:src/components/roster/context.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/test/context.spec.tsx",
+      "target": "file:src/components/roster/context.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/components.tsx",
+      "target": "function:src/components/support/containers/SupportContainer/components.tsx:Form",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/components.tsx",
+      "target": "file:src/components/form-elements/FormContainer/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/components.tsx",
+      "target": "file:src/components/layout/loading/Loading/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/components.tsx",
+      "target": "file:src/components/support/containers/SupportContainer/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/components.tsx",
+      "target": "file:src/components/support/forms/update/UpdateSupportForm/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/hooks.ts",
+      "target": "function:src/components/support/containers/SupportContainer/hooks.ts:useGetSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/hooks.ts",
+      "target": "function:src/components/support/containers/SupportContainer/hooks.ts:useHandleForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/hooks.ts",
+      "target": "file:src/components/support/context.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/hooks.ts",
+      "target": "file:src/context/App/AppActions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/hooks.ts",
+      "target": "file:src/helpers/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/hooks.ts",
+      "target": "file:src/helpers/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/support/containers/SupportContainer/hooks.ts:useGetSupport",
+      "target": "function:src/context/App/AppActions.ts:getSupport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useHandleUpdateSupportForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useUpdateSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useOnCancelBtnClick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useHandleDeleteBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useHandleFormSubmit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "file:src/components/support/context.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "file:src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "file:src/context/App/AppActions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "file:src/helpers/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "file:src/helpers/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "target": "file:src/utils/Toast/Toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useHandleDeleteBtn",
+      "target": "function:src/context/App/AppActions.ts:deleteSupport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/support/forms/update/UpdateSupportForm/hooks.ts:useHandleFormSubmit",
+      "target": "function:src/components/support/forms/update/UpdateSupportForm/utils.ts:handleUpdateSupport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "target": "function:src/components/support/forms/update/UpdateSupportForm/utils.ts:handleUpdateSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "target": "file:src/context/App/AppActions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "target": "file:src/helpers/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "target": "file:src/utils/Toast/Toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/support/forms/update/UpdateSupportForm/utils.ts:handleUpdateSupport",
+      "target": "function:src/context/App/AppActions.ts:updateSupport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/support/forms/update/UpdateSupportForm/utils.ts:handleUpdateSupport",
+      "target": "function:src/context/App/AppActions.ts:createPersonnel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/support/forms/update/UpdateSupportForm/utils.ts:handleUpdateSupport",
+      "target": "function:src/context/App/AppActions.ts:updatePersonnel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/support/forms/update/UpdateSupportForm/utils.ts:handleUpdateSupport",
+      "target": "function:src/context/App/AppActions.ts:deletePersonnel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/support/forms/update/UpdateSupportForm/utils.ts:handleUpdateSupport",
+      "target": "function:src/context/App/AppActions.ts:createOtherSupport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/support/forms/update/UpdateSupportForm/utils.ts:handleUpdateSupport",
+      "target": "function:src/context/App/AppActions.ts:updateOtherSupport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/config/index.ts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:getAllSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:getSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:createSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:updateSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:deleteSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:createOtherSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:updateOtherSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:createPersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:updatePersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:deletePersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:getRosterPersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:getPerson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:createRosterPersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:updateRosterPersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:deleteRosterPersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "function:src/context/App/AppActions.ts:getDocs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "file:src/config/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/context/App/AppActions.ts",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/helpers/hooks.ts",
+      "target": "function:src/helpers/hooks.ts:useGetToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/helpers/hooks.ts",
+      "target": "function:src/helpers/hooks.ts:useEnableQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/helpers/hooks.ts",
+      "target": "function:src/helpers/hooks.ts:useRedirectAfterLogin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/helpers/hooks.ts",
+      "target": "function:src/helpers/hooks.ts:useActiveAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/helpers/hooks.ts",
+      "target": "function:src/helpers/hooks.ts:useAuthRedirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/helpers/hooks.ts",
+      "target": "function:src/helpers/hooks.ts:useUnauthRedirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/helpers/hooks.ts",
+      "target": "function:src/helpers/hooks.ts:useGetUserDepartment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/helpers/hooks.ts",
+      "target": "function:src/helpers/hooks.ts:withTokenRefresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/helpers/hooks.ts",
+      "target": "file:src/context/Auth/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/helpers/hooks.ts:useEnableQuery",
+      "target": "function:src/helpers/hooks.ts:useGetToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/helpers/hooks.ts:useRedirectAfterLogin",
+      "target": "function:src/helpers/hooks.ts:useGetToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/helpers/hooks.ts:useAuthRedirect",
+      "target": "function:src/helpers/hooks.ts:useGetToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/helpers/hooks.ts:useUnauthRedirect",
+      "target": "function:src/helpers/hooks.ts:useGetToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/helpers/test/utils.spec.ts",
+      "target": "file:src/helpers/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/helpers/test/utils.spec.ts",
+      "target": "file:src/helpers/utils.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/helpers/utils.ts",
+      "target": "function:src/helpers/utils.ts:authHeaders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/helpers/utils.ts",
+      "target": "function:src/helpers/utils.ts:formatDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/helpers/utils.ts",
+      "target": "function:src/helpers/utils.ts:getUserDepartment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/Toast/Toast.tsx",
+      "target": "function:src/utils/Toast/Toast.tsx:savedPopup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/Toast/Toast.tsx",
+      "target": "function:src/utils/Toast/Toast.tsx:errorPopup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/Toast/Toast.tsx",
+      "target": "function:src/utils/Toast/Toast.tsx:authPopup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/Toast/Toast.tsx",
+      "target": "function:src/utils/Toast/Toast.tsx:infoPopup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/Toast/Toast.tsx",
+      "target": "file:src/utils/Toast/Toast.module.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

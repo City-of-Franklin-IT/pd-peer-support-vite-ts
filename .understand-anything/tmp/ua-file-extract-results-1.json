@@ -1,0 +1,2165 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 20,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/components/form-elements/FormContainer/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 15,
+      "functions": [
+        {
+          "name": "FormContainer",
+          "startLine": 6,
+          "endLine": 16,
+          "params": [
+            "{ children }"
+          ]
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Footer/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 7,
+      "functions": [
+        {
+          "name": "useHandleDocsBtn",
+          "startLine": 4,
+          "endLine": 10,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useHandleDocsBtn",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useHandleDocsBtn",
+          "callee": "useGetUserDepartment",
+          "lineNumber": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/roster/containers/RosterContainer/components.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 49,
+      "functions": [
+        {
+          "name": "Header",
+          "startLine": 11,
+          "endLine": 13,
+          "params": [
+            "{ children }"
+          ]
+        },
+        {
+          "name": "CreateBtn",
+          "startLine": 15,
+          "endLine": 26,
+          "params": [
+            "{ children }"
+          ]
+        },
+        {
+          "name": "Form",
+          "startLine": 28,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "GetPersonnel",
+          "startLine": 51,
+          "endLine": 59,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Header",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "CreateBtn",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "Form",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CreateBtn",
+          "callee": "useContext",
+          "lineNumber": 16
+        },
+        {
+          "caller": "CreateBtn",
+          "callee": "dispatch",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Form",
+          "callee": "useHandleForm",
+          "lineNumber": 29
+        },
+        {
+          "caller": "GetPersonnel",
+          "callee": "useGetPerson",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 3,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/roster/containers/RosterContainer/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 70,
+      "functions": [
+        {
+          "name": "useOnCreateBtnClick",
+          "startLine": 15,
+          "endLine": 22,
+          "params": [
+            "formType"
+          ]
+        },
+        {
+          "name": "useGetPerson",
+          "startLine": 27,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "useHandleForm",
+          "startLine": 42,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "useHandleDeleteBtn",
+          "startLine": 63,
+          "endLine": 91,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useOnCreateBtnClick",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "useGetPerson",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "useHandleForm",
+          "line": 42,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useOnCreateBtnClick",
+          "callee": "useContext",
+          "lineNumber": 16
+        },
+        {
+          "caller": "useOnCreateBtnClick",
+          "callee": "dispatch",
+          "lineNumber": 19
+        },
+        {
+          "caller": "useOnCreateBtnClick",
+          "callee": "dispatch",
+          "lineNumber": 20
+        },
+        {
+          "caller": "useGetPerson",
+          "callee": "useContext",
+          "lineNumber": 28
+        },
+        {
+          "caller": "useGetPerson",
+          "callee": "useEnableQuery",
+          "lineNumber": 30
+        },
+        {
+          "caller": "useGetPerson",
+          "callee": "useQuery",
+          "lineNumber": 32
+        },
+        {
+          "caller": "useGetPerson",
+          "callee": "AppActions.getPerson",
+          "lineNumber": 34
+        },
+        {
+          "caller": "useGetPerson",
+          "callee": "authHeaders",
+          "lineNumber": 34
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "useContext",
+          "lineNumber": 43
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "useRef",
+          "lineNumber": 45
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "useHandleDeleteBtn",
+          "lineNumber": 47
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "useEffect",
+          "lineNumber": 51
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "formRef.current.scrollIntoView",
+          "lineNumber": 53
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "window.scrollTo",
+          "lineNumber": 54
+        },
+        {
+          "caller": "useHandleDeleteBtn",
+          "callee": "useContext",
+          "lineNumber": 64
+        },
+        {
+          "caller": "useHandleDeleteBtn",
+          "callee": "useState",
+          "lineNumber": 66
+        },
+        {
+          "caller": "useHandleDeleteBtn",
+          "callee": "useQueryClient",
+          "lineNumber": 68
+        },
+        {
+          "caller": "useHandleDeleteBtn",
+          "callee": "useEnableQuery",
+          "lineNumber": 70
+        },
+        {
+          "caller": "onClick",
+          "callee": "setState",
+          "lineNumber": 74
+        },
+        {
+          "caller": "onClick",
+          "callee": "AppActions.deleteRosterPersonnel",
+          "lineNumber": 78
+        },
+        {
+          "caller": "onClick",
+          "callee": "authHeaders",
+          "lineNumber": 78
+        },
+        {
+          "caller": "onClick",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 81
+        },
+        {
+          "caller": "onClick",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 82
+        },
+        {
+          "caller": "onClick",
+          "callee": "dispatch",
+          "lineNumber": 83
+        },
+        {
+          "caller": "onClick",
+          "callee": "savedPopup",
+          "lineNumber": 84
+        },
+        {
+          "caller": "onClick",
+          "callee": "errorPopup",
+          "lineNumber": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 3,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/roster/context.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 49,
+      "functions": [
+        {
+          "name": "RosterReducer",
+          "startLine": 30,
+          "endLine": 48,
+          "params": [
+            "state",
+            "action"
+          ]
+        },
+        {
+          "name": "RosterProvider",
+          "startLine": 50,
+          "endLine": 58,
+          "params": [
+            "{ children }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RosterProvider",
+          "line": 50,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RosterProvider",
+          "callee": "useReducer",
+          "lineNumber": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "useHandleCreateRosterPersonnelForm",
+          "startLine": 11,
+          "endLine": 17,
+          "params": []
+        },
+        {
+          "name": "useCreateRosterPersonnel",
+          "startLine": 19,
+          "endLine": 27,
+          "params": []
+        },
+        {
+          "name": "useOnCancelBtnClick",
+          "startLine": 29,
+          "endLine": 33,
+          "params": []
+        },
+        {
+          "name": "useHandleFormSubmit",
+          "startLine": 35,
+          "endLine": 51,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useHandleCreateRosterPersonnelForm",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "useOnCancelBtnClick",
+          "line": 29,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useHandleCreateRosterPersonnelForm",
+          "callee": "useCreateRosterPersonnel",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useHandleCreateRosterPersonnelForm",
+          "callee": "useOnCancelBtnClick",
+          "lineNumber": 13
+        },
+        {
+          "caller": "useHandleCreateRosterPersonnelForm",
+          "callee": "useHandleFormSubmit",
+          "lineNumber": 14
+        },
+        {
+          "caller": "useCreateRosterPersonnel",
+          "callee": "useForm",
+          "lineNumber": 21
+        },
+        {
+          "caller": "useOnCancelBtnClick",
+          "callee": "useContext",
+          "lineNumber": 30
+        },
+        {
+          "caller": "useOnCancelBtnClick",
+          "callee": "dispatch",
+          "lineNumber": 32
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useContext",
+          "lineNumber": 36
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useEnableQuery",
+          "lineNumber": 38
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useQueryClient",
+          "lineNumber": 40
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useCallback",
+          "lineNumber": 42
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "handleCreateRosterPersonnel(formData, token)\n      .then",
+          "lineNumber": 45
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "handleCreateRosterPersonnel",
+          "lineNumber": 45
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 47
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "dispatch",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "handleCreateRosterPersonnel",
+          "startLine": 8,
+          "endLine": 14,
+          "params": [
+            "formData",
+            "token"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "handleCreateRosterPersonnel",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "handleCreateRosterPersonnel",
+          "callee": "AppActions.createRosterPersonnel",
+          "lineNumber": 9
+        },
+        {
+          "caller": "handleCreateRosterPersonnel",
+          "callee": "authHeaders",
+          "lineNumber": 9
+        },
+        {
+          "caller": "handleCreateRosterPersonnel",
+          "callee": "savedPopup",
+          "lineNumber": 12
+        },
+        {
+          "caller": "handleCreateRosterPersonnel",
+          "callee": "errorPopup",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "useHandleUpdateRosterPersonnelForm",
+          "startLine": 13,
+          "endLine": 19,
+          "params": [
+            "personnel"
+          ]
+        },
+        {
+          "name": "useUpdateRosterPersonnel",
+          "startLine": 21,
+          "endLine": 30,
+          "params": [
+            "personnel"
+          ]
+        },
+        {
+          "name": "useHandleFormSubmit",
+          "startLine": 32,
+          "endLine": 50,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useHandleUpdateRosterPersonnelForm",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useHandleUpdateRosterPersonnelForm",
+          "callee": "useUpdateRosterPersonnel",
+          "lineNumber": 14
+        },
+        {
+          "caller": "useHandleUpdateRosterPersonnelForm",
+          "callee": "useOnCancelBtnClick",
+          "lineNumber": 15
+        },
+        {
+          "caller": "useHandleUpdateRosterPersonnelForm",
+          "callee": "useHandleFormSubmit",
+          "lineNumber": 16
+        },
+        {
+          "caller": "useUpdateRosterPersonnel",
+          "callee": "useForm",
+          "lineNumber": 23
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useContext",
+          "lineNumber": 33
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useQueryClient",
+          "lineNumber": 35
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useEnableQuery",
+          "lineNumber": 37
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useCallback",
+          "lineNumber": 39
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "handleUpdateRosterPersonnel(formData, token)\n      .then(() => {\n        queryClient.invalidateQueries({ queryKey: ['getRosterPersonnel'] })\n        queryClient.invalidateQueries({ queryKey: ['getPerson', formData.uuid] })\n        dispatch({ type: 'RESET_CTX' })\n      })\n      .catch",
+          "lineNumber": 42
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "handleUpdateRosterPersonnel(formData, token)\n      .then",
+          "lineNumber": 42
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "handleUpdateRosterPersonnel",
+          "lineNumber": 42
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 44
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 45
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "dispatch",
+          "lineNumber": 46
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "errorPopup",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "handleUpdateRosterPersonnel",
+          "startLine": 8,
+          "endLine": 16,
+          "params": [
+            "formData",
+            "token"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "handleUpdateRosterPersonnel",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "handleUpdateRosterPersonnel",
+          "callee": "AppActions.updateRosterPersonnel",
+          "lineNumber": 10
+        },
+        {
+          "caller": "handleUpdateRosterPersonnel",
+          "callee": "authHeaders",
+          "lineNumber": 10
+        },
+        {
+          "caller": "handleUpdateRosterPersonnel",
+          "callee": "savedPopup",
+          "lineNumber": 13
+        },
+        {
+          "caller": "handleUpdateRosterPersonnel",
+          "callee": "errorPopup",
+          "lineNumber": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/roster/test/context.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "wrapper",
+          "startLine": 5,
+          "endLine": 7,
+          "params": [
+            "{ children }"
+          ]
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/containers/SupportContainer/components.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "Form",
+          "startLine": 8,
+          "endLine": 18,
+          "params": []
+        },
+        {
+          "name": "GetSupport",
+          "startLine": 20,
+          "endLine": 30,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Form",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Form",
+          "callee": "useHandleForm",
+          "lineNumber": 9
+        },
+        {
+          "caller": "GetSupport",
+          "callee": "useGetSupport",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/containers/SupportContainer/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "useGetSupport",
+          "startLine": 11,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "useHandleForm",
+          "startLine": 25,
+          "endLine": 39,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useGetSupport",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "useHandleForm",
+          "line": 25,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useGetSupport",
+          "callee": "useContext",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useGetSupport",
+          "callee": "useEnableQuery",
+          "lineNumber": 13
+        },
+        {
+          "caller": "useGetSupport",
+          "callee": "useQuery",
+          "lineNumber": 15
+        },
+        {
+          "caller": "useGetSupport",
+          "callee": "AppActions.getSupport",
+          "lineNumber": 17
+        },
+        {
+          "caller": "useGetSupport",
+          "callee": "authHeaders",
+          "lineNumber": 17
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "useContext",
+          "lineNumber": 26
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "useRef",
+          "lineNumber": 28
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "useEffect",
+          "lineNumber": 30
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "formRef.current.scrollIntoView",
+          "lineNumber": 32
+        },
+        {
+          "caller": "useHandleForm",
+          "callee": "window.scrollTo",
+          "lineNumber": 33
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 115,
+      "nonEmptyLines": 92,
+      "functions": [
+        {
+          "name": "useHandleUpdateSupportForm",
+          "startLine": 17,
+          "endLine": 29,
+          "params": [
+            "support"
+          ]
+        },
+        {
+          "name": "useUpdateSupport",
+          "startLine": 34,
+          "endLine": 49,
+          "params": [
+            "support"
+          ]
+        },
+        {
+          "name": "useOnCancelBtnClick",
+          "startLine": 54,
+          "endLine": 60,
+          "params": []
+        },
+        {
+          "name": "useHandleDeleteBtn",
+          "startLine": 65,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "useHandleFormSubmit",
+          "startLine": 97,
+          "endLine": 115,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useHandleUpdateSupportForm",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useHandleUpdateSupportForm",
+          "callee": "useUpdateSupport",
+          "lineNumber": 18
+        },
+        {
+          "caller": "useHandleUpdateSupportForm",
+          "callee": "useOnCancelBtnClick",
+          "lineNumber": 19
+        },
+        {
+          "caller": "useHandleUpdateSupportForm",
+          "callee": "useHandleDeleteBtn",
+          "lineNumber": 20
+        },
+        {
+          "caller": "useHandleUpdateSupportForm",
+          "callee": "useHandleFormSubmit",
+          "lineNumber": 21
+        },
+        {
+          "caller": "useUpdateSupport",
+          "callee": "useForm",
+          "lineNumber": 36
+        },
+        {
+          "caller": "useUpdateSupport",
+          "callee": "support?.startDateTime?.substring",
+          "lineNumber": 39
+        },
+        {
+          "caller": "useUpdateSupport",
+          "callee": "support?.endDateTime?.substring",
+          "lineNumber": 40
+        },
+        {
+          "caller": "useOnCancelBtnClick",
+          "callee": "useContext",
+          "lineNumber": 55
+        },
+        {
+          "caller": "onClick",
+          "callee": "dispatch",
+          "lineNumber": 57
+        },
+        {
+          "caller": "useHandleDeleteBtn",
+          "callee": "useContext",
+          "lineNumber": 66
+        },
+        {
+          "caller": "useHandleDeleteBtn",
+          "callee": "useState",
+          "lineNumber": 68
+        },
+        {
+          "caller": "useHandleDeleteBtn",
+          "callee": "useQueryClient",
+          "lineNumber": 70
+        },
+        {
+          "caller": "useHandleDeleteBtn",
+          "callee": "useEnableQuery",
+          "lineNumber": 72
+        },
+        {
+          "caller": "onDeleteBtnClick",
+          "callee": "setState",
+          "lineNumber": 76
+        },
+        {
+          "caller": "onDeleteBtnClick",
+          "callee": "AppActions.deleteSupport",
+          "lineNumber": 80
+        },
+        {
+          "caller": "onDeleteBtnClick",
+          "callee": "authHeaders",
+          "lineNumber": 80
+        },
+        {
+          "caller": "onDeleteBtnClick",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 83
+        },
+        {
+          "caller": "onDeleteBtnClick",
+          "callee": "dispatch",
+          "lineNumber": 84
+        },
+        {
+          "caller": "onDeleteBtnClick",
+          "callee": "savedPopup",
+          "lineNumber": 85
+        },
+        {
+          "caller": "onDeleteBtnClick",
+          "callee": "errorPopup",
+          "lineNumber": 86
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useContext",
+          "lineNumber": 98
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useQueryClient",
+          "lineNumber": 100
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useEnableQuery",
+          "lineNumber": 102
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "useCallback",
+          "lineNumber": 104
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "handleUpdateSupport(formData, token)\n      .then(() => {\n        queryClient.invalidateQueries({ queryKey: ['getAllSupport'] })\n        queryClient.invalidateQueries({ queryKey: ['getSupport', formData.uuid] })\n        dispatch({ type: 'RESET_CTX' })\n      })\n      .catch",
+          "lineNumber": 107
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "handleUpdateSupport(formData, token)\n      .then",
+          "lineNumber": 107
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "handleUpdateSupport",
+          "lineNumber": 107
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 109
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 110
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "dispatch",
+          "lineNumber": 111
+        },
+        {
+          "caller": "useHandleFormSubmit",
+          "callee": "console.log",
+          "lineNumber": 113
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "handleUpdateSupport",
+          "startLine": 8,
+          "endLine": 48,
+          "params": [
+            "formData",
+            "token"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "handleUpdateSupport",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "AppActions.updateSupport",
+          "lineNumber": 9
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "authHeaders",
+          "lineNumber": 9
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "Promise.all",
+          "lineNumber": 16
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "personnel?.map",
+          "lineNumber": 17
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "AppActions.createPersonnel",
+          "lineNumber": 19
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "authHeaders",
+          "lineNumber": 19
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "AppActions.updatePersonnel",
+          "lineNumber": 23
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "authHeaders",
+          "lineNumber": 23
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "AppActions.deletePersonnel",
+          "lineNumber": 27
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "authHeaders",
+          "lineNumber": 27
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "Promise.resolve",
+          "lineNumber": 30
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "AppActions.createOtherSupport",
+          "lineNumber": 36
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "authHeaders",
+          "lineNumber": 36
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "AppActions.updateOtherSupport",
+          "lineNumber": 40
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "authHeaders",
+          "lineNumber": 40
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "savedPopup",
+          "lineNumber": 46
+        },
+        {
+          "caller": "handleUpdateSupport",
+          "callee": "errorPopup",
+          "lineNumber": 47
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/config/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "exports": [
+        {
+          "name": "APP_BASE",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "APP_TITLE",
+          "line": 2,
+          "isDefault": false
+        },
+        {
+          "name": "NODE_ENV",
+          "line": 3,
+          "isDefault": false
+        },
+        {
+          "name": "CLIENT_ID",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/context/App/AppActions.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 273,
+      "nonEmptyLines": 215,
+      "functions": [
+        {
+          "name": "getAllSupport",
+          "startLine": 15,
+          "endLine": 21,
+          "params": [
+            "headers"
+          ]
+        },
+        {
+          "name": "getSupport",
+          "startLine": 28,
+          "endLine": 34,
+          "params": [
+            "uuid",
+            "headers"
+          ]
+        },
+        {
+          "name": "createSupport",
+          "startLine": 41,
+          "endLine": 53,
+          "params": [
+            "formData",
+            "headers"
+          ]
+        },
+        {
+          "name": "updateSupport",
+          "startLine": 60,
+          "endLine": 72,
+          "params": [
+            "formData",
+            "headers"
+          ]
+        },
+        {
+          "name": "deleteSupport",
+          "startLine": 79,
+          "endLine": 88,
+          "params": [
+            "uuid",
+            "headers"
+          ]
+        },
+        {
+          "name": "createOtherSupport",
+          "startLine": 95,
+          "endLine": 107,
+          "params": [
+            "formData",
+            "headers"
+          ]
+        },
+        {
+          "name": "updateOtherSupport",
+          "startLine": 114,
+          "endLine": 126,
+          "params": [
+            "formData",
+            "headers"
+          ]
+        },
+        {
+          "name": "createPersonnel",
+          "startLine": 133,
+          "endLine": 145,
+          "params": [
+            "formData",
+            "headers"
+          ]
+        },
+        {
+          "name": "updatePersonnel",
+          "startLine": 152,
+          "endLine": 164,
+          "params": [
+            "formData",
+            "headers"
+          ]
+        },
+        {
+          "name": "deletePersonnel",
+          "startLine": 171,
+          "endLine": 180,
+          "params": [
+            "uuid",
+            "headers"
+          ]
+        },
+        {
+          "name": "getRosterPersonnel",
+          "startLine": 187,
+          "endLine": 193,
+          "params": [
+            "headers"
+          ]
+        },
+        {
+          "name": "getPerson",
+          "startLine": 200,
+          "endLine": 206,
+          "params": [
+            "uuid",
+            "headers"
+          ]
+        },
+        {
+          "name": "createRosterPersonnel",
+          "startLine": 213,
+          "endLine": 225,
+          "params": [
+            "formData",
+            "headers"
+          ]
+        },
+        {
+          "name": "updateRosterPersonnel",
+          "startLine": 232,
+          "endLine": 244,
+          "params": [
+            "formData",
+            "headers"
+          ]
+        },
+        {
+          "name": "deleteRosterPersonnel",
+          "startLine": 251,
+          "endLine": 260,
+          "params": [
+            "uuid",
+            "headers"
+          ]
+        },
+        {
+          "name": "getDocs",
+          "startLine": 267,
+          "endLine": 273,
+          "params": [
+            "headers"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getAllSupport",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "getSupport",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "createSupport",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "updateSupport",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "deleteSupport",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "createOtherSupport",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "updateOtherSupport",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "createPersonnel",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "updatePersonnel",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "deletePersonnel",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "getRosterPersonnel",
+          "line": 187,
+          "isDefault": false
+        },
+        {
+          "name": "getPerson",
+          "line": 200,
+          "isDefault": false
+        },
+        {
+          "name": "createRosterPersonnel",
+          "line": 213,
+          "isDefault": false
+        },
+        {
+          "name": "updateRosterPersonnel",
+          "line": 232,
+          "isDefault": false
+        },
+        {
+          "name": "deleteRosterPersonnel",
+          "line": 251,
+          "isDefault": false
+        },
+        {
+          "name": "getDocs",
+          "line": 267,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getAllSupport",
+          "callee": "fetch",
+          "lineNumber": 16
+        },
+        {
+          "caller": "getAllSupport",
+          "callee": "res.json",
+          "lineNumber": 20
+        },
+        {
+          "caller": "getSupport",
+          "callee": "fetch",
+          "lineNumber": 29
+        },
+        {
+          "caller": "getSupport",
+          "callee": "res.json",
+          "lineNumber": 33
+        },
+        {
+          "caller": "createSupport",
+          "callee": "headers.append",
+          "lineNumber": 42
+        },
+        {
+          "caller": "createSupport",
+          "callee": "fetch",
+          "lineNumber": 44
+        },
+        {
+          "caller": "createSupport",
+          "callee": "JSON.stringify",
+          "lineNumber": 47
+        },
+        {
+          "caller": "createSupport",
+          "callee": "res.json",
+          "lineNumber": 52
+        },
+        {
+          "caller": "updateSupport",
+          "callee": "headers.append",
+          "lineNumber": 61
+        },
+        {
+          "caller": "updateSupport",
+          "callee": "fetch",
+          "lineNumber": 63
+        },
+        {
+          "caller": "updateSupport",
+          "callee": "JSON.stringify",
+          "lineNumber": 66
+        },
+        {
+          "caller": "updateSupport",
+          "callee": "res.json",
+          "lineNumber": 71
+        },
+        {
+          "caller": "deleteSupport",
+          "callee": "fetch",
+          "lineNumber": 80
+        },
+        {
+          "caller": "deleteSupport",
+          "callee": "res.json",
+          "lineNumber": 87
+        },
+        {
+          "caller": "createOtherSupport",
+          "callee": "headers.append",
+          "lineNumber": 96
+        },
+        {
+          "caller": "createOtherSupport",
+          "callee": "fetch",
+          "lineNumber": 98
+        },
+        {
+          "caller": "createOtherSupport",
+          "callee": "JSON.stringify",
+          "lineNumber": 101
+        },
+        {
+          "caller": "createOtherSupport",
+          "callee": "res.json",
+          "lineNumber": 106
+        },
+        {
+          "caller": "updateOtherSupport",
+          "callee": "headers.append",
+          "lineNumber": 115
+        },
+        {
+          "caller": "updateOtherSupport",
+          "callee": "fetch",
+          "lineNumber": 117
+        },
+        {
+          "caller": "updateOtherSupport",
+          "callee": "JSON.stringify",
+          "lineNumber": 120
+        },
+        {
+          "caller": "updateOtherSupport",
+          "callee": "res.json",
+          "lineNumber": 125
+        },
+        {
+          "caller": "createPersonnel",
+          "callee": "headers.append",
+          "lineNumber": 134
+        },
+        {
+          "caller": "createPersonnel",
+          "callee": "fetch",
+          "lineNumber": 136
+        },
+        {
+          "caller": "createPersonnel",
+          "callee": "JSON.stringify",
+          "lineNumber": 139
+        },
+        {
+          "caller": "createPersonnel",
+          "callee": "res.json",
+          "lineNumber": 144
+        },
+        {
+          "caller": "updatePersonnel",
+          "callee": "headers.append",
+          "lineNumber": 153
+        },
+        {
+          "caller": "updatePersonnel",
+          "callee": "fetch",
+          "lineNumber": 155
+        },
+        {
+          "caller": "updatePersonnel",
+          "callee": "JSON.stringify",
+          "lineNumber": 158
+        },
+        {
+          "caller": "updatePersonnel",
+          "callee": "res.json",
+          "lineNumber": 163
+        },
+        {
+          "caller": "deletePersonnel",
+          "callee": "fetch",
+          "lineNumber": 172
+        },
+        {
+          "caller": "deletePersonnel",
+          "callee": "res.json",
+          "lineNumber": 179
+        },
+        {
+          "caller": "getRosterPersonnel",
+          "callee": "fetch",
+          "lineNumber": 188
+        },
+        {
+          "caller": "getRosterPersonnel",
+          "callee": "res.json",
+          "lineNumber": 192
+        },
+        {
+          "caller": "getPerson",
+          "callee": "fetch",
+          "lineNumber": 201
+        },
+        {
+          "caller": "getPerson",
+          "callee": "res.json",
+          "lineNumber": 205
+        },
+        {
+          "caller": "createRosterPersonnel",
+          "callee": "headers.append",
+          "lineNumber": 214
+        },
+        {
+          "caller": "createRosterPersonnel",
+          "callee": "fetch",
+          "lineNumber": 216
+        },
+        {
+          "caller": "createRosterPersonnel",
+          "callee": "JSON.stringify",
+          "lineNumber": 219
+        },
+        {
+          "caller": "createRosterPersonnel",
+          "callee": "res.json",
+          "lineNumber": 224
+        },
+        {
+          "caller": "updateRosterPersonnel",
+          "callee": "headers.append",
+          "lineNumber": 233
+        },
+        {
+          "caller": "updateRosterPersonnel",
+          "callee": "fetch",
+          "lineNumber": 235
+        },
+        {
+          "caller": "updateRosterPersonnel",
+          "callee": "JSON.stringify",
+          "lineNumber": 238
+        },
+        {
+          "caller": "updateRosterPersonnel",
+          "callee": "res.json",
+          "lineNumber": 243
+        },
+        {
+          "caller": "deleteRosterPersonnel",
+          "callee": "fetch",
+          "lineNumber": 252
+        },
+        {
+          "caller": "deleteRosterPersonnel",
+          "callee": "res.json",
+          "lineNumber": 259
+        },
+        {
+          "caller": "getDocs",
+          "callee": "fetch",
+          "lineNumber": 268
+        },
+        {
+          "caller": "getDocs",
+          "callee": "res.json",
+          "lineNumber": 272
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 16,
+        "functionCount": 16,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/helpers/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "useGetToken",
+          "startLine": 6,
+          "endLine": 9,
+          "params": []
+        },
+        {
+          "name": "useEnableQuery",
+          "startLine": 11,
+          "endLine": 22,
+          "params": []
+        },
+        {
+          "name": "useRedirectAfterLogin",
+          "startLine": 24,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "useActiveAccount",
+          "startLine": 38,
+          "endLine": 41,
+          "params": []
+        },
+        {
+          "name": "useAuthRedirect",
+          "startLine": 43,
+          "endLine": 52,
+          "params": []
+        },
+        {
+          "name": "useUnauthRedirect",
+          "startLine": 54,
+          "endLine": 63,
+          "params": []
+        },
+        {
+          "name": "useGetUserDepartment",
+          "startLine": 65,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "withTokenRefresh",
+          "startLine": 79,
+          "endLine": 91,
+          "params": [
+            "fn",
+            "refresh"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "useGetToken",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "useEnableQuery",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "useRedirectAfterLogin",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "useActiveAccount",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "useAuthRedirect",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "useUnauthRedirect",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "useGetUserDepartment",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "withTokenRefresh",
+          "line": 79,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useGetToken",
+          "callee": "useAuth",
+          "lineNumber": 7
+        },
+        {
+          "caller": "useEnableQuery",
+          "callee": "useAuth",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useEnableQuery",
+          "callee": "useNavigate",
+          "lineNumber": 13
+        },
+        {
+          "caller": "useEnableQuery",
+          "callee": "useEffect",
+          "lineNumber": 15
+        },
+        {
+          "caller": "useEnableQuery",
+          "callee": "navigate",
+          "lineNumber": 17
+        },
+        {
+          "caller": "useRedirectAfterLogin",
+          "callee": "useAuth",
+          "lineNumber": 25
+        },
+        {
+          "caller": "useRedirectAfterLogin",
+          "callee": "useEffect",
+          "lineNumber": 27
+        },
+        {
+          "caller": "useRedirectAfterLogin",
+          "callee": "sessionStorage.getItem",
+          "lineNumber": 29
+        },
+        {
+          "caller": "useRedirectAfterLogin",
+          "callee": "sessionStorage.removeItem",
+          "lineNumber": 32
+        },
+        {
+          "caller": "useActiveAccount",
+          "callee": "useAuth",
+          "lineNumber": 39
+        },
+        {
+          "caller": "useAuthRedirect",
+          "callee": "useAuth",
+          "lineNumber": 44
+        },
+        {
+          "caller": "useAuthRedirect",
+          "callee": "useNavigate",
+          "lineNumber": 45
+        },
+        {
+          "caller": "useAuthRedirect",
+          "callee": "useEffect",
+          "lineNumber": 47
+        },
+        {
+          "caller": "useAuthRedirect",
+          "callee": "navigate",
+          "lineNumber": 49
+        },
+        {
+          "caller": "useUnauthRedirect",
+          "callee": "useAuth",
+          "lineNumber": 55
+        },
+        {
+          "caller": "useUnauthRedirect",
+          "callee": "useNavigate",
+          "lineNumber": 56
+        },
+        {
+          "caller": "useUnauthRedirect",
+          "callee": "useEffect",
+          "lineNumber": 58
+        },
+        {
+          "caller": "useUnauthRedirect",
+          "callee": "navigate",
+          "lineNumber": 60
+        },
+        {
+          "caller": "useGetUserDepartment",
+          "callee": "useAuth",
+          "lineNumber": 66
+        },
+        {
+          "caller": "useGetUserDepartment",
+          "callee": "useMsal",
+          "lineNumber": 67
+        },
+        {
+          "caller": "withTokenRefresh",
+          "callee": "fn",
+          "lineNumber": 84
+        },
+        {
+          "caller": "withTokenRefresh",
+          "callee": "refresh",
+          "lineNumber": 87
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/helpers/test/utils.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 22,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/helpers/utils.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 95,
+      "nonEmptyLines": 79,
+      "functions": [
+        {
+          "name": "authHeaders",
+          "startLine": 5,
+          "endLine": 13,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "formatDate",
+          "startLine": 15,
+          "endLine": 18,
+          "params": [
+            "date"
+          ]
+        },
+        {
+          "name": "getUserDepartment",
+          "startLine": 75,
+          "endLine": 95,
+          "params": [
+            "instance",
+            "activeAccount"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "authHeaders",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "formatDate",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "motionProps",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "motionPropsMap",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "getUserDepartment",
+          "line": 75,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "authHeaders",
+          "callee": "headers.append",
+          "lineNumber": 9
+        },
+        {
+          "caller": "formatDate",
+          "callee": "new Date(date).toISOString().split",
+          "lineNumber": 17
+        },
+        {
+          "caller": "formatDate",
+          "callee": "new Date(date).toISOString",
+          "lineNumber": 17
+        },
+        {
+          "caller": "getUserDepartment",
+          "callee": "instance.acquireTokenSilent",
+          "lineNumber": 86
+        },
+        {
+          "caller": "getUserDepartment",
+          "callee": "headers.append",
+          "lineNumber": 90
+        },
+        {
+          "caller": "getUserDepartment",
+          "callee": "fetch",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getUserDepartment",
+          "callee": "response.json",
+          "lineNumber": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/utils/Toast/Toast.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "savedPopup",
+          "startLine": 10,
+          "endLine": 25,
+          "params": [
+            "msg"
+          ]
+        },
+        {
+          "name": "errorPopup",
+          "startLine": 27,
+          "endLine": 42,
+          "params": [
+            "msg"
+          ]
+        },
+        {
+          "name": "authPopup",
+          "startLine": 44,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "infoPopup",
+          "startLine": 61,
+          "endLine": 76,
+          "params": [
+            "msg"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "savedPopup",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "errorPopup",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "authPopup",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "infoPopup",
+          "line": 61,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "savedPopup",
+          "callee": "toast",
+          "lineNumber": 18
+        },
+        {
+          "caller": "errorPopup",
+          "callee": "toast",
+          "lineNumber": 35
+        },
+        {
+          "caller": "authPopup",
+          "callee": "toast",
+          "lineNumber": 52
+        },
+        {
+          "caller": "infoPopup",
+          "callee": "toast",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    }
+  ]
+}

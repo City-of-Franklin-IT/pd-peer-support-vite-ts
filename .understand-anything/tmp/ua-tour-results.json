@@ -1,0 +1,549 @@
+{
+  "scriptCompleted": true,
+  "entryPointCandidates": [
+    {
+      "id": "document:README.md",
+      "score": 8,
+      "name": "README.md",
+      "summary": "Project overview and setup guide for the pd-peer-support-vite-ts application"
+    },
+    {
+      "id": "file:src/config/index.ts",
+      "score": 3,
+      "name": "index.ts",
+      "summary": "Environment configuration with NODE_ENV handling and API base URL selection (dev vs production)"
+    },
+    {
+      "id": "file:src/types/index.ts",
+      "score": 3,
+      "name": "index.ts",
+      "summary": "TypeScript interfaces and types for SupportInterface, PersonnelInterface, PersonnelRosterInterface, OtherSupportInterface"
+    },
+    {
+      "id": "file:src/main.tsx",
+      "score": 2,
+      "name": "main.tsx",
+      "summary": "Application entry point that initializes React app, mounts to DOM"
+    },
+    {
+      "id": "file:src/App.tsx",
+      "score": 2,
+      "name": "App.tsx",
+      "summary": "Root application component with routing, layout, and main page navigation"
+    }
+  ],
+  "fanInRanking": [
+    {
+      "id": "file:src/context/Auth/AuthCtxProvider.tsx",
+      "fanIn": 3,
+      "name": "AuthCtxProvider.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/context/Auth/useAuth.ts",
+      "fanIn": 3,
+      "name": "useAuth.ts",
+      "type": "file"
+    },
+    {
+      "id": "file:src/context/App/AppActions.ts",
+      "fanIn": 3,
+      "name": "AppActions.ts",
+      "type": "file"
+    },
+    {
+      "id": "file:src/main.tsx",
+      "fanIn": 2,
+      "name": "main.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/form-elements/FormLabel.tsx",
+      "fanIn": 2,
+      "name": "FormLabel.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/form-elements/FormError.tsx",
+      "fanIn": 2,
+      "name": "FormError.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/helpers/hooks.ts",
+      "fanIn": 2,
+      "name": "hooks.ts",
+      "type": "file"
+    },
+    {
+      "id": "file:src/types/index.ts",
+      "fanIn": 2,
+      "name": "index.ts",
+      "type": "file"
+    },
+    {
+      "id": "file:src/App.tsx",
+      "fanIn": 1,
+      "name": "App.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/context/Auth/config.ts",
+      "fanIn": 1,
+      "name": "config.ts",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/support/containers/SupportContainer.tsx",
+      "fanIn": 1,
+      "name": "SupportContainer.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/support/context.tsx",
+      "fanIn": 1,
+      "name": "context.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/support/tables/SupportTable.tsx",
+      "fanIn": 1,
+      "name": "SupportTable.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/support/forms/CreateSupportForm.tsx",
+      "fanIn": 1,
+      "name": "CreateSupportForm.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/roster/RosterContainer.tsx",
+      "fanIn": 1,
+      "name": "RosterContainer.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/roster/context.tsx",
+      "fanIn": 1,
+      "name": "context.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/layout/Header.tsx",
+      "fanIn": 1,
+      "name": "Header.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/layout/Footer.tsx",
+      "fanIn": 1,
+      "name": "Footer.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/config/index.ts",
+      "fanIn": 1,
+      "name": "index.ts",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/support/forms/CreatePersonnelForm.tsx",
+      "fanIn": 1,
+      "name": "CreatePersonnelForm.tsx",
+      "type": "file"
+    }
+  ],
+  "fanOutRanking": [
+    {
+      "id": "file:src/App.tsx",
+      "fanOut": 7,
+      "name": "App.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/support/containers/SupportContainer.tsx",
+      "fanOut": 5,
+      "name": "SupportContainer.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/support/forms/CreateSupportForm.tsx",
+      "fanOut": 5,
+      "name": "CreateSupportForm.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/main.tsx",
+      "fanOut": 2,
+      "name": "main.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/context/Auth/AuthCtxProvider.tsx",
+      "fanOut": 2,
+      "name": "AuthCtxProvider.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/roster/RosterContainer.tsx",
+      "fanOut": 2,
+      "name": "RosterContainer.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/context/App/AppActions.ts",
+      "fanOut": 2,
+      "name": "AppActions.ts",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/support/forms/CreatePersonnelForm.tsx",
+      "fanOut": 2,
+      "name": "CreatePersonnelForm.tsx",
+      "type": "file"
+    },
+    {
+      "id": "document:README.md",
+      "fanOut": 1,
+      "name": "README.md",
+      "type": "document"
+    },
+    {
+      "id": "file:src/context/Auth/useAuth.ts",
+      "fanOut": 1,
+      "name": "useAuth.ts",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/support/tables/SupportTable.tsx",
+      "fanOut": 1,
+      "name": "SupportTable.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/components/layout/Header.tsx",
+      "fanOut": 1,
+      "name": "Header.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/helpers/hooks.ts",
+      "fanOut": 1,
+      "name": "hooks.ts",
+      "type": "file"
+    },
+    {
+      "id": "config:vite.config.ts",
+      "fanOut": 1,
+      "name": "vite.config.ts",
+      "type": "config"
+    },
+    {
+      "id": "file:src/test/setup.ts",
+      "fanOut": 1,
+      "name": "setup.ts",
+      "type": "file"
+    },
+    {
+      "id": "file:src/pages/Support.tsx",
+      "fanOut": 1,
+      "name": "Support.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/pages/Roster.tsx",
+      "fanOut": 1,
+      "name": "Roster.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/pages/Create.tsx",
+      "fanOut": 1,
+      "name": "Create.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/pages/ProtectedRoute.tsx",
+      "fanOut": 1,
+      "name": "ProtectedRoute.tsx",
+      "type": "file"
+    },
+    {
+      "id": "file:src/pages/Login.tsx",
+      "fanOut": 1,
+      "name": "Login.tsx",
+      "type": "file"
+    }
+  ],
+  "bfsTraversal": {
+    "startNode": "file:src/config/index.ts",
+    "order": [
+      "file:src/config/index.ts"
+    ],
+    "depthMap": {
+      "file:src/config/index.ts": 0
+    },
+    "byDepth": {
+      "0": [
+        "file:src/config/index.ts"
+      ]
+    }
+  },
+  "nonCodeFiles": {
+    "documentation": [
+      {
+        "id": "document:README.md",
+        "name": "README.md",
+        "summary": "Project overview and setup guide for the pd-peer-support-vite-ts application"
+      }
+    ],
+    "infrastructure": [],
+    "data": [],
+    "config": [
+      {
+        "id": "config:package.json",
+        "name": "package.json",
+        "summary": "Project manifest with dependencies: React 18, React Router, React Hook Form, React Query, MSAL, Vite, TypeScript, Tailwind CSS"
+      },
+      {
+        "id": "config:vite.config.ts",
+        "name": "vite.config.ts",
+        "summary": "Vite build configuration with base path /peer-support, path aliases (@/, @components/, etc.), React plugin"
+      },
+      {
+        "id": "config:tsconfig.json",
+        "name": "tsconfig.json",
+        "summary": "TypeScript compiler options with path aliases matching Vite config"
+      }
+    ]
+  },
+  "clusters": [
+    {
+      "nodes": [
+        "file:src/context/Auth/AuthCtxProvider.tsx",
+        "file:src/helpers/hooks.ts"
+      ],
+      "edgeCount": 2
+    }
+  ],
+  "layers": {
+    "count": 9,
+    "list": [
+      {
+        "id": "layer:authentication",
+        "name": "Authentication",
+        "description": "Azure AD authentication, MSAL configuration, token management, and auth context"
+      },
+      {
+        "id": "layer:pages",
+        "name": "Pages",
+        "description": "Top-level page components: Support, Roster, Create, Login"
+      },
+      {
+        "id": "layer:features",
+        "name": "Features",
+        "description": "Feature-specific containers and state management: Support and Roster features"
+      },
+      {
+        "id": "layer:forms",
+        "name": "Forms",
+        "description": "React Hook Form components for support and personnel entry management"
+      },
+      {
+        "id": "layer:ui",
+        "name": "UI Components",
+        "description": "Reusable UI components: tables, form elements, layout, filters, pagination"
+      },
+      {
+        "id": "layer:data",
+        "name": "Data & API",
+        "description": "Centralized API client, type definitions, and data models"
+      },
+      {
+        "id": "layer:utilities",
+        "name": "Utilities",
+        "description": "Custom hooks, configuration, and helper functions"
+      },
+      {
+        "id": "layer:configuration",
+        "name": "Configuration",
+        "description": "Build configuration, environment setup, TypeScript config, and dependencies"
+      },
+      {
+        "id": "layer:testing",
+        "name": "Testing",
+        "description": "Test setup, mock API responses, and test utilities"
+      }
+    ]
+  },
+  "nodeSummaryIndex": {
+    "document:README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Project overview and setup guide for the pd-peer-support-vite-ts application"
+    },
+    "file:src/main.tsx": {
+      "name": "main.tsx",
+      "type": "file",
+      "summary": "Application entry point that initializes React app, mounts to DOM"
+    },
+    "file:src/App.tsx": {
+      "name": "App.tsx",
+      "type": "file",
+      "summary": "Root application component with routing, layout, and main page navigation"
+    },
+    "file:src/context/Auth/AuthCtxProvider.tsx": {
+      "name": "AuthCtxProvider.tsx",
+      "type": "file",
+      "summary": "React Context provider for authentication state, MSAL token acquisition, and auth hooks"
+    },
+    "file:src/context/Auth/config.ts": {
+      "name": "config.ts",
+      "type": "file",
+      "summary": "Azure AD and MSAL configuration with tenant ID and client ID"
+    },
+    "file:src/context/Auth/useAuth.ts": {
+      "name": "useAuth.ts",
+      "type": "file",
+      "summary": "Custom hook to access authentication context and token state"
+    },
+    "file:src/components/support/containers/SupportContainer.tsx": {
+      "name": "SupportContainer.tsx",
+      "type": "file",
+      "summary": "Main container for support entries feature with state management, filters, pagination, and data fetching"
+    },
+    "file:src/components/support/context.tsx": {
+      "name": "context.tsx",
+      "type": "file",
+      "summary": "Local state context for support page filters, pagination, and search"
+    },
+    "file:src/components/support/tables/SupportTable.tsx": {
+      "name": "SupportTable.tsx",
+      "type": "file",
+      "summary": "Data table for displaying support entries with columns for type, recipient, personnel, and actions"
+    },
+    "file:src/components/support/forms/CreateSupportForm.tsx": {
+      "name": "CreateSupportForm.tsx",
+      "type": "file",
+      "summary": "React Hook Form component for creating and editing support entries with nested personnel management"
+    },
+    "file:src/components/roster/RosterContainer.tsx": {
+      "name": "RosterContainer.tsx",
+      "type": "file",
+      "summary": "Container for personnel roster management with CRUD operations on staff list"
+    },
+    "file:src/components/roster/context.tsx": {
+      "name": "context.tsx",
+      "type": "file",
+      "summary": "Local state context for roster page filters and pagination"
+    },
+    "file:src/components/layout/Header.tsx": {
+      "name": "Header.tsx",
+      "type": "file",
+      "summary": "Navigation header with site title and navigation buttons to Support, Roster, Create pages"
+    },
+    "file:src/components/layout/Footer.tsx": {
+      "name": "Footer.tsx",
+      "type": "file",
+      "summary": "Footer component with branding and copyright information"
+    },
+    "file:src/components/form-elements/FormLabel.tsx": {
+      "name": "FormLabel.tsx",
+      "type": "file",
+      "summary": "Reusable form label component with standard styling"
+    },
+    "file:src/components/form-elements/FormError.tsx": {
+      "name": "FormError.tsx",
+      "type": "file",
+      "summary": "Reusable form error message component for displaying validation errors"
+    },
+    "file:src/context/App/AppActions.ts": {
+      "name": "AppActions.ts",
+      "type": "file",
+      "summary": "Centralized API client with methods for all CRUD operations on support entries, personnel, and roster"
+    },
+    "file:src/helpers/hooks.ts": {
+      "name": "hooks.ts",
+      "type": "file",
+      "summary": "Shared custom hooks for token acquisition, auth state, and common utilities"
+    },
+    "file:src/config/index.ts": {
+      "name": "index.ts",
+      "type": "file",
+      "summary": "Environment configuration with NODE_ENV handling and API base URL selection (dev vs production)"
+    },
+    "file:src/types/index.ts": {
+      "name": "index.ts",
+      "type": "file",
+      "summary": "TypeScript interfaces and types for SupportInterface, PersonnelInterface, PersonnelRosterInterface, OtherSupportInterface"
+    },
+    "file:src/components/support/forms/CreatePersonnelForm.tsx": {
+      "name": "CreatePersonnelForm.tsx",
+      "type": "file",
+      "summary": "Form component for managing personnel entries within support entries"
+    },
+    "config:package.json": {
+      "name": "package.json",
+      "type": "config",
+      "summary": "Project manifest with dependencies: React 18, React Router, React Hook Form, React Query, MSAL, Vite, TypeScript, Tailwind CSS"
+    },
+    "config:vite.config.ts": {
+      "name": "vite.config.ts",
+      "type": "config",
+      "summary": "Vite build configuration with base path /peer-support, path aliases (@/, @components/, etc.), React plugin"
+    },
+    "config:tsconfig.json": {
+      "name": "tsconfig.json",
+      "type": "config",
+      "summary": "TypeScript compiler options with path aliases matching Vite config"
+    },
+    "file:src/test/setup.ts": {
+      "name": "setup.ts",
+      "type": "file",
+      "summary": "Vitest setup file with jsdom environment, Testing Library configuration, and mock API setup"
+    },
+    "file:src/test/mocks/api.ts": {
+      "name": "api.ts",
+      "type": "file",
+      "summary": "Mock API responses for testing without real backend"
+    },
+    "file:src/components/support/containers/FiltersContainer.tsx": {
+      "name": "FiltersContainer.tsx",
+      "type": "file",
+      "summary": "Container for filter controls (support type, recipient type, date range, search)"
+    },
+    "file:src/components/support/containers/PaginationContainer.tsx": {
+      "name": "PaginationContainer.tsx",
+      "type": "file",
+      "summary": "Pagination controls for navigating through support entries"
+    },
+    "file:src/pages/Support.tsx": {
+      "name": "Support.tsx",
+      "type": "file",
+      "summary": "Support page that composes SupportContainer with filters, table, and pagination"
+    },
+    "file:src/pages/Roster.tsx": {
+      "name": "Roster.tsx",
+      "type": "file",
+      "summary": "Roster page for personnel management with CRUD interface"
+    },
+    "file:src/pages/Create.tsx": {
+      "name": "Create.tsx",
+      "type": "file",
+      "summary": "Create page for adding new support entries"
+    },
+    "file:src/pages/ProtectedRoute.tsx": {
+      "name": "ProtectedRoute.tsx",
+      "type": "file",
+      "summary": "Route guard component that checks authentication before rendering protected pages"
+    },
+    "file:src/pages/Login.tsx": {
+      "name": "Login.tsx",
+      "type": "file",
+      "summary": "Login page with Azure AD authentication flow"
+    }
+  },
+  "totalNodes": 33,
+  "totalEdges": 41
+}

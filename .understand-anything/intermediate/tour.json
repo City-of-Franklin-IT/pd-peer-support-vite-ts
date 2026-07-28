@@ -1,0 +1,81 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview and Setup",
+    "description": "Start with README.md to understand the project's purpose, architecture, and technology stack. The pd-peer-support-vite-ts application is a React-based web app for Franklin Police Department peer support program administrators. This document outlines the main features, key technologies, and deployment process.",
+    "nodeIds": ["document:README.md"]
+  },
+  {
+    "order": 2,
+    "title": "Application Bootstrap and Entry Point",
+    "description": "The main.tsx file initializes the React application and mounts it to the DOM. It imports the root App component and wraps it with the authentication provider, establishing the foundational structure for the entire application.",
+    "nodeIds": ["file:src/main.tsx"],
+    "languageLesson": "React applications initialize with ReactDOM.createRoot() and then render the root component. The entry point is the perfect place to set up global providers like authentication context."
+  },
+  {
+    "order": 3,
+    "title": "Root Routing and Layout",
+    "description": "App.tsx defines the router structure and main page navigation. It composes the authentication provider, layout components (Header and Footer), and routes to all pages: Support, Roster, Create, and Login. This is where the application's high-level structure becomes clear.",
+    "nodeIds": ["file:src/App.tsx", "file:src/components/layout/Header.tsx", "file:src/components/layout/Footer.tsx"],
+    "languageLesson": "React Router uses <BrowserRouter>, <Routes>, and <Route> to define the application's page structure. Layout components like Header and Footer wrap page routes, appearing on every page."
+  },
+  {
+    "order": 4,
+    "title": "Authentication Setup and Configuration",
+    "description": "The AuthCtxProvider.tsx component sets up the authentication context using Azure AD and MSAL (Microsoft Authentication Library). It manages token acquisition, token refresh intervals (every 4 minutes), and handles browser-specific quirks like Edge popup behavior. The useAuth.ts hook provides convenient access to auth state throughout the app.",
+    "nodeIds": ["file:src/context/Auth/AuthCtxProvider.tsx", "file:src/context/Auth/config.ts", "file:src/context/Auth/useAuth.ts"],
+    "languageLesson": "React Context provides a way to pass data through the component tree without prop drilling. The useAuth hook uses the useContext hook to access the authentication provider, making auth state available anywhere in the app."
+  },
+  {
+    "order": 5,
+    "title": "Route Protection and Access Control",
+    "description": "The ProtectedRoute.tsx component guards access to sensitive pages by checking authentication status before rendering. This prevents unauthenticated users from accessing the Support, Roster, and Create pages. The Login.tsx page provides the Azure AD authentication flow for initial login.",
+    "nodeIds": ["file:src/pages/ProtectedRoute.tsx", "file:src/pages/Login.tsx"]
+  },
+  {
+    "order": 6,
+    "title": "Type Definitions and Data Models",
+    "description": "The types/index.ts file defines TypeScript interfaces for the core domain: SupportInterface (for support entries), PersonnelInterface (staff involved in support), PersonnelRosterInterface (roster of peer support staff), and OtherSupportInterface (support for non-staff recipients). These types form the vocabulary used throughout the application.",
+    "nodeIds": ["file:src/types/index.ts"],
+    "languageLesson": "TypeScript interfaces define the shape of data flowing through the application. Keeping types in a single location makes them easy to find and update as the domain evolves."
+  },
+  {
+    "order": 7,
+    "title": "Centralized API Integration and AppActions",
+    "description": "AppActions.ts is the centralized API client for all CRUD operations on support entries, personnel, and roster data. It uses the configuration from config/index.ts to select the correct API endpoint (dev vs. production) and leverages the useGetToken hook from helpers/hooks.ts to acquire authentication tokens for API requests.",
+    "nodeIds": ["file:src/context/App/AppActions.ts", "file:src/config/index.ts", "file:src/helpers/hooks.ts"],
+    "languageLesson": "Centralizing API calls in a single module makes it easier to manage authentication, error handling, and endpoint changes. This pattern is often called a 'service' or 'API client' in frontend architecture."
+  },
+  {
+    "order": 8,
+    "title": "Support Feature Overview",
+    "description": "The Support page is the main feature of the application. It composes the SupportContainer, which orchestrates filters, pagination, a data table, and integration with the AppActions API client. This is where peer support staff can search, filter, and review support entries.",
+    "nodeIds": ["file:src/pages/Support.tsx", "file:src/components/support/containers/SupportContainer.tsx"]
+  },
+  {
+    "order": 9,
+    "title": "Support Data Display and Filtering",
+    "description": "The SupportContainer manages local UI state using React Context (context.tsx) and useReducer. It composes the SupportTable (displays support entries), FiltersContainer (support type, recipient type, date range, search), and PaginationContainer (navigation). This separation of concerns keeps each component focused on a single responsibility.",
+    "nodeIds": ["file:src/components/support/context.tsx", "file:src/components/support/tables/SupportTable.tsx", "file:src/components/support/containers/FiltersContainer.tsx", "file:src/components/support/containers/PaginationContainer.tsx"],
+    "languageLesson": "React Context with useReducer is a lightweight state management pattern for local UI state like filters, pagination, and form data. It avoids prop drilling while being simpler than external state management libraries."
+  },
+  {
+    "order": 10,
+    "title": "Creating and Editing Support Entries",
+    "description": "The Create page displays the CreateSupportForm, a complex React Hook Form component that handles creating and editing support entries. The form manages nested data structures (an array of personnel) using special _dirtied and _deleted flags to track changes. It uses reusable form elements (FormLabel, FormError) and calls AppActions to submit data to the API.",
+    "nodeIds": ["file:src/pages/Create.tsx", "file:src/components/support/forms/CreateSupportForm.tsx", "file:src/components/support/forms/CreatePersonnelForm.tsx", "file:src/components/form-elements/FormLabel.tsx", "file:src/components/form-elements/FormError.tsx"],
+    "languageLesson": "React Hook Form simplifies form state management with a register function and watch/getValues methods. Nested form arrays require special handling with useFieldArray to add/remove personnel entries dynamically."
+  },
+  {
+    "order": 11,
+    "title": "Personnel Roster Management",
+    "description": "The Roster page is the secondary feature, allowing administrators to manage the personnel roster (peer support staff). The RosterContainer orchestrates the roster context (for filters and pagination) and integrates with AppActions to perform CRUD operations on roster members.",
+    "nodeIds": ["file:src/pages/Roster.tsx", "file:src/components/roster/RosterContainer.tsx", "file:src/components/roster/context.tsx"]
+  },
+  {
+    "order": 12,
+    "title": "Build Configuration and Dependencies",
+    "description": "The package.json lists all project dependencies (React 18, React Router, React Hook Form, React Query, MSAL, Vite, TypeScript, Tailwind CSS). The vite.config.ts configures the build tool with base path /peer-support, path aliases for cleaner imports, and the React plugin. The tsconfig.json defines TypeScript compiler options and path aliases.",
+    "nodeIds": ["config:package.json", "config:vite.config.ts", "config:tsconfig.json"]
+  }
+]

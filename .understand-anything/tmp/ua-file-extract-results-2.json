@@ -1,0 +1,636 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 19,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/components/error/ErrorBoundary/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 24,
+      "functions": [
+        {
+          "name": "ErrorBoundary",
+          "startLine": 7,
+          "endLine": 28,
+          "params": [
+            "{ href, children }"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ErrorFallback",
+          "callee": "useNavigate",
+          "lineNumber": 9
+        },
+        {
+          "caller": "ErrorFallback",
+          "callee": "setTimeout",
+          "lineNumber": 11
+        },
+        {
+          "caller": "ErrorFallback",
+          "callee": "navigate",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/error/ErrorBoundary/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "Bomb",
+          "startLine": 10,
+          "endLine": 10,
+          "params": []
+        },
+        {
+          "name": "Safe",
+          "startLine": 11,
+          "endLine": 11,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/error/ErrorBoundary/types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 8,
+      "nonEmptyLines": 7,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/loading/Loading/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 9,
+      "functions": [
+        {
+          "name": "Loading",
+          "startLine": 3,
+          "endLine": 10,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/loading/Loading/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 9,
+      "nonEmptyLines": 8,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Create/components.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "CreateContainer",
+          "startLine": 6,
+          "endLine": 14,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateContainer",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CreateContainer",
+          "callee": "useSetForm",
+          "lineNumber": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Create/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "useSetForm",
+          "startLine": 7,
+          "endLine": 17,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useSetForm",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useSetForm",
+          "callee": "useParams",
+          "lineNumber": 8
+        },
+        {
+          "caller": "useSetForm",
+          "callee": "createFormMap.get",
+          "lineNumber": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Create/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "Create",
+          "startLine": 5,
+          "endLine": 14,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Docs/components.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "EndpointItems",
+          "startLine": 8,
+          "endLine": 17,
+          "params": [
+            "{ collection }"
+          ]
+        },
+        {
+          "name": "MethodBadge",
+          "startLine": 19,
+          "endLine": 24,
+          "params": [
+            "{ method }"
+          ]
+        },
+        {
+          "name": "CloseDocsBtn",
+          "startLine": 26,
+          "endLine": 33,
+          "params": []
+        },
+        {
+          "name": "EndpointItem",
+          "startLine": 35,
+          "endLine": 69,
+          "params": [
+            "{ item }"
+          ]
+        },
+        {
+          "name": "RequestDescription",
+          "startLine": 71,
+          "endLine": 77,
+          "params": [
+            "{ description }"
+          ]
+        },
+        {
+          "name": "RequestBody",
+          "startLine": 79,
+          "endLine": 90,
+          "params": [
+            "{ body }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "EndpointItems",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "MethodBadge",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "CloseDocsBtn",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "EndpointItems",
+          "callee": "collection.item.map",
+          "lineNumber": 12
+        },
+        {
+          "caller": "MethodBadge",
+          "callee": "docColorsMap.get",
+          "lineNumber": 22
+        },
+        {
+          "caller": "EndpointItem",
+          "callee": "useHandleEndpointItem",
+          "lineNumber": 36
+        },
+        {
+          "caller": "EndpointItem",
+          "callee": "item.item.map",
+          "lineNumber": 44
+        },
+        {
+          "caller": "EndpointItem",
+          "callee": "item.request.url.raw.replace",
+          "lineNumber": 62
+        },
+        {
+          "caller": "RequestBody",
+          "callee": "JSON.stringify",
+          "lineNumber": 86
+        },
+        {
+          "caller": "RequestBody",
+          "callee": "JSON.parse",
+          "lineNumber": 86
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Docs/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 26,
+      "functions": [
+        {
+          "name": "useGetDocs",
+          "startLine": 10,
+          "endLine": 18,
+          "params": []
+        },
+        {
+          "name": "useHandleEndpointItem",
+          "startLine": 23,
+          "endLine": 31,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useGetDocs",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "useHandleEndpointItem",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useGetDocs",
+          "callee": "useEnableQuery",
+          "lineNumber": 11
+        },
+        {
+          "caller": "useGetDocs",
+          "callee": "useQuery",
+          "lineNumber": 13
+        },
+        {
+          "caller": "useGetDocs",
+          "callee": "AppActions.getDocs",
+          "lineNumber": 15
+        },
+        {
+          "caller": "useGetDocs",
+          "callee": "authHeaders",
+          "lineNumber": 15
+        },
+        {
+          "caller": "useHandleEndpointItem",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "onChange",
+          "callee": "setState",
+          "lineNumber": 27
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Docs/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "Documentation",
+          "startLine": 12,
+          "endLine": 31,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Documentation",
+          "callee": "useGetDocs",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Docs/utils.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 40,
+      "exports": [
+        {
+          "name": "docColorsMap",
+          "line": 39,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Roster/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "Roster",
+          "startLine": 9,
+          "endLine": 21,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Roster",
+          "callee": "useGetRosterPersonnel",
+          "lineNumber": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Roster/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 27,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Support/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 16,
+      "functions": [
+        {
+          "name": "useGetAllSupport",
+          "startLine": 9,
+          "endLine": 18,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useGetAllSupport",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useGetAllSupport",
+          "callee": "useEnableQuery",
+          "lineNumber": 10
+        },
+        {
+          "caller": "useGetAllSupport",
+          "callee": "useQuery",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useGetAllSupport",
+          "callee": "AppActions.getAllSupport",
+          "lineNumber": 14
+        },
+        {
+          "caller": "useGetAllSupport",
+          "callee": "authHeaders",
+          "lineNumber": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Support/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "Support",
+          "startLine": 9,
+          "endLine": 21,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Support",
+          "callee": "useGetAllSupport",
+          "lineNumber": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Support/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 37,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/utils/HandleLoading/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 8,
+      "functions": [
+        {
+          "name": "HandleLoading",
+          "startLine": 6,
+          "endLine": 10,
+          "params": [
+            "props"
+          ]
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/utils/Motion/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "Motion",
+          "startLine": 7,
+          "endLine": 14,
+          "params": [
+            "{ animation, children }"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Motion",
+          "callee": "motionPropsMap.get",
+          "lineNumber": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

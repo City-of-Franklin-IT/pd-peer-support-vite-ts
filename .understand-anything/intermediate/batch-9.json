@@ -1,0 +1,171 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "type": "file",
+      "name": "components.tsx",
+      "filePath": "src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "summary": "React Hook Form components for personnel selection in support entry creation. Exports PersonnelSelect input field and PersonnelOptions dropdown list derived from the roster.",
+      "tags": ["component", "form-element", "personnel-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreatePersonnelForm/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/components/support/forms/create/CreatePersonnelForm/hooks.ts",
+      "summary": "Custom React hooks managing personnel form state and visibility. Handles form value tracking, deletion flags, and remove button display logic for dynamic personnel array entries.",
+      "tags": ["custom-hook", "form-logic", "state-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+      "summary": "Entry point component for personnel form creation, delegating to PersonnelSelect component. Wraps personnel input handling in a simple render.",
+      "tags": ["entry-point", "component", "form-container"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreatePersonnelForm/utils.ts",
+      "type": "file",
+      "name": "utils.ts",
+      "filePath": "src/components/support/forms/create/CreatePersonnelForm/utils.ts",
+      "summary": "Empty utility file placeholder for CreatePersonnelForm module. Reserved for helper functions.",
+      "tags": ["utility", "placeholder", "unused"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Roster/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/pages/Roster/hooks.ts",
+      "summary": "Custom hook for roster personnel data fetching using React Query. Integrates with authentication headers and query enabling logic to fetch personnel roster from the API.",
+      "tags": ["custom-hook", "data-fetching", "react-query"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreatePersonnelForm/components.tsx:PersonnelSelect",
+      "type": "function",
+      "name": "PersonnelSelect",
+      "filePath": "src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "lineRange": [9, 46],
+      "summary": "React Hook Form Controller component rendering personnel email selection dropdown. Manages dirty state and integrates with form array for dynamic personnel entries.",
+      "tags": ["form-component", "controller", "select-input"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreatePersonnelForm/components.tsx:PersonnelOptions",
+      "type": "function",
+      "name": "PersonnelOptions",
+      "filePath": "src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "lineRange": [48, 63],
+      "summary": "Renders personnel roster options for dropdown selection. Maps roster data to option elements keyed by UUID.",
+      "tags": ["form-element", "list-renderer", "roster-integration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreatePersonnelForm/hooks.ts:useHandlePersonnelSelect",
+      "type": "function",
+      "name": "useHandlePersonnelSelect",
+      "filePath": "src/components/support/forms/create/CreatePersonnelForm/hooks.ts",
+      "lineRange": [9, 20],
+      "summary": "Custom hook providing form control, setValue, deletion state, and remove button props for personnel selection. Integrates with React Hook Form context.",
+      "tags": ["custom-hook", "form-control", "state-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreatePersonnelForm/index.tsx:CreatePersonnelForm",
+      "type": "function",
+      "name": "CreatePersonnelForm",
+      "filePath": "src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+      "lineRange": [4, 9],
+      "summary": "Main export component wrapping PersonnelSelect with index prop. Serves as the form component interface for personnel entry creation.",
+      "tags": ["form-component", "wrapper", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Roster/hooks.ts:useGetRosterPersonnel",
+      "type": "function",
+      "name": "useGetRosterPersonnel",
+      "filePath": "src/pages/Roster/hooks.ts",
+      "lineRange": [9, 17],
+      "summary": "React Query hook fetching roster personnel data from API. Returns query result with personnel list, handling authentication headers and query enabling based on token availability.",
+      "tags": ["data-fetching", "custom-hook", "react-query"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreatePersonnelForm/components.tsx:PersonnelSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreatePersonnelForm/components.tsx:PersonnelOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "target": "file:src/components/form-elements/FormLabel/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "target": "file:src/components/form-elements/buttons/RemoveBtn",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreatePersonnelForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreatePersonnelForm/hooks.ts:useHandlePersonnelSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+      "target": "function:src/components/support/forms/create/CreatePersonnelForm/index.tsx:CreatePersonnelForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+      "target": "file:src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/components/support/forms/create/CreatePersonnelForm/components.tsx:PersonnelSelect",
+      "target": "function:src/components/support/forms/create/CreatePersonnelForm/hooks.ts:useHandlePersonnelSelect",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/support/forms/create/CreatePersonnelForm/components.tsx:PersonnelOptions",
+      "target": "function:src/pages/Roster/hooks.ts:useGetRosterPersonnel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/pages/Roster/hooks.ts",
+      "target": "function:src/pages/Roster/hooks.ts:useGetRosterPersonnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

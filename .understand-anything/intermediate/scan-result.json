@@ -1,0 +1,1535 @@
+{
+  "name": "pd-peer-support-vite-ts",
+  "description": "A React-based web application for Franklin Police Department peer support program administrators to track and manage support services (debriefs, defusing, referrals, etc.) provided to first responders and city employees.",
+  "languages": [
+    "css",
+    "html",
+    "javascript",
+    "json",
+    "markdown",
+    "typescript",
+    "xml"
+  ],
+  "frameworks": [
+    "Azure AD (MSAL)",
+    "Docker",
+    "ESLint",
+    "React",
+    "React Hook Form",
+    "React Router",
+    "React Toastify",
+    "Tailwind CSS",
+    "TypeScript",
+    "Vite",
+    "Vitest"
+  ],
+  "files": [
+    {
+      "path": ".claude/settings.json",
+      "language": "json",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".env.development",
+      "language": "config",
+      "sizeLines": 1,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "CLAUDE.md",
+      "language": "markdown",
+      "sizeLines": 140,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "eslint.config.js",
+      "language": "javascript",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "sizeLines": 29,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "sizeLines": 52,
+      "fileCategory": "config"
+    },
+    {
+      "path": "public/favicons/browserconfig.xml",
+      "language": "xml",
+      "sizeLines": 1,
+      "fileCategory": "config"
+    },
+    {
+      "path": "public/favicons/manifest.json",
+      "language": "json",
+      "sizeLines": 40,
+      "fileCategory": "config"
+    },
+    {
+      "path": "public/redirect.html",
+      "language": "html",
+      "sizeLines": 8,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 171,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/App.tsx",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/error/ErrorBoundary/index.tsx",
+      "language": "typescript",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/error/ErrorBoundary/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/error/ErrorBoundary/types.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "language": "typescript",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/buttons/DeleteBtn/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/buttons/FormBtns/components.tsx",
+      "language": "typescript",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/buttons/FormBtns/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/buttons/FormBtns/index.tsx",
+      "language": "typescript",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/buttons/FormBtns/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/buttons/RemoveBtn/index.tsx",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/buttons/RemoveBtn/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/FormContainer/FormContainer.module.css",
+      "language": "css",
+      "sizeLines": 20,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/form-elements/FormContainer/index.tsx",
+      "language": "typescript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/FormError/index.tsx",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/FormError/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/FormLabel/index.tsx",
+      "language": "typescript",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/FormLabel/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/form-elements/RequiredIcon/index.tsx",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/buttons/nav/BackToHomeBtn/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/buttons/nav/BackToTopBtn/index.tsx",
+      "language": "typescript",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/buttons/nav/BackToTopBtn/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/buttons/nav/BackToTopBtn/utils.ts",
+      "language": "typescript",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/buttons/nav/NextPageBtn/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/buttons/nav/PrevPageBtn/index.tsx",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/buttons/nav/PrevPageBtn/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Footer/components.tsx",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Footer/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Footer/index.tsx",
+      "language": "typescript",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Footer/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Header/components.tsx",
+      "language": "typescript",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Header/context.tsx",
+      "language": "typescript",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Header/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Header/index.tsx",
+      "language": "typescript",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Header/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Layout/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Layout/index.tsx",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/Layout/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/loading/Loading/index.tsx",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/layout/loading/Loading/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/containers/RosterContainer/components.tsx",
+      "language": "typescript",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/containers/RosterContainer/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/containers/RosterContainer/index.tsx",
+      "language": "typescript",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/containers/RosterContainer/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/context.tsx",
+      "language": "typescript",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "language": "typescript",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/components.tsx",
+      "language": "typescript",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/tables/PersonnelTable/components.tsx",
+      "language": "typescript",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/tables/PersonnelTable/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/tables/PersonnelTable/index.tsx",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/tables/PersonnelTable/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/roster/test/context.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/FiltersContainer/components.tsx",
+      "language": "typescript",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/FiltersContainer/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 103,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/FiltersContainer/index.tsx",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/FiltersContainer/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/components.tsx",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/index.tsx",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/SupportContainer/components.tsx",
+      "language": "typescript",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/SupportContainer/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/SupportContainer/index.tsx",
+      "language": "typescript",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/SupportContainer/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/context.tsx",
+      "language": "typescript",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "language": "typescript",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreatePersonnelForm/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreatePersonnelForm/utils.ts",
+      "language": "typescript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "language": "typescript",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "language": "typescript",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/create/CreateSupportForm/utils.ts",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/update/UpdateSupportForm/index.tsx",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "language": "typescript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/tables/SupportTable/components.tsx",
+      "language": "typescript",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/tables/SupportTable/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/tables/SupportTable/index.tsx",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/tables/SupportTable/test/hooks.spec.ts",
+      "language": "typescript",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/tables/SupportTable/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/tables/SupportTable/test/utils.spec.ts",
+      "language": "typescript",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/tables/SupportTable/utils.ts",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/test/context.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/config/index.ts",
+      "language": "typescript",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/context/App/AppActions.ts",
+      "language": "typescript",
+      "sizeLines": 272,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/context/App/AppTypes.ts",
+      "language": "typescript",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/context/Auth/config.ts",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/context/Auth/constants.ts",
+      "language": "typescript",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/context/Auth/hooks/AuthProvider.tsx",
+      "language": "typescript",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/context/Auth/hooks/useHandleLoginRedirect.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/context/Auth/index.tsx",
+      "language": "typescript",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/helpers/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/helpers/test/utils.spec.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/helpers/utils.ts",
+      "language": "typescript",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/index.css",
+      "language": "css",
+      "sizeLines": 106,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/main.tsx",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Create/components.tsx",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Create/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Create/index.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Create/utils.ts",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Docs/components.tsx",
+      "language": "typescript",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Docs/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Docs/index.tsx",
+      "language": "typescript",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Docs/utils.ts",
+      "language": "typescript",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Login/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Login/index.tsx",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Redirect/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Redirect/index.tsx",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Redirect/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Roster/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Roster/index.tsx",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Roster/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Support/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Support/index.tsx",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/pages/Support/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/test/mocks/api.ts",
+      "language": "typescript",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/test/setup.ts",
+      "language": "typescript",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/test/utils.tsx",
+      "language": "typescript",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/utils/HandleLoading/index.tsx",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/utils/Motion/index.tsx",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/utils/PageWrapper/index.tsx",
+      "language": "typescript",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/utils/PageWrapper/utils.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/utils/Toast/Toast.module.css",
+      "language": "css",
+      "sizeLines": 33,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/utils/Toast/Toast.tsx",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "language": "typescript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tsconfig.app.json",
+      "language": "json",
+      "sizeLines": 27,
+      "fileCategory": "config"
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "sizeLines": 38,
+      "fileCategory": "config"
+    },
+    {
+      "path": "tsconfig.node.json",
+      "language": "json",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "tsconfig.test.json",
+      "language": "json",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "vitest.config.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 159,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "large",
+  "importMap": {
+    ".claude/settings.json": [],
+    ".env.development": [],
+    ".understand-anything/.understandignore": [],
+    "CLAUDE.md": [],
+    "eslint.config.js": [],
+    "index.html": [],
+    "package.json": [],
+    "public/favicons/browserconfig.xml": [],
+    "public/favicons/manifest.json": [],
+    "public/redirect.html": [],
+    "README.md": [],
+    "src/App.tsx": [
+      "src/components/layout/Layout/index.tsx",
+      "src/config/index.ts",
+      "src/context/Auth/index.tsx",
+      "src/pages/Create/index.tsx",
+      "src/pages/Docs/index.tsx",
+      "src/pages/Login/index.tsx",
+      "src/pages/Redirect/index.tsx",
+      "src/pages/Roster/index.tsx",
+      "src/pages/Support/index.tsx"
+    ],
+    "src/components/error/ErrorBoundary/index.tsx": [
+      "src/components/error/ErrorBoundary/types.ts"
+    ],
+    "src/components/error/ErrorBoundary/test/index.spec.tsx": [
+      "src/components/error/ErrorBoundary/index.tsx"
+    ],
+    "src/components/error/ErrorBoundary/types.ts": [],
+    "src/components/form-elements/buttons/DeleteBtn/index.tsx": [],
+    "src/components/form-elements/buttons/DeleteBtn/test/index.spec.tsx": [
+      "src/components/form-elements/buttons/DeleteBtn/index.tsx"
+    ],
+    "src/components/form-elements/buttons/FormBtns/components.tsx": [
+      "src/components/form-elements/buttons/FormBtns/hooks.ts"
+    ],
+    "src/components/form-elements/buttons/FormBtns/hooks.ts": [],
+    "src/components/form-elements/buttons/FormBtns/index.tsx": [
+      "src/components/form-elements/buttons/FormBtns/components.tsx"
+    ],
+    "src/components/form-elements/buttons/FormBtns/test/index.spec.tsx": [
+      "src/components/form-elements/buttons/FormBtns/index.tsx"
+    ],
+    "src/components/form-elements/buttons/RemoveBtn/index.tsx": [],
+    "src/components/form-elements/buttons/RemoveBtn/test/index.spec.tsx": [
+      "src/components/form-elements/buttons/RemoveBtn/index.tsx"
+    ],
+    "src/components/form-elements/FormContainer/FormContainer.module.css": [],
+    "src/components/form-elements/FormContainer/index.tsx": [
+      "src/components/form-elements/FormContainer/FormContainer.module.css",
+      "src/helpers/utils.ts"
+    ],
+    "src/components/form-elements/FormError/index.tsx": [],
+    "src/components/form-elements/FormError/test/index.spec.tsx": [
+      "src/components/form-elements/FormError/index.tsx"
+    ],
+    "src/components/form-elements/FormLabel/index.tsx": [
+      "src/components/form-elements/FormError/index.tsx",
+      "src/components/form-elements/RequiredIcon/index.tsx"
+    ],
+    "src/components/form-elements/FormLabel/test/index.spec.tsx": [
+      "src/components/form-elements/FormLabel/index.tsx"
+    ],
+    "src/components/form-elements/RequiredIcon/index.tsx": [],
+    "src/components/layout/buttons/nav/BackToHomeBtn/index.tsx": [],
+    "src/components/layout/buttons/nav/BackToHomeBtn/test/index.spec.tsx": [
+      "src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+      "src/test/utils.tsx"
+    ],
+    "src/components/layout/buttons/nav/BackToTopBtn/index.tsx": [
+      "src/components/layout/buttons/nav/BackToTopBtn/utils.ts"
+    ],
+    "src/components/layout/buttons/nav/BackToTopBtn/test/index.spec.tsx": [
+      "src/components/layout/buttons/nav/BackToTopBtn/index.tsx"
+    ],
+    "src/components/layout/buttons/nav/BackToTopBtn/utils.ts": [],
+    "src/components/layout/buttons/nav/NextPageBtn/index.tsx": [],
+    "src/components/layout/buttons/nav/NextPageBtn/test/index.spec.tsx": [
+      "src/components/layout/buttons/nav/NextPageBtn/index.tsx"
+    ],
+    "src/components/layout/buttons/nav/PrevPageBtn/index.tsx": [],
+    "src/components/layout/buttons/nav/PrevPageBtn/test/index.spec.tsx": [
+      "src/components/layout/buttons/nav/PrevPageBtn/index.tsx"
+    ],
+    "src/components/layout/Footer/components.tsx": [
+      "src/components/layout/Footer/hooks.ts"
+    ],
+    "src/components/layout/Footer/hooks.ts": [
+      "src/config/index.ts",
+      "src/helpers/hooks.ts"
+    ],
+    "src/components/layout/Footer/index.tsx": [
+      "src/components/layout/Footer/components.tsx"
+    ],
+    "src/components/layout/Footer/test/index.spec.tsx": [
+      "src/components/layout/Footer/index.tsx",
+      "src/test/utils.tsx"
+    ],
+    "src/components/layout/Header/components.tsx": [
+      "src/components/layout/Header/context.tsx",
+      "src/components/layout/Header/hooks.ts",
+      "src/config/index.ts",
+      "src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+      "src/context/Auth/index.tsx"
+    ],
+    "src/components/layout/Header/context.tsx": [],
+    "src/components/layout/Header/hooks.ts": [
+      "src/components/layout/Header/context.tsx"
+    ],
+    "src/components/layout/Header/index.tsx": [
+      "src/components/layout/Header/components.tsx",
+      "src/components/layout/Header/hooks.ts"
+    ],
+    "src/components/layout/Header/test/index.spec.tsx": [
+      "src/components/layout/Header/index.tsx",
+      "src/test/utils.tsx"
+    ],
+    "src/components/layout/Layout/hooks.ts": [
+      "src/context/Auth/index.tsx"
+    ],
+    "src/components/layout/Layout/index.tsx": [
+      "src/components/layout/Footer/index.tsx",
+      "src/components/layout/Header/context.tsx",
+      "src/components/layout/Header/index.tsx",
+      "src/components/layout/Layout/hooks.ts"
+    ],
+    "src/components/layout/Layout/test/index.spec.tsx": [
+      "src/components/layout/Layout/index.tsx",
+      "src/test/utils.tsx"
+    ],
+    "src/components/layout/loading/Loading/index.tsx": [],
+    "src/components/layout/loading/Loading/test/index.spec.tsx": [
+      "src/components/layout/loading/Loading/index.tsx"
+    ],
+    "src/components/roster/containers/RosterContainer/components.tsx": [
+      "src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "src/components/roster/containers/RosterContainer/hooks.ts",
+      "src/components/roster/context.tsx",
+      "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx",
+      "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+      "src/utils/HandleLoading/index.tsx"
+    ],
+    "src/components/roster/containers/RosterContainer/hooks.ts": [
+      "src/components/roster/context.tsx",
+      "src/context/App/AppActions.ts",
+      "src/helpers/hooks.ts",
+      "src/helpers/utils.ts",
+      "src/utils/Toast/Toast.tsx"
+    ],
+    "src/components/roster/containers/RosterContainer/index.tsx": [
+      "src/components/roster/containers/RosterContainer/components.tsx",
+      "src/components/roster/tables/PersonnelTable/index.tsx",
+      "src/context/App/AppTypes.ts",
+      "src/helpers/utils.ts"
+    ],
+    "src/components/roster/containers/RosterContainer/test/index.spec.tsx": [
+      "src/components/roster/containers/RosterContainer/index.tsx",
+      "src/test/mocks/api.ts",
+      "src/test/utils.tsx"
+    ],
+    "src/components/roster/context.tsx": [],
+    "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx": [
+      "src/components/form-elements/FormLabel/index.tsx",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx": [
+      "src/components/roster/context.tsx",
+      "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+      "src/context/App/AppTypes.ts",
+      "src/helpers/hooks.ts"
+    ],
+    "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx": [
+      "src/components/form-elements/buttons/FormBtns/index.tsx",
+      "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx",
+      "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx"
+    ],
+    "src/components/roster/forms/create/CreateRosterPersonnelForm/test/index.spec.tsx": [
+      "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx",
+      "src/test/utils.tsx"
+    ],
+    "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts": [
+      "src/context/App/AppActions.ts",
+      "src/context/App/AppTypes.ts",
+      "src/helpers/utils.ts",
+      "src/utils/Toast/Toast.tsx"
+    ],
+    "src/components/roster/forms/update/UpdateRosterPersonnelForm/components.tsx": [],
+    "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts": [
+      "src/components/roster/context.tsx",
+      "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+      "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+      "src/context/App/AppTypes.ts",
+      "src/helpers/hooks.ts",
+      "src/utils/Toast/Toast.tsx"
+    ],
+    "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx": [
+      "src/components/form-elements/buttons/FormBtns/index.tsx",
+      "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx",
+      "src/components/roster/forms/update/UpdateRosterPersonnelForm/components.tsx",
+      "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/roster/forms/update/UpdateRosterPersonnelForm/test/index.spec.tsx": [
+      "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+      "src/test/mocks/api.ts",
+      "src/test/utils.tsx"
+    ],
+    "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts": [
+      "src/context/App/AppActions.ts",
+      "src/context/App/AppTypes.ts",
+      "src/helpers/utils.ts",
+      "src/utils/Toast/Toast.tsx"
+    ],
+    "src/components/roster/tables/PersonnelTable/components.tsx": [
+      "src/components/roster/tables/PersonnelTable/hooks.ts",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/roster/tables/PersonnelTable/hooks.ts": [
+      "src/components/roster/context.tsx",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/roster/tables/PersonnelTable/index.tsx": [
+      "src/components/roster/tables/PersonnelTable/components.tsx",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/roster/tables/PersonnelTable/test/index.spec.tsx": [
+      "src/components/roster/tables/PersonnelTable/index.tsx",
+      "src/test/mocks/api.ts",
+      "src/test/utils.tsx"
+    ],
+    "src/components/roster/test/context.spec.tsx": [
+      "src/components/roster/context.tsx"
+    ],
+    "src/components/support/containers/FiltersContainer/components.tsx": [
+      "src/components/support/containers/FiltersContainer/hooks.ts",
+      "src/components/support/forms/create/CreatePersonnelForm/components.tsx"
+    ],
+    "src/components/support/containers/FiltersContainer/hooks.ts": [
+      "src/components/support/context.tsx"
+    ],
+    "src/components/support/containers/FiltersContainer/index.tsx": [
+      "src/components/support/containers/FiltersContainer/components.tsx",
+      "src/helpers/utils.ts"
+    ],
+    "src/components/support/containers/FiltersContainer/test/index.spec.tsx": [
+      "src/components/support/containers/FiltersContainer/index.tsx",
+      "src/test/utils.tsx"
+    ],
+    "src/components/support/containers/PaginationContainer/components.tsx": [
+      "src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+      "src/components/layout/buttons/nav/PrevPageBtn/index.tsx",
+      "src/components/support/containers/PaginationContainer/hooks.ts"
+    ],
+    "src/components/support/containers/PaginationContainer/hooks.ts": [
+      "src/components/support/context.tsx"
+    ],
+    "src/components/support/containers/PaginationContainer/index.tsx": [
+      "src/components/support/containers/PaginationContainer/components.tsx"
+    ],
+    "src/components/support/containers/PaginationContainer/test/index.spec.tsx": [
+      "src/components/support/containers/PaginationContainer/index.tsx",
+      "src/test/utils.tsx"
+    ],
+    "src/components/support/containers/SupportContainer/components.tsx": [
+      "src/components/form-elements/FormContainer/index.tsx",
+      "src/components/layout/loading/Loading/index.tsx",
+      "src/components/support/containers/SupportContainer/hooks.ts",
+      "src/components/support/forms/update/UpdateSupportForm/index.tsx"
+    ],
+    "src/components/support/containers/SupportContainer/hooks.ts": [
+      "src/components/support/context.tsx",
+      "src/context/App/AppActions.ts",
+      "src/helpers/hooks.ts",
+      "src/helpers/utils.ts"
+    ],
+    "src/components/support/containers/SupportContainer/index.tsx": [
+      "src/components/support/containers/FiltersContainer/index.tsx",
+      "src/components/support/containers/PaginationContainer/index.tsx",
+      "src/components/support/containers/SupportContainer/components.tsx",
+      "src/components/support/tables/SupportTable/hooks.ts",
+      "src/components/support/tables/SupportTable/index.tsx",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/support/containers/SupportContainer/test/index.spec.tsx": [
+      "src/components/support/containers/SupportContainer/index.tsx",
+      "src/test/mocks/api.ts",
+      "src/test/utils.tsx"
+    ],
+    "src/components/support/context.tsx": [],
+    "src/components/support/forms/create/CreateOtherSupportForm/components.tsx": [
+      "src/components/form-elements/FormLabel/index.tsx",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts": [
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/support/forms/create/CreateOtherSupportForm/index.tsx": [
+      "src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+      "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts"
+    ],
+    "src/components/support/forms/create/CreatePersonnelForm/components.tsx": [
+      "src/components/form-elements/buttons/RemoveBtn/index.tsx",
+      "src/components/form-elements/FormLabel/index.tsx",
+      "src/components/support/forms/create/CreatePersonnelForm/hooks.ts",
+      "src/pages/Roster/hooks.ts"
+    ],
+    "src/components/support/forms/create/CreatePersonnelForm/hooks.ts": [
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/support/forms/create/CreatePersonnelForm/index.tsx": [
+      "src/components/support/forms/create/CreatePersonnelForm/components.tsx"
+    ],
+    "src/components/support/forms/create/CreatePersonnelForm/utils.ts": [],
+    "src/components/support/forms/create/CreateSupportForm/components.tsx": [
+      "src/components/form-elements/FormLabel/index.tsx",
+      "src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+      "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "src/components/support/forms/create/CreateSupportForm/utils.ts",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/support/forms/create/CreateSupportForm/hooks.ts": [
+      "src/components/support/forms/create/CreateSupportForm/utils.ts",
+      "src/context/App/AppTypes.ts",
+      "src/helpers/hooks.ts"
+    ],
+    "src/components/support/forms/create/CreateSupportForm/index.tsx": [
+      "src/components/form-elements/buttons/FormBtns/index.tsx",
+      "src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "src/components/support/forms/create/CreateSupportForm/hooks.ts"
+    ],
+    "src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx": [
+      "src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "src/test/utils.tsx"
+    ],
+    "src/components/support/forms/create/CreateSupportForm/utils.ts": [
+      "src/context/App/AppActions.ts",
+      "src/context/App/AppTypes.ts",
+      "src/helpers/utils.ts",
+      "src/utils/Toast/Toast.tsx"
+    ],
+    "src/components/support/forms/update/UpdateSupportForm/hooks.ts": [
+      "src/components/support/context.tsx",
+      "src/components/support/forms/update/UpdateSupportForm/utils.ts",
+      "src/context/App/AppActions.ts",
+      "src/context/App/AppTypes.ts",
+      "src/helpers/hooks.ts",
+      "src/helpers/utils.ts",
+      "src/utils/Toast/Toast.tsx"
+    ],
+    "src/components/support/forms/update/UpdateSupportForm/index.tsx": [
+      "src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "src/components/form-elements/buttons/FormBtns/index.tsx",
+      "src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx": [
+      "src/components/support/forms/update/UpdateSupportForm/index.tsx",
+      "src/test/mocks/api.ts",
+      "src/test/utils.tsx"
+    ],
+    "src/components/support/forms/update/UpdateSupportForm/utils.ts": [
+      "src/context/App/AppActions.ts",
+      "src/context/App/AppTypes.ts",
+      "src/helpers/utils.ts",
+      "src/utils/Toast/Toast.tsx"
+    ],
+    "src/components/support/tables/SupportTable/components.tsx": [
+      "src/components/support/tables/SupportTable/hooks.ts",
+      "src/components/support/tables/SupportTable/utils.ts",
+      "src/context/App/AppTypes.ts",
+      "src/helpers/utils.ts"
+    ],
+    "src/components/support/tables/SupportTable/hooks.ts": [
+      "src/components/support/context.tsx",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/support/tables/SupportTable/index.tsx": [
+      "src/components/support/tables/SupportTable/components.tsx",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/support/tables/SupportTable/test/hooks.spec.ts": [
+      "src/components/support/context.tsx",
+      "src/components/support/tables/SupportTable/hooks.ts",
+      "src/test/mocks/api.ts"
+    ],
+    "src/components/support/tables/SupportTable/test/index.spec.tsx": [
+      "src/components/support/tables/SupportTable/index.tsx",
+      "src/test/mocks/api.ts",
+      "src/test/utils.tsx"
+    ],
+    "src/components/support/tables/SupportTable/test/utils.spec.ts": [
+      "src/components/support/tables/SupportTable/utils.ts",
+      "src/test/mocks/api.ts"
+    ],
+    "src/components/support/tables/SupportTable/utils.ts": [
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/components/support/test/context.spec.tsx": [
+      "src/components/support/context.tsx"
+    ],
+    "src/config/index.ts": [],
+    "src/context/App/AppActions.ts": [
+      "src/config/index.ts",
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/context/App/AppTypes.ts": [],
+    "src/context/Auth/config.ts": [
+      "src/config/index.ts"
+    ],
+    "src/context/Auth/constants.ts": [],
+    "src/context/Auth/hooks/AuthProvider.tsx": [
+      "src/context/Auth/config.ts"
+    ],
+    "src/context/Auth/hooks/useHandleLoginRedirect.ts": [
+      "src/context/Auth/config.ts"
+    ],
+    "src/context/Auth/hooks/useHandleLogoutRedirect.ts": [],
+    "src/context/Auth/index.tsx": [
+      "src/context/Auth/config.ts",
+      "src/context/Auth/constants.ts"
+    ],
+    "src/helpers/hooks.ts": [
+      "src/context/Auth/index.tsx"
+    ],
+    "src/helpers/test/utils.spec.ts": [
+      "src/helpers/utils.ts"
+    ],
+    "src/helpers/utils.ts": [],
+    "src/index.css": [],
+    "src/main.tsx": [
+      "src/App.tsx",
+      "src/context/Auth/hooks/AuthProvider.tsx",
+      "src/index.css"
+    ],
+    "src/pages/Create/components.tsx": [
+      "src/components/form-elements/FormContainer/index.tsx",
+      "src/pages/Create/hooks.ts"
+    ],
+    "src/pages/Create/hooks.ts": [
+      "src/pages/Create/utils.ts"
+    ],
+    "src/pages/Create/index.tsx": [
+      "src/components/error/ErrorBoundary/index.tsx",
+      "src/pages/Create/components.tsx"
+    ],
+    "src/pages/Create/utils.ts": [
+      "src/components/support/forms/create/CreateSupportForm/index.tsx"
+    ],
+    "src/pages/Docs/components.tsx": [
+      "src/pages/Docs/hooks.ts",
+      "src/pages/Docs/utils.ts"
+    ],
+    "src/pages/Docs/hooks.ts": [
+      "src/context/App/AppActions.ts",
+      "src/helpers/hooks.ts",
+      "src/helpers/utils.ts"
+    ],
+    "src/pages/Docs/index.tsx": [
+      "src/components/error/ErrorBoundary/index.tsx",
+      "src/pages/Docs/components.tsx",
+      "src/pages/Docs/hooks.ts",
+      "src/pages/Docs/utils.ts",
+      "src/utils/HandleLoading/index.tsx",
+      "src/utils/Motion/index.tsx"
+    ],
+    "src/pages/Docs/utils.ts": [],
+    "src/pages/Login/hooks.ts": [
+      "src/context/Auth/index.tsx"
+    ],
+    "src/pages/Login/index.tsx": [
+      "src/pages/Login/hooks.ts"
+    ],
+    "src/pages/Redirect/hooks.ts": [
+      "src/context/Auth/index.tsx"
+    ],
+    "src/pages/Redirect/index.tsx": [
+      "src/pages/Redirect/hooks.ts"
+    ],
+    "src/pages/Redirect/test/index.spec.tsx": [
+      "src/pages/Redirect/index.tsx"
+    ],
+    "src/pages/Roster/hooks.ts": [
+      "src/context/App/AppActions.ts",
+      "src/helpers/hooks.ts",
+      "src/helpers/utils.ts"
+    ],
+    "src/pages/Roster/index.tsx": [
+      "src/components/error/ErrorBoundary/index.tsx",
+      "src/components/roster/containers/RosterContainer/index.tsx",
+      "src/components/roster/context.tsx",
+      "src/pages/Roster/hooks.ts",
+      "src/utils/HandleLoading/index.tsx"
+    ],
+    "src/pages/Roster/test/index.spec.tsx": [
+      "src/pages/Roster/index.tsx",
+      "src/test/mocks/api.ts",
+      "src/test/utils.tsx"
+    ],
+    "src/pages/Support/hooks.ts": [
+      "src/context/App/AppActions.ts",
+      "src/helpers/hooks.ts",
+      "src/helpers/utils.ts"
+    ],
+    "src/pages/Support/index.tsx": [
+      "src/components/error/ErrorBoundary/index.tsx",
+      "src/components/layout/loading/Loading/index.tsx",
+      "src/components/support/containers/SupportContainer/index.tsx",
+      "src/components/support/context.tsx",
+      "src/pages/Support/hooks.ts"
+    ],
+    "src/pages/Support/test/index.spec.tsx": [
+      "src/pages/Support/index.tsx",
+      "src/test/mocks/api.ts",
+      "src/test/utils.tsx"
+    ],
+    "src/test/mocks/api.ts": [
+      "src/context/App/AppTypes.ts"
+    ],
+    "src/test/setup.ts": [],
+    "src/test/utils.tsx": [
+      "src/components/layout/Header/context.tsx",
+      "src/components/roster/context.tsx",
+      "src/components/support/context.tsx"
+    ],
+    "src/utils/HandleLoading/index.tsx": [
+      "src/components/layout/loading/Loading/index.tsx"
+    ],
+    "src/utils/Motion/index.tsx": [
+      "src/helpers/utils.ts"
+    ],
+    "src/utils/PageWrapper/index.tsx": [
+      "src/utils/PageWrapper/utils.ts"
+    ],
+    "src/utils/PageWrapper/utils.ts": [],
+    "src/utils/Toast/Toast.module.css": [],
+    "src/utils/Toast/Toast.tsx": [
+      "src/utils/Toast/Toast.module.css"
+    ],
+    "src/vite-env.d.ts": [],
+    "tsconfig.app.json": [],
+    "tsconfig.json": [],
+    "tsconfig.node.json": [],
+    "tsconfig.test.json": [],
+    "vite.config.ts": [],
+    "vitest.config.ts": []
+  }
+}

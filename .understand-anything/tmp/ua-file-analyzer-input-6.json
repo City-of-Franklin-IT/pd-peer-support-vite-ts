@@ -1,0 +1,99 @@
+{
+  "projectRoot": "/home/andrew/apps/typescript/pd/pd-peer-support-vite-ts",
+  "batchFiles": [
+    {
+      "path": "src/components/support/containers/FiltersContainer/components.tsx",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/FiltersContainer/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/FiltersContainer/index.tsx",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/FiltersContainer/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/components.tsx",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/index.tsx",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/test/index.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/context.tsx",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/support/test/context.spec.tsx",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/components/support/containers/FiltersContainer/components.tsx": [
+      "src/components/form-elements/index.ts",
+      "src/components/support/context.tsx"
+    ],
+    "src/components/support/containers/FiltersContainer/hooks.ts": [
+      "src/components/support/context.tsx"
+    ],
+    "src/components/support/containers/FiltersContainer/index.tsx": [
+      "src/components/support/containers/FiltersContainer/components.tsx",
+      "src/components/support/containers/FiltersContainer/hooks.ts"
+    ],
+    "src/components/support/containers/FiltersContainer/test/index.spec.tsx": [
+      "src/components/support/containers/FiltersContainer/index.tsx"
+    ],
+    "src/components/support/containers/PaginationContainer/components.tsx": [
+      "src/components/form-elements/index.ts",
+      "src/components/support/context.tsx"
+    ],
+    "src/components/support/containers/PaginationContainer/hooks.ts": [
+      "src/components/support/context.tsx"
+    ],
+    "src/components/support/containers/PaginationContainer/index.tsx": [
+      "src/components/support/containers/PaginationContainer/components.tsx",
+      "src/components/support/containers/PaginationContainer/hooks.ts"
+    ],
+    "src/components/support/containers/PaginationContainer/test/index.spec.tsx": [
+      "src/components/support/containers/PaginationContainer/index.tsx"
+    ],
+    "src/components/support/context.tsx": [],
+    "src/components/support/test/context.spec.tsx": [
+      "src/components/support/context.tsx"
+    ]
+  }
+}

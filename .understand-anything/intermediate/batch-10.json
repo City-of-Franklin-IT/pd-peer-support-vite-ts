@@ -1,0 +1,228 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/layout/buttons/nav/BackToTopBtn/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/layout/buttons/nav/BackToTopBtn/index.tsx",
+      "summary": "BackToTopBtn component that renders a button triggering smooth scroll to a reference element using handleClick utility.",
+      "tags": ["component", "ui-button", "navigation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/buttons/nav/BackToTopBtn/index.tsx:BackToTopBtn",
+      "type": "function",
+      "name": "BackToTopBtn",
+      "filePath": "src/components/layout/buttons/nav/BackToTopBtn/index.tsx",
+      "lineRange": [3, 13],
+      "summary": "React component that accepts a topRef prop and renders a styled button that scrolls to the top when clicked.",
+      "tags": ["component", "react", "ui-button"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/buttons/nav/BackToTopBtn/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/layout/buttons/nav/BackToTopBtn/test/index.spec.tsx",
+      "summary": "Vitest test suite for BackToTopBtn component verifying button rendering and scrollIntoView behavior.",
+      "tags": ["test", "vitest", "component-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/buttons/nav/BackToTopBtn/utils.ts",
+      "type": "file",
+      "name": "utils.ts",
+      "filePath": "src/components/layout/buttons/nav/BackToTopBtn/utils.ts",
+      "summary": "Utility module exporting handleClick function that performs smooth scrolling to a reference element.",
+      "tags": ["utility", "scroll-handler", "helper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/buttons/nav/BackToTopBtn/utils.ts:handleClick",
+      "type": "function",
+      "name": "handleClick",
+      "filePath": "src/components/layout/buttons/nav/BackToTopBtn/utils.ts",
+      "lineRange": [1, 5],
+      "summary": "Exports a handler function that scrolls a referenced element into view with smooth behavior.",
+      "tags": ["utility", "scroll-handler", "dom-manipulation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+      "summary": "NextPageBtn component that renders a styled navigation button with next arrow icon and disabled state support.",
+      "tags": ["component", "ui-button", "pagination"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/buttons/nav/NextPageBtn/index.tsx:NextPageBtn",
+      "type": "function",
+      "name": "NextPageBtn",
+      "filePath": "src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+      "lineRange": [5, 17],
+      "summary": "React component that accepts onClick handler and disabled state, rendering a next page navigation button with icon.",
+      "tags": ["component", "react", "pagination"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/buttons/nav/NextPageBtn/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/layout/buttons/nav/NextPageBtn/test/index.spec.tsx",
+      "summary": "Vitest test suite for NextPageBtn component verifying rendering, disabled state, and click behavior.",
+      "tags": ["test", "vitest", "component-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/buttons/nav/PrevPageBtn/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/layout/buttons/nav/PrevPageBtn/index.tsx",
+      "summary": "PrevPageBtn component that renders a styled navigation button with previous arrow icon and disabled state support.",
+      "tags": ["component", "ui-button", "pagination"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/buttons/nav/PrevPageBtn/index.tsx:PrevPageBtn",
+      "type": "function",
+      "name": "PrevPageBtn",
+      "filePath": "src/components/layout/buttons/nav/PrevPageBtn/index.tsx",
+      "lineRange": [5, 17],
+      "summary": "React component that accepts onClick handler and disabled state, rendering a previous page navigation button with icon.",
+      "tags": ["component", "react", "pagination"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/buttons/nav/PrevPageBtn/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/layout/buttons/nav/PrevPageBtn/test/index.spec.tsx",
+      "summary": "Vitest test suite for PrevPageBtn component verifying rendering, disabled state, and click behavior.",
+      "tags": ["test", "vitest", "component-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/PageWrapper/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/utils/PageWrapper/index.tsx",
+      "summary": "PageWrapper utility component that wraps children with Framer Motion animations for page transitions using pageVariants.",
+      "tags": ["component", "animation", "page-wrapper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/PageWrapper/index.tsx:PageWrapper",
+      "type": "function",
+      "name": "PageWrapper",
+      "filePath": "src/utils/PageWrapper/index.tsx",
+      "lineRange": [4, 21],
+      "summary": "React wrapper component that applies fade-in/fade-out animations to child components using Framer Motion.",
+      "tags": ["component", "react", "animation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/PageWrapper/utils.ts",
+      "type": "file",
+      "name": "utils.ts",
+      "filePath": "src/utils/PageWrapper/utils.ts",
+      "summary": "Utility module exporting pageVariants object that defines animation states for page transitions.",
+      "tags": ["utility", "animation", "constants"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/layout/buttons/nav/BackToTopBtn/index.tsx",
+      "target": "function:src/components/layout/buttons/nav/BackToTopBtn/index.tsx:BackToTopBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/BackToTopBtn/index.tsx",
+      "target": "file:src/components/layout/buttons/nav/BackToTopBtn/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/BackToTopBtn/test/index.spec.tsx",
+      "target": "file:src/components/layout/buttons/nav/BackToTopBtn/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/BackToTopBtn/test/index.spec.tsx",
+      "target": "file:src/components/layout/buttons/nav/BackToTopBtn/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/BackToTopBtn/utils.ts",
+      "target": "function:src/components/layout/buttons/nav/BackToTopBtn/utils.ts:handleClick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+      "target": "function:src/components/layout/buttons/nav/NextPageBtn/index.tsx:NextPageBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/NextPageBtn/test/index.spec.tsx",
+      "target": "file:src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/NextPageBtn/test/index.spec.tsx",
+      "target": "file:src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/PrevPageBtn/index.tsx",
+      "target": "function:src/components/layout/buttons/nav/PrevPageBtn/index.tsx:PrevPageBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/PrevPageBtn/test/index.spec.tsx",
+      "target": "file:src/components/layout/buttons/nav/PrevPageBtn/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/PrevPageBtn/test/index.spec.tsx",
+      "target": "file:src/components/layout/buttons/nav/PrevPageBtn/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/utils/PageWrapper/index.tsx",
+      "target": "function:src/utils/PageWrapper/index.tsx:PageWrapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/PageWrapper/index.tsx",
+      "target": "file:src/utils/PageWrapper/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+  ]
+}

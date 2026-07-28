@@ -1,0 +1,3593 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 159,
+  "totalBatches": 12,
+  "exportsByPath": {
+    ".understand-anything/.understandignore": [],
+    "eslint.config.js": [],
+    "src/App.tsx": [],
+    "src/components/error/ErrorBoundary/index.tsx": [],
+    "src/components/error/ErrorBoundary/test/index.spec.tsx": [],
+    "src/components/error/ErrorBoundary/types.ts": [],
+    "src/components/form-elements/buttons/DeleteBtn/index.tsx": [],
+    "src/components/form-elements/buttons/DeleteBtn/test/index.spec.tsx": [],
+    "src/components/form-elements/buttons/FormBtns/components.tsx": [
+      "CancelBtn",
+      "ResetBtn",
+      "SaveBtn"
+    ],
+    "src/components/form-elements/buttons/FormBtns/hooks.ts": [
+      "useDisableBtn"
+    ],
+    "src/components/form-elements/buttons/FormBtns/index.tsx": [],
+    "src/components/form-elements/buttons/FormBtns/test/index.spec.tsx": [],
+    "src/components/form-elements/buttons/RemoveBtn/index.tsx": [],
+    "src/components/form-elements/buttons/RemoveBtn/test/index.spec.tsx": [],
+    "src/components/form-elements/FormContainer/index.tsx": [],
+    "src/components/form-elements/FormError/index.tsx": [],
+    "src/components/form-elements/FormError/test/index.spec.tsx": [],
+    "src/components/form-elements/FormLabel/index.tsx": [],
+    "src/components/form-elements/FormLabel/test/index.spec.tsx": [],
+    "src/components/form-elements/RequiredIcon/index.tsx": [],
+    "src/components/layout/buttons/nav/BackToHomeBtn/index.tsx": [],
+    "src/components/layout/buttons/nav/BackToHomeBtn/test/index.spec.tsx": [],
+    "src/components/layout/buttons/nav/BackToTopBtn/index.tsx": [],
+    "src/components/layout/buttons/nav/BackToTopBtn/test/index.spec.tsx": [],
+    "src/components/layout/buttons/nav/BackToTopBtn/utils.ts": [
+      "handleClick"
+    ],
+    "src/components/layout/buttons/nav/NextPageBtn/index.tsx": [],
+    "src/components/layout/buttons/nav/NextPageBtn/test/index.spec.tsx": [],
+    "src/components/layout/buttons/nav/PrevPageBtn/index.tsx": [],
+    "src/components/layout/buttons/nav/PrevPageBtn/test/index.spec.tsx": [],
+    "src/components/layout/Footer/components.tsx": [
+      "DocsBtn"
+    ],
+    "src/components/layout/Footer/hooks.ts": [
+      "useHandleDocsBtn"
+    ],
+    "src/components/layout/Footer/index.tsx": [],
+    "src/components/layout/Footer/test/index.spec.tsx": [],
+    "src/components/layout/Header/components.tsx": [
+      "Title",
+      "Buttons",
+      "HomeLink"
+    ],
+    "src/components/layout/Header/context.tsx": [
+      "HeaderProvider"
+    ],
+    "src/components/layout/Header/hooks.ts": [
+      "useHandleTitle",
+      "useHandleButtonsVisibility",
+      "useSetActivePage"
+    ],
+    "src/components/layout/Header/index.tsx": [],
+    "src/components/layout/Header/test/index.spec.tsx": [],
+    "src/components/layout/Layout/hooks.ts": [
+      "useAuthCheck"
+    ],
+    "src/components/layout/Layout/index.tsx": [],
+    "src/components/layout/Layout/test/index.spec.tsx": [],
+    "src/components/layout/loading/Loading/index.tsx": [],
+    "src/components/layout/loading/Loading/test/index.spec.tsx": [],
+    "src/components/roster/containers/RosterContainer/components.tsx": [
+      "Header",
+      "CreateBtn",
+      "Form"
+    ],
+    "src/components/roster/containers/RosterContainer/hooks.ts": [
+      "useOnCreateBtnClick",
+      "useGetPerson",
+      "useHandleForm"
+    ],
+    "src/components/roster/containers/RosterContainer/index.tsx": [],
+    "src/components/roster/containers/RosterContainer/test/index.spec.tsx": [],
+    "src/components/roster/context.tsx": [
+      "RosterProvider"
+    ],
+    "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx": [
+      "EmailInput"
+    ],
+    "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx": [
+      "useHandleCreateRosterPersonnelForm",
+      "useOnCancelBtnClick"
+    ],
+    "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx": [],
+    "src/components/roster/forms/create/CreateRosterPersonnelForm/test/index.spec.tsx": [],
+    "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts": [
+      "handleCreateRosterPersonnel"
+    ],
+    "src/components/roster/forms/update/UpdateRosterPersonnelForm/components.tsx": [
+      "Header"
+    ],
+    "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts": [
+      "useHandleUpdateRosterPersonnelForm"
+    ],
+    "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx": [],
+    "src/components/roster/forms/update/UpdateRosterPersonnelForm/test/index.spec.tsx": [],
+    "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts": [
+      "handleUpdateRosterPersonnel"
+    ],
+    "src/components/roster/tables/PersonnelTable/components.tsx": [
+      "Table"
+    ],
+    "src/components/roster/tables/PersonnelTable/hooks.ts": [
+      "useHandleTableRow"
+    ],
+    "src/components/roster/tables/PersonnelTable/index.tsx": [],
+    "src/components/roster/tables/PersonnelTable/test/index.spec.tsx": [],
+    "src/components/roster/test/context.spec.tsx": [],
+    "src/components/support/containers/FiltersContainer/components.tsx": [
+      "DateRangeFilterInputs",
+      "PersonnelFilter",
+      "Search"
+    ],
+    "src/components/support/containers/FiltersContainer/hooks.ts": [
+      "useHandleDateRangeFilterInputs",
+      "useHandlePersonnelFilter",
+      "useHandleSearch"
+    ],
+    "src/components/support/containers/FiltersContainer/index.tsx": [],
+    "src/components/support/containers/FiltersContainer/test/index.spec.tsx": [],
+    "src/components/support/containers/PaginationContainer/components.tsx": [
+      "PageNavBtns"
+    ],
+    "src/components/support/containers/PaginationContainer/hooks.ts": [
+      "useHandlePageNav"
+    ],
+    "src/components/support/containers/PaginationContainer/index.tsx": [],
+    "src/components/support/containers/PaginationContainer/test/index.spec.tsx": [],
+    "src/components/support/containers/SupportContainer/components.tsx": [
+      "Form"
+    ],
+    "src/components/support/containers/SupportContainer/hooks.ts": [
+      "useGetSupport",
+      "useHandleForm"
+    ],
+    "src/components/support/containers/SupportContainer/index.tsx": [],
+    "src/components/support/containers/SupportContainer/test/index.spec.tsx": [],
+    "src/components/support/context.tsx": [
+      "SupportProvider"
+    ],
+    "src/components/support/forms/create/CreateOtherSupportForm/components.tsx": [
+      "DescriptionInput"
+    ],
+    "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts": [
+      "useIsVisible"
+    ],
+    "src/components/support/forms/create/CreateOtherSupportForm/index.tsx": [],
+    "src/components/support/forms/create/CreatePersonnelForm/components.tsx": [
+      "PersonnelSelect",
+      "PersonnelOptions"
+    ],
+    "src/components/support/forms/create/CreatePersonnelForm/hooks.ts": [
+      "useHandlePersonnelSelect"
+    ],
+    "src/components/support/forms/create/CreatePersonnelForm/index.tsx": [],
+    "src/components/support/forms/create/CreatePersonnelForm/utils.ts": [],
+    "src/components/support/forms/create/CreateSupportForm/components.tsx": [
+      "Header",
+      "DateTimeInputs",
+      "SupportDesignationSelect",
+      "SupportTypeSelect",
+      "NoteInput",
+      "PersonnelInputs"
+    ],
+    "src/components/support/forms/create/CreateSupportForm/hooks.ts": [
+      "useHandleCreateSupport",
+      "useHandleAddPersonnelBtn"
+    ],
+    "src/components/support/forms/create/CreateSupportForm/index.tsx": [],
+    "src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx": [],
+    "src/components/support/forms/create/CreateSupportForm/utils.ts": [
+      "supportDesignations",
+      "supportTypes",
+      "handleCreateSupport"
+    ],
+    "src/components/support/forms/update/UpdateSupportForm/hooks.ts": [
+      "useHandleUpdateSupportForm"
+    ],
+    "src/components/support/forms/update/UpdateSupportForm/index.tsx": [],
+    "src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx": [],
+    "src/components/support/forms/update/UpdateSupportForm/utils.ts": [
+      "handleUpdateSupport"
+    ],
+    "src/components/support/tables/SupportTable/components.tsx": [
+      "Table",
+      "NoSupport"
+    ],
+    "src/components/support/tables/SupportTable/hooks.ts": [
+      "useSetTableData",
+      "useSetColumnVisibility",
+      "useHandleTableRow"
+    ],
+    "src/components/support/tables/SupportTable/index.tsx": [],
+    "src/components/support/tables/SupportTable/test/hooks.spec.ts": [],
+    "src/components/support/tables/SupportTable/test/index.spec.tsx": [],
+    "src/components/support/tables/SupportTable/test/utils.spec.ts": [],
+    "src/components/support/tables/SupportTable/utils.ts": [
+      "supportTypeIconMap",
+      "handleDateTimes"
+    ],
+    "src/components/support/test/context.spec.tsx": [],
+    "src/config/index.ts": [
+      "APP_BASE",
+      "APP_TITLE",
+      "NODE_ENV",
+      "CLIENT_ID"
+    ],
+    "src/context/App/AppActions.ts": [
+      "getAllSupport",
+      "getSupport",
+      "createSupport",
+      "updateSupport",
+      "deleteSupport",
+      "createOtherSupport",
+      "updateOtherSupport",
+      "createPersonnel",
+      "updatePersonnel",
+      "deletePersonnel",
+      "getRosterPersonnel",
+      "getPerson",
+      "createRosterPersonnel",
+      "updateRosterPersonnel",
+      "deleteRosterPersonnel",
+      "getDocs"
+    ],
+    "src/context/App/AppTypes.ts": [],
+    "src/context/Auth/config.ts": [
+      "msalConfig",
+      "loginRequest",
+      "acquireRequest"
+    ],
+    "src/context/Auth/constants.ts": [
+      "MOCK_AUTH",
+      "MOCK_TOKEN"
+    ],
+    "src/context/Auth/hooks/AuthProvider.tsx": [
+      "AuthProvider",
+      "useAuthProvider"
+    ],
+    "src/context/Auth/hooks/useHandleLoginRedirect.ts": [
+      "useHandleLoginRedirect"
+    ],
+    "src/context/Auth/hooks/useHandleLogoutRedirect.ts": [
+      "useHandleLogoutRedirect"
+    ],
+    "src/context/Auth/index.tsx": [
+      "AuthCtxProvider",
+      "useAuth",
+      "MOCK_AUTH"
+    ],
+    "src/helpers/hooks.ts": [
+      "useGetToken",
+      "useEnableQuery",
+      "useRedirectAfterLogin",
+      "useActiveAccount",
+      "useAuthRedirect",
+      "useUnauthRedirect",
+      "useGetUserDepartment",
+      "withTokenRefresh"
+    ],
+    "src/helpers/test/utils.spec.ts": [],
+    "src/helpers/utils.ts": [
+      "authHeaders",
+      "formatDate",
+      "motionProps",
+      "motionPropsMap",
+      "getUserDepartment"
+    ],
+    "src/main.tsx": [],
+    "src/pages/Create/components.tsx": [
+      "CreateContainer"
+    ],
+    "src/pages/Create/hooks.ts": [
+      "useSetForm"
+    ],
+    "src/pages/Create/index.tsx": [],
+    "src/pages/Create/utils.ts": [
+      "createFormMap"
+    ],
+    "src/pages/Docs/components.tsx": [
+      "EndpointItems",
+      "MethodBadge",
+      "CloseDocsBtn"
+    ],
+    "src/pages/Docs/hooks.ts": [
+      "useGetDocs",
+      "useHandleEndpointItem"
+    ],
+    "src/pages/Docs/index.tsx": [],
+    "src/pages/Docs/utils.ts": [
+      "docColorsMap"
+    ],
+    "src/pages/Login/hooks.ts": [
+      "useHandleAuth"
+    ],
+    "src/pages/Login/index.tsx": [],
+    "src/pages/Redirect/hooks.ts": [
+      "useRedirect"
+    ],
+    "src/pages/Redirect/index.tsx": [],
+    "src/pages/Redirect/test/index.spec.tsx": [],
+    "src/pages/Roster/hooks.ts": [
+      "useGetRosterPersonnel"
+    ],
+    "src/pages/Roster/index.tsx": [],
+    "src/pages/Roster/test/index.spec.tsx": [],
+    "src/pages/Support/hooks.ts": [
+      "useGetAllSupport"
+    ],
+    "src/pages/Support/index.tsx": [],
+    "src/pages/Support/test/index.spec.tsx": [],
+    "src/test/mocks/api.ts": [
+      "createPersonnelRoster",
+      "createSupport",
+      "createMockCollection"
+    ],
+    "src/test/setup.ts": [],
+    "src/test/utils.tsx": [
+      "renderWithRouter",
+      "renderWithProviders",
+      "renderWithSupportCtx",
+      "renderWithRosterCtx",
+      "renderWithHeaderCtx"
+    ],
+    "src/utils/HandleLoading/index.tsx": [],
+    "src/utils/Motion/index.tsx": [],
+    "src/utils/PageWrapper/index.tsx": [],
+    "src/utils/PageWrapper/utils.ts": [
+      "pageVariants"
+    ],
+    "src/utils/Toast/Toast.tsx": [
+      "savedPopup",
+      "errorPopup",
+      "authPopup",
+      "infoPopup"
+    ],
+    "src/vite-env.d.ts": [],
+    "vite.config.ts": [],
+    "vitest.config.ts": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "src/components/form-elements/FormContainer/index.tsx",
+          "language": "typescript",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Footer/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/containers/RosterContainer/components.tsx",
+          "language": "typescript",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/containers/RosterContainer/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/context.tsx",
+          "language": "typescript",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+          "language": "typescript",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+          "language": "typescript",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/test/context.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/SupportContainer/components.tsx",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/SupportContainer/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 114,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/update/UpdateSupportForm/utils.ts",
+          "language": "typescript",
+          "sizeLines": 47,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/config/index.ts",
+          "language": "typescript",
+          "sizeLines": 4,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/context/App/AppActions.ts",
+          "language": "typescript",
+          "sizeLines": 272,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/helpers/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 91,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/helpers/test/utils.spec.ts",
+          "language": "typescript",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/helpers/utils.ts",
+          "language": "typescript",
+          "sizeLines": 94,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/utils/Toast/Toast.tsx",
+          "language": "typescript",
+          "sizeLines": 75,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/form-elements/FormContainer/index.tsx": [
+          "src/components/form-elements/FormContainer/FormContainer.module.css",
+          "src/helpers/utils.ts"
+        ],
+        "src/components/layout/Footer/hooks.ts": [
+          "src/config/index.ts",
+          "src/helpers/hooks.ts"
+        ],
+        "src/components/roster/containers/RosterContainer/components.tsx": [
+          "src/components/form-elements/buttons/DeleteBtn/index.tsx",
+          "src/components/roster/containers/RosterContainer/hooks.ts",
+          "src/components/roster/context.tsx",
+          "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx",
+          "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+          "src/utils/HandleLoading/index.tsx"
+        ],
+        "src/components/roster/containers/RosterContainer/hooks.ts": [
+          "src/components/roster/context.tsx",
+          "src/context/App/AppActions.ts",
+          "src/helpers/hooks.ts",
+          "src/helpers/utils.ts",
+          "src/utils/Toast/Toast.tsx"
+        ],
+        "src/components/roster/context.tsx": [],
+        "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx": [
+          "src/components/roster/context.tsx",
+          "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+          "src/context/App/AppTypes.ts",
+          "src/helpers/hooks.ts"
+        ],
+        "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts": [
+          "src/context/App/AppActions.ts",
+          "src/context/App/AppTypes.ts",
+          "src/helpers/utils.ts",
+          "src/utils/Toast/Toast.tsx"
+        ],
+        "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts": [
+          "src/components/roster/context.tsx",
+          "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+          "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+          "src/context/App/AppTypes.ts",
+          "src/helpers/hooks.ts",
+          "src/utils/Toast/Toast.tsx"
+        ],
+        "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts": [
+          "src/context/App/AppActions.ts",
+          "src/context/App/AppTypes.ts",
+          "src/helpers/utils.ts",
+          "src/utils/Toast/Toast.tsx"
+        ],
+        "src/components/roster/test/context.spec.tsx": [
+          "src/components/roster/context.tsx"
+        ],
+        "src/components/support/containers/SupportContainer/components.tsx": [
+          "src/components/form-elements/FormContainer/index.tsx",
+          "src/components/layout/loading/Loading/index.tsx",
+          "src/components/support/containers/SupportContainer/hooks.ts",
+          "src/components/support/forms/update/UpdateSupportForm/index.tsx"
+        ],
+        "src/components/support/containers/SupportContainer/hooks.ts": [
+          "src/components/support/context.tsx",
+          "src/context/App/AppActions.ts",
+          "src/helpers/hooks.ts",
+          "src/helpers/utils.ts"
+        ],
+        "src/components/support/forms/update/UpdateSupportForm/hooks.ts": [
+          "src/components/support/context.tsx",
+          "src/components/support/forms/update/UpdateSupportForm/utils.ts",
+          "src/context/App/AppActions.ts",
+          "src/context/App/AppTypes.ts",
+          "src/helpers/hooks.ts",
+          "src/helpers/utils.ts",
+          "src/utils/Toast/Toast.tsx"
+        ],
+        "src/components/support/forms/update/UpdateSupportForm/utils.ts": [
+          "src/context/App/AppActions.ts",
+          "src/context/App/AppTypes.ts",
+          "src/helpers/utils.ts",
+          "src/utils/Toast/Toast.tsx"
+        ],
+        "src/config/index.ts": [],
+        "src/context/App/AppActions.ts": [
+          "src/config/index.ts",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/helpers/hooks.ts": [
+          "src/context/Auth/index.tsx"
+        ],
+        "src/helpers/test/utils.spec.ts": [
+          "src/helpers/utils.ts"
+        ],
+        "src/helpers/utils.ts": [],
+        "src/utils/Toast/Toast.tsx": [
+          "src/utils/Toast/Toast.module.css"
+        ]
+      },
+      "neighborMap": {
+        "src/components/form-elements/FormContainer/index.tsx": [
+          {
+            "path": "src/components/form-elements/FormContainer/FormContainer.module.css",
+            "batchIndex": 12,
+            "symbols": []
+          },
+          {
+            "path": "src/pages/Create/components.tsx",
+            "batchIndex": 2,
+            "symbols": [
+              "CreateContainer"
+            ]
+          }
+        ],
+        "src/components/layout/Footer/hooks.ts": [
+          {
+            "path": "src/components/layout/Footer/components.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "DocsBtn"
+            ]
+          }
+        ],
+        "src/components/roster/containers/RosterContainer/components.tsx": [
+          {
+            "path": "src/components/form-elements/buttons/DeleteBtn/index.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx",
+            "batchIndex": 8,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+            "batchIndex": 8,
+            "symbols": []
+          },
+          {
+            "path": "src/utils/HandleLoading/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/containers/RosterContainer/index.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/roster/context.tsx": [
+          {
+            "path": "src/components/roster/tables/PersonnelTable/hooks.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "useHandleTableRow"
+            ]
+          },
+          {
+            "path": "src/pages/Roster/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx": [
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx",
+            "batchIndex": 8,
+            "symbols": []
+          }
+        ],
+        "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts": [
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts": [
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+            "batchIndex": 8,
+            "symbols": []
+          }
+        ],
+        "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts": [
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/support/containers/SupportContainer/components.tsx": [
+          {
+            "path": "src/components/layout/loading/Loading/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/update/UpdateSupportForm/index.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/containers/SupportContainer/index.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/support/containers/SupportContainer/hooks.ts": [
+          {
+            "path": "src/components/support/context.tsx",
+            "batchIndex": 6,
+            "symbols": [
+              "SupportProvider"
+            ]
+          }
+        ],
+        "src/components/support/forms/update/UpdateSupportForm/hooks.ts": [
+          {
+            "path": "src/components/support/context.tsx",
+            "batchIndex": 6,
+            "symbols": [
+              "SupportProvider"
+            ]
+          },
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/update/UpdateSupportForm/index.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          }
+        ],
+        "src/components/support/forms/update/UpdateSupportForm/utils.ts": [
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/config/index.ts": [
+          {
+            "path": "src/App.tsx",
+            "batchIndex": 7,
+            "symbols": []
+          },
+          {
+            "path": "src/components/layout/Header/components.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "Title",
+              "Buttons",
+              "HomeLink"
+            ]
+          },
+          {
+            "path": "src/context/Auth/config.ts",
+            "batchIndex": 7,
+            "symbols": [
+              "msalConfig",
+              "loginRequest",
+              "acquireRequest"
+            ]
+          }
+        ],
+        "src/context/App/AppActions.ts": [
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/create/CreateSupportForm/utils.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "supportDesignations",
+              "supportTypes",
+              "handleCreateSupport"
+            ]
+          },
+          {
+            "path": "src/pages/Docs/hooks.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useGetDocs",
+              "useHandleEndpointItem"
+            ]
+          },
+          {
+            "path": "src/pages/Roster/hooks.ts",
+            "batchIndex": 9,
+            "symbols": [
+              "useGetRosterPersonnel"
+            ]
+          },
+          {
+            "path": "src/pages/Support/hooks.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useGetAllSupport"
+            ]
+          }
+        ],
+        "src/helpers/hooks.ts": [
+          {
+            "path": "src/context/Auth/index.tsx",
+            "batchIndex": 7,
+            "symbols": [
+              "AuthCtxProvider",
+              "useAuth",
+              "MOCK_AUTH"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "useHandleCreateSupport",
+              "useHandleAddPersonnelBtn"
+            ]
+          },
+          {
+            "path": "src/pages/Docs/hooks.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useGetDocs",
+              "useHandleEndpointItem"
+            ]
+          },
+          {
+            "path": "src/pages/Roster/hooks.ts",
+            "batchIndex": 9,
+            "symbols": [
+              "useGetRosterPersonnel"
+            ]
+          },
+          {
+            "path": "src/pages/Support/hooks.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useGetAllSupport"
+            ]
+          }
+        ],
+        "src/helpers/utils.ts": [
+          {
+            "path": "src/components/roster/containers/RosterContainer/index.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/containers/FiltersContainer/index.tsx",
+            "batchIndex": 6,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/create/CreateSupportForm/utils.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "supportDesignations",
+              "supportTypes",
+              "handleCreateSupport"
+            ]
+          },
+          {
+            "path": "src/components/support/tables/SupportTable/components.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "Table",
+              "NoSupport"
+            ]
+          },
+          {
+            "path": "src/pages/Docs/hooks.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useGetDocs",
+              "useHandleEndpointItem"
+            ]
+          },
+          {
+            "path": "src/pages/Roster/hooks.ts",
+            "batchIndex": 9,
+            "symbols": [
+              "useGetRosterPersonnel"
+            ]
+          },
+          {
+            "path": "src/pages/Support/hooks.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useGetAllSupport"
+            ]
+          },
+          {
+            "path": "src/utils/Motion/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ],
+        "src/utils/Toast/Toast.tsx": [
+          {
+            "path": "src/utils/Toast/Toast.module.css",
+            "batchIndex": 12,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/create/CreateSupportForm/utils.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "supportDesignations",
+              "supportTypes",
+              "handleCreateSupport"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "src/components/error/ErrorBoundary/index.tsx",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/error/ErrorBoundary/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/error/ErrorBoundary/types.ts",
+          "language": "typescript",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/loading/Loading/index.tsx",
+          "language": "typescript",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/loading/Loading/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Create/components.tsx",
+          "language": "typescript",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Create/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Create/index.tsx",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Docs/components.tsx",
+          "language": "typescript",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Docs/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Docs/index.tsx",
+          "language": "typescript",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Docs/utils.ts",
+          "language": "typescript",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Roster/index.tsx",
+          "language": "typescript",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Roster/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Support/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Support/index.tsx",
+          "language": "typescript",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Support/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/utils/HandleLoading/index.tsx",
+          "language": "typescript",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/utils/Motion/index.tsx",
+          "language": "typescript",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/error/ErrorBoundary/index.tsx": [
+          "src/components/error/ErrorBoundary/types.ts"
+        ],
+        "src/components/error/ErrorBoundary/test/index.spec.tsx": [
+          "src/components/error/ErrorBoundary/index.tsx"
+        ],
+        "src/components/error/ErrorBoundary/types.ts": [],
+        "src/components/layout/loading/Loading/index.tsx": [],
+        "src/components/layout/loading/Loading/test/index.spec.tsx": [
+          "src/components/layout/loading/Loading/index.tsx"
+        ],
+        "src/pages/Create/components.tsx": [
+          "src/components/form-elements/FormContainer/index.tsx",
+          "src/pages/Create/hooks.ts"
+        ],
+        "src/pages/Create/hooks.ts": [
+          "src/pages/Create/utils.ts"
+        ],
+        "src/pages/Create/index.tsx": [
+          "src/components/error/ErrorBoundary/index.tsx",
+          "src/pages/Create/components.tsx"
+        ],
+        "src/pages/Docs/components.tsx": [
+          "src/pages/Docs/hooks.ts",
+          "src/pages/Docs/utils.ts"
+        ],
+        "src/pages/Docs/hooks.ts": [
+          "src/context/App/AppActions.ts",
+          "src/helpers/hooks.ts",
+          "src/helpers/utils.ts"
+        ],
+        "src/pages/Docs/index.tsx": [
+          "src/components/error/ErrorBoundary/index.tsx",
+          "src/pages/Docs/components.tsx",
+          "src/pages/Docs/hooks.ts",
+          "src/pages/Docs/utils.ts",
+          "src/utils/HandleLoading/index.tsx",
+          "src/utils/Motion/index.tsx"
+        ],
+        "src/pages/Docs/utils.ts": [],
+        "src/pages/Roster/index.tsx": [
+          "src/components/error/ErrorBoundary/index.tsx",
+          "src/components/roster/containers/RosterContainer/index.tsx",
+          "src/components/roster/context.tsx",
+          "src/pages/Roster/hooks.ts",
+          "src/utils/HandleLoading/index.tsx"
+        ],
+        "src/pages/Roster/test/index.spec.tsx": [
+          "src/pages/Roster/index.tsx",
+          "src/test/mocks/api.ts",
+          "src/test/utils.tsx"
+        ],
+        "src/pages/Support/hooks.ts": [
+          "src/context/App/AppActions.ts",
+          "src/helpers/hooks.ts",
+          "src/helpers/utils.ts"
+        ],
+        "src/pages/Support/index.tsx": [
+          "src/components/error/ErrorBoundary/index.tsx",
+          "src/components/layout/loading/Loading/index.tsx",
+          "src/components/support/containers/SupportContainer/index.tsx",
+          "src/components/support/context.tsx",
+          "src/pages/Support/hooks.ts"
+        ],
+        "src/pages/Support/test/index.spec.tsx": [
+          "src/pages/Support/index.tsx",
+          "src/test/mocks/api.ts",
+          "src/test/utils.tsx"
+        ],
+        "src/utils/HandleLoading/index.tsx": [
+          "src/components/layout/loading/Loading/index.tsx"
+        ],
+        "src/utils/Motion/index.tsx": [
+          "src/helpers/utils.ts"
+        ]
+      },
+      "neighborMap": {
+        "src/components/layout/loading/Loading/index.tsx": [
+          {
+            "path": "src/components/support/containers/SupportContainer/components.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Form"
+            ]
+          }
+        ],
+        "src/pages/Create/components.tsx": [
+          {
+            "path": "src/components/form-elements/FormContainer/index.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ],
+        "src/pages/Create/hooks.ts": [
+          {
+            "path": "src/pages/Create/utils.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "createFormMap"
+            ]
+          }
+        ],
+        "src/pages/Create/index.tsx": [
+          {
+            "path": "src/App.tsx",
+            "batchIndex": 7,
+            "symbols": []
+          }
+        ],
+        "src/pages/Docs/hooks.ts": [
+          {
+            "path": "src/context/App/AppActions.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "getAllSupport",
+              "getSupport",
+              "createSupport",
+              "updateSupport",
+              "deleteSupport",
+              "createOtherSupport",
+              "updateOtherSupport",
+              "createPersonnel",
+              "updatePersonnel",
+              "deletePersonnel",
+              "getRosterPersonnel",
+              "getPerson",
+              "createRosterPersonnel",
+              "updateRosterPersonnel",
+              "deleteRosterPersonnel",
+              "getDocs"
+            ]
+          },
+          {
+            "path": "src/helpers/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useGetToken",
+              "useEnableQuery",
+              "useRedirectAfterLogin",
+              "useActiveAccount",
+              "useAuthRedirect",
+              "useUnauthRedirect",
+              "useGetUserDepartment",
+              "withTokenRefresh"
+            ]
+          },
+          {
+            "path": "src/helpers/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "authHeaders",
+              "formatDate",
+              "motionProps",
+              "motionPropsMap",
+              "getUserDepartment"
+            ]
+          }
+        ],
+        "src/pages/Docs/index.tsx": [
+          {
+            "path": "src/App.tsx",
+            "batchIndex": 7,
+            "symbols": []
+          }
+        ],
+        "src/pages/Roster/index.tsx": [
+          {
+            "path": "src/components/roster/containers/RosterContainer/index.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/context.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "RosterProvider"
+            ]
+          },
+          {
+            "path": "src/pages/Roster/hooks.ts",
+            "batchIndex": 9,
+            "symbols": [
+              "useGetRosterPersonnel"
+            ]
+          },
+          {
+            "path": "src/App.tsx",
+            "batchIndex": 7,
+            "symbols": []
+          }
+        ],
+        "src/pages/Roster/test/index.spec.tsx": [
+          {
+            "path": "src/test/mocks/api.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "createPersonnelRoster",
+              "createSupport",
+              "createMockCollection"
+            ]
+          },
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/pages/Support/hooks.ts": [
+          {
+            "path": "src/context/App/AppActions.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "getAllSupport",
+              "getSupport",
+              "createSupport",
+              "updateSupport",
+              "deleteSupport",
+              "createOtherSupport",
+              "updateOtherSupport",
+              "createPersonnel",
+              "updatePersonnel",
+              "deletePersonnel",
+              "getRosterPersonnel",
+              "getPerson",
+              "createRosterPersonnel",
+              "updateRosterPersonnel",
+              "deleteRosterPersonnel",
+              "getDocs"
+            ]
+          },
+          {
+            "path": "src/helpers/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useGetToken",
+              "useEnableQuery",
+              "useRedirectAfterLogin",
+              "useActiveAccount",
+              "useAuthRedirect",
+              "useUnauthRedirect",
+              "useGetUserDepartment",
+              "withTokenRefresh"
+            ]
+          },
+          {
+            "path": "src/helpers/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "authHeaders",
+              "formatDate",
+              "motionProps",
+              "motionPropsMap",
+              "getUserDepartment"
+            ]
+          }
+        ],
+        "src/pages/Support/index.tsx": [
+          {
+            "path": "src/components/support/containers/SupportContainer/index.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/context.tsx",
+            "batchIndex": 6,
+            "symbols": [
+              "SupportProvider"
+            ]
+          },
+          {
+            "path": "src/App.tsx",
+            "batchIndex": 7,
+            "symbols": []
+          }
+        ],
+        "src/pages/Support/test/index.spec.tsx": [
+          {
+            "path": "src/test/mocks/api.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "createPersonnelRoster",
+              "createSupport",
+              "createMockCollection"
+            ]
+          },
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/utils/HandleLoading/index.tsx": [
+          {
+            "path": "src/components/roster/containers/RosterContainer/components.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Header",
+              "CreateBtn",
+              "Form"
+            ]
+          }
+        ],
+        "src/utils/Motion/index.tsx": [
+          {
+            "path": "src/helpers/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "authHeaders",
+              "formatDate",
+              "motionProps",
+              "motionPropsMap",
+              "getUserDepartment"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "src/components/form-elements/FormError/index.tsx",
+          "language": "typescript",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/form-elements/FormError/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/form-elements/FormLabel/index.tsx",
+          "language": "typescript",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/form-elements/FormLabel/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/form-elements/RequiredIcon/index.tsx",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/form-elements/buttons/DeleteBtn/index.tsx",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/form-elements/buttons/DeleteBtn/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+          "language": "typescript",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+          "language": "typescript",
+          "sizeLines": 170,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 88,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreateSupportForm/index.tsx",
+          "language": "typescript",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 71,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreateSupportForm/utils.ts",
+          "language": "typescript",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/update/UpdateSupportForm/index.tsx",
+          "language": "typescript",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 53,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Create/utils.ts",
+          "language": "typescript",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/form-elements/FormError/index.tsx": [],
+        "src/components/form-elements/FormError/test/index.spec.tsx": [
+          "src/components/form-elements/FormError/index.tsx"
+        ],
+        "src/components/form-elements/FormLabel/index.tsx": [
+          "src/components/form-elements/FormError/index.tsx",
+          "src/components/form-elements/RequiredIcon/index.tsx"
+        ],
+        "src/components/form-elements/FormLabel/test/index.spec.tsx": [
+          "src/components/form-elements/FormLabel/index.tsx"
+        ],
+        "src/components/form-elements/RequiredIcon/index.tsx": [],
+        "src/components/form-elements/buttons/DeleteBtn/index.tsx": [],
+        "src/components/form-elements/buttons/DeleteBtn/test/index.spec.tsx": [
+          "src/components/form-elements/buttons/DeleteBtn/index.tsx"
+        ],
+        "src/components/support/forms/create/CreateOtherSupportForm/components.tsx": [
+          "src/components/form-elements/FormLabel/index.tsx",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts": [
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/support/forms/create/CreateOtherSupportForm/index.tsx": [
+          "src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+          "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts"
+        ],
+        "src/components/support/forms/create/CreateSupportForm/components.tsx": [
+          "src/components/form-elements/FormLabel/index.tsx",
+          "src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+          "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+          "src/components/support/forms/create/CreateSupportForm/utils.ts",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/support/forms/create/CreateSupportForm/hooks.ts": [
+          "src/components/support/forms/create/CreateSupportForm/utils.ts",
+          "src/context/App/AppTypes.ts",
+          "src/helpers/hooks.ts"
+        ],
+        "src/components/support/forms/create/CreateSupportForm/index.tsx": [
+          "src/components/form-elements/buttons/FormBtns/index.tsx",
+          "src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+          "src/components/support/forms/create/CreateSupportForm/components.tsx",
+          "src/components/support/forms/create/CreateSupportForm/hooks.ts"
+        ],
+        "src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx": [
+          "src/components/support/forms/create/CreateSupportForm/index.tsx",
+          "src/test/utils.tsx"
+        ],
+        "src/components/support/forms/create/CreateSupportForm/utils.ts": [
+          "src/context/App/AppActions.ts",
+          "src/context/App/AppTypes.ts",
+          "src/helpers/utils.ts",
+          "src/utils/Toast/Toast.tsx"
+        ],
+        "src/components/support/forms/update/UpdateSupportForm/index.tsx": [
+          "src/components/form-elements/buttons/DeleteBtn/index.tsx",
+          "src/components/form-elements/buttons/FormBtns/index.tsx",
+          "src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+          "src/components/support/forms/create/CreateSupportForm/components.tsx",
+          "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx": [
+          "src/components/support/forms/update/UpdateSupportForm/index.tsx",
+          "src/test/mocks/api.ts",
+          "src/test/utils.tsx"
+        ],
+        "src/pages/Create/utils.ts": [
+          "src/components/support/forms/create/CreateSupportForm/index.tsx"
+        ]
+      },
+      "neighborMap": {
+        "src/components/form-elements/FormLabel/index.tsx": [
+          {
+            "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx",
+            "batchIndex": 8,
+            "symbols": [
+              "EmailInput"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+            "batchIndex": 9,
+            "symbols": [
+              "PersonnelSelect",
+              "PersonnelOptions"
+            ]
+          }
+        ],
+        "src/components/form-elements/buttons/DeleteBtn/index.tsx": [
+          {
+            "path": "src/components/roster/containers/RosterContainer/components.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Header",
+              "CreateBtn",
+              "Form"
+            ]
+          }
+        ],
+        "src/components/support/forms/create/CreateOtherSupportForm/components.tsx": [
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts": [
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/support/forms/create/CreateSupportForm/components.tsx": [
+          {
+            "path": "src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+            "batchIndex": 9,
+            "symbols": []
+          },
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/support/forms/create/CreateSupportForm/hooks.ts": [
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/helpers/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useGetToken",
+              "useEnableQuery",
+              "useRedirectAfterLogin",
+              "useActiveAccount",
+              "useAuthRedirect",
+              "useUnauthRedirect",
+              "useGetUserDepartment",
+              "withTokenRefresh"
+            ]
+          }
+        ],
+        "src/components/support/forms/create/CreateSupportForm/index.tsx": [
+          {
+            "path": "src/components/form-elements/buttons/FormBtns/index.tsx",
+            "batchIndex": 8,
+            "symbols": []
+          }
+        ],
+        "src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx": [
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/components/support/forms/create/CreateSupportForm/utils.ts": [
+          {
+            "path": "src/context/App/AppActions.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "getAllSupport",
+              "getSupport",
+              "createSupport",
+              "updateSupport",
+              "deleteSupport",
+              "createOtherSupport",
+              "updateOtherSupport",
+              "createPersonnel",
+              "updatePersonnel",
+              "deletePersonnel",
+              "getRosterPersonnel",
+              "getPerson",
+              "createRosterPersonnel",
+              "updateRosterPersonnel",
+              "deleteRosterPersonnel",
+              "getDocs"
+            ]
+          },
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/helpers/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "authHeaders",
+              "formatDate",
+              "motionProps",
+              "motionPropsMap",
+              "getUserDepartment"
+            ]
+          },
+          {
+            "path": "src/utils/Toast/Toast.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "savedPopup",
+              "errorPopup",
+              "authPopup",
+              "infoPopup"
+            ]
+          }
+        ],
+        "src/components/support/forms/update/UpdateSupportForm/index.tsx": [
+          {
+            "path": "src/components/form-elements/buttons/FormBtns/index.tsx",
+            "batchIndex": 8,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useHandleUpdateSupportForm"
+            ]
+          },
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/containers/SupportContainer/components.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Form"
+            ]
+          }
+        ],
+        "src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx": [
+          {
+            "path": "src/test/mocks/api.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "createPersonnelRoster",
+              "createSupport",
+              "createMockCollection"
+            ]
+          },
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/pages/Create/utils.ts": [
+          {
+            "path": "src/pages/Create/hooks.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useSetForm"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "src/components/roster/containers/RosterContainer/index.tsx",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/containers/RosterContainer/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/tables/PersonnelTable/components.tsx",
+          "language": "typescript",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/tables/PersonnelTable/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/tables/PersonnelTable/index.tsx",
+          "language": "typescript",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/tables/PersonnelTable/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/SupportContainer/index.tsx",
+          "language": "typescript",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/SupportContainer/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 56,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/tables/SupportTable/components.tsx",
+          "language": "typescript",
+          "sizeLines": 123,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/tables/SupportTable/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 100,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/tables/SupportTable/index.tsx",
+          "language": "typescript",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/tables/SupportTable/test/hooks.spec.ts",
+          "language": "typescript",
+          "sizeLines": 161,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/tables/SupportTable/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/tables/SupportTable/test/utils.spec.ts",
+          "language": "typescript",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/tables/SupportTable/utils.ts",
+          "language": "typescript",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/context/App/AppTypes.ts",
+          "language": "typescript",
+          "sizeLines": 77,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/test/mocks/api.ts",
+          "language": "typescript",
+          "sizeLines": 55,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/roster/containers/RosterContainer/index.tsx": [
+          "src/components/roster/containers/RosterContainer/components.tsx",
+          "src/components/roster/tables/PersonnelTable/index.tsx",
+          "src/context/App/AppTypes.ts",
+          "src/helpers/utils.ts"
+        ],
+        "src/components/roster/containers/RosterContainer/test/index.spec.tsx": [
+          "src/components/roster/containers/RosterContainer/index.tsx",
+          "src/test/mocks/api.ts",
+          "src/test/utils.tsx"
+        ],
+        "src/components/roster/tables/PersonnelTable/components.tsx": [
+          "src/components/roster/tables/PersonnelTable/hooks.ts",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/roster/tables/PersonnelTable/hooks.ts": [
+          "src/components/roster/context.tsx",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/roster/tables/PersonnelTable/index.tsx": [
+          "src/components/roster/tables/PersonnelTable/components.tsx",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/roster/tables/PersonnelTable/test/index.spec.tsx": [
+          "src/components/roster/tables/PersonnelTable/index.tsx",
+          "src/test/mocks/api.ts",
+          "src/test/utils.tsx"
+        ],
+        "src/components/support/containers/SupportContainer/index.tsx": [
+          "src/components/support/containers/FiltersContainer/index.tsx",
+          "src/components/support/containers/PaginationContainer/index.tsx",
+          "src/components/support/containers/SupportContainer/components.tsx",
+          "src/components/support/tables/SupportTable/hooks.ts",
+          "src/components/support/tables/SupportTable/index.tsx",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/support/containers/SupportContainer/test/index.spec.tsx": [
+          "src/components/support/containers/SupportContainer/index.tsx",
+          "src/test/mocks/api.ts",
+          "src/test/utils.tsx"
+        ],
+        "src/components/support/tables/SupportTable/components.tsx": [
+          "src/components/support/tables/SupportTable/hooks.ts",
+          "src/components/support/tables/SupportTable/utils.ts",
+          "src/context/App/AppTypes.ts",
+          "src/helpers/utils.ts"
+        ],
+        "src/components/support/tables/SupportTable/hooks.ts": [
+          "src/components/support/context.tsx",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/support/tables/SupportTable/index.tsx": [
+          "src/components/support/tables/SupportTable/components.tsx",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/support/tables/SupportTable/test/hooks.spec.ts": [
+          "src/components/support/context.tsx",
+          "src/components/support/tables/SupportTable/hooks.ts",
+          "src/test/mocks/api.ts"
+        ],
+        "src/components/support/tables/SupportTable/test/index.spec.tsx": [
+          "src/components/support/tables/SupportTable/index.tsx",
+          "src/test/mocks/api.ts",
+          "src/test/utils.tsx"
+        ],
+        "src/components/support/tables/SupportTable/test/utils.spec.ts": [
+          "src/components/support/tables/SupportTable/utils.ts",
+          "src/test/mocks/api.ts"
+        ],
+        "src/components/support/tables/SupportTable/utils.ts": [
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/context/App/AppTypes.ts": [],
+        "src/test/mocks/api.ts": [
+          "src/context/App/AppTypes.ts"
+        ]
+      },
+      "neighborMap": {
+        "src/components/roster/containers/RosterContainer/index.tsx": [
+          {
+            "path": "src/components/roster/containers/RosterContainer/components.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Header",
+              "CreateBtn",
+              "Form"
+            ]
+          },
+          {
+            "path": "src/helpers/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "authHeaders",
+              "formatDate",
+              "motionProps",
+              "motionPropsMap",
+              "getUserDepartment"
+            ]
+          },
+          {
+            "path": "src/pages/Roster/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ],
+        "src/components/roster/containers/RosterContainer/test/index.spec.tsx": [
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/components/roster/tables/PersonnelTable/hooks.ts": [
+          {
+            "path": "src/components/roster/context.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "RosterProvider"
+            ]
+          }
+        ],
+        "src/components/roster/tables/PersonnelTable/test/index.spec.tsx": [
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/components/support/containers/SupportContainer/index.tsx": [
+          {
+            "path": "src/components/support/containers/FiltersContainer/index.tsx",
+            "batchIndex": 6,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/containers/PaginationContainer/index.tsx",
+            "batchIndex": 6,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/containers/SupportContainer/components.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Form"
+            ]
+          },
+          {
+            "path": "src/pages/Support/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ],
+        "src/components/support/containers/SupportContainer/test/index.spec.tsx": [
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/components/support/tables/SupportTable/components.tsx": [
+          {
+            "path": "src/helpers/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "authHeaders",
+              "formatDate",
+              "motionProps",
+              "motionPropsMap",
+              "getUserDepartment"
+            ]
+          }
+        ],
+        "src/components/support/tables/SupportTable/hooks.ts": [
+          {
+            "path": "src/components/support/context.tsx",
+            "batchIndex": 6,
+            "symbols": [
+              "SupportProvider"
+            ]
+          }
+        ],
+        "src/components/support/tables/SupportTable/test/hooks.spec.ts": [
+          {
+            "path": "src/components/support/context.tsx",
+            "batchIndex": 6,
+            "symbols": [
+              "SupportProvider"
+            ]
+          }
+        ],
+        "src/components/support/tables/SupportTable/test/index.spec.tsx": [
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/context/App/AppTypes.ts": [
+          {
+            "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx",
+            "batchIndex": 8,
+            "symbols": [
+              "EmailInput"
+            ]
+          },
+          {
+            "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "useHandleCreateRosterPersonnelForm",
+              "useOnCancelBtnClick"
+            ]
+          },
+          {
+            "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "handleCreateRosterPersonnel"
+            ]
+          },
+          {
+            "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useHandleUpdateRosterPersonnelForm"
+            ]
+          },
+          {
+            "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+            "batchIndex": 8,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "handleUpdateRosterPersonnel"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "DescriptionInput"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "useIsVisible"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/create/CreatePersonnelForm/hooks.ts",
+            "batchIndex": 9,
+            "symbols": [
+              "useHandlePersonnelSelect"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "Header",
+              "DateTimeInputs",
+              "SupportDesignationSelect",
+              "SupportTypeSelect",
+              "NoteInput",
+              "PersonnelInputs"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "useHandleCreateSupport",
+              "useHandleAddPersonnelBtn"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/create/CreateSupportForm/utils.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "supportDesignations",
+              "supportTypes",
+              "handleCreateSupport"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useHandleUpdateSupportForm"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/update/UpdateSupportForm/index.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/update/UpdateSupportForm/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "handleUpdateSupport"
+            ]
+          },
+          {
+            "path": "src/context/App/AppActions.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "getAllSupport",
+              "getSupport",
+              "createSupport",
+              "updateSupport",
+              "deleteSupport",
+              "createOtherSupport",
+              "updateOtherSupport",
+              "createPersonnel",
+              "updatePersonnel",
+              "deletePersonnel",
+              "getRosterPersonnel",
+              "getPerson",
+              "createRosterPersonnel",
+              "updateRosterPersonnel",
+              "deleteRosterPersonnel",
+              "getDocs"
+            ]
+          }
+        ],
+        "src/test/mocks/api.ts": [
+          {
+            "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/test/index.spec.tsx",
+            "batchIndex": 8,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          },
+          {
+            "path": "src/pages/Roster/test/index.spec.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "src/pages/Support/test/index.spec.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "src/components/layout/Footer/components.tsx",
+          "language": "typescript",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Footer/index.tsx",
+          "language": "typescript",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Footer/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Header/components.tsx",
+          "language": "typescript",
+          "sizeLines": 107,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Header/context.tsx",
+          "language": "typescript",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Header/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Header/index.tsx",
+          "language": "typescript",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Header/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Layout/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Layout/index.tsx",
+          "language": "typescript",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/Layout/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+          "language": "typescript",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/buttons/nav/BackToHomeBtn/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/test/utils.tsx",
+          "language": "typescript",
+          "sizeLines": 87,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/layout/Footer/components.tsx": [
+          "src/components/layout/Footer/hooks.ts"
+        ],
+        "src/components/layout/Footer/index.tsx": [
+          "src/components/layout/Footer/components.tsx"
+        ],
+        "src/components/layout/Footer/test/index.spec.tsx": [
+          "src/components/layout/Footer/index.tsx",
+          "src/test/utils.tsx"
+        ],
+        "src/components/layout/Header/components.tsx": [
+          "src/components/layout/Header/context.tsx",
+          "src/components/layout/Header/hooks.ts",
+          "src/config/index.ts",
+          "src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+          "src/context/Auth/index.tsx"
+        ],
+        "src/components/layout/Header/context.tsx": [],
+        "src/components/layout/Header/hooks.ts": [
+          "src/components/layout/Header/context.tsx"
+        ],
+        "src/components/layout/Header/index.tsx": [
+          "src/components/layout/Header/components.tsx",
+          "src/components/layout/Header/hooks.ts"
+        ],
+        "src/components/layout/Header/test/index.spec.tsx": [
+          "src/components/layout/Header/index.tsx",
+          "src/test/utils.tsx"
+        ],
+        "src/components/layout/Layout/hooks.ts": [
+          "src/context/Auth/index.tsx"
+        ],
+        "src/components/layout/Layout/index.tsx": [
+          "src/components/layout/Footer/index.tsx",
+          "src/components/layout/Header/context.tsx",
+          "src/components/layout/Header/index.tsx",
+          "src/components/layout/Layout/hooks.ts"
+        ],
+        "src/components/layout/Layout/test/index.spec.tsx": [
+          "src/components/layout/Layout/index.tsx",
+          "src/test/utils.tsx"
+        ],
+        "src/components/layout/buttons/nav/BackToHomeBtn/index.tsx": [],
+        "src/components/layout/buttons/nav/BackToHomeBtn/test/index.spec.tsx": [
+          "src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+          "src/test/utils.tsx"
+        ],
+        "src/context/Auth/hooks/useHandleLogoutRedirect.ts": [],
+        "src/test/utils.tsx": [
+          "src/components/layout/Header/context.tsx",
+          "src/components/roster/context.tsx",
+          "src/components/support/context.tsx"
+        ]
+      },
+      "neighborMap": {
+        "src/components/layout/Footer/components.tsx": [
+          {
+            "path": "src/components/layout/Footer/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useHandleDocsBtn"
+            ]
+          }
+        ],
+        "src/components/layout/Header/components.tsx": [
+          {
+            "path": "src/config/index.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "APP_BASE",
+              "APP_TITLE",
+              "NODE_ENV",
+              "CLIENT_ID"
+            ]
+          },
+          {
+            "path": "src/context/Auth/index.tsx",
+            "batchIndex": 7,
+            "symbols": [
+              "AuthCtxProvider",
+              "useAuth",
+              "MOCK_AUTH"
+            ]
+          }
+        ],
+        "src/components/layout/Layout/hooks.ts": [
+          {
+            "path": "src/context/Auth/index.tsx",
+            "batchIndex": 7,
+            "symbols": [
+              "AuthCtxProvider",
+              "useAuth",
+              "MOCK_AUTH"
+            ]
+          }
+        ],
+        "src/components/layout/Layout/index.tsx": [
+          {
+            "path": "src/App.tsx",
+            "batchIndex": 7,
+            "symbols": []
+          }
+        ],
+        "src/test/utils.tsx": [
+          {
+            "path": "src/components/roster/context.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "RosterProvider"
+            ]
+          },
+          {
+            "path": "src/components/support/context.tsx",
+            "batchIndex": 6,
+            "symbols": [
+              "SupportProvider"
+            ]
+          },
+          {
+            "path": "src/components/roster/containers/RosterContainer/test/index.spec.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/test/index.spec.tsx",
+            "batchIndex": 8,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/test/index.spec.tsx",
+            "batchIndex": 8,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/tables/PersonnelTable/test/index.spec.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/containers/FiltersContainer/test/index.spec.tsx",
+            "batchIndex": 6,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/containers/PaginationContainer/test/index.spec.tsx",
+            "batchIndex": 6,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/containers/SupportContainer/test/index.spec.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/tables/SupportTable/test/index.spec.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/pages/Roster/test/index.spec.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "src/pages/Support/test/index.spec.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": "src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+          "language": "typescript",
+          "sizeLines": 18,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/buttons/nav/NextPageBtn/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/buttons/nav/PrevPageBtn/index.tsx",
+          "language": "typescript",
+          "sizeLines": 18,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/buttons/nav/PrevPageBtn/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/FiltersContainer/components.tsx",
+          "language": "typescript",
+          "sizeLines": 92,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/FiltersContainer/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 103,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/FiltersContainer/index.tsx",
+          "language": "typescript",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/FiltersContainer/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/PaginationContainer/components.tsx",
+          "language": "typescript",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/PaginationContainer/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 47,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/PaginationContainer/index.tsx",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/containers/PaginationContainer/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/context.tsx",
+          "language": "typescript",
+          "sizeLines": 105,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/test/context.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 76,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/layout/buttons/nav/NextPageBtn/index.tsx": [],
+        "src/components/layout/buttons/nav/NextPageBtn/test/index.spec.tsx": [
+          "src/components/layout/buttons/nav/NextPageBtn/index.tsx"
+        ],
+        "src/components/layout/buttons/nav/PrevPageBtn/index.tsx": [],
+        "src/components/layout/buttons/nav/PrevPageBtn/test/index.spec.tsx": [
+          "src/components/layout/buttons/nav/PrevPageBtn/index.tsx"
+        ],
+        "src/components/support/containers/FiltersContainer/components.tsx": [
+          "src/components/support/containers/FiltersContainer/hooks.ts",
+          "src/components/support/forms/create/CreatePersonnelForm/components.tsx"
+        ],
+        "src/components/support/containers/FiltersContainer/hooks.ts": [
+          "src/components/support/context.tsx"
+        ],
+        "src/components/support/containers/FiltersContainer/index.tsx": [
+          "src/components/support/containers/FiltersContainer/components.tsx",
+          "src/helpers/utils.ts"
+        ],
+        "src/components/support/containers/FiltersContainer/test/index.spec.tsx": [
+          "src/components/support/containers/FiltersContainer/index.tsx",
+          "src/test/utils.tsx"
+        ],
+        "src/components/support/containers/PaginationContainer/components.tsx": [
+          "src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+          "src/components/layout/buttons/nav/PrevPageBtn/index.tsx",
+          "src/components/support/containers/PaginationContainer/hooks.ts"
+        ],
+        "src/components/support/containers/PaginationContainer/hooks.ts": [
+          "src/components/support/context.tsx"
+        ],
+        "src/components/support/containers/PaginationContainer/index.tsx": [
+          "src/components/support/containers/PaginationContainer/components.tsx"
+        ],
+        "src/components/support/containers/PaginationContainer/test/index.spec.tsx": [
+          "src/components/support/containers/PaginationContainer/index.tsx",
+          "src/test/utils.tsx"
+        ],
+        "src/components/support/context.tsx": [],
+        "src/components/support/test/context.spec.tsx": [
+          "src/components/support/context.tsx"
+        ]
+      },
+      "neighborMap": {
+        "src/components/support/containers/FiltersContainer/components.tsx": [
+          {
+            "path": "src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+            "batchIndex": 9,
+            "symbols": [
+              "PersonnelSelect",
+              "PersonnelOptions"
+            ]
+          }
+        ],
+        "src/components/support/containers/FiltersContainer/index.tsx": [
+          {
+            "path": "src/helpers/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "authHeaders",
+              "formatDate",
+              "motionProps",
+              "motionPropsMap",
+              "getUserDepartment"
+            ]
+          },
+          {
+            "path": "src/components/support/containers/SupportContainer/index.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/support/containers/FiltersContainer/test/index.spec.tsx": [
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/components/support/containers/PaginationContainer/index.tsx": [
+          {
+            "path": "src/components/support/containers/SupportContainer/index.tsx",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/support/containers/PaginationContainer/test/index.spec.tsx": [
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/components/support/context.tsx": [
+          {
+            "path": "src/components/support/containers/SupportContainer/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useGetSupport",
+              "useHandleForm"
+            ]
+          },
+          {
+            "path": "src/components/support/forms/update/UpdateSupportForm/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useHandleUpdateSupportForm"
+            ]
+          },
+          {
+            "path": "src/components/support/tables/SupportTable/hooks.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "useSetTableData",
+              "useSetColumnVisibility",
+              "useHandleTableRow"
+            ]
+          },
+          {
+            "path": "src/components/support/tables/SupportTable/test/hooks.spec.ts",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/pages/Support/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "src/App.tsx",
+          "language": "typescript",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/context/Auth/config.ts",
+          "language": "typescript",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/context/Auth/constants.ts",
+          "language": "typescript",
+          "sizeLines": 2,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/context/Auth/hooks/AuthProvider.tsx",
+          "language": "typescript",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/context/Auth/hooks/useHandleLoginRedirect.ts",
+          "language": "typescript",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/context/Auth/index.tsx",
+          "language": "typescript",
+          "sizeLines": 132,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main.tsx",
+          "language": "typescript",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Login/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Login/index.tsx",
+          "language": "typescript",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Redirect/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Redirect/index.tsx",
+          "language": "typescript",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Redirect/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/App.tsx": [
+          "src/components/layout/Layout/index.tsx",
+          "src/config/index.ts",
+          "src/context/Auth/index.tsx",
+          "src/pages/Create/index.tsx",
+          "src/pages/Docs/index.tsx",
+          "src/pages/Login/index.tsx",
+          "src/pages/Redirect/index.tsx",
+          "src/pages/Roster/index.tsx",
+          "src/pages/Support/index.tsx"
+        ],
+        "src/context/Auth/config.ts": [
+          "src/config/index.ts"
+        ],
+        "src/context/Auth/constants.ts": [],
+        "src/context/Auth/hooks/AuthProvider.tsx": [
+          "src/context/Auth/config.ts"
+        ],
+        "src/context/Auth/hooks/useHandleLoginRedirect.ts": [
+          "src/context/Auth/config.ts"
+        ],
+        "src/context/Auth/index.tsx": [
+          "src/context/Auth/config.ts",
+          "src/context/Auth/constants.ts"
+        ],
+        "src/main.tsx": [
+          "src/App.tsx",
+          "src/context/Auth/hooks/AuthProvider.tsx",
+          "src/index.css"
+        ],
+        "src/pages/Login/hooks.ts": [
+          "src/context/Auth/index.tsx"
+        ],
+        "src/pages/Login/index.tsx": [
+          "src/pages/Login/hooks.ts"
+        ],
+        "src/pages/Redirect/hooks.ts": [
+          "src/context/Auth/index.tsx"
+        ],
+        "src/pages/Redirect/index.tsx": [
+          "src/pages/Redirect/hooks.ts"
+        ],
+        "src/pages/Redirect/test/index.spec.tsx": [
+          "src/pages/Redirect/index.tsx"
+        ]
+      },
+      "neighborMap": {
+        "src/App.tsx": [
+          {
+            "path": "src/components/layout/Layout/index.tsx",
+            "batchIndex": 5,
+            "symbols": []
+          },
+          {
+            "path": "src/config/index.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "APP_BASE",
+              "APP_TITLE",
+              "NODE_ENV",
+              "CLIENT_ID"
+            ]
+          },
+          {
+            "path": "src/pages/Create/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "src/pages/Docs/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "src/pages/Roster/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "src/pages/Support/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ],
+        "src/context/Auth/config.ts": [
+          {
+            "path": "src/config/index.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "APP_BASE",
+              "APP_TITLE",
+              "NODE_ENV",
+              "CLIENT_ID"
+            ]
+          }
+        ],
+        "src/context/Auth/index.tsx": [
+          {
+            "path": "src/components/layout/Header/components.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "Title",
+              "Buttons",
+              "HomeLink"
+            ]
+          },
+          {
+            "path": "src/components/layout/Layout/hooks.ts",
+            "batchIndex": 5,
+            "symbols": [
+              "useAuthCheck"
+            ]
+          },
+          {
+            "path": "src/helpers/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useGetToken",
+              "useEnableQuery",
+              "useRedirectAfterLogin",
+              "useActiveAccount",
+              "useAuthRedirect",
+              "useUnauthRedirect",
+              "useGetUserDepartment",
+              "withTokenRefresh"
+            ]
+          }
+        ],
+        "src/main.tsx": [
+          {
+            "path": "src/index.css",
+            "batchIndex": 12,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": "src/components/form-elements/buttons/FormBtns/components.tsx",
+          "language": "typescript",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/form-elements/buttons/FormBtns/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/form-elements/buttons/FormBtns/index.tsx",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/form-elements/buttons/FormBtns/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx",
+          "language": "typescript",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx",
+          "language": "typescript",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/components.tsx",
+          "language": "typescript",
+          "sizeLines": 2,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+          "language": "typescript",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/form-elements/buttons/FormBtns/components.tsx": [
+          "src/components/form-elements/buttons/FormBtns/hooks.ts"
+        ],
+        "src/components/form-elements/buttons/FormBtns/hooks.ts": [],
+        "src/components/form-elements/buttons/FormBtns/index.tsx": [
+          "src/components/form-elements/buttons/FormBtns/components.tsx"
+        ],
+        "src/components/form-elements/buttons/FormBtns/test/index.spec.tsx": [
+          "src/components/form-elements/buttons/FormBtns/index.tsx"
+        ],
+        "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx": [
+          "src/components/form-elements/FormLabel/index.tsx",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx": [
+          "src/components/form-elements/buttons/FormBtns/index.tsx",
+          "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx",
+          "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx"
+        ],
+        "src/components/roster/forms/create/CreateRosterPersonnelForm/test/index.spec.tsx": [
+          "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx",
+          "src/test/utils.tsx"
+        ],
+        "src/components/roster/forms/update/UpdateRosterPersonnelForm/components.tsx": [],
+        "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx": [
+          "src/components/form-elements/buttons/FormBtns/index.tsx",
+          "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx",
+          "src/components/roster/forms/update/UpdateRosterPersonnelForm/components.tsx",
+          "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/roster/forms/update/UpdateRosterPersonnelForm/test/index.spec.tsx": [
+          "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+          "src/test/mocks/api.ts",
+          "src/test/utils.tsx"
+        ]
+      },
+      "neighborMap": {
+        "src/components/form-elements/buttons/FormBtns/index.tsx": [
+          {
+            "path": "src/components/support/forms/create/CreateSupportForm/index.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/forms/update/UpdateSupportForm/index.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          }
+        ],
+        "src/components/roster/forms/create/CreateRosterPersonnelForm/components.tsx": [
+          {
+            "path": "src/components/form-elements/FormLabel/index.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          },
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx": [
+          {
+            "path": "src/components/roster/forms/create/CreateRosterPersonnelForm/hooks.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "useHandleCreateRosterPersonnelForm",
+              "useOnCancelBtnClick"
+            ]
+          },
+          {
+            "path": "src/components/roster/containers/RosterContainer/components.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Header",
+              "CreateBtn",
+              "Form"
+            ]
+          }
+        ],
+        "src/components/roster/forms/create/CreateRosterPersonnelForm/test/index.spec.tsx": [
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ],
+        "src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx": [
+          {
+            "path": "src/components/roster/forms/update/UpdateRosterPersonnelForm/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useHandleUpdateRosterPersonnelForm"
+            ]
+          },
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/components/roster/containers/RosterContainer/components.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Header",
+              "CreateBtn",
+              "Form"
+            ]
+          }
+        ],
+        "src/components/roster/forms/update/UpdateRosterPersonnelForm/test/index.spec.tsx": [
+          {
+            "path": "src/test/mocks/api.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "createPersonnelRoster",
+              "createSupport",
+              "createMockCollection"
+            ]
+          },
+          {
+            "path": "src/test/utils.tsx",
+            "batchIndex": 5,
+            "symbols": [
+              "renderWithRouter",
+              "renderWithProviders",
+              "renderWithSupportCtx",
+              "renderWithRosterCtx",
+              "renderWithHeaderCtx"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "src/components/form-elements/buttons/RemoveBtn/index.tsx",
+          "language": "typescript",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/form-elements/buttons/RemoveBtn/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+          "language": "typescript",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreatePersonnelForm/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Roster/hooks.ts",
+          "language": "typescript",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/form-elements/buttons/RemoveBtn/index.tsx": [],
+        "src/components/form-elements/buttons/RemoveBtn/test/index.spec.tsx": [
+          "src/components/form-elements/buttons/RemoveBtn/index.tsx"
+        ],
+        "src/components/support/forms/create/CreatePersonnelForm/components.tsx": [
+          "src/components/form-elements/buttons/RemoveBtn/index.tsx",
+          "src/components/form-elements/FormLabel/index.tsx",
+          "src/components/support/forms/create/CreatePersonnelForm/hooks.ts",
+          "src/pages/Roster/hooks.ts"
+        ],
+        "src/components/support/forms/create/CreatePersonnelForm/hooks.ts": [
+          "src/context/App/AppTypes.ts"
+        ],
+        "src/components/support/forms/create/CreatePersonnelForm/index.tsx": [
+          "src/components/support/forms/create/CreatePersonnelForm/components.tsx"
+        ],
+        "src/pages/Roster/hooks.ts": [
+          "src/context/App/AppActions.ts",
+          "src/helpers/hooks.ts",
+          "src/helpers/utils.ts"
+        ]
+      },
+      "neighborMap": {
+        "src/components/support/forms/create/CreatePersonnelForm/components.tsx": [
+          {
+            "path": "src/components/form-elements/FormLabel/index.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          },
+          {
+            "path": "src/components/support/containers/FiltersContainer/components.tsx",
+            "batchIndex": 6,
+            "symbols": [
+              "DateRangeFilterInputs",
+              "PersonnelFilter",
+              "Search"
+            ]
+          }
+        ],
+        "src/components/support/forms/create/CreatePersonnelForm/hooks.ts": [
+          {
+            "path": "src/context/App/AppTypes.ts",
+            "batchIndex": 4,
+            "symbols": []
+          }
+        ],
+        "src/components/support/forms/create/CreatePersonnelForm/index.tsx": [
+          {
+            "path": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "Header",
+              "DateTimeInputs",
+              "SupportDesignationSelect",
+              "SupportTypeSelect",
+              "NoteInput",
+              "PersonnelInputs"
+            ]
+          }
+        ],
+        "src/pages/Roster/hooks.ts": [
+          {
+            "path": "src/context/App/AppActions.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "getAllSupport",
+              "getSupport",
+              "createSupport",
+              "updateSupport",
+              "deleteSupport",
+              "createOtherSupport",
+              "updateOtherSupport",
+              "createPersonnel",
+              "updatePersonnel",
+              "deletePersonnel",
+              "getRosterPersonnel",
+              "getPerson",
+              "createRosterPersonnel",
+              "updateRosterPersonnel",
+              "deleteRosterPersonnel",
+              "getDocs"
+            ]
+          },
+          {
+            "path": "src/helpers/hooks.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "useGetToken",
+              "useEnableQuery",
+              "useRedirectAfterLogin",
+              "useActiveAccount",
+              "useAuthRedirect",
+              "useUnauthRedirect",
+              "useGetUserDepartment",
+              "withTokenRefresh"
+            ]
+          },
+          {
+            "path": "src/helpers/utils.ts",
+            "batchIndex": 1,
+            "symbols": [
+              "authHeaders",
+              "formatDate",
+              "motionProps",
+              "motionPropsMap",
+              "getUserDepartment"
+            ]
+          },
+          {
+            "path": "src/pages/Roster/index.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "src/components/layout/buttons/nav/BackToTopBtn/index.tsx",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/buttons/nav/BackToTopBtn/test/index.spec.tsx",
+          "language": "typescript",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/layout/buttons/nav/BackToTopBtn/utils.ts",
+          "language": "typescript",
+          "sizeLines": 4,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/layout/buttons/nav/BackToTopBtn/index.tsx": [
+          "src/components/layout/buttons/nav/BackToTopBtn/utils.ts"
+        ],
+        "src/components/layout/buttons/nav/BackToTopBtn/test/index.spec.tsx": [
+          "src/components/layout/buttons/nav/BackToTopBtn/index.tsx"
+        ],
+        "src/components/layout/buttons/nav/BackToTopBtn/utils.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": ".env.development",
+          "language": "config",
+          "sizeLines": 1,
+          "fileCategory": "config"
+        },
+        {
+          "path": "CLAUDE.md",
+          "language": "markdown",
+          "sizeLines": 140,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 171,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "index.html",
+          "language": "html",
+          "sizeLines": 29,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "package.json",
+          "language": "json",
+          "sizeLines": 52,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tsconfig.app.json",
+          "language": "json",
+          "sizeLines": 27,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tsconfig.json",
+          "language": "json",
+          "sizeLines": 38,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tsconfig.node.json",
+          "language": "json",
+          "sizeLines": 9,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tsconfig.test.json",
+          "language": "json",
+          "sizeLines": 7,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".env.development": [],
+        "CLAUDE.md": [],
+        "README.md": [],
+        "index.html": [],
+        "package.json": [],
+        "tsconfig.app.json": [],
+        "tsconfig.json": [],
+        "tsconfig.node.json": [],
+        "tsconfig.test.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 12,
+      "files": [
+        {
+          "path": ".claude/settings.json",
+          "language": "json",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".understand-anything/.understandignore",
+          "language": "unknown",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "eslint.config.js",
+          "language": "javascript",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/favicons/browserconfig.xml",
+          "language": "xml",
+          "sizeLines": 1,
+          "fileCategory": "config"
+        },
+        {
+          "path": "public/favicons/manifest.json",
+          "language": "json",
+          "sizeLines": 40,
+          "fileCategory": "config"
+        },
+        {
+          "path": "public/redirect.html",
+          "language": "html",
+          "sizeLines": 8,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/components/form-elements/FormContainer/FormContainer.module.css",
+          "language": "css",
+          "sizeLines": 20,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/components/support/forms/create/CreatePersonnelForm/utils.ts",
+          "language": "typescript",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/index.css",
+          "language": "css",
+          "sizeLines": 106,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/test/setup.ts",
+          "language": "typescript",
+          "sizeLines": 80,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/utils/PageWrapper/index.tsx",
+          "language": "typescript",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/utils/PageWrapper/utils.ts",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/utils/Toast/Toast.module.css",
+          "language": "css",
+          "sizeLines": 33,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/vite-env.d.ts",
+          "language": "typescript",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "vite.config.ts",
+          "language": "typescript",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "vitest.config.ts",
+          "language": "typescript",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".claude/settings.json": [],
+        ".understand-anything/.understandignore": [],
+        "eslint.config.js": [],
+        "public/favicons/browserconfig.xml": [],
+        "public/favicons/manifest.json": [],
+        "public/redirect.html": [],
+        "src/components/form-elements/FormContainer/FormContainer.module.css": [],
+        "src/components/support/forms/create/CreatePersonnelForm/utils.ts": [],
+        "src/index.css": [],
+        "src/test/setup.ts": [],
+        "src/utils/PageWrapper/index.tsx": [
+          "src/utils/PageWrapper/utils.ts"
+        ],
+        "src/utils/PageWrapper/utils.ts": [],
+        "src/utils/Toast/Toast.module.css": [],
+        "src/vite-env.d.ts": [],
+        "vite.config.ts": [],
+        "vitest.config.ts": []
+      },
+      "neighborMap": {
+        "src/components/form-elements/FormContainer/FormContainer.module.css": [
+          {
+            "path": "src/components/form-elements/FormContainer/index.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ],
+        "src/index.css": [
+          {
+            "path": "src/main.tsx",
+            "batchIndex": 7,
+            "symbols": []
+          }
+        ],
+        "src/utils/Toast/Toast.module.css": [
+          {
+            "path": "src/utils/Toast/Toast.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "savedPopup",
+              "errorPopup",
+              "authPopup",
+              "infoPopup"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

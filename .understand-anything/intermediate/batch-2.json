@@ -1,0 +1,647 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/error/ErrorBoundary/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/error/ErrorBoundary/index.tsx",
+      "summary": "Error boundary wrapper component that catches errors in child components and navigates to a specified route using react-error-boundary.",
+      "tags": ["error-handling", "component", "wrapper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/error/ErrorBoundary/index.tsx:ErrorBoundary",
+      "type": "function",
+      "name": "ErrorBoundary",
+      "filePath": "src/components/error/ErrorBoundary/index.tsx",
+      "lineRange": [7, 28],
+      "summary": "React component that wraps children with error boundary functionality, redirecting to specified href on error.",
+      "tags": ["error-handling", "component-wrapper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/error/ErrorBoundary/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/error/ErrorBoundary/test/index.spec.tsx",
+      "summary": "Test suite for ErrorBoundary component verifying safe rendering and error fallback behavior.",
+      "tags": ["test", "error-handling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/error/ErrorBoundary/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "src/components/error/ErrorBoundary/types.ts",
+      "summary": "Type definitions for ErrorBoundary component props including href, children, and optional error message.",
+      "tags": ["type-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/loading/Loading/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/layout/loading/Loading/index.tsx",
+      "summary": "Loading spinner component displaying a centered, pulsing loading icon.",
+      "tags": ["component", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/loading/Loading/index.tsx:Loading",
+      "type": "function",
+      "name": "Loading",
+      "filePath": "src/components/layout/loading/Loading/index.tsx",
+      "lineRange": [3, 10],
+      "summary": "Renders a full-screen centered loading icon with pulse animation.",
+      "tags": ["component", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/loading/Loading/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/layout/loading/Loading/test/index.spec.tsx",
+      "summary": "Test suite for Loading component verifying proper rendering of loading spinner.",
+      "tags": ["test", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Create/components.tsx",
+      "type": "file",
+      "name": "components.tsx",
+      "filePath": "src/pages/Create/components.tsx",
+      "summary": "Exports CreateContainer component that wraps form selection logic with FormContainer.",
+      "tags": ["component", "container"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Create/components.tsx:CreateContainer",
+      "type": "function",
+      "name": "CreateContainer",
+      "filePath": "src/pages/Create/components.tsx",
+      "lineRange": [6, 14],
+      "summary": "Container component that retrieves the appropriate create form based on route parameters and wraps it in FormContainer.",
+      "tags": ["container", "component"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Create/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/pages/Create/hooks.ts",
+      "summary": "Custom hook useSetForm that maps route formtype parameter to the corresponding create form component.",
+      "tags": ["hook", "form-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Create/hooks.ts:useSetForm",
+      "type": "function",
+      "name": "useSetForm",
+      "filePath": "src/pages/Create/hooks.ts",
+      "lineRange": [7, 17],
+      "summary": "Returns the appropriate create form component based on formtype URL parameter using a form map.",
+      "tags": ["hook", "form-selection"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Create/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/pages/Create/index.tsx",
+      "summary": "Create page component that renders CreateContainer wrapped in error boundary with fallback to support page.",
+      "tags": ["page", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Create/index.tsx:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "src/pages/Create/index.tsx",
+      "lineRange": [5, 14],
+      "summary": "Page component for creating new support entries with error handling and responsive layout.",
+      "tags": ["page", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Docs/components.tsx",
+      "type": "file",
+      "name": "components.tsx",
+      "filePath": "src/pages/Docs/components.tsx",
+      "summary": "Exports six UI components for rendering API documentation including endpoint items, method badges, and request details.",
+      "tags": ["component", "documentation-ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/pages/Docs/components.tsx:EndpointItems",
+      "type": "function",
+      "name": "EndpointItems",
+      "filePath": "src/pages/Docs/components.tsx",
+      "lineRange": [8, 17],
+      "summary": "Renders a list of endpoint items from a Postman collection.",
+      "tags": ["component", "documentation-ui"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Docs/components.tsx:MethodBadge",
+      "type": "function",
+      "name": "MethodBadge",
+      "filePath": "src/pages/Docs/components.tsx",
+      "lineRange": [19, 24],
+      "summary": "Displays HTTP method (GET, POST, etc.) as a styled badge with color coding.",
+      "tags": ["component", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Docs/components.tsx:CloseDocsBtn",
+      "type": "function",
+      "name": "CloseDocsBtn",
+      "filePath": "src/pages/Docs/components.tsx",
+      "lineRange": [26, 33],
+      "summary": "Button component that navigates back to the support page.",
+      "tags": ["component", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Docs/components.tsx:EndpointItem",
+      "type": "function",
+      "name": "EndpointItem",
+      "filePath": "src/pages/Docs/components.tsx",
+      "lineRange": [35, 69],
+      "summary": "Recursively renders endpoint items with collapsible categories and request details including method, URL, and body.",
+      "tags": ["component", "documentation-ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/pages/Docs/components.tsx:RequestDescription",
+      "type": "function",
+      "name": "RequestDescription",
+      "filePath": "src/pages/Docs/components.tsx",
+      "lineRange": [71, 77],
+      "summary": "Renders optional request description text.",
+      "tags": ["component", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Docs/components.tsx:RequestBody",
+      "type": "function",
+      "name": "RequestBody",
+      "filePath": "src/pages/Docs/components.tsx",
+      "lineRange": [79, 90],
+      "summary": "Displays formatted JSON request body in a code block.",
+      "tags": ["component", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Docs/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/pages/Docs/hooks.ts",
+      "summary": "Custom hooks for fetching API documentation and managing endpoint item collapse state.",
+      "tags": ["hook", "api-integration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Docs/hooks.ts:useGetDocs",
+      "type": "function",
+      "name": "useGetDocs",
+      "filePath": "src/pages/Docs/hooks.ts",
+      "lineRange": [10, 18],
+      "summary": "React Query hook that fetches API documentation from server with authentication.",
+      "tags": ["hook", "api-integration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Docs/hooks.ts:useHandleEndpointItem",
+      "type": "function",
+      "name": "useHandleEndpointItem",
+      "filePath": "src/pages/Docs/hooks.ts",
+      "lineRange": [23, 31],
+      "summary": "Hook providing collapse state and toggle handler for endpoint items.",
+      "tags": ["hook", "state-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Docs/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/pages/Docs/index.tsx",
+      "summary": "Documentation page component that fetches and displays API documentation with loading states and error handling.",
+      "tags": ["page", "entry-point", "documentation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Docs/index.tsx:Documentation",
+      "type": "function",
+      "name": "Documentation",
+      "filePath": "src/pages/Docs/index.tsx",
+      "lineRange": [12, 31],
+      "summary": "Page component for API documentation with error boundary, loading state, and animated content display.",
+      "tags": ["page", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Docs/utils.ts",
+      "type": "file",
+      "name": "utils.ts",
+      "filePath": "src/pages/Docs/utils.ts",
+      "summary": "Type definitions and color mapping for API documentation including HTTP method types and badge colors.",
+      "tags": ["utility", "type-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Roster/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/pages/Roster/index.tsx",
+      "summary": "Roster page component that fetches and displays peer support personnel roster with context provider and error handling.",
+      "tags": ["page", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Roster/index.tsx:Roster",
+      "type": "function",
+      "name": "Roster",
+      "filePath": "src/pages/Roster/index.tsx",
+      "lineRange": [9, 21],
+      "summary": "Page component that fetches roster personnel data and renders it in a context-aware container with loading and error states.",
+      "tags": ["page", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Roster/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/pages/Roster/test/index.spec.tsx",
+      "summary": "Test suite for Roster page component verifying data loading and rendering behavior.",
+      "tags": ["test", "page-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Support/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/pages/Support/hooks.ts",
+      "summary": "Custom hook useGetAllSupport that fetches all peer support entries from the API with caching.",
+      "tags": ["hook", "api-integration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Support/hooks.ts:useGetAllSupport",
+      "type": "function",
+      "name": "useGetAllSupport",
+      "filePath": "src/pages/Support/hooks.ts",
+      "lineRange": [9, 18],
+      "summary": "React Query hook fetching all support entries with authentication and infinite cache duration.",
+      "tags": ["hook", "api-integration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Support/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/pages/Support/index.tsx",
+      "summary": "Support page component that fetches all peer support entries and renders them in a context-aware container with loading and error handling.",
+      "tags": ["page", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Support/index.tsx:Support",
+      "type": "function",
+      "name": "Support",
+      "filePath": "src/pages/Support/index.tsx",
+      "lineRange": [9, 21],
+      "summary": "Main support page component fetching support entries and rendering them in a responsive container with context provider.",
+      "tags": ["page", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Support/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/pages/Support/test/index.spec.tsx",
+      "summary": "Test suite for Support page component verifying data loading, rendering, and user interactions.",
+      "tags": ["test", "page-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/HandleLoading/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/utils/HandleLoading/index.tsx",
+      "summary": "Utility component that conditionally renders a Loading component or its children based on success state.",
+      "tags": ["utility", "component"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/HandleLoading/index.tsx:HandleLoading",
+      "type": "function",
+      "name": "HandleLoading",
+      "filePath": "src/utils/HandleLoading/index.tsx",
+      "lineRange": [6, 10],
+      "summary": "Component wrapper that displays loading spinner until async operation succeeds.",
+      "tags": ["utility", "component"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/Motion/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/utils/Motion/index.tsx",
+      "summary": "Utility component that wraps children in Framer Motion animations based on animation type parameter.",
+      "tags": ["utility", "animation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/Motion/index.tsx:Motion",
+      "type": "function",
+      "name": "Motion",
+      "filePath": "src/utils/Motion/index.tsx",
+      "lineRange": [7, 14],
+      "summary": "Component that applies Framer Motion animations to children using predefined animation configurations.",
+      "tags": ["utility", "animation"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/error/ErrorBoundary/index.tsx",
+      "target": "function:src/components/error/ErrorBoundary/index.tsx:ErrorBoundary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/error/ErrorBoundary/index.tsx",
+      "target": "file:src/components/error/ErrorBoundary/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/error/ErrorBoundary/test/index.spec.tsx",
+      "target": "file:src/components/error/ErrorBoundary/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/error/ErrorBoundary/test/index.spec.tsx",
+      "target": "file:src/components/error/ErrorBoundary/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/layout/loading/Loading/index.tsx",
+      "target": "function:src/components/layout/loading/Loading/index.tsx:Loading",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/loading/Loading/test/index.spec.tsx",
+      "target": "file:src/components/layout/loading/Loading/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/loading/Loading/test/index.spec.tsx",
+      "target": "file:src/components/layout/loading/Loading/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/pages/Create/components.tsx",
+      "target": "function:src/pages/Create/components.tsx:CreateContainer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Create/components.tsx",
+      "target": "file:src/pages/Create/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Create/hooks.ts",
+      "target": "function:src/pages/Create/hooks.ts:useSetForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Create/hooks.ts",
+      "target": "file:src/pages/Create/hooks.ts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/pages/Create/index.tsx",
+      "target": "file:src/pages/Create/components.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Create/index.tsx",
+      "target": "file:src/pages/Create/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Create/index.tsx",
+      "target": "function:src/pages/Create/index.tsx:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Docs/components.tsx",
+      "target": "function:src/pages/Docs/components.tsx:EndpointItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Docs/components.tsx",
+      "target": "function:src/pages/Docs/components.tsx:MethodBadge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Docs/components.tsx",
+      "target": "function:src/pages/Docs/components.tsx:CloseDocsBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Docs/components.tsx",
+      "target": "function:src/pages/Docs/components.tsx:EndpointItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Docs/components.tsx",
+      "target": "function:src/pages/Docs/components.tsx:RequestDescription",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Docs/components.tsx",
+      "target": "function:src/pages/Docs/components.tsx:RequestBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Docs/components.tsx",
+      "target": "file:src/pages/Docs/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Docs/components.tsx",
+      "target": "file:src/pages/Docs/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Docs/hooks.ts",
+      "target": "function:src/pages/Docs/hooks.ts:useGetDocs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Docs/hooks.ts",
+      "target": "function:src/pages/Docs/hooks.ts:useHandleEndpointItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Docs/hooks.ts",
+      "target": "file:src/pages/Docs/hooks.ts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/pages/Docs/index.tsx",
+      "target": "function:src/pages/Docs/index.tsx:Documentation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Docs/index.tsx",
+      "target": "file:src/pages/Docs/components.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Docs/index.tsx",
+      "target": "file:src/pages/Docs/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Roster/index.tsx",
+      "target": "function:src/pages/Roster/index.tsx:Roster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Roster/index.tsx",
+      "target": "file:src/pages/Roster/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Roster/test/index.spec.tsx",
+      "target": "file:src/pages/Roster/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Roster/test/index.spec.tsx",
+      "target": "file:src/pages/Roster/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/pages/Support/hooks.ts",
+      "target": "function:src/pages/Support/hooks.ts:useGetAllSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Support/hooks.ts",
+      "target": "file:src/pages/Support/hooks.ts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/pages/Support/index.tsx",
+      "target": "function:src/pages/Support/index.tsx:Support",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Support/index.tsx",
+      "target": "file:src/pages/Support/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Support/test/index.spec.tsx",
+      "target": "file:src/pages/Support/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Support/test/index.spec.tsx",
+      "target": "file:src/pages/Support/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/utils/HandleLoading/index.tsx",
+      "target": "function:src/utils/HandleLoading/index.tsx:HandleLoading",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/utils/Motion/index.tsx",
+      "target": "function:src/utils/Motion/index.tsx:Motion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

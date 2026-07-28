@@ -1,0 +1,496 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/App.tsx",
+      "type": "file",
+      "name": "App.tsx",
+      "filePath": "src/App.tsx",
+      "summary": "Main application component that sets up routing, authentication context, and React Query state management with organized route structure for login, support, roster, and documentation pages.",
+      "tags": ["entry-point", "routing", "state-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/main.tsx",
+      "type": "file",
+      "name": "main.tsx",
+      "filePath": "src/main.tsx",
+      "summary": "Application entry point that bootstraps React with StrictMode, renders the root App component, and wraps it with the AuthProvider for authentication support.",
+      "tags": ["entry-point", "bootstrap", "application-root"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/context/Auth/config.ts",
+      "type": "file",
+      "name": "config.ts",
+      "filePath": "src/context/Auth/config.ts",
+      "summary": "Azure AD MSAL configuration for authentication, including client credentials, redirect URIs, cache settings, and login/token acquisition request parameters.",
+      "tags": ["configuration", "authentication", "azure-ad"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/context/Auth/constants.ts",
+      "type": "file",
+      "name": "constants.ts",
+      "filePath": "src/context/Auth/constants.ts",
+      "summary": "Authentication constants defining mock authentication mode and development token value for testing without Azure AD.",
+      "tags": ["configuration", "constants", "development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "type": "file",
+      "name": "AuthProvider.tsx",
+      "filePath": "src/context/Auth/hooks/AuthProvider.tsx",
+      "summary": "React component wrapping the MSAL PublicClientApplication initialization, handling account detection, setting active accounts, and managing authentication state lifecycle.",
+      "tags": ["authentication", "provider", "msal"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/context/Auth/hooks/useHandleLoginRedirect.ts",
+      "type": "file",
+      "name": "useHandleLoginRedirect.ts",
+      "filePath": "src/context/Auth/hooks/useHandleLoginRedirect.ts",
+      "summary": "Custom hook that returns a login redirect function triggering MSAL's loginRedirect flow with optional account creation prompt.",
+      "tags": ["hook", "authentication", "login"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+      "type": "file",
+      "name": "useHandleLogoutRedirect.ts",
+      "filePath": "src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+      "summary": "Custom hook providing logout functionality that clears MSAL cache and redirects to the home page.",
+      "tags": ["hook", "authentication", "logout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/context/Auth/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/context/Auth/index.tsx",
+      "summary": "Central authentication context providing isAuthenticated, token, isLoading state and token refresh mechanism, along with useAuth hook for consuming authentication state throughout the application.",
+      "tags": ["entry-point", "authentication", "context-provider"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/pages/Login/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/pages/Login/hooks.ts",
+      "summary": "Custom hook managing login page authentication flow, attempting silent SSO, handling login redirect, and navigating authenticated users to the support page.",
+      "tags": ["hook", "authentication", "login"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/pages/Login/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/pages/Login/index.tsx",
+      "summary": "Login page component that uses the authentication hook to manage auth flow, rendering no visible UI (empty component that handles redirection).",
+      "tags": ["page", "authentication", "login"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Redirect/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/pages/Redirect/hooks.ts",
+      "summary": "Custom hook that conditionally redirects users to support page when authenticated or home page when not, used for catch-all route handling.",
+      "tags": ["hook", "routing", "redirect"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Redirect/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/pages/Redirect/index.tsx",
+      "summary": "Catch-all redirect page component that uses redirect logic to route unauthenticated users to login and authenticated users to the main support page.",
+      "tags": ["page", "routing", "redirect"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/pages/Redirect/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/pages/Redirect/test/index.spec.tsx",
+      "summary": "Unit test for Redirect page verifying that the component renders as null to the DOM without visible UI.",
+      "tags": ["test", "page-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/App.tsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "src/App.tsx",
+      "lineRange": [20, 41],
+      "summary": "Main application component configuring React Router with lazy-loaded routes, QueryClient provider, and authentication context wrapper.",
+      "tags": ["component", "routing", "entry-point"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/context/Auth/hooks/AuthProvider.tsx:AuthProvider",
+      "type": "function",
+      "name": "AuthProvider",
+      "filePath": "src/context/Auth/hooks/AuthProvider.tsx",
+      "lineRange": [6, 45],
+      "summary": "Component that initializes MSAL instance, handles account detection and event callbacks, wrapping the app in MsalProvider.",
+      "tags": ["component", "authentication", "provider"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/context/Auth/hooks/useHandleLoginRedirect.ts:useHandleLoginRedirect",
+      "type": "function",
+      "name": "useHandleLoginRedirect",
+      "filePath": "src/context/Auth/hooks/useHandleLoginRedirect.ts",
+      "lineRange": [4, 17],
+      "summary": "Custom hook returning a function that initiates MSAL login flow with account creation prompt.",
+      "tags": ["hook", "authentication", "login"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/Auth/hooks/useHandleLogoutRedirect.ts:useHandleLogoutRedirect",
+      "type": "function",
+      "name": "useHandleLogoutRedirect",
+      "filePath": "src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+      "lineRange": [3, 11],
+      "summary": "Custom hook returning a function that clears MSAL cache and navigates to home page on logout.",
+      "tags": ["hook", "authentication", "logout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/context/Auth/index.tsx:AuthCtxProvider",
+      "type": "function",
+      "name": "AuthCtxProvider",
+      "filePath": "src/context/Auth/index.tsx",
+      "lineRange": [16, 122],
+      "summary": "Provider component that establishes authentication context with token state, mock auth support, Edge browser workarounds, and token refresh logic.",
+      "tags": ["component", "authentication", "context-provider"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/context/Auth/index.tsx:useAuth",
+      "type": "function",
+      "name": "useAuth",
+      "filePath": "src/context/Auth/index.tsx",
+      "lineRange": [124, 130],
+      "summary": "Custom hook that retrieves authentication context with error handling, providing authenticated state to consuming components.",
+      "tags": ["hook", "authentication", "context-consumer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Login/hooks.ts:useHandleAuth",
+      "type": "function",
+      "name": "useHandleAuth",
+      "filePath": "src/pages/Login/hooks.ts",
+      "lineRange": [6, 39],
+      "summary": "Hook managing login page flow with SSO attempt, login redirect fallback, and navigation to support page on successful authentication.",
+      "tags": ["hook", "authentication", "login"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/pages/Login/index.tsx:Login",
+      "type": "function",
+      "name": "Login",
+      "filePath": "src/pages/Login/index.tsx",
+      "lineRange": [3, 7],
+      "summary": "Login page component that triggers authentication handling and renders empty UI, relying on redirect logic.",
+      "tags": ["component", "page", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Redirect/hooks.ts:useRedirect",
+      "type": "function",
+      "name": "useRedirect",
+      "filePath": "src/pages/Redirect/hooks.ts",
+      "lineRange": [5, 18],
+      "summary": "Hook that redirects users based on authentication state, sending them to support page if authenticated or home if not.",
+      "tags": ["hook", "routing", "redirect"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/pages/Redirect/index.tsx:Redirect",
+      "type": "function",
+      "name": "Redirect",
+      "filePath": "src/pages/Redirect/index.tsx",
+      "lineRange": [3, 7],
+      "summary": "Catch-all page component that uses redirect hook to route users based on authentication state.",
+      "tags": ["component", "page", "routing"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/context/Auth/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/components/layout/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/pages/Login/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/pages/Redirect/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/pages/Support/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/pages/Roster/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.tsx",
+      "target": "file:src/App.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "target": "file:src/context/Auth/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "target": "file:src/context/Auth/constants.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "target": "file:src/helpers/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/context/Auth/hooks/useHandleLoginRedirect.ts",
+      "target": "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+      "target": "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/context/Auth/index.tsx",
+      "target": "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/context/Auth/index.tsx",
+      "target": "file:src/context/Auth/hooks/useHandleLoginRedirect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/context/Auth/index.tsx",
+      "target": "file:src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Login/hooks.ts",
+      "target": "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Login/index.tsx",
+      "target": "file:src/pages/Login/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Redirect/hooks.ts",
+      "target": "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Redirect/index.tsx",
+      "target": "file:src/pages/Redirect/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/pages/Redirect/test/index.spec.tsx",
+      "target": "file:src/pages/Redirect/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "function:src/App.tsx:App",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "target": "function:src/context/Auth/hooks/AuthProvider.tsx:AuthProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/Auth/hooks/useHandleLoginRedirect.ts",
+      "target": "function:src/context/Auth/hooks/useHandleLoginRedirect.ts:useHandleLoginRedirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+      "target": "function:src/context/Auth/hooks/useHandleLogoutRedirect.ts:useHandleLogoutRedirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/Auth/index.tsx",
+      "target": "function:src/context/Auth/index.tsx:AuthCtxProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/context/Auth/index.tsx",
+      "target": "function:src/context/Auth/index.tsx:useAuth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Login/hooks.ts",
+      "target": "function:src/pages/Login/hooks.ts:useHandleAuth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Login/index.tsx",
+      "target": "function:src/pages/Login/index.tsx:Login",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Redirect/hooks.ts",
+      "target": "function:src/pages/Redirect/hooks.ts:useRedirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/pages/Redirect/index.tsx",
+      "target": "function:src/pages/Redirect/index.tsx:Redirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/App.tsx",
+      "target": "file:src/context/Auth/index.tsx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/context/Auth/index.tsx",
+      "target": "function:src/context/Auth/index.tsx:AuthCtxProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/context/Auth/index.tsx",
+      "target": "function:src/context/Auth/index.tsx:useAuth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/pages/Login/index.tsx",
+      "target": "function:src/pages/Login/index.tsx:Login",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/pages/Redirect/index.tsx",
+      "target": "function:src/pages/Redirect/index.tsx:Redirect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/context/Auth/index.tsx:AuthCtxProvider",
+      "target": "function:src/context/Auth/index.tsx:useAuth",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:src/pages/Login/hooks.ts:useHandleAuth",
+      "target": "function:src/context/Auth/index.tsx:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/pages/Redirect/hooks.ts:useRedirect",
+      "target": "function:src/context/Auth/index.tsx:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/pages/Redirect/test/index.spec.tsx",
+      "target": "file:src/pages/Redirect/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

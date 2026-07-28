@@ -1,0 +1,158 @@
+[
+  {
+    "id": "layer:entry-point",
+    "name": "Entry Point",
+    "description": "Application bootstrap and root component setup (main.tsx, App.tsx, index.html)",
+    "nodeIds": [
+      "file:src/main.tsx",
+      "file:src/App.tsx",
+      "file:index.html"
+    ]
+  },
+  {
+    "id": "layer:pages",
+    "name": "Pages",
+    "description": "Route-level page components for major application views (Login, Support, Roster, Create, Docs, Redirect)",
+    "nodeIds": [
+      "file:src/pages/Login/index.tsx",
+      "file:src/pages/Support/index.tsx",
+      "file:src/pages/Roster/index.tsx",
+      "file:src/pages/Create/index.tsx",
+      "file:src/pages/Docs/index.tsx",
+      "file:src/pages/Redirect/index.tsx"
+    ]
+  },
+  {
+    "id": "layer:layout",
+    "name": "Layout & Navigation",
+    "description": "Root layout wrapper with Header, Footer, and navigation components providing consistent page structure and navigation controls",
+    "nodeIds": [
+      "file:src/components/layout/Layout/index.tsx",
+      "file:src/components/layout/Header/index.tsx",
+      "file:src/components/layout/Footer/index.tsx",
+      "file:src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+      "file:src/components/layout/buttons/nav/BackToTopBtn/index.tsx",
+      "file:src/components/layout/buttons/nav/NextPageBtn/index.tsx",
+      "file:src/components/layout/buttons/nav/PrevPageBtn/index.tsx"
+    ]
+  },
+  {
+    "id": "layer:support-feature",
+    "name": "Support Feature",
+    "description": "Support entry management feature including containers, forms (create/update), tables, filters, pagination, and context-based state",
+    "nodeIds": [
+      "file:src/components/support/context.tsx",
+      "file:src/components/support/containers/SupportContainer/index.tsx",
+      "file:src/components/support/containers/FiltersContainer/index.tsx",
+      "file:src/components/support/containers/PaginationContainer/index.tsx",
+      "file:src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "file:src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+      "file:src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "file:src/components/support/forms/update/UpdateSupportForm/index.tsx",
+      "file:src/components/support/tables/SupportTable/index.tsx"
+    ]
+  },
+  {
+    "id": "layer:roster-feature",
+    "name": "Roster Feature",
+    "description": "Personnel roster management feature including containers, forms (create/update), tables, and context-based state",
+    "nodeIds": [
+      "file:src/components/roster/context.tsx",
+      "file:src/components/roster/containers/RosterContainer/index.tsx",
+      "file:src/components/roster/forms/create/CreateRosterPersonnelForm/index.tsx",
+      "file:src/components/roster/forms/update/UpdateRosterPersonnelForm/index.tsx",
+      "file:src/components/roster/tables/PersonnelTable/index.tsx"
+    ]
+  },
+  {
+    "id": "layer:form-elements",
+    "name": "Form Elements",
+    "description": "Reusable form components and controls (FormLabel, FormError, FormContainer, FormBtns, DeleteBtn, RemoveBtn) for consistent form UI",
+    "nodeIds": [
+      "file:src/components/form-elements/FormContainer/index.tsx",
+      "file:src/components/form-elements/FormLabel/index.tsx",
+      "file:src/components/form-elements/FormError/index.tsx",
+      "file:src/components/form-elements/RequiredIcon/index.tsx",
+      "file:src/components/form-elements/buttons/FormBtns/index.tsx",
+      "file:src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "file:src/components/form-elements/buttons/RemoveBtn/index.tsx"
+    ]
+  },
+  {
+    "id": "layer:error-handling",
+    "name": "Error Handling",
+    "description": "Error boundary wrapper for graceful error handling across the application",
+    "nodeIds": [
+      "file:src/components/error/ErrorBoundary/index.tsx"
+    ]
+  },
+  {
+    "id": "layer:authentication",
+    "name": "Authentication",
+    "description": "Azure AD authentication setup with MSAL, auth context provider, hooks, and development mock support",
+    "nodeIds": [
+      "file:src/context/Auth/index.tsx",
+      "file:src/context/Auth/config.ts",
+      "file:src/context/Auth/constants.ts",
+      "file:src/context/Auth/hooks/AuthProvider.tsx",
+      "file:src/context/Auth/hooks/useHandleLoginRedirect.ts",
+      "file:src/context/Auth/hooks/useHandleLogoutRedirect.ts",
+      "file:src/pages/Login/index.tsx"
+    ]
+  },
+  {
+    "id": "layer:api-service",
+    "name": "API Service Layer",
+    "description": "Centralized API integration layer with all server-side calls, types, and environment-aware configuration",
+    "nodeIds": [
+      "file:src/context/App/AppActions.ts",
+      "file:src/context/App/AppTypes.ts",
+      "file:src/config/index.ts"
+    ]
+  },
+  {
+    "id": "layer:helpers-utilities",
+    "name": "Helpers & Utilities",
+    "description": "Shared custom hooks, utility functions, and helper modules for authentication, data formatting, animations, and common patterns",
+    "nodeIds": [
+      "file:src/helpers/hooks.ts",
+      "file:src/helpers/utils.ts",
+      "file:src/utils/Toast/Toast.tsx",
+      "file:src/utils/Motion/index.tsx",
+      "file:src/utils/PageWrapper/index.tsx",
+      "file:src/utils/HandleLoading/index.tsx"
+    ]
+  },
+  {
+    "id": "layer:configuration",
+    "name": "Configuration & Build",
+    "description": "Build configuration, package management, linting, and testing setup",
+    "nodeIds": [
+      "file:vite.config.ts",
+      "file:vitest.config.ts",
+      "file:tsconfig.json",
+      "file:eslint.config.js",
+      "config:package.json",
+      "config:.env.development"
+    ]
+  },
+  {
+    "id": "layer:testing",
+    "name": "Testing & Mocks",
+    "description": "Test utilities, setup, and mock data factories for integration and unit testing",
+    "nodeIds": [
+      "file:src/test/setup.ts",
+      "file:src/test/utils.tsx",
+      "file:src/test/mocks/api.ts"
+    ]
+  },
+  {
+    "id": "layer:documentation",
+    "name": "Documentation",
+    "description": "Project documentation and development guides",
+    "nodeIds": [
+      "document:README.md",
+      "document:CLAUDE.md"
+    ]
+  }
+]

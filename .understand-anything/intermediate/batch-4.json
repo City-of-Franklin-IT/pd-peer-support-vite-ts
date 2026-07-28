@@ -1,0 +1,870 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/roster/containers/RosterContainer/index.tsx",
+      "type": "file",
+      "name": "RosterContainer/index.tsx",
+      "filePath": "src/components/roster/containers/RosterContainer/index.tsx",
+      "summary": "Container component that renders the personnel roster display with a table of peer support staff members.",
+      "tags": ["component", "container", "roster"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/containers/RosterContainer/index.tsx:RosterContainer",
+      "type": "function",
+      "name": "RosterContainer",
+      "filePath": "src/components/roster/containers/RosterContainer/index.tsx",
+      "lineRange": [11, 28],
+      "summary": "React component that wraps the personnel roster table and displays peer support staff.",
+      "tags": ["component", "container", "react"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/roster/containers/RosterContainer/test/index.spec.tsx",
+      "type": "file",
+      "name": "RosterContainer/test/index.spec.tsx",
+      "filePath": "src/components/roster/containers/RosterContainer/test/index.spec.tsx",
+      "summary": "Unit tests for RosterContainer component using Vitest and Testing Library.",
+      "tags": ["test", "unit-test", "react-testing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/roster/tables/PersonnelTable/components.tsx",
+      "type": "file",
+      "name": "PersonnelTable/components.tsx",
+      "filePath": "src/components/roster/tables/PersonnelTable/components.tsx",
+      "summary": "Exports table sub-components (Table, TableHeaders, TableBody, TableRow) for displaying personnel roster data.",
+      "tags": ["component", "table", "sub-components"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/tables/PersonnelTable/components.tsx:Table",
+      "type": "function",
+      "name": "Table",
+      "filePath": "src/components/roster/tables/PersonnelTable/components.tsx",
+      "lineRange": [6, 11],
+      "summary": "Renders the main table element wrapping table headers and body.",
+      "tags": ["component", "ui", "table"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/tables/PersonnelTable/components.tsx:TableHeaders",
+      "type": "function",
+      "name": "TableHeaders",
+      "filePath": "src/components/roster/tables/PersonnelTable/components.tsx",
+      "lineRange": [13, 20],
+      "summary": "Renders table header row with columns for personnel data (name, email, contact).",
+      "tags": ["component", "ui", "table-header"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/tables/PersonnelTable/components.tsx:TableBody",
+      "type": "function",
+      "name": "TableBody",
+      "filePath": "src/components/roster/tables/PersonnelTable/components.tsx",
+      "lineRange": [22, 33],
+      "summary": "Maps personnel data and renders table rows for each roster member.",
+      "tags": ["component", "ui", "table-body"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/tables/PersonnelTable/components.tsx:TableRow",
+      "type": "function",
+      "name": "TableRow",
+      "filePath": "src/components/roster/tables/PersonnelTable/components.tsx",
+      "lineRange": [40, 49],
+      "summary": "Renders a single personnel table row with hover and click handlers.",
+      "tags": ["component", "ui", "table-row"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/roster/tables/PersonnelTable/hooks.ts",
+      "type": "file",
+      "name": "PersonnelTable/hooks.ts",
+      "filePath": "src/components/roster/tables/PersonnelTable/hooks.ts",
+      "summary": "Custom hooks for personnel table row interaction handling and state management.",
+      "tags": ["hook", "utility", "event-handling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/tables/PersonnelTable/hooks.ts:useHandleTableRow",
+      "type": "function",
+      "name": "useHandleTableRow",
+      "filePath": "src/components/roster/tables/PersonnelTable/hooks.ts",
+      "lineRange": [11, 23],
+      "summary": "Custom hook that provides table row styling and click handler logic.",
+      "tags": ["hook", "custom-hook", "state-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/tables/PersonnelTable/hooks.ts:useOnTableRowClick",
+      "type": "function",
+      "name": "useOnTableRowClick",
+      "filePath": "src/components/roster/tables/PersonnelTable/hooks.ts",
+      "lineRange": [28, 35],
+      "summary": "Custom hook that dispatches roster context actions when a table row is clicked.",
+      "tags": ["hook", "custom-hook", "context-dispatch"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/roster/tables/PersonnelTable/index.tsx",
+      "type": "file",
+      "name": "PersonnelTable/index.tsx",
+      "filePath": "src/components/roster/tables/PersonnelTable/index.tsx",
+      "summary": "Main export for PersonnelTable component, composing sub-components and hooks.",
+      "tags": ["component", "table", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/roster/tables/PersonnelTable/index.tsx:PersonnelTable",
+      "type": "function",
+      "name": "PersonnelTable",
+      "filePath": "src/components/roster/tables/PersonnelTable/index.tsx",
+      "lineRange": [7, 12],
+      "summary": "React component that renders the personnel roster table.",
+      "tags": ["component", "table", "react"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/roster/tables/PersonnelTable/test/index.spec.tsx",
+      "type": "file",
+      "name": "PersonnelTable/test/index.spec.tsx",
+      "filePath": "src/components/roster/tables/PersonnelTable/test/index.spec.tsx",
+      "summary": "Unit tests for PersonnelTable component covering rendering and interactions.",
+      "tags": ["test", "unit-test", "react-testing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/support/containers/SupportContainer/index.tsx",
+      "type": "file",
+      "name": "SupportContainer/index.tsx",
+      "filePath": "src/components/support/containers/SupportContainer/index.tsx",
+      "summary": "Main container component for peer support entry management, composing filters, pagination, and support table.",
+      "tags": ["component", "container", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/containers/SupportContainer/index.tsx:SupportContainer",
+      "type": "function",
+      "name": "SupportContainer",
+      "filePath": "src/components/support/containers/SupportContainer/index.tsx",
+      "lineRange": [12, 27],
+      "summary": "React component that orchestrates support entry display with filtering, pagination, and table views.",
+      "tags": ["component", "container", "react"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/containers/SupportContainer/test/index.spec.tsx",
+      "type": "file",
+      "name": "SupportContainer/test/index.spec.tsx",
+      "filePath": "src/components/support/containers/SupportContainer/test/index.spec.tsx",
+      "summary": "Unit tests for SupportContainer component integration with hooks and child components.",
+      "tags": ["test", "unit-test", "react-testing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/support/tables/SupportTable/components.tsx",
+      "type": "file",
+      "name": "SupportTable/components.tsx",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "summary": "Exports table sub-components and utilities for rendering support entries with personnel, dates, types, and notes.",
+      "tags": ["component", "table", "ui-components"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/components.tsx:Table",
+      "type": "function",
+      "name": "Table",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "lineRange": [10, 19],
+      "summary": "Renders the support table container with headers and body.",
+      "tags": ["component", "ui", "table"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/components.tsx:NoSupport",
+      "type": "function",
+      "name": "NoSupport",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "lineRange": [21, 26],
+      "summary": "Renders empty state message when no support entries exist.",
+      "tags": ["component", "ui", "empty-state"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/components.tsx:TableHeaders",
+      "type": "function",
+      "name": "TableHeaders",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "lineRange": [28, 42],
+      "summary": "Renders table header row with dynamic column visibility based on screen size.",
+      "tags": ["component", "ui", "table-header"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/components.tsx:TableBody",
+      "type": "function",
+      "name": "TableBody",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "lineRange": [44, 55],
+      "summary": "Maps support entries and renders table rows for each support record.",
+      "tags": ["component", "ui", "table-body"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/components.tsx:TableRow",
+      "type": "function",
+      "name": "TableRow",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "lineRange": [62, 74],
+      "summary": "Renders a single support entry row with interactive date, personnel, type, and note cells.",
+      "tags": ["component", "ui", "table-row"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/components.tsx:DateTimes",
+      "type": "function",
+      "name": "DateTimes",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "lineRange": [76, 85],
+      "summary": "Renders formatted start and end datetime for a support entry.",
+      "tags": ["component", "ui", "date-display"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/components.tsx:Personnel",
+      "type": "function",
+      "name": "Personnel",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "lineRange": [87, 101],
+      "summary": "Renders list of peer support personnel involved in the support entry.",
+      "tags": ["component", "ui", "personnel-list"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/components.tsx:SupportType",
+      "type": "function",
+      "name": "SupportType",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "lineRange": [103, 112],
+      "summary": "Renders support type with icon using supportTypeIconMap lookup.",
+      "tags": ["component", "ui", "type-display"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/components.tsx:SupportTypeIcon",
+      "type": "function",
+      "name": "SupportTypeIcon",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "lineRange": [114, 116],
+      "summary": "Renders icon image for support type.",
+      "tags": ["component", "ui", "icon"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/components.tsx:Note",
+      "type": "function",
+      "name": "Note",
+      "filePath": "src/components/support/tables/SupportTable/components.tsx",
+      "lineRange": [118, 124],
+      "summary": "Renders optional note text for support entry with conditional visibility.",
+      "tags": ["component", "ui", "text-display"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "type": "file",
+      "name": "SupportTable/hooks.ts",
+      "filePath": "src/components/support/tables/SupportTable/hooks.ts",
+      "summary": "Custom hooks for support table data filtering, pagination, column visibility, and row interactions.",
+      "tags": ["hook", "utility", "state-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/hooks.ts:useSetTableData",
+      "type": "function",
+      "name": "useSetTableData",
+      "filePath": "src/components/support/tables/SupportTable/hooks.ts",
+      "lineRange": [10, 52],
+      "summary": "Custom hook that filters and paginates support data based on date range, personnel, and search filters.",
+      "tags": ["hook", "custom-hook", "data-filtering"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/hooks.ts:useSetColumnVisibility",
+      "type": "function",
+      "name": "useSetColumnVisibility",
+      "filePath": "src/components/support/tables/SupportTable/hooks.ts",
+      "lineRange": [57, 73],
+      "summary": "Custom hook that manages responsive column visibility based on window resize events.",
+      "tags": ["hook", "custom-hook", "responsive-design"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/hooks.ts:useHandleTableRow",
+      "type": "function",
+      "name": "useHandleTableRow",
+      "filePath": "src/components/support/tables/SupportTable/hooks.ts",
+      "lineRange": [78, 92],
+      "summary": "Custom hook that provides table row styling and click handling with column visibility awareness.",
+      "tags": ["hook", "custom-hook", "event-handling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/tables/SupportTable/index.tsx",
+      "type": "file",
+      "name": "SupportTable/index.tsx",
+      "filePath": "src/components/support/tables/SupportTable/index.tsx",
+      "summary": "Main export for SupportTable component, composing table sub-components.",
+      "tags": ["component", "table", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/index.tsx:SupportTable",
+      "type": "function",
+      "name": "SupportTable",
+      "filePath": "src/components/support/tables/SupportTable/index.tsx",
+      "lineRange": [7, 15],
+      "summary": "React component that renders the support entries table.",
+      "tags": ["component", "table", "react"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/tables/SupportTable/test/hooks.spec.ts",
+      "type": "file",
+      "name": "SupportTable/test/hooks.spec.ts",
+      "filePath": "src/components/support/tables/SupportTable/test/hooks.spec.ts",
+      "summary": "Unit tests for custom hooks in SupportTable covering filtering, pagination, and visibility logic.",
+      "tags": ["test", "unit-test", "hook-testing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/support/tables/SupportTable/test/index.spec.tsx",
+      "type": "file",
+      "name": "SupportTable/test/index.spec.tsx",
+      "filePath": "src/components/support/tables/SupportTable/test/index.spec.tsx",
+      "summary": "Unit tests for SupportTable component covering rendering and integration with sub-components.",
+      "tags": ["test", "unit-test", "react-testing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/tables/SupportTable/test/utils.spec.ts",
+      "type": "file",
+      "name": "SupportTable/test/utils.spec.ts",
+      "filePath": "src/components/support/tables/SupportTable/test/utils.spec.ts",
+      "summary": "Unit tests for SupportTable utility functions covering date formatting and support type mapping.",
+      "tags": ["test", "unit-test", "utility-testing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/tables/SupportTable/utils.ts",
+      "type": "file",
+      "name": "SupportTable/utils.ts",
+      "filePath": "src/components/support/tables/SupportTable/utils.ts",
+      "summary": "Utility functions and constants for support table formatting, including date formatting and support type icon mapping.",
+      "tags": ["utility", "formatter", "constants"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/tables/SupportTable/utils.ts:handleDateTimes",
+      "type": "function",
+      "name": "handleDateTimes",
+      "filePath": "src/components/support/tables/SupportTable/utils.ts",
+      "lineRange": [27, 43],
+      "summary": "Formats support entry start and end datetime into ISO string and extracts time components.",
+      "tags": ["utility", "date-formatting", "formatter"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/context/App/AppTypes.ts",
+      "type": "file",
+      "name": "AppTypes.ts",
+      "filePath": "src/context/App/AppTypes.ts",
+      "summary": "Core TypeScript type definitions for support entries, personnel, rosters, and related data models used throughout the application.",
+      "tags": ["type-definition", "schema", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/test/mocks/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "src/test/mocks/api.ts",
+      "summary": "Mock factory functions for creating test data including personnel roster and support entries.",
+      "tags": ["test", "mock", "test-utilities"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/test/mocks/api.ts:createPersonnelRoster",
+      "type": "function",
+      "name": "createPersonnelRoster",
+      "filePath": "src/test/mocks/api.ts",
+      "lineRange": [3, 13],
+      "summary": "Factory function that creates mock PersonnelRosterInterface objects with optional overrides for testing.",
+      "tags": ["test-utility", "factory", "mock"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/test/mocks/api.ts:createSupport",
+      "type": "function",
+      "name": "createSupport",
+      "filePath": "src/test/mocks/api.ts",
+      "lineRange": [15, 30],
+      "summary": "Factory function that creates mock SupportInterface objects with optional overrides for testing.",
+      "tags": ["test-utility", "factory", "mock"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/test/mocks/api.ts:createMockCollection",
+      "type": "function",
+      "name": "createMockCollection",
+      "filePath": "src/test/mocks/api.ts",
+      "lineRange": [32, 55],
+      "summary": "Factory function that creates a complete mock data collection with personnel roster and support entries.",
+      "tags": ["test-utility", "factory", "mock"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/index.tsx",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/index.tsx",
+      "target": "function:src/components/roster/containers/RosterContainer/index.tsx:RosterContainer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/test/index.spec.tsx",
+      "target": "file:src/components/roster/containers/RosterContainer/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/containers/RosterContainer/test/index.spec.tsx",
+      "target": "file:src/components/roster/containers/RosterContainer/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/components.tsx",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/components.tsx",
+      "target": "function:src/components/roster/tables/PersonnelTable/components.tsx:Table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/components.tsx",
+      "target": "function:src/components/roster/tables/PersonnelTable/components.tsx:TableHeaders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/components.tsx",
+      "target": "function:src/components/roster/tables/PersonnelTable/components.tsx:TableBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/components.tsx",
+      "target": "function:src/components/roster/tables/PersonnelTable/components.tsx:TableRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/components.tsx",
+      "target": "function:src/components/roster/tables/PersonnelTable/components.tsx:Table",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/hooks.ts",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/hooks.ts",
+      "target": "function:src/components/roster/tables/PersonnelTable/hooks.ts:useHandleTableRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/hooks.ts",
+      "target": "function:src/components/roster/tables/PersonnelTable/hooks.ts:useOnTableRowClick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/hooks.ts",
+      "target": "function:src/components/roster/tables/PersonnelTable/hooks.ts:useHandleTableRow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/index.tsx",
+      "target": "file:src/components/roster/tables/PersonnelTable/components.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/index.tsx",
+      "target": "file:src/components/roster/tables/PersonnelTable/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/index.tsx",
+      "target": "function:src/components/roster/tables/PersonnelTable/index.tsx:PersonnelTable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/test/index.spec.tsx",
+      "target": "file:src/components/roster/tables/PersonnelTable/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/roster/tables/PersonnelTable/test/index.spec.tsx",
+      "target": "file:src/components/roster/tables/PersonnelTable/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/index.tsx",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/index.tsx",
+      "target": "function:src/components/support/containers/SupportContainer/index.tsx:SupportContainer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/index.tsx",
+      "target": "function:src/components/support/tables/SupportTable/hooks.ts:useSetTableData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/test/index.spec.tsx",
+      "target": "file:src/components/support/containers/SupportContainer/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/containers/SupportContainer/test/index.spec.tsx",
+      "target": "file:src/components/support/containers/SupportContainer/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:Table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:NoSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:TableHeaders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:TableBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:TableRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:DateTimes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:Personnel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:SupportType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:SupportTypeIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:Note",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:Table",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/components.tsx",
+      "target": "function:src/components/support/tables/SupportTable/components.tsx:NoSupport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "target": "function:src/components/support/tables/SupportTable/hooks.ts:useSetTableData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "target": "function:src/components/support/tables/SupportTable/hooks.ts:useSetColumnVisibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "target": "function:src/components/support/tables/SupportTable/hooks.ts:useHandleTableRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "target": "function:src/components/support/tables/SupportTable/hooks.ts:useSetTableData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "target": "function:src/components/support/tables/SupportTable/hooks.ts:useSetColumnVisibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "target": "function:src/components/support/tables/SupportTable/hooks.ts:useHandleTableRow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/index.tsx",
+      "target": "file:src/components/support/tables/SupportTable/components.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/index.tsx",
+      "target": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/index.tsx",
+      "target": "function:src/components/support/tables/SupportTable/index.tsx:SupportTable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/test/hooks.spec.ts",
+      "target": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/test/hooks.spec.ts",
+      "target": "file:src/components/support/tables/SupportTable/hooks.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/test/index.spec.tsx",
+      "target": "file:src/components/support/tables/SupportTable/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/test/index.spec.tsx",
+      "target": "file:src/components/support/tables/SupportTable/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/test/utils.spec.ts",
+      "target": "file:src/components/support/tables/SupportTable/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/test/utils.spec.ts",
+      "target": "file:src/components/support/tables/SupportTable/utils.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/utils.ts",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/utils.ts",
+      "target": "function:src/components/support/tables/SupportTable/utils.ts:handleDateTimes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/tables/SupportTable/utils.ts",
+      "target": "function:src/components/support/tables/SupportTable/utils.ts:handleDateTimes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/test/mocks/api.ts",
+      "target": "file:src/context/App/AppTypes.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/test/mocks/api.ts",
+      "target": "function:src/test/mocks/api.ts:createPersonnelRoster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/test/mocks/api.ts",
+      "target": "function:src/test/mocks/api.ts:createSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/test/mocks/api.ts",
+      "target": "function:src/test/mocks/api.ts:createMockCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/test/mocks/api.ts",
+      "target": "function:src/test/mocks/api.ts:createPersonnelRoster",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/test/mocks/api.ts",
+      "target": "function:src/test/mocks/api.ts:createSupport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/test/mocks/api.ts",
+      "target": "function:src/test/mocks/api.ts:createMockCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

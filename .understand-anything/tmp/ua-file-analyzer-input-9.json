@@ -1,0 +1,68 @@
+{
+  "projectRoot": "/home/andrew/apps/typescript/pd/pd-peer-support-vite-ts",
+  "batchFiles": [
+    {
+      "path": "src/components/support/forms/create/CreatePersonnelForm/components.tsx",
+      "language": "typescript",
+      "sizeLines": 100,
+      "fileCategory": "component"
+    },
+    {
+      "path": "src/components/support/forms/create/CreatePersonnelForm/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 50,
+      "fileCategory": "hooks"
+    },
+    {
+      "path": "src/components/support/forms/create/CreatePersonnelForm/index.tsx",
+      "language": "typescript",
+      "sizeLines": 50,
+      "fileCategory": "component"
+    },
+    {
+      "path": "src/components/support/forms/create/CreatePersonnelForm/utils.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "utility"
+    },
+    {
+      "path": "src/components/roster/containers/RosterContainer/hooks.ts",
+      "language": "typescript",
+      "sizeLines": 100,
+      "fileCategory": "hooks"
+    }
+  ],
+  "batchImportData": {
+    "src/components/support/forms/create/CreatePersonnelForm/components.tsx": {
+      "imports": [
+        { "source": "@components/form-elements", "specifiers": ["FormLabel", "FormError"] },
+        { "source": "./hooks", "specifiers": [] },
+        { "source": "./utils", "specifiers": [] }
+      ]
+    },
+    "src/components/support/forms/create/CreatePersonnelForm/hooks.ts": {
+      "imports": [
+        { "source": "react-hook-form", "specifiers": [] },
+        { "source": "@context/App", "specifiers": ["AppTypes"] }
+      ]
+    },
+    "src/components/support/forms/create/CreatePersonnelForm/index.tsx": {
+      "imports": [
+        { "source": "./components", "specifiers": [] },
+        { "source": "./hooks", "specifiers": [] },
+        { "source": "./utils", "specifiers": [] }
+      ]
+    },
+    "src/components/support/forms/create/CreatePersonnelForm/utils.ts": {
+      "imports": []
+    },
+    "src/components/roster/containers/RosterContainer/hooks.ts": {
+      "imports": [
+        { "source": "react-query", "specifiers": [] },
+        { "source": "@helpers/hooks", "specifiers": ["useEnableQuery"] },
+        { "source": "@helpers/utils", "specifiers": ["authHeaders"] },
+        { "source": "@context/App", "specifiers": ["AppActions"] }
+      ]
+    }
+  }
+}

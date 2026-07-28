@@ -1,0 +1,823 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/form-elements/buttons/FormBtns/components.tsx",
+      "type": "file",
+      "name": "components.tsx",
+      "filePath": "src/components/form-elements/buttons/FormBtns/components.tsx",
+      "summary": "Exports three reusable form action buttons—Cancel, Reset, and Save—with form state integration and disabled state management.",
+      "tags": ["button-components", "form-elements", "react-hook-form"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/buttons/FormBtns/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/components/form-elements/buttons/FormBtns/hooks.ts",
+      "summary": "Provides useDisableBtn hook that determines button disabled state based on form validation and submission status.",
+      "tags": ["utility-hook", "form-validation", "memoized"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/buttons/FormBtns/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/form-elements/buttons/FormBtns/index.tsx",
+      "summary": "Main FormBtns component that composes Cancel, Reset, and Save buttons in a responsive flex layout with customizable cancel handler.",
+      "tags": ["component", "form-actions", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/buttons/FormBtns/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/form-elements/buttons/FormBtns/test/index.spec.tsx",
+      "summary": "Test suite for FormBtns component using Vitest and react-hook-form test utilities.",
+      "tags": ["test", "component-test", "form-elements"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/buttons/RemoveBtn/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/form-elements/buttons/RemoveBtn/index.tsx",
+      "summary": "Renders a conditional remove button as a badge with error styling, visible only when the visible prop is true.",
+      "tags": ["component", "button", "conditional-render"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/buttons/RemoveBtn/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/form-elements/buttons/RemoveBtn/test/index.spec.tsx",
+      "summary": "Test suite for RemoveBtn component verifying visibility and click behavior.",
+      "tags": ["test", "component-test", "unit-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/Header/components.tsx",
+      "type": "file",
+      "name": "components.tsx",
+      "filePath": "src/components/layout/Header/components.tsx",
+      "summary": "Exports six header sub-components including Title, Buttons navigation, HomeLink, HelpDoc link, HeaderBtn nav link, and LogoutBtn with conditional rendering based on authentication and page context.",
+      "tags": ["layout-component", "navigation", "authentication"],
+      "complexity": "moderate",
+      "languageNotes": "Demonstrates conditional rendering patterns and context integration for active page highlighting."
+    },
+    {
+      "id": "file:src/components/layout/Header/context.tsx",
+      "type": "file",
+      "name": "context.tsx",
+      "filePath": "src/components/layout/Header/context.tsx",
+      "summary": "Defines HeaderContext with reducer pattern to manage active page state for navigation highlighting across the header.",
+      "tags": ["context", "state-management", "reducer"],
+      "complexity": "simple",
+      "languageNotes": "Uses TypeScript union types to enforce valid page names and reducer action types."
+    },
+    {
+      "id": "file:src/components/layout/Header/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/components/layout/Header/hooks.ts",
+      "summary": "Provides three custom hooks for header behavior: useHandleTitle determines navigation links, useHandleButtonsVisibility controls button display on login page, and useSetActivePage tracks route changes.",
+      "tags": ["utility-hooks", "routing", "location-tracking"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/layout/Header/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/layout/Header/index.tsx",
+      "summary": "Main Header component that orchestrates Title, navigation Buttons, and HomeLink with active page state management.",
+      "tags": ["layout-component", "header", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/Header/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/layout/Header/test/index.spec.tsx",
+      "summary": "Test suite for Header component verifying rendering and navigation integration.",
+      "tags": ["test", "component-test", "integration-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/Layout/hooks.ts",
+      "type": "file",
+      "name": "hooks.ts",
+      "filePath": "src/components/layout/Layout/hooks.ts",
+      "summary": "Provides useAuthCheck hook that enforces authentication by redirecting unauthenticated users to the login page.",
+      "tags": ["utility-hook", "authentication", "route-guard"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/Layout/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/layout/Layout/index.tsx",
+      "summary": "Root Layout component wrapping the entire application with Header, Footer, HeaderProvider context, and auth check guard.",
+      "tags": ["layout-component", "entry-point", "root-wrapper"],
+      "complexity": "simple",
+      "languageNotes": "Uses React Router Outlet for nested page rendering with responsive container sizing."
+    },
+    {
+      "id": "file:src/components/layout/Layout/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/layout/Layout/test/index.spec.tsx",
+      "summary": "Test suite for Layout component verifying root layout structure and children rendering.",
+      "tags": ["test", "component-test", "integration-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/Footer/components.tsx",
+      "type": "file",
+      "name": "components.tsx",
+      "filePath": "src/components/layout/Footer/components.tsx",
+      "summary": "Exports DocsBtn component that conditionally renders API documentation link, visible only to IT department users or in development mode.",
+      "tags": ["footer-component", "navigation", "conditional-render"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/Footer/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/layout/Footer/index.tsx",
+      "summary": "Main Footer component displaying developer credit text and conditional DocsBtn link.",
+      "tags": ["layout-component", "footer", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/Footer/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/layout/Footer/test/index.spec.tsx",
+      "summary": "Test suite for Footer component verification.",
+      "tags": ["test", "component-test", "unit-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+      "summary": "Navigation button component that links back to the support page with border styling and hover effects.",
+      "tags": ["navigation-button", "component", "router-link"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/buttons/nav/BackToHomeBtn/test/index.spec.tsx",
+      "type": "file",
+      "name": "index.spec.tsx",
+      "filePath": "src/components/layout/buttons/nav/BackToHomeBtn/test/index.spec.tsx",
+      "summary": "Test suite for BackToHomeBtn navigation component.",
+      "tags": ["test", "component-test", "unit-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/buttons/FormBtns/components.tsx:CancelBtn",
+      "type": "function",
+      "name": "CancelBtn",
+      "filePath": "src/components/form-elements/buttons/FormBtns/components.tsx",
+      "lineRange": [4, 14],
+      "summary": "React component rendering a cancel button with error styling that accepts an onClick handler.",
+      "tags": ["button-component", "form-action", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/buttons/FormBtns/components.tsx:ResetBtn",
+      "type": "function",
+      "name": "ResetBtn",
+      "filePath": "src/components/form-elements/buttons/FormBtns/components.tsx",
+      "lineRange": [16, 27],
+      "summary": "React component rendering a reset button that clears form state using react-hook-form context.",
+      "tags": ["button-component", "form-action", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/buttons/FormBtns/components.tsx:SaveBtn",
+      "type": "function",
+      "name": "SaveBtn",
+      "filePath": "src/components/form-elements/buttons/FormBtns/components.tsx",
+      "lineRange": [29, 40],
+      "summary": "React component rendering a submit button with disabled state controlled by form validation status.",
+      "tags": ["button-component", "form-action", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/buttons/FormBtns/hooks.ts:useDisableBtn",
+      "type": "function",
+      "name": "useDisableBtn",
+      "filePath": "src/components/form-elements/buttons/FormBtns/hooks.ts",
+      "lineRange": [4, 12],
+      "summary": "Custom hook that memoizes button disabled state based on form validation and submission progress.",
+      "tags": ["custom-hook", "form-validation", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/buttons/FormBtns/index.tsx:FormBtns",
+      "type": "function",
+      "name": "FormBtns",
+      "filePath": "src/components/form-elements/buttons/FormBtns/index.tsx",
+      "lineRange": [4, 13],
+      "summary": "Main component composing Cancel, Reset, and Save buttons in a responsive flex layout.",
+      "tags": ["component", "form-element", "button-group"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/buttons/RemoveBtn/index.tsx:RemoveBtn",
+      "type": "function",
+      "name": "RemoveBtn",
+      "filePath": "src/components/form-elements/buttons/RemoveBtn/index.tsx",
+      "lineRange": [1, 12],
+      "summary": "Conditional remove button component that only renders when the visible prop is true.",
+      "tags": ["button-component", "conditional", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/components.tsx:Title",
+      "type": "function",
+      "name": "Title",
+      "filePath": "src/components/layout/Header/components.tsx",
+      "lineRange": [10, 26],
+      "summary": "Header title component displaying FPD icon and app title with navigation link.",
+      "tags": ["header-component", "navigation", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/components.tsx:Buttons",
+      "type": "function",
+      "name": "Buttons",
+      "filePath": "src/components/layout/Header/components.tsx",
+      "lineRange": [28, 45],
+      "summary": "Header navigation buttons container rendering Support, Create Support, Manage Roster, Login, and Logout buttons.",
+      "tags": ["header-component", "navigation", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/components.tsx:HomeLink",
+      "type": "function",
+      "name": "HomeLink",
+      "filePath": "src/components/layout/Header/components.tsx",
+      "lineRange": [47, 55],
+      "summary": "Header sub-link to external home page with warning hover styling.",
+      "tags": ["header-component", "navigation", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/components.tsx:HelpDoc",
+      "type": "function",
+      "name": "HelpDoc",
+      "filePath": "src/components/layout/Header/components.tsx",
+      "lineRange": [57, 66],
+      "summary": "Help documentation button linking to SharePoint documentation.",
+      "tags": ["header-component", "documentation", "external-link"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/components.tsx:HeaderBtn",
+      "type": "function",
+      "name": "HeaderBtn",
+      "filePath": "src/components/layout/Header/components.tsx",
+      "lineRange": [74, 90],
+      "summary": "Reusable navigation button component with active state styling and optional visibility control.",
+      "tags": ["header-component", "navigation", "router-link"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/components.tsx:LogoutBtn",
+      "type": "function",
+      "name": "LogoutBtn",
+      "filePath": "src/components/layout/Header/components.tsx",
+      "lineRange": [92, 107],
+      "summary": "Logout button component conditionally rendered only for authenticated users.",
+      "tags": ["header-component", "authentication", "conditional"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/context.tsx:HeaderReducer",
+      "type": "function",
+      "name": "HeaderReducer",
+      "filePath": "src/components/layout/Header/context.tsx",
+      "lineRange": [30, 41],
+      "summary": "Reducer function managing header context state for active page tracking.",
+      "tags": ["reducer", "state-management", "header-context"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/context.tsx:HeaderProvider",
+      "type": "function",
+      "name": "HeaderProvider",
+      "filePath": "src/components/layout/Header/context.tsx",
+      "lineRange": [43, 51],
+      "summary": "Context provider component supplying header state and dispatch to child components.",
+      "tags": ["context-provider", "state-management", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/hooks.ts:useHandleTitle",
+      "type": "function",
+      "name": "useHandleTitle",
+      "filePath": "src/components/layout/Header/hooks.ts",
+      "lineRange": [11, 17],
+      "summary": "Hook that determines the title link destination based on current route.",
+      "tags": ["custom-hook", "routing", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/hooks.ts:useHandleButtonsVisibility",
+      "type": "function",
+      "name": "useHandleButtonsVisibility",
+      "filePath": "src/components/layout/Header/hooks.ts",
+      "lineRange": [22, 28],
+      "summary": "Hook that determines header button visibility based on page location.",
+      "tags": ["custom-hook", "routing", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Header/hooks.ts:useSetActivePage",
+      "type": "function",
+      "name": "useSetActivePage",
+      "filePath": "src/components/layout/Header/hooks.ts",
+      "lineRange": [33, 59],
+      "summary": "Hook that updates header context with active page name when route changes.",
+      "tags": ["custom-hook", "routing", "side-effect", "exported"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/layout/Header/index.tsx:Header",
+      "type": "function",
+      "name": "Header",
+      "filePath": "src/components/layout/Header/index.tsx",
+      "lineRange": [6, 22],
+      "summary": "Main header component orchestrating title, navigation buttons, and home link.",
+      "tags": ["layout-component", "header", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Layout/hooks.ts:useAuthCheck",
+      "type": "function",
+      "name": "useAuthCheck",
+      "filePath": "src/components/layout/Layout/hooks.ts",
+      "lineRange": [5, 16],
+      "summary": "Hook that enforces authentication by redirecting unauthenticated users to login page.",
+      "tags": ["custom-hook", "authentication", "route-guard", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Layout/index.tsx:Layout",
+      "type": "function",
+      "name": "Layout",
+      "filePath": "src/components/layout/Layout/index.tsx",
+      "lineRange": [9, 25],
+      "summary": "Root layout component wrapping the application with header, footer, and outlet for nested routes.",
+      "tags": ["layout-component", "root-wrapper", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Footer/components.tsx:DocsBtn",
+      "type": "function",
+      "name": "DocsBtn",
+      "filePath": "src/components/layout/Footer/components.tsx",
+      "lineRange": [5, 16],
+      "summary": "Footer button linking to API documentation, visible only to IT department or in development mode.",
+      "tags": ["footer-component", "documentation", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/Footer/index.tsx:Footer",
+      "type": "function",
+      "name": "Footer",
+      "filePath": "src/components/layout/Footer/index.tsx",
+      "lineRange": [4, 12],
+      "summary": "Main footer component displaying developer credit and conditional API docs button.",
+      "tags": ["layout-component", "footer", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/layout/buttons/nav/BackToHomeBtn/index.tsx:BackToHomeBtn",
+      "type": "function",
+      "name": "BackToHomeBtn",
+      "filePath": "src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+      "lineRange": [3, 12],
+      "summary": "Navigation button linking back to support page with border styling.",
+      "tags": ["navigation-button", "component", "exported"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/components.tsx",
+      "target": "file:src/components/form-elements/buttons/RemoveBtn/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/index.tsx",
+      "target": "file:src/components/form-elements/buttons/FormBtns/components.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/test/index.spec.tsx",
+      "target": "file:src/components/form-elements/buttons/FormBtns/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/RemoveBtn/test/index.spec.tsx",
+      "target": "file:src/components/form-elements/buttons/RemoveBtn/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/Header/hooks.ts",
+      "target": "file:src/components/layout/Header/context.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/Header/index.tsx",
+      "target": "file:src/components/layout/Header/components.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/Header/index.tsx",
+      "target": "file:src/components/layout/Header/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/Header/test/index.spec.tsx",
+      "target": "file:src/components/layout/Header/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/Layout/index.tsx",
+      "target": "file:src/components/layout/Header/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/Layout/index.tsx",
+      "target": "file:src/components/layout/Footer/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/Footer/test/index.spec.tsx",
+      "target": "file:src/components/layout/Footer/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/BackToHomeBtn/test/index.spec.tsx",
+      "target": "file:src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/components.tsx",
+      "target": "function:src/components/form-elements/buttons/FormBtns/components.tsx:CancelBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/components.tsx",
+      "target": "function:src/components/form-elements/buttons/FormBtns/components.tsx:ResetBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/components.tsx",
+      "target": "function:src/components/form-elements/buttons/FormBtns/components.tsx:SaveBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/hooks.ts",
+      "target": "function:src/components/form-elements/buttons/FormBtns/hooks.ts:useDisableBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/index.tsx",
+      "target": "function:src/components/form-elements/buttons/FormBtns/index.tsx:FormBtns",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/RemoveBtn/index.tsx",
+      "target": "function:src/components/form-elements/buttons/RemoveBtn/index.tsx:RemoveBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/components.tsx",
+      "target": "function:src/components/layout/Header/components.tsx:Title",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/components.tsx",
+      "target": "function:src/components/layout/Header/components.tsx:Buttons",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/components.tsx",
+      "target": "function:src/components/layout/Header/components.tsx:HomeLink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/components.tsx",
+      "target": "function:src/components/layout/Header/components.tsx:HelpDoc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/components.tsx",
+      "target": "function:src/components/layout/Header/components.tsx:HeaderBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/components.tsx",
+      "target": "function:src/components/layout/Header/components.tsx:LogoutBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/context.tsx",
+      "target": "function:src/components/layout/Header/context.tsx:HeaderReducer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/context.tsx",
+      "target": "function:src/components/layout/Header/context.tsx:HeaderProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/hooks.ts",
+      "target": "function:src/components/layout/Header/hooks.ts:useHandleTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/hooks.ts",
+      "target": "function:src/components/layout/Header/hooks.ts:useHandleButtonsVisibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/hooks.ts",
+      "target": "function:src/components/layout/Header/hooks.ts:useSetActivePage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Header/index.tsx",
+      "target": "function:src/components/layout/Header/index.tsx:Header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Layout/hooks.ts",
+      "target": "function:src/components/layout/Layout/hooks.ts:useAuthCheck",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Layout/index.tsx",
+      "target": "function:src/components/layout/Layout/index.tsx:Layout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Footer/components.tsx",
+      "target": "function:src/components/layout/Footer/components.tsx:DocsBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/Footer/index.tsx",
+      "target": "function:src/components/layout/Footer/index.tsx:Footer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+      "target": "function:src/components/layout/buttons/nav/BackToHomeBtn/index.tsx:BackToHomeBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/components.tsx",
+      "target": "function:src/components/form-elements/buttons/FormBtns/components.tsx:CancelBtn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/components.tsx",
+      "target": "function:src/components/form-elements/buttons/FormBtns/components.tsx:ResetBtn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/components.tsx",
+      "target": "function:src/components/form-elements/buttons/FormBtns/components.tsx:SaveBtn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/hooks.ts",
+      "target": "function:src/components/form-elements/buttons/FormBtns/hooks.ts:useDisableBtn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/layout/Header/components.tsx",
+      "target": "function:src/components/layout/Header/components.tsx:Title",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/layout/Header/components.tsx",
+      "target": "function:src/components/layout/Header/components.tsx:Buttons",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/layout/Header/components.tsx",
+      "target": "function:src/components/layout/Header/components.tsx:HomeLink",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/layout/Header/context.tsx",
+      "target": "function:src/components/layout/Header/context.tsx:HeaderProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/layout/Header/hooks.ts",
+      "target": "function:src/components/layout/Header/hooks.ts:useHandleTitle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/layout/Header/hooks.ts",
+      "target": "function:src/components/layout/Header/hooks.ts:useHandleButtonsVisibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/layout/Header/hooks.ts",
+      "target": "function:src/components/layout/Header/hooks.ts:useSetActivePage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/layout/Layout/hooks.ts",
+      "target": "function:src/components/layout/Layout/hooks.ts:useAuthCheck",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/layout/Footer/components.tsx",
+      "target": "function:src/components/layout/Footer/components.tsx:DocsBtn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/form-elements/buttons/FormBtns/components.tsx:SaveBtn",
+      "target": "function:src/components/form-elements/buttons/FormBtns/hooks.ts:useDisableBtn",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/layout/Header/components.tsx:Title",
+      "target": "function:src/components/layout/Header/hooks.ts:useHandleTitle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/layout/Header/components.tsx:Buttons",
+      "target": "function:src/components/layout/Header/hooks.ts:useHandleButtonsVisibility",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/layout/Header/index.tsx:Header",
+      "target": "function:src/components/layout/Header/hooks.ts:useSetActivePage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/components/layout/Layout/index.tsx:Layout",
+      "target": "function:src/components/layout/Layout/hooks.ts:useAuthCheck",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/FormBtns/test/index.spec.tsx",
+      "target": "file:src/components/form-elements/buttons/FormBtns/index.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/RemoveBtn/index.tsx",
+      "target": "file:src/components/form-elements/buttons/RemoveBtn/test/index.spec.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/layout/Header/index.tsx",
+      "target": "file:src/components/layout/Header/test/index.spec.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/layout/Layout/index.tsx",
+      "target": "file:src/components/layout/Layout/test/index.spec.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/layout/Footer/index.tsx",
+      "target": "file:src/components/layout/Footer/test/index.spec.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+      "target": "file:src/components/layout/buttons/nav/BackToHomeBtn/test/index.spec.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

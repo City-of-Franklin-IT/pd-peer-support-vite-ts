@@ -1,0 +1,457 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 10,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/components/support/containers/FiltersContainer/components.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 81,
+      "functions": [
+        {
+          "name": "DateRangeFilterInputs",
+          "startLine": 6,
+          "endLine": 23,
+          "params": []
+        },
+        {
+          "name": "PersonnelFilter",
+          "startLine": 25,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "Search",
+          "startLine": 42,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "DateRangeInput",
+          "startLine": 65,
+          "endLine": 78,
+          "params": [
+            "props"
+          ]
+        },
+        {
+          "name": "ClearFilterBtn",
+          "startLine": 85,
+          "endLine": 93,
+          "params": [
+            "props"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DateRangeFilterInputs",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "PersonnelFilter",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "Search",
+          "line": 42,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DateRangeFilterInputs",
+          "callee": "useHandleDateRangeFilterInputs",
+          "lineNumber": 7
+        },
+        {
+          "caller": "PersonnelFilter",
+          "callee": "useHandlePersonnelFilter",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Search",
+          "callee": "useHandleSearch",
+          "lineNumber": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/containers/FiltersContainer/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 104,
+      "nonEmptyLines": 82,
+      "functions": [
+        {
+          "name": "useHandleDateRangeFilterInputs",
+          "startLine": 7,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "useHandlePersonnelFilter",
+          "startLine": 49,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "useHandleSearch",
+          "startLine": 80,
+          "endLine": 104,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useHandleDateRangeFilterInputs",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "useHandlePersonnelFilter",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "useHandleSearch",
+          "line": 80,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useHandleDateRangeFilterInputs",
+          "callee": "useContext",
+          "lineNumber": 8
+        },
+        {
+          "caller": "dateOnChange",
+          "callee": "dispatch",
+          "lineNumber": 18
+        },
+        {
+          "caller": "clearBtnOnClick",
+          "callee": "dispatch",
+          "lineNumber": 23
+        },
+        {
+          "caller": "clearBtnOnClick",
+          "callee": "dispatch",
+          "lineNumber": 24
+        },
+        {
+          "caller": "useHandleDateRangeFilterInputs",
+          "callee": "dateOnChange",
+          "lineNumber": 34
+        },
+        {
+          "caller": "useHandleDateRangeFilterInputs",
+          "callee": "dateOnChange",
+          "lineNumber": 38
+        },
+        {
+          "caller": "useHandlePersonnelFilter",
+          "callee": "useContext",
+          "lineNumber": 50
+        },
+        {
+          "caller": "selectOnChange",
+          "callee": "dispatch",
+          "lineNumber": 56
+        },
+        {
+          "caller": "clearBtnOnClick",
+          "callee": "dispatch",
+          "lineNumber": 61
+        },
+        {
+          "caller": "useHandleSearch",
+          "callee": "useContext",
+          "lineNumber": 81
+        },
+        {
+          "caller": "searchOnChange",
+          "callee": "dispatch",
+          "lineNumber": 86
+        },
+        {
+          "caller": "clearBtnOnClick",
+          "callee": "dispatch",
+          "lineNumber": 90
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/containers/FiltersContainer/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "FiltersContainer",
+          "startLine": 7,
+          "endLine": 19,
+          "params": [
+            "{ visible }"
+          ]
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/containers/FiltersContainer/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 29,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/components.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "PageNavBtns",
+          "startLine": 7,
+          "endLine": 21,
+          "params": [
+            "{ count }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PageNavBtns",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PageNavBtns",
+          "callee": "useHandlePageNav",
+          "lineNumber": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "useHandlePageNav",
+          "startLine": 7,
+          "endLine": 48,
+          "params": [
+            "count"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "useHandlePageNav",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useHandlePageNav",
+          "callee": "useContext",
+          "lineNumber": 8
+        },
+        {
+          "caller": "btnOnClick",
+          "callee": "dispatch",
+          "lineNumber": 15
+        },
+        {
+          "caller": "useHandlePageNav",
+          "callee": "btnOnClick",
+          "lineNumber": 19
+        },
+        {
+          "caller": "useHandlePageNav",
+          "callee": "btnOnClick",
+          "lineNumber": 24
+        },
+        {
+          "caller": "useHandlePageNav",
+          "callee": "useEffect",
+          "lineNumber": 35
+        },
+        {
+          "caller": "useHandlePageNav",
+          "callee": "Math.ceil",
+          "lineNumber": 37
+        },
+        {
+          "caller": "useHandlePageNav",
+          "callee": "dispatch",
+          "lineNumber": 40
+        },
+        {
+          "caller": "useHandlePageNav",
+          "callee": "useEffect",
+          "lineNumber": 43
+        },
+        {
+          "caller": "useHandlePageNav",
+          "callee": "dispatch",
+          "lineNumber": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 8,
+      "functions": [
+        {
+          "name": "PaginationContainer",
+          "startLine": 4,
+          "endLine": 9,
+          "params": [
+            "{ count }"
+          ]
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/containers/PaginationContainer/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 25,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/context.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 106,
+      "nonEmptyLines": 96,
+      "functions": [
+        {
+          "name": "SupportReducer",
+          "startLine": 45,
+          "endLine": 94,
+          "params": [
+            "state",
+            "action"
+          ]
+        },
+        {
+          "name": "SupportProvider",
+          "startLine": 96,
+          "endLine": 104,
+          "params": [
+            "{ children }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SupportProvider",
+          "line": 96,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SupportProvider",
+          "callee": "useReducer",
+          "lineNumber": 97
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/support/test/context.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 66,
+      "functions": [
+        {
+          "name": "wrapper",
+          "startLine": 5,
+          "endLine": 7,
+          "params": [
+            "{ children }"
+          ]
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

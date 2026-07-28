@@ -1,0 +1,880 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/form-elements/FormError/index.tsx",
+      "type": "file",
+      "name": "FormError/index.tsx",
+      "filePath": "src/components/form-elements/FormError/index.tsx",
+      "summary": "Simple form error display component that conditionally renders error messages with warning styling.",
+      "tags": ["component", "form-element", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/FormError/index.tsx:FormError",
+      "type": "function",
+      "name": "FormError",
+      "filePath": "src/components/form-elements/FormError/index.tsx",
+      "lineRange": [1, 7],
+      "summary": "React component that renders error messages with warning styling when an error prop is provided.",
+      "tags": ["component", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/FormError/test/index.spec.tsx",
+      "type": "file",
+      "name": "FormError/test/index.spec.tsx",
+      "filePath": "src/components/form-elements/FormError/test/index.spec.tsx",
+      "summary": "Vitest test suite for FormError component covering rendering and error display behavior.",
+      "tags": ["test", "component-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/FormLabel/index.tsx",
+      "type": "file",
+      "name": "FormLabel/index.tsx",
+      "filePath": "src/components/form-elements/FormLabel/index.tsx",
+      "summary": "Composable form label component that combines label, required indicator, and error display into a reusable form field header.",
+      "tags": ["component", "form-element", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/FormLabel/index.tsx:FormLabel",
+      "type": "function",
+      "name": "FormLabel",
+      "filePath": "src/components/form-elements/FormLabel/index.tsx",
+      "lineRange": [12, 23],
+      "summary": "React component that renders a labeled form field with optional required indicator and error message display.",
+      "tags": ["component", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/FormLabel/test/index.spec.tsx",
+      "type": "file",
+      "name": "FormLabel/test/index.spec.tsx",
+      "filePath": "src/components/form-elements/FormLabel/test/index.spec.tsx",
+      "summary": "Vitest test suite for FormLabel component testing label rendering, required indicator display, and error messages.",
+      "tags": ["test", "component-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/RequiredIcon/index.tsx",
+      "type": "file",
+      "name": "RequiredIcon/index.tsx",
+      "filePath": "src/components/form-elements/RequiredIcon/index.tsx",
+      "summary": "Simple required field indicator component that displays a visual asterisk when a form field is required.",
+      "tags": ["component", "form-element", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/RequiredIcon/index.tsx:RequiredIcon",
+      "type": "function",
+      "name": "RequiredIcon",
+      "filePath": "src/components/form-elements/RequiredIcon/index.tsx",
+      "lineRange": [1, 9],
+      "summary": "React component that conditionally renders a red asterisk indicator for required form fields.",
+      "tags": ["component", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "type": "file",
+      "name": "DeleteBtn/index.tsx",
+      "filePath": "src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "summary": "Reusable delete button component with danger styling and configurable click handler.",
+      "tags": ["component", "button", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/form-elements/buttons/DeleteBtn/index.tsx:DeleteBtn",
+      "type": "function",
+      "name": "DeleteBtn",
+      "filePath": "src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "lineRange": [3, 13],
+      "summary": "React button component with danger styling that accepts onClick handler and label.",
+      "tags": ["component", "button"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/form-elements/buttons/DeleteBtn/test/index.spec.tsx",
+      "type": "file",
+      "name": "DeleteBtn/test/index.spec.tsx",
+      "filePath": "src/components/form-elements/buttons/DeleteBtn/test/index.spec.tsx",
+      "summary": "Vitest test suite for DeleteBtn component verifying button rendering and click event handling.",
+      "tags": ["test", "component-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+      "type": "file",
+      "name": "CreateOtherSupportForm/components.tsx",
+      "filePath": "src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+      "summary": "Exports DescriptionInput form field component for capturing non-personnel support recipient descriptions.",
+      "tags": ["component", "form-component"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateOtherSupportForm/components.tsx:DescriptionInput",
+      "type": "function",
+      "name": "DescriptionInput",
+      "filePath": "src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+      "lineRange": [9, 35],
+      "summary": "Form field component that captures description of non-personnel support recipients with form context integration.",
+      "tags": ["component", "form-field"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreateOtherSupportForm/hooks.ts",
+      "type": "file",
+      "name": "CreateOtherSupportForm/hooks.ts",
+      "filePath": "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts",
+      "summary": "Custom hook useIsVisible that determines visibility of the other support form based on support type field value.",
+      "tags": ["hook", "form-logic"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateOtherSupportForm/hooks.ts:useIsVisible",
+      "type": "function",
+      "name": "useIsVisible",
+      "filePath": "src/components/support/forms/create/CreateOtherSupportForm/hooks.ts",
+      "lineRange": [9, 15],
+      "summary": "Custom React hook that uses form context to determine if the other support form section should be displayed.",
+      "tags": ["hook", "form-logic"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "type": "file",
+      "name": "CreateOtherSupportForm/index.tsx",
+      "filePath": "src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "summary": "Form container for capturing support information for non-personnel recipients, conditionally rendered based on support type.",
+      "tags": ["component", "form", "support-feature"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateOtherSupportForm/index.tsx:CreateOtherSupportForm",
+      "type": "function",
+      "name": "CreateOtherSupportForm",
+      "filePath": "src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "lineRange": [6, 14],
+      "summary": "React component that renders the other support form when appropriate support types are selected.",
+      "tags": ["component", "form"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "type": "file",
+      "name": "CreateSupportForm/components.tsx",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "summary": "Exports 10 sub-components for the create support form including inputs for date/time, support type/designation, personnel, and notes.",
+      "tags": ["component", "form-component", "complex-form"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:Header",
+      "type": "function",
+      "name": "Header",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "lineRange": [12, 14],
+      "summary": "Simple heading component for form headers with consistent styling.",
+      "tags": ["component", "ui-element"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:DateTimeInputs",
+      "type": "function",
+      "name": "DateTimeInputs",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "lineRange": [16, 21],
+      "summary": "Wrapper component that renders start and end date/time input fields.",
+      "tags": ["component", "form-field"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:SupportDesignationSelect",
+      "type": "function",
+      "name": "SupportDesignationSelect",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "lineRange": [23, 46],
+      "summary": "Form field component for selecting support designation (employee type) with validation and error display.",
+      "tags": ["component", "form-field", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:SupportTypeSelect",
+      "type": "function",
+      "name": "SupportTypeSelect",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "lineRange": [48, 71],
+      "summary": "Form field component for selecting support type (debrief, defusing, etc.) with validation and error display.",
+      "tags": ["component", "form-field", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:NoteInput",
+      "type": "function",
+      "name": "NoteInput",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "lineRange": [73, 89],
+      "summary": "Textarea input component for support notes with form context integration.",
+      "tags": ["component", "form-field"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:PersonnelInputs",
+      "type": "function",
+      "name": "PersonnelInputs",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "lineRange": [91, 108],
+      "summary": "Container component that renders a list of personnel input fields from the form context.",
+      "tags": ["component", "form-field", "array-field"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:DateInput",
+      "type": "function",
+      "name": "DateInput",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "lineRange": [110, 136],
+      "summary": "Reusable date input field component with datetime picker and form context integration.",
+      "tags": ["component", "form-field", "date-picker"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:SupportDesignationOptions",
+      "type": "function",
+      "name": "SupportDesignationOptions",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "lineRange": [138, 147],
+      "summary": "Helper component that renders select options for support designations.",
+      "tags": ["component", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:SupportTypeOptions",
+      "type": "function",
+      "name": "SupportTypeOptions",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "lineRange": [149, 158],
+      "summary": "Helper component that renders select options for support types.",
+      "tags": ["component", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:AddPersonnelBtn",
+      "type": "function",
+      "name": "AddPersonnelBtn",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "lineRange": [160, 171],
+      "summary": "Button component that triggers adding a new personnel field to the form array.",
+      "tags": ["component", "form-control"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "type": "file",
+      "name": "CreateSupportForm/hooks.ts",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "summary": "Custom hooks for form creation workflow including form initialization, submission, personnel management, and navigation.",
+      "tags": ["hook", "form-logic", "custom-hook"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useHandleCreateSupport",
+      "type": "function",
+      "name": "useHandleCreateSupport",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "lineRange": [14, 20],
+      "summary": "Custom hook that orchestrates form methods, submission, and cancellation handlers for creating support entries.",
+      "tags": ["hook", "form-logic", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useHandleAddPersonnelBtn",
+      "type": "function",
+      "name": "useHandleAddPersonnelBtn",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "lineRange": [25, 38],
+      "summary": "Custom hook that returns click handler for adding new personnel fields to dynamic form array.",
+      "tags": ["hook", "form-logic", "exported"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useCreateSupport",
+      "type": "function",
+      "name": "useCreateSupport",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "lineRange": [43, 57],
+      "summary": "Custom hook that initializes React Hook Form with default values for support entry creation.",
+      "tags": ["hook", "form-initialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useOnCancelBtnClick",
+      "type": "function",
+      "name": "useOnCancelBtnClick",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "lineRange": [62, 68],
+      "summary": "Custom hook that returns click handler navigating back to support list on form cancellation.",
+      "tags": ["hook", "navigation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useHandleFormSubmit",
+      "type": "function",
+      "name": "useHandleFormSubmit",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "lineRange": [73, 89],
+      "summary": "Custom hook that returns memoized form submission handler managing API calls, cache invalidation, and navigation.",
+      "tags": ["hook", "form-submission"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "type": "file",
+      "name": "CreateSupportForm/index.tsx",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "summary": "Main create support form component that orchestrates form layout, field management, and submission using React Hook Form.",
+      "tags": ["component", "form", "entry-point", "support-feature"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/index.tsx:CreateSupportForm",
+      "type": "function",
+      "name": "CreateSupportForm",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "lineRange": [9, 32],
+      "summary": "React component that wraps form submission and renders create support form with all field components.",
+      "tags": ["component", "form"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx",
+      "type": "file",
+      "name": "CreateSupportForm/test/index.spec.tsx",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx",
+      "summary": "Vitest test suite for CreateSupportForm component covering form rendering, field validation, and submission behavior.",
+      "tags": ["test", "component-test", "integration-test"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/support/forms/create/CreateSupportForm/utils.ts",
+      "type": "file",
+      "name": "CreateSupportForm/utils.ts",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/utils.ts",
+      "summary": "Exports support designation and type constants and handleCreateSupport async function that orchestrates API calls for creating support entries with personnel.",
+      "tags": ["utility", "form-helper", "api-integration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/create/CreateSupportForm/utils.ts:handleCreateSupport",
+      "type": "function",
+      "name": "handleCreateSupport",
+      "filePath": "src/components/support/forms/create/CreateSupportForm/utils.ts",
+      "lineRange": [28, 44],
+      "summary": "Async function that creates a support entry and related personnel/other support records via API calls with proper error handling.",
+      "tags": ["utility", "api-call", "async"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/update/UpdateSupportForm/index.tsx",
+      "type": "file",
+      "name": "UpdateSupportForm/index.tsx",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/index.tsx",
+      "summary": "Main update support form component that extends CreateSupportForm for editing existing support entries with specialized hooks.",
+      "tags": ["component", "form", "support-feature"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/components/support/forms/update/UpdateSupportForm/index.tsx:UpdateSupportForm",
+      "type": "function",
+      "name": "UpdateSupportForm",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/index.tsx",
+      "lineRange": [13, 43],
+      "summary": "React component that renders the form for updating an existing support entry using CreateSupportForm as the base.",
+      "tags": ["component", "form"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx",
+      "type": "file",
+      "name": "UpdateSupportForm/test/index.spec.tsx",
+      "filePath": "src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx",
+      "summary": "Vitest test suite for UpdateSupportForm component covering form initialization, field population, and update submission.",
+      "tags": ["test", "component-test", "integration-test"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/pages/Create/utils.ts",
+      "type": "file",
+      "name": "Create/utils.ts",
+      "filePath": "src/pages/Create/utils.ts",
+      "summary": "Utility file exporting createFormMap object for mapping form modes to appropriate form components.",
+      "tags": ["utility", "form-routing"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/form-elements/FormError/index.tsx",
+      "target": "function:src/components/form-elements/FormError/index.tsx:FormError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/FormError/test/index.spec.tsx",
+      "target": "file:src/components/form-elements/FormError/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/form-elements/FormError/test/index.spec.tsx",
+      "target": "function:src/components/form-elements/FormError/index.tsx:FormError",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/form-elements/FormLabel/index.tsx",
+      "target": "file:src/components/form-elements/RequiredIcon/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/form-elements/FormLabel/index.tsx",
+      "target": "function:src/components/form-elements/FormLabel/index.tsx:FormLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/FormLabel/index.tsx",
+      "target": "file:src/components/form-elements/FormError/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/form-elements/FormLabel/index.tsx",
+      "target": "function:src/components/form-elements/RequiredIcon/index.tsx:RequiredIcon",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/form-elements/FormLabel/test/index.spec.tsx",
+      "target": "file:src/components/form-elements/FormLabel/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/form-elements/FormLabel/test/index.spec.tsx",
+      "target": "function:src/components/form-elements/FormLabel/index.tsx:FormLabel",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/form-elements/RequiredIcon/index.tsx",
+      "target": "function:src/components/form-elements/RequiredIcon/index.tsx:RequiredIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "target": "function:src/components/form-elements/buttons/DeleteBtn/index.tsx:DeleteBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/DeleteBtn/test/index.spec.tsx",
+      "target": "file:src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/form-elements/buttons/DeleteBtn/test/index.spec.tsx",
+      "target": "function:src/components/form-elements/buttons/DeleteBtn/index.tsx:DeleteBtn",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+      "target": "file:src/components/form-elements/FormLabel/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+      "target": "file:src/components/form-elements/FormError/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateOtherSupportForm/components.tsx:DescriptionInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateOtherSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateOtherSupportForm/hooks.ts:useIsVisible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "target": "file:src/components/support/forms/create/CreateOtherSupportForm/components.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "target": "file:src/components/support/forms/create/CreateOtherSupportForm/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "target": "function:src/components/support/forms/create/CreateOtherSupportForm/index.tsx:CreateOtherSupportForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateOtherSupportForm/index.tsx",
+      "target": "function:src/components/support/forms/create/CreateOtherSupportForm/hooks.ts:useIsVisible",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "file:src/components/form-elements/FormLabel/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "file:src/components/form-elements/FormError/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "file:src/components/form-elements/buttons/DeleteBtn/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:Header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:DateTimeInputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:SupportDesignationSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:SupportTypeSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:NoteInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:PersonnelInputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:DateInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:SupportDesignationOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:SupportTypeOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:AddPersonnelBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/form-elements/FormLabel/index.tsx:FormLabel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:SupportDesignationSelect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:SupportTypeSelect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:NoteInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:PersonnelInputs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:Header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/components.tsx:DateTimeInputs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useHandleCreateSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useHandleAddPersonnelBtn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useCreateSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useOnCancelBtnClick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useHandleFormSubmit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useHandleCreateSupport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useHandleAddPersonnelBtn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useCreateSupport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useOnCancelBtnClick",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useHandleFormSubmit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "target": "file:src/components/support/forms/create/CreateSupportForm/components.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "target": "file:src/components/support/forms/create/CreateSupportForm/hooks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "target": "file:src/components/support/forms/create/CreateSupportForm/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/index.tsx:CreateSupportForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/hooks.ts:useHandleCreateSupport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx",
+      "target": "file:src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx",
+      "target": "file:src/test/mocks/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/test/index.spec.tsx",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/index.tsx:CreateSupportForm",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/utils.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/utils.ts:handleCreateSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/create/CreateSupportForm/utils.ts",
+      "target": "function:src/components/support/forms/create/CreateSupportForm/utils.ts:handleCreateSupport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/index.tsx",
+      "target": "file:src/components/support/forms/create/CreateSupportForm/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/index.tsx",
+      "target": "function:src/components/support/forms/update/UpdateSupportForm/index.tsx:UpdateSupportForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx",
+      "target": "file:src/components/support/forms/update/UpdateSupportForm/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx",
+      "target": "file:src/test/mocks/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/support/forms/update/UpdateSupportForm/test/index.spec.tsx",
+      "target": "function:src/components/support/forms/update/UpdateSupportForm/index.tsx:UpdateSupportForm",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

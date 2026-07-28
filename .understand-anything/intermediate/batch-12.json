@@ -1,0 +1,345 @@
+{
+  "nodes": [
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "HTML entry point for the Vite application, sets up the root DOM element and loads the main TypeScript application module.",
+      "tags": ["entry-point", "html", "markup"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "src/index.css",
+      "summary": "Global stylesheet defining base typography, color variables, layout utilities, and system-wide styling for the Peer Support application.",
+      "tags": ["stylesheet", "global", "styling"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/vite-env.d.ts",
+      "type": "file",
+      "name": "vite-env.d.ts",
+      "filePath": "src/vite-env.d.ts",
+      "summary": "TypeScript ambient declaration file providing type definitions for Vite's client-side API.",
+      "tags": ["type-definition", "vite", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/test/setup.ts",
+      "type": "file",
+      "name": "setup.ts",
+      "filePath": "src/test/setup.ts",
+      "summary": "Test environment setup file configuring Vitest with jsdom and setting up global test utilities for DOM element creation.",
+      "tags": ["test", "configuration", "vitest"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/test/utils.tsx",
+      "type": "file",
+      "name": "utils.tsx",
+      "filePath": "src/test/utils.tsx",
+      "summary": "Test rendering utilities providing wrapper components for React Query, Router, and context providers used across the test suite.",
+      "tags": ["test", "utility", "testing-library"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/test/utils.tsx:renderWithRouter",
+      "type": "function",
+      "name": "renderWithRouter",
+      "filePath": "src/test/utils.tsx",
+      "lineRange": [21, 29],
+      "summary": "Renders a component wrapped in MemoryRouter for testing routes with optional initial route configuration.",
+      "tags": ["test", "router", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/test/utils.tsx:renderWithProviders",
+      "type": "function",
+      "name": "renderWithProviders",
+      "filePath": "src/test/utils.tsx",
+      "lineRange": [31, 42],
+      "summary": "Renders a component with QueryClient and MemoryRouter providers for comprehensive integration testing.",
+      "tags": ["test", "providers", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/test/utils.tsx:renderWithSupportCtx",
+      "type": "function",
+      "name": "renderWithSupportCtx",
+      "filePath": "src/test/utils.tsx",
+      "lineRange": [44, 57],
+      "summary": "Renders a component with SupportProvider context, QueryClient, and routing for testing support page components.",
+      "tags": ["test", "context", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/test/utils.tsx:renderWithRosterCtx",
+      "type": "function",
+      "name": "renderWithRosterCtx",
+      "filePath": "src/test/utils.tsx",
+      "lineRange": [59, 72],
+      "summary": "Renders a component with RosterProvider context, QueryClient, and routing for testing roster page components.",
+      "tags": ["test", "context", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/test/utils.tsx:renderWithHeaderCtx",
+      "type": "function",
+      "name": "renderWithHeaderCtx",
+      "filePath": "src/test/utils.tsx",
+      "lineRange": [74, 87],
+      "summary": "Renders a component with HeaderProvider context, QueryClient, and routing for testing header and layout components.",
+      "tags": ["test", "context", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Comprehensive project documentation covering overview, features, setup instructions, architecture, components, testing, and deployment for the Peer Support Management System.",
+      "tags": ["documentation", "entry-point", "guide"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:CLAUDE.md",
+      "type": "document",
+      "name": "CLAUDE.md",
+      "filePath": "CLAUDE.md",
+      "summary": "Developer guidance documentation detailing development commands, architecture patterns, authentication flow, state management, components, and testing practices for Claude Code.",
+      "tags": ["documentation", "development", "architecture"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/form-elements/FormContainer/FormContainer.module.css",
+      "type": "file",
+      "name": "FormContainer.module.css",
+      "filePath": "src/components/form-elements/FormContainer/FormContainer.module.css",
+      "summary": "CSS module stylesheet for FormContainer component providing form layout and styling for the form-elements feature.",
+      "tags": ["stylesheet", "module-css", "component"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/Toast/Toast.module.css",
+      "type": "file",
+      "name": "Toast.module.css",
+      "filePath": "src/utils/Toast/Toast.module.css",
+      "summary": "CSS module stylesheet for Toast notification component defining animation and positioning styles for system notifications.",
+      "tags": ["stylesheet", "module-css", "component"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.gitignore",
+      "type": "file",
+      "name": ".gitignore",
+      "filePath": ".gitignore",
+      "summary": "Git ignore configuration specifying which files and directories should be excluded from version control, including build artifacts and dependencies.",
+      "tags": ["infrastructure", "configuration", "vcs"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "Project manifest defining dependencies, dev dependencies, build scripts, and metadata for the npm package.",
+      "tags": ["configuration", "build-system", "package-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package-lock.json",
+      "type": "config",
+      "name": "package-lock.json",
+      "filePath": "package-lock.json",
+      "summary": "Lock file recording exact versions and dependency tree for reproducible installs across environments.",
+      "tags": ["configuration", "package-management", "dependency-lock"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:eslint.config.js",
+      "type": "config",
+      "name": "eslint.config.js",
+      "filePath": "eslint.config.js",
+      "summary": "ESLint configuration enabling TypeScript and React hooks linting rules for code quality enforcement.",
+      "tags": ["configuration", "linting", "code-quality"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:public/redirect.html",
+      "type": "file",
+      "name": "redirect.html",
+      "filePath": "public/redirect.html",
+      "summary": "HTML redirect page handling subdirectory routing for the application deployed at /peer-support path.",
+      "tags": ["markup", "routing", "deployment"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:public/vite.svg",
+      "type": "file",
+      "name": "vite.svg",
+      "filePath": "public/vite.svg",
+      "summary": "Vite project logo SVG asset used for branding and visual presentation.",
+      "tags": ["asset", "image", "static"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/test/utils.tsx",
+      "target": "function:src/test/utils.tsx:renderWithRouter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/test/utils.tsx",
+      "target": "function:src/test/utils.tsx:renderWithProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/test/utils.tsx",
+      "target": "function:src/test/utils.tsx:renderWithSupportCtx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/test/utils.tsx",
+      "target": "function:src/test/utils.tsx:renderWithRosterCtx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/test/utils.tsx",
+      "target": "function:src/test/utils.tsx:renderWithHeaderCtx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/test/utils.tsx",
+      "target": "function:src/test/utils.tsx:renderWithRouter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/test/utils.tsx",
+      "target": "function:src/test/utils.tsx:renderWithProviders",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/test/utils.tsx",
+      "target": "function:src/test/utils.tsx:renderWithSupportCtx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/test/utils.tsx",
+      "target": "function:src/test/utils.tsx:renderWithRosterCtx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/test/utils.tsx",
+      "target": "function:src/test/utils.tsx:renderWithHeaderCtx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:index.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:src/index.css",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:src/test/setup.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:eslint.config.js",
+      "target": "file:src/test/utils.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:eslint.config.js",
+      "target": "file:src/test/setup.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:index.html",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CLAUDE.md",
+      "target": "file:src/index.css",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CLAUDE.md",
+      "target": "file:src/test/setup.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CLAUDE.md",
+      "target": "file:src/test/utils.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:src/index.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/components/form-elements/FormContainer/FormContainer.module.css",
+      "target": "file:src/index.css",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/utils/Toast/Toast.module.css",
+      "target": "file:src/index.css",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

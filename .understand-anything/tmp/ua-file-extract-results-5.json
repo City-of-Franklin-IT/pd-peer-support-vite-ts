@@ -1,0 +1,665 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 19,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/components/form-elements/buttons/FormBtns/components.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "CancelBtn",
+          "startLine": 4,
+          "endLine": 14,
+          "params": [
+            "{ onClick }"
+          ]
+        },
+        {
+          "name": "ResetBtn",
+          "startLine": 16,
+          "endLine": 27,
+          "params": []
+        },
+        {
+          "name": "SaveBtn",
+          "startLine": 29,
+          "endLine": 40,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CancelBtn",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "ResetBtn",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "SaveBtn",
+          "line": 29,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ResetBtn",
+          "callee": "useFormContext",
+          "lineNumber": 17
+        },
+        {
+          "caller": "ResetBtn",
+          "callee": "reset",
+          "lineNumber": 22
+        },
+        {
+          "caller": "SaveBtn",
+          "callee": "useDisableBtn",
+          "lineNumber": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/form-elements/buttons/FormBtns/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 10,
+      "functions": [
+        {
+          "name": "useDisableBtn",
+          "startLine": 4,
+          "endLine": 12,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useDisableBtn",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useDisableBtn",
+          "callee": "useFormContext",
+          "lineNumber": 5
+        },
+        {
+          "caller": "useDisableBtn",
+          "callee": "useMemo",
+          "lineNumber": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/form-elements/buttons/FormBtns/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "FormBtns",
+          "startLine": 4,
+          "endLine": 13,
+          "params": [
+            "{ onCancelBtnClick }"
+          ]
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/form-elements/buttons/FormBtns/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 26,
+      "functions": [
+        {
+          "name": "Wrapper",
+          "startLine": 6,
+          "endLine": 9,
+          "params": [
+            "{ children }"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Wrapper",
+          "callee": "useForm",
+          "lineNumber": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/form-elements/buttons/RemoveBtn/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "RemoveBtn",
+          "startLine": 1,
+          "endLine": 12,
+          "params": [
+            "{ onClick, visible }"
+          ]
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/form-elements/buttons/RemoveBtn/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 19,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Header/components.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 107,
+      "nonEmptyLines": 91,
+      "functions": [
+        {
+          "name": "Title",
+          "startLine": 10,
+          "endLine": 26,
+          "params": []
+        },
+        {
+          "name": "Buttons",
+          "startLine": 28,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "HomeLink",
+          "startLine": 47,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "HelpDoc",
+          "startLine": 57,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "HeaderBtn",
+          "startLine": 74,
+          "endLine": 90,
+          "params": [
+            "props"
+          ]
+        },
+        {
+          "name": "LogoutBtn",
+          "startLine": 92,
+          "endLine": 107,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Title",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "Buttons",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "HomeLink",
+          "line": 47,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Title",
+          "callee": "useHandleTitle",
+          "lineNumber": 11
+        },
+        {
+          "caller": "Buttons",
+          "callee": "useHandleButtonsVisibility",
+          "lineNumber": 29
+        },
+        {
+          "caller": "HeaderBtn",
+          "callee": "useContext",
+          "lineNumber": 75
+        },
+        {
+          "caller": "LogoutBtn",
+          "callee": "useAuth",
+          "lineNumber": 93
+        },
+        {
+          "caller": "LogoutBtn",
+          "callee": "useHandleLogoutRedirect",
+          "lineNumber": 95
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Header/context.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 41,
+      "functions": [
+        {
+          "name": "HeaderReducer",
+          "startLine": 30,
+          "endLine": 41,
+          "params": [
+            "state",
+            "action"
+          ]
+        },
+        {
+          "name": "HeaderProvider",
+          "startLine": 43,
+          "endLine": 51,
+          "params": [
+            "{ children }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "HeaderProvider",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "HeaderProvider",
+          "callee": "useReducer",
+          "lineNumber": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Header/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 47,
+      "functions": [
+        {
+          "name": "useHandleTitle",
+          "startLine": 11,
+          "endLine": 17,
+          "params": []
+        },
+        {
+          "name": "useHandleButtonsVisibility",
+          "startLine": 22,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "useSetActivePage",
+          "startLine": 33,
+          "endLine": 59,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useHandleTitle",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "useHandleButtonsVisibility",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "useSetActivePage",
+          "line": 33,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useHandleTitle",
+          "callee": "useLocation",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useHandleButtonsVisibility",
+          "callee": "useLocation",
+          "lineNumber": 23
+        },
+        {
+          "caller": "useSetActivePage",
+          "callee": "useContext",
+          "lineNumber": 34
+        },
+        {
+          "caller": "useSetActivePage",
+          "callee": "useLocation",
+          "lineNumber": 36
+        },
+        {
+          "caller": "useSetActivePage",
+          "callee": "useEffect",
+          "lineNumber": 38
+        },
+        {
+          "caller": "useSetActivePage",
+          "callee": "dispatch",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Header/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "Header",
+          "startLine": 6,
+          "endLine": 22,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Header",
+          "callee": "useSetActivePage",
+          "lineNumber": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Header/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 19,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Layout/hooks.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "useAuthCheck",
+          "startLine": 5,
+          "endLine": 16,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useAuthCheck",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useAuthCheck",
+          "callee": "useAuth",
+          "lineNumber": 6
+        },
+        {
+          "caller": "useAuthCheck",
+          "callee": "useNavigate",
+          "lineNumber": 7
+        },
+        {
+          "caller": "useAuthCheck",
+          "callee": "useEffect",
+          "lineNumber": 9
+        },
+        {
+          "caller": "useAuthCheck",
+          "callee": "navigate",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Layout/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "Layout",
+          "startLine": 9,
+          "endLine": 25,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Layout",
+          "callee": "useAuthCheck",
+          "lineNumber": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Layout/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Footer/components.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "DocsBtn",
+          "startLine": 5,
+          "endLine": 16,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DocsBtn",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DocsBtn",
+          "callee": "useHandleDocsBtn",
+          "lineNumber": 6
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Footer/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "Footer",
+          "startLine": 4,
+          "endLine": 12,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/Footer/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 11,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/buttons/nav/BackToHomeBtn/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "BackToHomeBtn",
+          "startLine": 3,
+          "endLine": 12,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/layout/buttons/nav/BackToHomeBtn/test/index.spec.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

@@ -7,6 +7,7 @@
     "dev": "vite --port 6000",
     "build": "tsc -b && vite build",
     "deploy": "scp -r dist $USER@cofasv32:/opt/builds/pd-peer-support-vite-ts",
+    "deploy:access-tokens": "scp -r dist $USER@cofasv32:/opt/builds/access-tokens/pd-peer-support-vite-ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest"
