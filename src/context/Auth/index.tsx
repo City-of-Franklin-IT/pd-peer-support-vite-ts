@@ -1,116 +1,114 @@
-import { createContext, useContext, useEffect, useState, useCallback, ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react'
 import { useMsal } from '@azure/msal-react'
-import { BrowserAuthError } from '@azure/msal-browser'
-import { acquireRequest } from '@/context/Auth/config'
 import { MOCK_AUTH, MOCK_TOKEN } from '@/context/Auth/constants'
+import { acquireRequest, loginRequest } from '@/context/Auth/config'
+import { getAccessTokenRoles } from './utils'
 
 interface AuthContextType {
   isAuthenticated: boolean
   token: string | undefined
   isLoading: boolean
+  canUpdate: boolean
   refreshToken: (forceRefresh?: boolean) => Promise<void>
 }
 
-const AuthContext = createContext<AuthContextType | null>(null)
+const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
-export function AuthCtxProvider({ children }: { children: ReactNode }) {
+export const AuthCtxProvider = ({ children }: { children: ReactNode }) => {
   const { instance, accounts, inProgress } = useMsal()
   const [token, setToken] = useState<string | undefined>(undefined)
   const [isLoading, setIsLoading] = useState(true)
+  const [canUpdate, setCanUpdate] = useState(false)
 
   const getToken = useCallback(async () => {
-    if (MOCK_AUTH) {
+    setIsLoading(true)
+
+    if(MOCK_AUTH) {
       setToken(MOCK_TOKEN)
+      setCanUpdate(true)
       setIsLoading(false)
       return
     }
 
-    if (inProgress !== 'none') {
+    if(inProgress !== 'none') {
       return
     }
 
     const activeAccount = instance.getActiveAccount()
-    const isEdge = /Edg/.test(navigator.userAgent)
 
-    // 1. No accounts exist
-    if (!activeAccount && accounts.length === 0) {
+    if(!activeAccount && accounts.length === 0) {
       setToken(undefined)
       setIsLoading(false)
       return
     }
 
-    // 2. Promote first account if needed
-    if (!activeAccount && accounts.length > 0) {
+    if(!activeAccount && accounts.length > 0) {
       instance.setActiveAccount(accounts[0])
-      const newActiveAccount = instance.getActiveAccount()
-
-      if (newActiveAccount) {
-        try {
-          const response = await instance.acquireTokenSilent({
-            ...acquireRequest(newActiveAccount),
-            account: newActiveAccount
-          })
-          setToken(response.idToken)
-          setIsLoading(false)
-        } catch {
-          // Silent fail on initial account — iOS fallback to redirect
-          instance.loginRedirect(acquireRequest(newActiveAccount))
-        }
-      }
+      setIsLoading(false)
       return
     }
 
-    // 3. Use existing active account — MUST acquire token even for cached accounts
-    if (activeAccount) {
-      try {
-        const response = await instance.acquireTokenSilent({
-          ...acquireRequest(activeAccount),
-          account: activeAccount
-        })
-        setToken(response.idToken)
-        setIsLoading(false)
-      } catch (error) {
-        if (isEdge && error instanceof BrowserAuthError &&
-          (error.errorCode === 'popup_window_error' || error.errorCode === 'empty_window_error')) {
-          // Edge popup blocker: already handled, just mark not loading
-          setToken(undefined)
-          setIsLoading(false)
-        } else {
-          // Fallback to interactive redirect (iOS, or silent failed)
-          instance.loginRedirect(acquireRequest(activeAccount))
-        }
-      }
-    } else {
+    if(!activeAccount) {
       setToken(undefined)
       setIsLoading(false)
+      return
     }
-  }, [instance, accounts.length, inProgress])
-
-  const refreshToken = useCallback(async (forceRefresh?: boolean) => {
-    if (MOCK_AUTH) return
-    const activeAccount = instance.getActiveAccount()
-    if (!activeAccount) return
 
     try {
-      const result = await instance.acquireTokenSilent({
-        ...acquireRequest(activeAccount),
-        account: activeAccount,
-        forceRefresh: forceRefresh ?? true
-      })
-      setToken(result.idToken)
+      const request = acquireRequest(activeAccount)
+      const response = await instance.acquireTokenSilent(request)
+      setToken(response.accessToken)
+      setCanUpdate(getAccessTokenRoles(response.accessToken).includes("roll-call.write"))
+      setIsLoading(false)
+    } catch(error) {
+      try {
+        const request = acquireRequest(activeAccount)
+        const response = await instance.acquireTokenPopup(request)
+        setToken(response.accessToken)
+        setCanUpdate(getAccessTokenRoles(response.accessToken).includes("roll-call.write"))
+        setIsLoading(false)
+      } catch {
+        instance.loginRedirect(loginRequest)
+      }
+    }
+  }, [instance, accounts, inProgress])
+
+  const refreshToken = useCallback(async (forceRefresh = false) => {
+    const activeAccount = instance.getActiveAccount()
+
+    if(!activeAccount || MOCK_AUTH) return
+
+    try {
+      const request = { ...acquireRequest(activeAccount), forceRefresh }
+      const response = await instance.acquireTokenSilent(request)
+      setToken(response.accessToken)
     } catch {
-      setToken(undefined)
+      instance.loginRedirect(loginRequest)
     }
   }, [instance])
 
   useEffect(() => {
     getToken()
-  }, [getToken])
+  }, [inProgress, getToken])
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if(!document.hidden) {
+        refreshToken(true)
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
+  }, [refreshToken])
 
   const value: AuthContextType = {
     isAuthenticated: !!token,
     token,
     isLoading,
+    canUpdate,
     refreshToken
   }
 
@@ -121,12 +119,13 @@ export function AuthCtxProvider({ children }: { children: ReactNode }) {
   )
 }
 
-export function useAuth() {
+export const useAuth = () => {
   const context = useContext(AuthContext)
-  if (!context) {
+  if(!context) {
     throw new Error('useAuth must be used within AuthCtxProvider')
   }
+  
   return context
 }
 
-export { MOCK_AUTH } from '@/context/Auth/constants'
+export { MOCK_AUTH, MOCK_TOKEN } from '@/context/Auth/constants'

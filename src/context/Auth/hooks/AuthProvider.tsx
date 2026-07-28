@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
-import { PublicClientApplication, AuthenticationResult, EventType } from "@azure/msal-browser"
+import { PublicClientApplication } from "@azure/msal-browser"
 import { MsalProvider } from "@azure/msal-react"
 import { msalConfig } from "../config"
+
+// Types
+import { AuthenticationResult, EventType } from "@azure/msal-browser"
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [msalInstance, setMsalInstance] = useState<PublicClientApplication | null>(null)
@@ -10,15 +13,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const initializeMsal = async () => {
       const instance = new PublicClientApplication(msalConfig)
-      
+
       await instance.initialize()
-      
+
       const accounts = instance.getAllAccounts()
-      
+
       if(!instance.getActiveAccount() && accounts.length > 0) {
         instance.setActiveAccount(accounts[0])
       }
-      
+
       instance.addEventCallback((event) => {
         const authenticationResult = event.payload as AuthenticationResult
         const account = authenticationResult?.account
@@ -42,8 +45,4 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   return <MsalProvider instance={msalInstance}>
     {children}
   </MsalProvider>
-}
-
-export const useAuthProvider = () => {
-  return { AuthProvider }
 }
