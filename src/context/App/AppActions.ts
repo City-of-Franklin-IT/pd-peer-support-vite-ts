@@ -1,8 +1,8 @@
 import { NODE_ENV } from '../../config'
 
 const baseUrl = NODE_ENV === 'development' ?
-  'https://cofasv38.franklin-gov.com/api/v2/pd/peer-support' :
-  'https://pdapps.franklintn.gov/api/v2/pd/peer-support'
+  'https://cofasv38.franklin-gov.com/api/v3/pd/peer-support' :
+  'https://pdapps.franklintn.gov/api/v3/pd/peer-support'
 
 // Types
 import * as AppTypes from './AppTypes'
@@ -10,7 +10,7 @@ import * as AppTypes from './AppTypes'
 /**
 * Get all peer support entries
 * 
-* GET /api/v2/pd/peer-support/support
+* GET /api/v3/pd/peer-support/support
 **/
 export const getAllSupport = async (headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.SupportInterface[] }> => {
   const res = await fetch(`${ baseUrl }/support`, { headers })
@@ -23,7 +23,7 @@ export const getAllSupport = async (headers: Headers): Promise<AppTypes.ServerRe
 /**
 * Get peer support entry
 * 
-* GET /api/v2/pd/peer-support/support/:uuid
+* GET /api/v3/pd/peer-support/support/:uuid
 **/
 export const getSupport = async (uuid: string, headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.SupportInterface }> => {
   const res = await fetch(`${ baseUrl }/support/${ uuid }`, { headers })
@@ -36,7 +36,7 @@ export const getSupport = async (uuid: string, headers: Headers): Promise<AppTyp
 /**
 * Create peer support entry
 * 
-* POST /api/v2/peer-support/support
+* POST /api/v3/peer-support/support
 **/
 export const createSupport = async (formData: AppTypes.SupportCreateInterface, headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.SupportInterface }> => {
   headers.append('Content-Type', 'application/json')
@@ -55,7 +55,7 @@ export const createSupport = async (formData: AppTypes.SupportCreateInterface, h
 /**
 * Update peer support entry by uuid
 *
-* PUT /api/v2/peer-support/support/:uuid
+* PUT /api/v3/peer-support/support/:uuid
 **/
 export const updateSupport = async (formData: AppTypes.SupportCreateInterface, headers: Headers): Promise<AppTypes.ServerResponse> => {
   headers.append('Content-Type', 'application/json')
@@ -74,7 +74,7 @@ export const updateSupport = async (formData: AppTypes.SupportCreateInterface, h
 /**
 * Delete peer support entry by uuid
 *
-* DELETE /api/v2/peer-support/support/:uuid
+* DELETE /api/v3/peer-support/support/:uuid
 **/
 export const deleteSupport = async (uuid: string, headers: Headers): Promise<AppTypes.ServerResponse> => {
   const res = await fetch(`${ baseUrl }/support/${ uuid }`, {
@@ -90,7 +90,7 @@ export const deleteSupport = async (uuid: string, headers: Headers): Promise<App
 /**
 * Create other support
 *
-* POST /api/v2/peer-support/support/other
+* POST /api/v3/peer-support/support/other
 **/
 export const createOtherSupport = async (formData: AppTypes.OtherSupportCreateInterface, headers: Headers): Promise<AppTypes.OtherSupportCreateInterface> => {
   headers.append('Content-Type', 'application/json')
@@ -109,7 +109,7 @@ export const createOtherSupport = async (formData: AppTypes.OtherSupportCreateIn
 /**
 * Update other support by uuid
 *
-* PUT /api/v2/peer-support/support/other/:uuid
+* PUT /api/v3/peer-support/support/other/:uuid
 **/
 export const updateOtherSupport = async (formData: AppTypes.OtherSupportCreateInterface, headers: Headers): Promise<AppTypes.OtherSupportCreateInterface> => {
   headers.append('Content-Type', 'application/json')
@@ -128,7 +128,7 @@ export const updateOtherSupport = async (formData: AppTypes.OtherSupportCreateIn
 /**
 * Create personnel
 *
-* POST /api/v2/peer-support/personnel
+* POST /api/v3/peer-support/personnel
 **/
 export const createPersonnel = async (formData: AppTypes.PersonnelCreateInterface, headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.PersonnelInterface }> => {
   headers.append('Content-Type', 'application/json')
@@ -147,7 +147,7 @@ export const createPersonnel = async (formData: AppTypes.PersonnelCreateInterfac
 /**
 * Update personnel by uuid
 *
-* PUT /api/v2/pd/peer-support/personnel/:uuid
+* PUT /api/v3/pd/peer-support/personnel/:uuid
 **/
 export const updatePersonnel = async (formData: AppTypes.PersonnelCreateInterface, headers: Headers): Promise<AppTypes.ServerResponse> => {
   headers.append('Content-Type', 'application/json')
@@ -166,7 +166,7 @@ export const updatePersonnel = async (formData: AppTypes.PersonnelCreateInterfac
 /**
 * Delete personnel by uuid
 *
-* DELETE /api/v2/pd/peer-support/personnel/:uuid
+* DELETE /api/v3/pd/peer-support/personnel/:uuid
 **/
 export const deletePersonnel = async (uuid: string, headers: Headers): Promise<AppTypes.ServerResponse> => {
   const res = await fetch(`${ baseUrl }/personnel/${ uuid }`, {
@@ -182,7 +182,7 @@ export const deletePersonnel = async (uuid: string, headers: Headers): Promise<A
 /**
 * Get roster personnel
 *
-* GET /api/v2/api/pd/peer-support/roster
+* GET /api/v3/api/pd/peer-support/roster
 **/
 export const getRosterPersonnel = async (headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.PersonnelRosterInterface[] }> => {
   const res = await fetch(`${ baseUrl }/personnel-roster`, { headers })
@@ -195,7 +195,7 @@ export const getRosterPersonnel = async (headers: Headers): Promise<AppTypes.Ser
 /**
 * Get person by uuid
 *
-* GET /api/v2/pd/peer-support/personnel-roster/:uuid
+* GET /api/v3/pd/peer-support/personnel-roster/:uuid
 **/
 export const getPerson = async (uuid: string, headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.PersonnelRosterInterface }> => {
   const res = await fetch(`${ baseUrl }/personnel-roster/${ uuid }`, { headers })
@@ -208,7 +208,7 @@ export const getPerson = async (uuid: string, headers: Headers): Promise<AppType
 /**
 * Create roster personnel
 *
-* POST /api/v2/pd/peer-support/personnel-roster
+* POST /api/v3/pd/peer-support/personnel-roster
 **/
 export const createRosterPersonnel = async (formData: AppTypes.PersonnelRosterCreateInterface, headers: Headers): Promise<AppTypes.ServerResponse & { data: AppTypes.PersonnelRosterInterface }> => {
   headers.append('Content-Type', 'application/json')
@@ -227,7 +227,7 @@ export const createRosterPersonnel = async (formData: AppTypes.PersonnelRosterCr
 /**
 * Update roster personnel by uuid
 *
-* PUT /api/v2/pd/peer-support/personnel-roster/:uuid
+* PUT /api/v3/pd/peer-support/personnel-roster/:uuid
 **/
 export const updateRosterPersonnel = async (formData: AppTypes.PersonnelRosterCreateInterface, headers: Headers): Promise<AppTypes.ServerResponse> => {
   headers.append('Content-Type', 'application/json')
@@ -246,7 +246,7 @@ export const updateRosterPersonnel = async (formData: AppTypes.PersonnelRosterCr
 /**
 * Delete roster personnel by uuid
 *
-* DELETE /api/v2/pd/peer-support/personnel-roster/:uuid
+* DELETE /api/v3/pd/peer-support/personnel-roster/:uuid
 **/
 export const deleteRosterPersonnel = async (uuid: string, headers: Headers): Promise<AppTypes.ServerResponse> => {
   const res = await fetch(`${ baseUrl }/personnel-roster/${ uuid }`, {
@@ -262,7 +262,7 @@ export const deleteRosterPersonnel = async (uuid: string, headers: Headers): Pro
 /**
 * Get documentation
 *
-* GET /api/v2/pd/peer-support/docs
+* GET /api/v3/pd/peer-support/docs
 **/
 export const getDocs = async (headers: Headers) => {
   const res = await fetch(`${ baseUrl }/docs`, { headers })
