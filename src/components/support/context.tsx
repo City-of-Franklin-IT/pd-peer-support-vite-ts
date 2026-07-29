@@ -23,6 +23,7 @@ type SupportAction =
   | { type: 'SET_SEARCH_VALUE', payload: string }
   | { type: 'SET_TOTAL_PAGES', payload: number }
   | { type: 'SET_CURRENT_PAGE', payload: number }
+  | { type: 'CLEAR_ALL_FILTERS' }
   | { type: 'RESET_CTX' }
 
 const initialState: SupportState = {
@@ -85,6 +86,14 @@ const SupportReducer = (state: SupportState, action: SupportAction) => {
       return {
         ...state,
         currentPage: action.payload
+      }
+    case 'CLEAR_ALL_FILTERS':
+      return {
+        ...state,
+        dateRangeFilter: initialState.dateRangeFilter,
+        personnelFilter: initialState.personnelFilter,
+        searchValue: initialState.searchValue,
+        currentPage: initialState.currentPage
       }
     case 'RESET_CTX':
       return initialState

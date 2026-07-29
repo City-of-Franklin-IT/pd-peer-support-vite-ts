@@ -32,13 +32,13 @@ export const Buttons = () => {
 
   return (
     <div className="flex gap-2 overflow-y-visible w-fit pl-4 pb-2 flex-wrap justify-around lg:pb-0">
-      <HelpDoc />
       <HeaderBtn to={'/support'}>Support</HeaderBtn>
       <HeaderBtn to={'/create/support'}>Create Support</HeaderBtn>
       <HeaderBtn to={'/roster'}>Manage Roster</HeaderBtn>
       <HeaderBtn to={'/'} visible={!visible}>
         Login
       </HeaderBtn>
+      <HelpDoc />
       <LogoutBtn />
     </div>
   )
