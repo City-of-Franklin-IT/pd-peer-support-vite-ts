@@ -8,6 +8,9 @@ import substanceAbuseIcon from '@/assets/icons/support-type-icons/substance-abus
 import undisclosedIcon from '@/assets/icons/support-type-icons/undisclosed/undisclosed.svg'
 import workIcon from '@/assets/icons/support-type-icons/work/work.svg'
 
+// Helpers
+import { formatDisplayDateTime } from '@/helpers/utils'
+
 // Types
 import * as AppTypes from '@/context/App/AppTypes'
 
@@ -25,18 +28,9 @@ export const supportTypeIconMap = new Map<AppTypes.SupportType, string | undefin
 ])
 
 export const handleDateTimes = (support: AppTypes.SupportInterface) => {
-  const start = new Date(support.startDateTime).toISOString()
-  const end = new Date(support.endDateTime).toISOString()
-
   const startEndDateTimes = {
-    start: {
-      date: start.split('T')[0],
-      time: start.split('T')[1].slice(0, -8)
-    },
-    end: {
-      date: end.split('T')[0],
-      time: end.split('T')[1].slice(0, -8)
-    }
+    start: formatDisplayDateTime(support.startDateTime),
+    end: formatDisplayDateTime(support.endDateTime)
   }
 
   return startEndDateTimes

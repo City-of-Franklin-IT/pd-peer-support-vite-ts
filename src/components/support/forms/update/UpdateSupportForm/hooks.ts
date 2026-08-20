@@ -1,7 +1,7 @@
 import { useCallback, useContext, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useQueryClient } from '@tanstack/react-query'
-import { authHeaders } from '@/helpers/utils'
+import { authHeaders, toDatetimeLocalValue } from '@/helpers/utils'
 import * as AppActions from '@/context/App/AppActions'
 import SupportCtx from '@/components/support/context'
 import { useEnableQuery } from '@/helpers/hooks'
@@ -36,8 +36,8 @@ const useUpdateSupport = (support: AppTypes.SupportInterface | undefined) => {
   return useForm<AppTypes.SupportCreateInterface>({
     mode: 'onBlur',
     defaultValues: {
-      startDateTime: support?.startDateTime?.substring(0, 16),
-      endDateTime: support?.endDateTime?.substring(0, 16),
+      startDateTime: support?.startDateTime && toDatetimeLocalValue(support.startDateTime),
+      endDateTime: support?.endDateTime && toDatetimeLocalValue(support.endDateTime),
       supportDesignation: support?.supportDesignation,
       supportType: support?.supportType,
       note: support?.note,

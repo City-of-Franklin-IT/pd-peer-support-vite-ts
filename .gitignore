@@ -42,3 +42,4 @@ vite.config.d.ts
 .env
 .env.local
 .env.*.local
+.env.development

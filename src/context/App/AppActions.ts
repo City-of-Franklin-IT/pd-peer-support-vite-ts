@@ -1,8 +1,4 @@
-import { NODE_ENV } from '../../config'
-
-const baseUrl = NODE_ENV === 'development' ?
-  'https://cofasv38.franklin-gov.com/api/v3/pd/peer-support' :
-  'https://pdapps.franklintn.gov/api/v3/pd/peer-support'
+const baseUrl = import.meta.env.VITE_BASE_URL
 
 // Types
 import * as AppTypes from './AppTypes'

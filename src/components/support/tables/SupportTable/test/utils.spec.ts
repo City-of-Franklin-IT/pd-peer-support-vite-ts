@@ -2,28 +2,30 @@ import { handleDateTimes, supportTypeIconMap } from '../utils'
 import { createSupport } from '@test/mocks/api'
 
 describe('handleDateTimes', () => {
-  it('returns the correct start date and time', () => {
-    const support = createSupport({ startDateTime: '2024-06-15T09:30:00.000Z' })
+  it('converts the start date/time from UTC to America/Chicago', () => {
+    const support = createSupport({ startDateTime: '2024-06-15T09:30:00.000Z' }) // CDT (UTC-5)
     const result = handleDateTimes(support)
     expect(result.start.date).toBe('2024-06-15')
-    expect(result.start.time).toBe('09:30')
+    expect(result.start.time).toBe('04:30')
   })
 
-  it('returns the correct end date and time', () => {
-    const support = createSupport({ endDateTime: '2024-06-15T11:45:00.000Z' })
+  it('converts the end date/time from UTC to America/Chicago', () => {
+    const support = createSupport({ endDateTime: '2024-06-15T11:45:00.000Z' }) // CDT (UTC-5)
     const result = handleDateTimes(support)
     expect(result.end.date).toBe('2024-06-15')
-    expect(result.end.time).toBe('11:45')
+    expect(result.end.time).toBe('06:45')
   })
 
-  it('handles midnight correctly', () => {
+  it('rolls back to the previous day when the UTC offset crosses midnight', () => {
     const support = createSupport({
-      startDateTime: '2024-01-01T00:00:00.000Z',
+      startDateTime: '2024-01-01T00:00:00.000Z', // CST (UTC-6)
       endDateTime: '2024-01-01T00:00:00.000Z',
     })
     const result = handleDateTimes(support)
-    expect(result.start.time).toBe('00:00')
-    expect(result.end.time).toBe('00:00')
+    expect(result.start.date).toBe('2023-12-31')
+    expect(result.start.time).toBe('18:00')
+    expect(result.end.date).toBe('2023-12-31')
+    expect(result.end.time).toBe('18:00')
   })
 })
 

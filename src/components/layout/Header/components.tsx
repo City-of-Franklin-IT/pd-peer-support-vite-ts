@@ -1,6 +1,5 @@
 import { useContext } from 'react'
 import { Link } from 'react-router'
-import { APP_TITLE } from '../../../config'
 import fpdIcon from '@/assets/icons/fpd/fpd.png'
 import HeaderCtx from './context'
 import { useAuth } from '@/context/Auth'
@@ -18,7 +17,7 @@ export const Title = () => {
       <div className="flex gap-4 text-primary-content items-center justify-center">
         <img src={fpdIcon} alt="fpd icon" className="w-18" />
         <h1 className="text-xl font-bold text-center md:text-2xl lg:text-4xl">
-          {APP_TITLE}
+          {import.meta.env.VITE_APP_TITLE}
         </h1>
       </div>
     </Link>

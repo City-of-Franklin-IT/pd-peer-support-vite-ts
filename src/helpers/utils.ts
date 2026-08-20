@@ -13,8 +13,38 @@ export const authHeaders = (token: string | undefined) => {
 }
 
 export const formatDate = (date: string) => { // Format dates for react hook form
-  
+
   return new Date(date).toISOString().split('T')[0]
+}
+
+const PEER_SUPPORT_TIME_ZONE = 'America/Chicago'
+
+// Splits a UTC ISO datetime string into its America/Chicago wall-clock date/time parts
+const getLocalDateTimeParts = (utcIsoString: string) => {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: PEER_SUPPORT_TIME_ZONE,
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hour12: false
+  }).formatToParts(new Date(utcIsoString)).reduce((acc, part) => ({ ...acc, [part.type]: part.value }), {} as Record<string, string>)
+
+  return parts
+}
+
+// Converts a UTC ISO datetime string from the API into an America/Chicago { date, time } pair for display
+export const formatDisplayDateTime = (utcIsoString: string) => {
+  const parts = getLocalDateTimeParts(utcIsoString)
+
+  return {
+    date: `${ parts.year }-${ parts.month }-${ parts.day }`,
+    time: `${ parts.hour }:${ parts.minute }`
+  }
+}
+
+// Converts a UTC ISO datetime string from the API into an America/Chicago value for <input type="datetime-local">
+export const toDatetimeLocalValue = (utcIsoString: string) => {
+  const parts = getLocalDateTimeParts(utcIsoString)
+
+  return `${ parts.year }-${ parts.month }-${ parts.day }T${ parts.hour }:${ parts.minute }`
 }
 
 const slideInLeft: MotionProps = {
