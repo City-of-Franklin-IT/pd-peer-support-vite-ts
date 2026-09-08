@@ -68,7 +68,7 @@ export const MobileMenu = () => {
         aria-label="Menu"
         aria-expanded={open}
         onClick={onBtnClick}
-        className="btn btn-ghost btn-square text-primary-content hover:bg-primary/60 hover:shadow-none">
+        className="btn btn-ghost btn-square text-primary-content bg-transparent border-transparent shadow-none hover:bg-primary/60 hover:shadow-none">
           { open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /> }
       </button>
       <MenuItems visible={open} onNavigate={close} onLogout={handleLogoutRedirect} />
@@ -85,8 +85,11 @@ type MenuItemsProps = {
 const MenuItems = ({ visible, onNavigate, onLogout }: MenuItemsProps) => {
   if(!visible) return null
 
+  // Nested groups go in as <details className="group"> with a <summary className="uppercase
+  // cursor-pointer">, wrapping their <ul> in bg-primary-content text-primary so the sub-level
+  // inverts against this menu, and indenting each item with ps-4.
   return (
-    <ul className="dropdown-content menu z-50 bg-base-100 rounded-box w-56 p-2 shadow border border-base-300 tracking-normal">
+    <ul className="dropdown-content menu z-50 bg-primary rounded-box w-56 p-2 shadow border border-primary tracking-normal text-primary-content">
       <li>
         <Link to={'/support'} onClick={onNavigate} className="uppercase">
           Support
