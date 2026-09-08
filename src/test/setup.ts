@@ -70,6 +70,8 @@ vi.mock('@/helpers/hooks', () => ({
   useAuthRedirect: vi.fn(),
   useUnauthRedirect: vi.fn(),
   withTokenRefresh: vi.fn(),
+  useDismissOnOutside: vi.fn(() => ({ current: null })),
+  useElementHeightVar: vi.fn(),
 }))
 
 vi.mock('@/utils/Toast/Toast', () => ({

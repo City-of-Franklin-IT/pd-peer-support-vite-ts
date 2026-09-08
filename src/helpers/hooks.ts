@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import { useNavigate } from "react-router"
 import { useMsal } from "@azure/msal-react"
 import { useAuth, MOCK_AUTH } from "@/context/Auth"

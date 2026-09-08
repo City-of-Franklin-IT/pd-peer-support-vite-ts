@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react"
 import { useContext } from 'react'
-import { Link, useLocation } from 'react-router'
+import { Link } from 'react-router'
 import fpdIcon from '@/assets/icons/fpd/fpd.png'
 import HeaderCtx from './context'
 import { useAuth } from '@/context/Auth'
@@ -29,7 +29,7 @@ export const Buttons = () => {
   const visible = useHandleButtonsVisibility()
 
   return (
-    <div className="flex gap-2 overflow-y-visible w-fit pl-4 flex-wrap justify-around">
+    <div className="flex gap-2 overflow-y-visible pl-4 flex-wrap justify-end">
       <HeaderBtn to={'/support'}>Support</HeaderBtn>
       <HeaderBtn to={'/create/support'}>Create Support</HeaderBtn>
       <HeaderBtn to={'/roster'}>Manage Roster</HeaderBtn>
@@ -55,7 +55,6 @@ export const HomeLink = () => {
 }
 
 export const MobileMenu = () => {
-  const { pathname } = useLocation()
   const { ref, open, onBtnClick, close } = useHandleMobileMenu()
   const handleLogoutRedirect = useHandleLogoutRedirect()
   const visible = useHandleButtonsVisibility()
@@ -89,11 +88,6 @@ const MenuItems = ({ visible, onNavigate, onLogout }: MenuItemsProps) => {
   return (
     <ul className="dropdown-content menu z-50 bg-base-100 rounded-box w-56 p-2 shadow border border-base-300 tracking-normal">
       <li>
-        <a href={'/home'} onClick={onNavigate} className="uppercase">
-          Back To All PD Apps
-        </a>
-      </li>
-      <li>
         <Link to={'/support'} onClick={onNavigate} className="uppercase">
           Support
         </Link>
@@ -111,6 +105,11 @@ const MenuItems = ({ visible, onNavigate, onLogout }: MenuItemsProps) => {
       <li>
         <a href="https://franklintn.sharepoint.com/:b:/s/IT-ISDevelopment/IQAT_G7eB3dFQLTcbF7Ld3efAXGKw4HYHYf9teBGRTN9qA4?e=yeBOtF" target="_blank" rel="noreferrer" onClick={onNavigate} className="uppercase">
           Help
+        </a>
+      </li>
+      <li>
+        <a href={'/home'} onClick={onNavigate} className="uppercase">
+          Back To All PD Apps
         </a>
       </li>
       <li>
