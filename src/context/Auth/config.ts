@@ -3,9 +3,9 @@ import { LogLevel, AccountInfo } from "@azure/msal-browser"
 export const setAuth = () => {
     const auth = {
         clientId: import.meta.env.VITE_CLIENT_ID,
-        authority: "https://login.microsoftonline.com/f6644f52-f834-4a2f-a433-e6bc40d7c17f/",
-        redirectUri: "https://pdapps.franklintn.gov/peer-support",
-        postLogoutRedirectUri: "https://pdapps.franklintn.gov/",
+        authority: import.meta.env.VITE_AUTH_AUTHORITY,
+        redirectUri: import.meta.env.VITE_AUTH_REDIRECT_URI,
+        postLogoutRedirectUri: import.meta.env.VITE_AUTH_POST_LOGOUT_REDIRECT_URI,
         navigateToLoginRequestUrl: true,
         allowRedirectInIframe: true
     }
