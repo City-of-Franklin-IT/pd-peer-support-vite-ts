@@ -13,11 +13,11 @@ export const Title = () => {
   return (
     <Link
       to={href}
-      className="flex flex-col text-primary-content text-center w-fit"
+      className="flex flex-col text-primary-content text-center w-fit shrink-0"
     >
       <div className="flex gap-2 text-primary-content items-center justify-center lg:gap-4">
         <img src={fpdIcon} alt="fpd icon" className="w-10 lg:w-18" />
-        <h1 className="text-xl font-bold text-center md:text-2xl lg:text-4xl">
+        <h1 className="text-xl font-bold text-center whitespace-nowrap md:text-2xl lg:text-4xl">
           {import.meta.env.VITE_APP_TITLE}
         </h1>
       </div>
