@@ -1,4 +1,3 @@
-import { Menu, X } from "lucide-react"
 import { useContext } from 'react'
 import { Link } from 'react-router'
 import fpdIcon from '@/assets/icons/fpd/fpd.png'
@@ -69,7 +68,9 @@ export const MobileMenu = () => {
         aria-expanded={open}
         onClick={onBtnClick}
         className="btn btn-ghost btn-square text-primary-content bg-transparent border-transparent shadow-none hover:bg-primary/60 hover:shadow-none">
-          { open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /> }
+          <span aria-hidden="true" className="text-2xl leading-none">
+            {open ? '×' : '☰'}
+          </span>
       </button>
       <MenuItems visible={open} onNavigate={close} onLogout={handleLogoutRedirect} />
     </div>
@@ -85,24 +86,30 @@ type MenuItemsProps = {
 const MenuItems = ({ visible, onNavigate, onLogout }: MenuItemsProps) => {
   if(!visible) return null
 
-  // Nested groups go in as <details className="group"> with a <summary className="uppercase
-  // cursor-pointer">, wrapping their <ul> in bg-primary-content text-primary so the sub-level
-  // inverts against this menu, and indenting each item with ps-4.
   return (
     <ul className="dropdown-content menu z-50 bg-primary rounded-box w-56 p-2 shadow border border-primary tracking-normal text-primary-content">
       <li>
-        <Link to={'/support'} onClick={onNavigate} className="uppercase">
-          Support
+        <Link 
+          to={'/support'} 
+          onClick={onNavigate} 
+          className="uppercase">
+            Support
         </Link>
       </li>
       <li>
-        <Link to={'/create/support'} onClick={onNavigate} className="uppercase">
-          Create Support
+        <Link 
+          to={'/create/support'} 
+          onClick={onNavigate} 
+          className="uppercase">
+            Create Support
         </Link>
       </li>
       <li>
-        <Link to={'/roster'} onClick={onNavigate} className="uppercase">
-          Manage Roster
+        <Link 
+          to={'/roster'} 
+          onClick={onNavigate} 
+          className="uppercase">
+            Manage Roster
         </Link>
       </li>
       <li>

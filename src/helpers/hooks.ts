@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
 import { useNavigate } from "react-router"
 import { useMsal } from "@azure/msal-react"
-import { useAuth, MOCK_AUTH } from "@/context/Auth"
+import { useAuth } from "@/context/Auth"
 
 export const useGetToken = () => {
   const { token, isLoading } = useAuth()
@@ -67,7 +67,7 @@ export const useGetUserDepartment = () => {
   const { inProgress } = useMsal()
 
   // Mock implementation for development
-  if (MOCK_AUTH) {
+  if (import.meta.env.DEV) {
     return { department: 'IT', isLoading: false }
   }
 
