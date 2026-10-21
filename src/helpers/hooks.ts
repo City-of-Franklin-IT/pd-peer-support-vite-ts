@@ -1,7 +1,11 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router"
 import { useMsal } from "@azure/msal-react"
 import { useAuth } from "@/context/Auth"
+import { getUserDepartment } from "./utils"
+
+// Types
+import type { AccountInfo } from "@azure/msal-browser"
 
 export const useGetToken = () => {
   const { token, isLoading } = useAuth()
@@ -63,17 +67,35 @@ export const useUnauthRedirect = () => {
 }
 
 export const useGetUserDepartment = () => {
-  const { isLoading: authLoading } = useAuth()
-  const { inProgress } = useMsal()
+  const [state, setState] = useState<{ department: string | undefined, isLoading: boolean }>({ department: undefined, isLoading: true })
+  const hasFetchedRef = useRef(false)
 
-  // Mock implementation for development
-  if (import.meta.env.DEV) {
-    return { department: 'IT', isLoading: false }
-  }
+  const { instance, inProgress } = useMsal()
 
-  // Placeholder: actual implementation would fetch from Graph API
-  // For now, return undefined to avoid breaking existing code
-  return { department: undefined, isLoading: authLoading || inProgress !== 'none' }
+  useEffect(() => {
+    if(import.meta.env.DEV) {
+      setState({ department: 'Police', isLoading: false })
+      return
+    }
+
+    if(inProgress !== 'none') return
+
+    const activeAccount = instance.getActiveAccount()
+
+    if(activeAccount && !hasFetchedRef.current) {
+      hasFetchedRef.current = true
+      getUserDepartment(instance, activeAccount as AccountInfo)
+        .then(department => setState({ department, isLoading: false }))
+        .catch((err) => {
+          console.error(err)
+          setState(prev => ({ ...prev, isLoading: false }))
+        })
+    } else if(!activeAccount) {
+      setState(prev => ({ ...prev, isLoading: false }))
+    }
+  }, [inProgress, instance])
+
+  return { department: state.department, isLoading: state.isLoading }
 }
 
 export const withTokenRefresh = async <T>(
