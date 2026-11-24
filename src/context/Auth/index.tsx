@@ -1,6 +1,7 @@
 import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react'
 import { useMsal } from '@azure/msal-react'
 import { acquireRequest, loginRequest } from '@/context/Auth/config'
+import { MOCK_TOKEN } from '@/config'
 import { getAccessTokenRoles } from './utils'
 
 interface AuthContextType {
@@ -23,7 +24,7 @@ export const AuthCtxProvider = ({ children }: { children: ReactNode }) => {
     setIsLoading(true)
 
     if(import.meta.env.DEV) {
-      setToken(import.meta.env.VITE_MOCK_TOKEN)
+      setToken(MOCK_TOKEN)
       setCanUpdate(true)
       setIsLoading(false)
       return
