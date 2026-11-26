@@ -30,6 +30,12 @@ server {
         return 302 /peer-support/;
     }
 
+    location = /healthz {
+        access_log off;
+        default_type text/plain;
+        return 200 "ok\n";
+    }
+
     # Hashed build assets: cache aggressively
     location /peer-support/assets/ {
         expires 1y;
@@ -49,5 +55,8 @@ NGINX
 COPY --from=build /app/dist /usr/share/nginx/html/peer-support
 
 EXPOSE 8004
+
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
+  CMD wget -qO /dev/null http://127.0.0.1:8004/healthz || exit 1
 
 CMD ["nginx", "-g", "daemon off;"]
